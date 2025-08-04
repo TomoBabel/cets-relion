@@ -20,6 +20,8 @@ Requires-Dist: mrcfile
 Requires-Dist: numpy>=1.20.0
 Requires-Dist: pydantic>=2
 Requires-Dist: networkx
+Requires-Dist: matplotlib
+Requires-Dist: gemmi
 Provides-Extra: dev
 Requires-Dist: deepdiff; extra == "dev"
 Requires-Dist: mypy==1.8.0; extra == "dev"

@@ -34,7 +34,9 @@ dependencies = [
     "mrcfile",
     "numpy>=1.20.0",
     "pydantic>=2",
-    "networkx"
+    "networkx",
+    "matplotlib",
+    "gemmi",
 ]
 
 optional-dependencies.dev = [
