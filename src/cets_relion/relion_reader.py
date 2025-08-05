@@ -172,20 +172,88 @@ class RelionPipeline(object):
         Args:
             start (str): The job or file to start the search from
             jobtypes (List[str]): The job type(s) to find
+
+        Returns:
+            List[str]: The most recent job(s) that match the criteria
         """
         crit_path = self.upstream_critical_path(start)
         found: List[str] = []
-        count = 0
-        while not found:
-            for node in crit_path:
-                preds = crit_path.predecessors(node)
-                for pred in preds:
-                    if self.graph.nodes[pred].get("relion_type", None) in jobtypes:
-                        found.append(str(pred))
-            count += 1
-            if count == len(list(crit_path.nodes())):
+        ordered_nodes = list(crit_path)
+        ordered_nodes.sort(key=lambda x: get_sort_key(x), reverse=True)
+        for node in ordered_nodes:
+            preds = crit_path.predecessors(node)
+            for pred in preds:
+                if self.graph.nodes[pred].get("relion_type") in jobtypes:
+                    found.append(str(pred))
+            if found:
                 break
         return found
+
+    def last_file_of_type(
+        self,
+        start: str,
+        relion_type: List[str],
+        file_type: Optional[List[str]] = None,
+        kwds: Optional[List[str]] = None,
+    ):
+        """Find the most recent files(s) of a specific type in the workflow
+
+        Args:
+            start (str): The job or file to start the search from
+            relion_type (List[str]): The relion top level node type
+            file_type (Optional(List[str]): The file extension, any if None
+            kwds (Optional(List[str]): kwds to match, all must be matched, any if None
+
+        Returns:
+            List[str]: The most recent file(s) that match the criteria
+        """
+        crit_path = self.upstream_critical_path(start)
+        file_type = [] if file_type is None else file_type
+        kwds = [] if kwds is None else kwds
+        found: List[str] = []
+        ordered_nodes = list(crit_path)
+        ordered_nodes.sort(key=lambda x: get_sort_key(x), reverse=True)
+        for node in ordered_nodes:
+            preds = crit_path.predecessors(node)
+            for pred in preds:
+                rt_match = self.graph.nodes[pred].get("relion_type") in relion_type
+                found_kwds = self.graph.nodes[pred].get("kwds", [])
+                kwds_match = all([x in found_kwds for x in kwds])
+                ft_match = (
+                    True
+                    if not file_type
+                    else self.graph.nodes[pred].get("file_type") in file_type
+                )
+                if all([rt_match, kwds_match, ft_match]):
+                    found.append(str(pred))
+            if found:
+                break
+        return found
+
+
+def get_sort_key(node_name: str) -> Tuple[int, int]:
+    """Get the keys for sorting multiple nodes associated with the same job
+
+    Returns the criteria that the nodes are sorted on in descending order of
+    importance: its depth in the project, job number, and finally name.
+
+    Files come before the jobs that created them, as it's intended for working
+    backwards through a project
+
+    Args:
+        node_name (str): The node name, a job or a file
+
+    Returns:
+        Tuple[int, int]: (job number, depth)
+
+    """
+    parts = node_name.split("/")
+    try:
+        job_num = int(parts[1].replace("job", ""))
+        depth = 0 if parts[-1] == "" else 1
+    except Exception:
+        return 0, 0
+    return job_num, depth
 
 
 def draw_graph(network: nx.DiGraph, outfile: str):
@@ -196,27 +264,6 @@ def draw_graph(network: nx.DiGraph, outfile: str):
         outfile (str): File to write the output
 
     """
-
-    def get_sort_key(node_name: str) -> Tuple[int, int]:
-        """Get the keys for sorting multiple nodes associated with the same job
-
-        Returns the criteria that the nodes are sorted on in descending order of
-        importance: its depth in the project, job number, and finally name.
-
-        Args:
-            node_name (str): The node name, a job or a file
-
-        Returns:
-            Tuple[int, int]: (job number, depth)
-
-        """
-        parts = node_name.split("/")
-        try:
-            job_num = int(parts[1].replace("job", ""))
-            depth = 0 if parts[-1] == "" else 1
-        except Exception:
-            return 0, 0
-        return job_num, depth
 
     def get_x_pos(node_name, ngraph, is_jobs) -> float:
         """Get the x position of a node in the graph image

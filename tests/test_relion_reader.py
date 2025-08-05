@@ -79,11 +79,32 @@ class PipelineReaderTests(CetsRelionTest):
         assert list(full_crit.edges()) == JOBS_EDGES[1:]
 
     def test_last_job_of_type(self):
-        rp = RelionPipeline(self.test_data / "short_pipeline.star")
-        lj = rp.last_job_of_type("Denoise/job008/", ["relion.ctffind.ctffind4"])
-        assert lj == ["CtfFind/job003/"]
-
-    def test_last_job_of_type_with_multiple_retruls(self):
         rp = RelionPipeline(self.test_data / "forked_pipeline.star")
         lj = rp.last_job_of_type("JoinStar/job005/", ["relion.ctffind.ctffind4"])
-        assert lj == ["CtfFind/job003/", "CtfFind/job004/"]
+        assert lj == ["CtfFind/job004/"]
+
+    def test_last_file_of_type_multple_returns(self):
+        rp = RelionPipeline(self.test_data / "forked_pipeline.star")
+        lf = rp.last_file_of_type(
+            start="JoinStar/job005/", relion_type=["TomogramGroupMetadata"]
+        )
+        assert lf == [
+            "CtfFind/job003/tilt_series_ctf.star",
+            "CtfFind/job004/tilt_series_ctf.star",
+        ]
+
+    def test_last_file_of_type_just_type(self):
+        rp = RelionPipeline(self.test_data / "default_pipeline.star")
+        lf = rp.last_file_of_type(
+            start="ModelAngelo/job080/", relion_type=["TomogramGroupMetadata"]
+        )
+        assert lf == ["Polish/job070/tomograms.star"]
+
+    def test_last_file_of_type_with_kwds(self):
+        rp = RelionPipeline(self.test_data / "default_pipeline.star")
+        lf = rp.last_file_of_type(
+            start="ModelAngelo/job080/",
+            relion_type=["TomogramGroupMetadata"],
+            kwds=["ctffind"],
+        )
+        assert lf == ["CtfFind/job003/tilt_series_ctf.star"]
