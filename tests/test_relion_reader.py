@@ -1,55 +1,79 @@
 from src.cets_relion.relion_reader import RelionPipeline
 from tests.testing_tools import CetsRelionTest
+from tests.test_data.short_pipeline_networks import (
+    FULL_EDGES,
+    FULL_NODES,
+    FILES_CRIT_EDGES,
+    FILES_NODES,
+    FILES_EDGES,
+    FILES_CRIT_NODES,
+    JOBS_EDGES,
+    JOBS_NODES,
+    JOBS_CRIT_NODES,
+    FULL_CRIT_NODES,
+    FULL_CRIT_EDGES,
+    DOWNSTREAM_CRIT_FILES_NODES,
+    DOWNSTREAM_CRIT_FILES_EDGES,
+    UPSTREAM_JOBS_CRIT_EDGES,
+)
 
 
 class PipelineReaderTests(CetsRelionTest):
-    def test_instatiate_RelionPipeline_obj(self):
+    def test_instatiate_RelionPipeline_obj_main_graph(self):
         rp = RelionPipeline(self.test_data / "short_pipeline.star")
-        assert list(rp.graph.nodes()) == [
-            "Import/job001/",
-            "MotionCorr/job002/",
-            "CtfFind/job003/",
-            "ExcludeTiltImages/job004/",
-            "AlignTiltSeries/job005/",
-            "Tomograms/job006/",
-            "Denoise/job007/",
-            "Denoise/job008/",
-            "Import/job001/tilt_series.star",
-            "MotionCorr/job002/corrected_tilt_series.star",
-            "MotionCorr/job002/logfile.pdf",
-            "CtfFind/job003/tilt_series_ctf.star",
-            "CtfFind/job003/logfile.pdf",
-            "ExcludeTiltImages/job004/selected_tilt_series.star",
-            "AlignTiltSeries/job005/aligned_tilt_series.star",
-            "Tomograms/job006/tomograms.star",
-            "Denoise/job007/tomograms.star",
-            "Denoise/job008/tomograms.star",
-        ]
-        assert list(rp.graph.edges()) == [
-            ("Import/job001/", "Import/job001/tilt_series.star"),
-            ("MotionCorr/job002/", "MotionCorr/job002/corrected_tilt_series.star"),
-            ("MotionCorr/job002/", "MotionCorr/job002/logfile.pdf"),
-            ("CtfFind/job003/", "CtfFind/job003/tilt_series_ctf.star"),
-            ("CtfFind/job003/", "CtfFind/job003/logfile.pdf"),
-            (
-                "ExcludeTiltImages/job004/",
-                "ExcludeTiltImages/job004/selected_tilt_series.star",
-            ),
-            (
-                "AlignTiltSeries/job005/",
-                "AlignTiltSeries/job005/aligned_tilt_series.star",
-            ),
-            ("Tomograms/job006/", "Tomograms/job006/tomograms.star"),
-            ("Denoise/job007/", "Denoise/job007/tomograms.star"),
-            ("Denoise/job008/", "Denoise/job008/tomograms.star"),
-            ("Import/job001/tilt_series.star", "MotionCorr/job002/"),
-            ("MotionCorr/job002/corrected_tilt_series.star", "CtfFind/job003/"),
-            ("CtfFind/job003/tilt_series_ctf.star", "ExcludeTiltImages/job004/"),
-            (
-                "ExcludeTiltImages/job004/selected_tilt_series.star",
-                "AlignTiltSeries/job005/",
-            ),
-            ("AlignTiltSeries/job005/aligned_tilt_series.star", "Tomograms/job006/"),
-            ("Tomograms/job006/tomograms.star", "Denoise/job007/"),
-            ("Tomograms/job006/tomograms.star", "Denoise/job008/"),
-        ]
+        assert list(rp.graph.nodes()) == FULL_NODES
+        assert list(rp.graph.edges()) == FULL_EDGES
+
+    def test_instatiate_RelionPipeline_obj_jobs_graph(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        assert list((rp.jobs_graph.nodes())) == JOBS_NODES
+        assert list(rp.jobs_graph.edges()) == JOBS_EDGES
+
+    def test_instatiate_RelionPipeline_obj_files_graph(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        assert list((rp.files_graph.nodes())) == FILES_NODES
+        assert list(rp.files_graph.edges()) == FILES_EDGES
+
+    def test_upstream_full_critical_path(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        full_crit = rp.upstream_critical_path(start="Denoise/job008/tomograms.star")
+        assert list(full_crit.nodes()) == FULL_CRIT_NODES
+        assert list(full_crit.edges()) == FULL_CRIT_EDGES
+
+    def test_upstream_files_critical_path(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        full_crit = rp.upstream_critical_path(
+            start="Denoise/job008/tomograms.star", graph=rp.files_graph
+        )
+        assert list(full_crit.nodes()) == FILES_CRIT_NODES
+        assert list(full_crit.edges()) == FILES_CRIT_EDGES
+
+    def test_upstream_jobs_critical_path(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        full_crit = rp.upstream_critical_path(
+            start="Denoise/job008/", graph=rp.jobs_graph
+        )
+        assert list(full_crit.nodes()) == JOBS_CRIT_NODES
+        assert list(full_crit.edges()) == UPSTREAM_JOBS_CRIT_EDGES
+
+    def test_downstream_full_critical_path(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        full_crit = rp.downstream_critical_path(start="Import/job001/tilt_series.star")
+        assert list(full_crit.nodes()) == FULL_NODES[1:]
+        assert list(full_crit.edges()) == FULL_EDGES[1:]
+
+    def test_downstream_files_critical_path(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        full_crit = rp.downstream_critical_path(
+            start="MotionCorr/job002/corrected_tilt_series.star", graph=rp.files_graph
+        )
+        assert list(full_crit.nodes()) == DOWNSTREAM_CRIT_FILES_NODES
+        assert list(full_crit.edges()) == DOWNSTREAM_CRIT_FILES_EDGES
+
+    def test_jobs_downstream_critical_path(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        full_crit = rp.downstream_critical_path(
+            start="MotionCorr/job002/", graph=rp.jobs_graph
+        )
+        assert list(full_crit.nodes()) == JOBS_NODES[1:]
+        assert list(full_crit.edges()) == JOBS_EDGES[1:]
