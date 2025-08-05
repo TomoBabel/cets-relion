@@ -1,11 +1,10 @@
 from gemmi import cif
 from collections import namedtuple
-from os import PathLike
 import networkx as nx
 from pathlib import Path
 import matplotlib.pyplot as plt
 import random
-from typing import Optional, Tuple
+from typing import Optional, Tuple, List
 
 # definitions for the names of blocks in the RELION pipeline cif file
 PipelineBlockNames = namedtuple(
@@ -29,11 +28,11 @@ class RelionPipeline(object):
         files_graph (nx.DiGraph): A DAG with just the files
     """
 
-    def __init__(self, pipeline_file: PathLike) -> None:
+    def __init__(self, pipeline_file: str) -> None:
         """Instantiate a RelionPipeline object
 
         Args:
-             pipeline_file (PathLike): Path to the default_pipeliner.star file
+             pipeline_file (str): Path to the default_pipeliner.star file
         """
         self.data = cif.read_file(str(pipeline_file))
 
@@ -53,8 +52,8 @@ class RelionPipeline(object):
             ]
         )
         for job in jobs:
-            G.add_node(job[0], type="process")
-            jobs_graph.add_node(job[0], type="process")
+            G.add_node(job[0], type="process", relion_type=job[2])
+            jobs_graph.add_node(job[0], type="process", relion_type=job[2])
 
         # create file nodes from pipeliner 'nodes'
         nodes_block = self.data.find_block(PIPELINE_BLOCK.nodes)
@@ -64,7 +63,13 @@ class RelionPipeline(object):
         for pipe_node in pipe_nodes:
             split = pipe_node[1].split(".")
             kwds = [] if len(split) <= 2 else split[2:]
-            G.add_node(pipe_node[0], type="file")
+            G.add_node(
+                pipe_node[0],
+                type="file",
+                relion_type=split[0],
+                file_type=split[1],
+                kwds=kwds,
+            )
             files_graph.add_node(
                 pipe_node[0],
                 type="file",
@@ -97,7 +102,6 @@ class RelionPipeline(object):
         )
 
         for edge in out_edges:
-            print(edge[0], "->", edge[1])
             all_edges.append([edge[0], edge[1]])
         G.add_edges_from(all_edges)
 
@@ -129,12 +133,12 @@ class RelionPipeline(object):
         self.files_graph = files_graph
 
     def upstream_critical_path(
-        self, start: PathLike, graph: Optional[nx.DiGraph] = None
+        self, start: str, graph: Optional[nx.DiGraph] = None
     ) -> nx.DiGraph:
         """Return a subgraph tracing a job and all of its upstream parents
 
         Args:
-            start (PathLike): The job or file to start at
+            start (str): The job or file to start at
             graph (Optional[nx.DiGraph]): Which graph to use. If None it uses the main
                 graph
 
@@ -142,18 +146,15 @@ class RelionPipeline(object):
             nx.DiGraph: The subgraph
         """
         graph = self.graph if graph is None else graph
-        startstr = str(start)
-        sub_nodes = nx.ancestors(graph, startstr) | {startstr}
+        sub_nodes = nx.ancestors(graph, start) | {start}
         subgraph = graph.subgraph(sub_nodes).copy()
         return subgraph
 
-    def downstream_critical_path(
-        self, start: PathLike, graph: Optional[nx.DiGraph] = None
-    ):
+    def downstream_critical_path(self, start: str, graph: Optional[nx.DiGraph] = None):
         """Return a subgraph tracing a job and all of its downstream children
 
         Args:
-            start (PathLike): The job or file to start at
+            start (str): The job or file to start at
             graph (Optional[nx.DiGraph]): Which graph to use. If None it uses the main
                 graph
 
@@ -161,10 +162,30 @@ class RelionPipeline(object):
             nx.DiGraph: The subgraph
         """
         graph = self.graph if graph is None else graph
-        startstr = str(start)
-        sub_nodes = nx.descendants(graph, startstr) | {startstr}
+        sub_nodes = nx.descendants(graph, start) | {start}
         subgraph = graph.subgraph(sub_nodes).copy()
         return subgraph
+
+    def last_job_of_type(self, start: str, jobtypes: List[str]) -> List[str]:
+        """Find the most recent job(s) of a specific type in the workflow
+
+        Args:
+            start (str): The job or file to start the search from
+            jobtypes (List[str]): The job type(s) to find
+        """
+        crit_path = self.upstream_critical_path(start)
+        found: List[str] = []
+        count = 0
+        while not found:
+            for node in crit_path:
+                preds = crit_path.predecessors(node)
+                for pred in preds:
+                    if self.graph.nodes[pred].get("relion_type", None) in jobtypes:
+                        found.append(str(pred))
+            count += 1
+            if count == len(list(crit_path.nodes())):
+                break
+        return found
 
 
 def draw_graph(network: nx.DiGraph, outfile: str):

@@ -77,3 +77,13 @@ class PipelineReaderTests(CetsRelionTest):
         )
         assert list(full_crit.nodes()) == JOBS_NODES[1:]
         assert list(full_crit.edges()) == JOBS_EDGES[1:]
+
+    def test_last_job_of_type(self):
+        rp = RelionPipeline(self.test_data / "short_pipeline.star")
+        lj = rp.last_job_of_type("Denoise/job008/", ["relion.ctffind.ctffind4"])
+        assert lj == ["CtfFind/job003/"]
+
+    def test_last_job_of_type_with_multiple_retruls(self):
+        rp = RelionPipeline(self.test_data / "forked_pipeline.star")
+        lj = rp.last_job_of_type("JoinStar/job005/", ["relion.ctffind.ctffind4"])
+        assert lj == ["CtfFind/job003/", "CtfFind/job004/"]
