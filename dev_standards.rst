@@ -83,3 +83,5 @@ These are my personal preferences, we can discuss...
   can have errors and don't strictly conform to the file definition.
 - ``numpy`` and ``scipy``: We will all probably be using these so we should agree on
   specific version.
+- ``mrcfile`` for handling mrcs
+- ``tifffile`` for handling tiffs
