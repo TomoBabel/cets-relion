@@ -63,8 +63,6 @@ Typing
 ------
 
 - All functions should be strictly typed.
-- When file names are used as arguments ``os.PathLike`` should be used
-  rather than ``str``.
 - Empty string defaults should be ``""`` all other empty defaults should be
   ``Optional[<type>]``
 
