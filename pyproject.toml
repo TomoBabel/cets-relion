@@ -37,6 +37,7 @@ dependencies = [
     "networkx",
     "matplotlib",
     "gemmi",
+    "tiffile",
 ]
 
 optional-dependencies.dev = [
@@ -64,5 +65,5 @@ python_version = "3.9"
 warn_unused_configs = true
 
 [[tool.mypy.overrides]]
-module = ["gemmi", "mrcfile"]
+module = ["gemmi", "mrcfile", "tiffile", "networkx", "matplotlib.pyplot"]
 ignore_missing_imports = true

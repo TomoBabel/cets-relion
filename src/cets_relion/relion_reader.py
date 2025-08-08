@@ -189,14 +189,16 @@ class RelionPipeline(object):
                 break
         return found
 
-    def last_file_of_type(
+    def last_upstream_file_of_type(
         self,
         start: str,
         relion_type: List[str],
         file_type: Optional[List[str]] = None,
         kwds: Optional[List[str]] = None,
     ):
-        """Find the most recent files(s) of a specific type in the workflow
+        """Find the most recent files(s) of a specific type in the workflow, working
+        backward from the specified job. May return multiple files EG: if the start job
+        took multiple inputs of the same file type
 
         Args:
             start (str): The job or file to start the search from
@@ -229,6 +231,33 @@ class RelionPipeline(object):
             if found:
                 break
         return found
+
+    def next_downstream_file_of_type(
+        self,
+        start: str,
+        relion_type: str = "",
+        ext: str = "",
+        kwds: Optional[List[str]] = None,
+    ):
+        kwds = [] if not kwds else kwds
+        ds = self.downstream_critical_path(start)
+        found_files = []
+        for node in ds:
+            succesors = ds.successors(node)
+            for succ in [x for x in succesors if ds.nodes[x]["type"] == "file"]:
+                type_match = (
+                    ds.nodes[succ]["relion_type"] == relion_type or not relion_type
+                )
+                ext_match = ds.nodes[succ]["file_type"] == ext or not ext
+                kwds_match = (
+                    all([x in ds.nodes[succ]["kwds"] for x in kwds]) or not kwds
+                )
+                if all([type_match, ext_match, kwds_match]):
+                    found_files.append(succ)
+            if found_files:
+                return found_files
+
+        return found_files
 
 
 def get_sort_key(node_name: str) -> Tuple[int, int]:

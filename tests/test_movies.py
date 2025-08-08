@@ -1,0 +1,133 @@
+import shutil
+import os
+from pathlib import Path
+from pytest import fixture
+from unittest.mock import patch, MagicMock
+from src.cets_relion.movies import RelionMoviesStarFile
+from tests.testing_tools import CetsRelionTest
+from src.models.models import CTFMetadata, MovieFrame, MovieStackSeries, MovieStack
+from src.cets_relion.relion_reader import RelionPipeline
+
+
+@fixture(autouse=True)
+def mock_get_image_size():
+    with patch("src.cets_relion.movies.get_image_dims") as mock:
+        mock.return_value = (2000, 2000, 8)
+        yield mock
+
+
+@fixture(autouse=True)
+def mock_get_ctf_data():
+    with patch("src.cets_relion.movies.RelionCtfStarFile") as MockClass:
+        mock_instance = MagicMock()
+        mock_instance.get_tilt_image_ctf.return_value = CTFMetadata(
+            defocus_u=1111, defocus_v=2222, defocus_angle=33
+        )
+        MockClass.return_value = mock_instance
+        yield mock_instance
+
+
+class RelionCetsMoviesTests(CetsRelionTest):
+    def setup_dirs(self, jobs_to: int = 80):
+        skele = self.test_data / "skeleton_project"
+        shutil.copy(skele / "default_pipeline.star", "default_pipeline.star")
+        jobs = list(skele.glob("*/job*"))
+        jobs.sort(key=lambda x: int(str(x)[-3:]))
+        for n in range(jobs_to):
+            shutil.copytree(jobs[n], jobs[n].relative_to(skele))
+
+    def test_setup_dirs_through_job10(self):
+        self.setup_dirs(10)
+        jobs = Path(os.getcwd()).glob("*/job*")
+        exp = [f"job{n + 1:03d}" for n in range(10)]
+        exp.sort()
+        actual = [str(x).split("/")[-1] for x in jobs]
+        actual.sort()
+        assert exp == actual
+        assert Path("default_pipeline.star").is_file()
+
+    def test_setup_dirs_all(self):
+        self.setup_dirs()
+        jobs = Path(os.getcwd()).glob("*/job*")
+        exp = [f"job{n + 1:03d}" for n in range(80)]
+        exp.sort()
+        actual = [str(x).split("/")[-1] for x in jobs]
+        actual.sort()
+        assert exp == actual
+        assert Path("default_pipeline.star").is_file()
+
+    def test_instantiate_RelionMoviesStarFile(self):
+        self.setup_dirs(3)
+        msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        assert isinstance(msf.pipeline, RelionPipeline)
+        assert msf.movies_file == "Import/job001/tilt_series.star"
+        assert msf.ctf_files == ["CtfFind/job003/tilt_series_ctf.star"]
+
+    def test_get_movies_starfile(self):
+        self.setup_dirs(3)
+        msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        assert msf.get_tilt_movies_starfile("TS_01") == (
+            "Import/job001/tilt_series/TS_01.star"
+        )
+
+    def test_make_movie_cets_for_tilt_series(self):
+        self.setup_dirs(3)
+        msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        result = msf.make_movie_cets_for_tilt_series("TS_01")
+        assert isinstance(result, MovieStackSeries)
+        assert len(result.stacks) == 41
+        assert result.stacks[0].path == "frames/TS_01_000_0.0.mrc"
+        assert isinstance(result.stacks[0], MovieStack)
+        assert len(result.stacks[0].images) == 8
+        assert result.stacks[0].images[0] == MovieFrame(
+            accumulated_dose=0.375,
+            coordinate_systems=None,
+            coordinate_transformations=None,
+            ctf_metadata=CTFMetadata(
+                defocus_u=1111.0,
+                defocus_v=2222.0,
+                defocus_angle=33.0,
+            ),
+            height=2000,
+            nominal_tilt_angle=0.001,
+            path="00001@frames/TS_01_000_0.0.mrc",
+            section="0",
+            width=2000,
+        )
+        assert result.stacks[0].images[-1] == MovieFrame(
+            accumulated_dose=3.0,
+            coordinate_systems=None,
+            coordinate_transformations=None,
+            ctf_metadata=CTFMetadata(
+                defocus_u=1111.0,
+                defocus_v=2222.0,
+                defocus_angle=33.0,
+            ),
+            height=2000,
+            nominal_tilt_angle=0.001,
+            path="00008@frames/TS_01_000_0.0.mrc",
+            section="7",
+            width=2000,
+        )
+        assert result.stacks[-1].images[-1] == MovieFrame(
+            accumulated_dose=123.0,
+            coordinate_systems=None,
+            coordinate_transformations=None,
+            ctf_metadata=CTFMetadata(
+                defocus_u=1111.0,
+                defocus_v=2222.0,
+                defocus_angle=33.0,
+            ),
+            height=2000,
+            nominal_tilt_angle=60.0006,
+            path="00008@frames/TS_01_040_60.0.mrc",
+            section="7",
+            width=2000,
+        )
+
+    def test_get_all_movies_stack_series(self):
+        self.setup_dirs(3)
+        msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        result = msf.get_all_movies_stack_series()
+        assert len(result) == 5
+        assert all([isinstance(x, MovieStackSeries) for x in result])
