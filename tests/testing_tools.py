@@ -20,3 +20,11 @@ class CetsRelionTest(unittest.TestCase):
         os.chdir(self._orig_dir)
         if self.test_dir.is_dir():
             shutil.rmtree(self.test_dir)
+
+    def setup_dirs(self, jobs_to: int = 80):
+        skele = self.test_data / "skeleton_project"
+        shutil.copy(skele / "default_pipeline.star", "default_pipeline.star")
+        jobs = list(skele.glob("*/job*"))
+        jobs.sort(key=lambda x: int(str(x)[-3:]))
+        for n in range(jobs_to):
+            shutil.copytree(jobs[n], jobs[n].relative_to(skele))

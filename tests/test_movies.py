@@ -1,6 +1,3 @@
-import shutil
-import os
-from pathlib import Path
 from pytest import fixture
 from unittest.mock import patch, MagicMock
 from src.cets_relion.movies import RelionMoviesStarFile
@@ -28,34 +25,6 @@ def mock_get_ctf_data():
 
 
 class RelionCetsMoviesTests(CetsRelionTest):
-    def setup_dirs(self, jobs_to: int = 80):
-        skele = self.test_data / "skeleton_project"
-        shutil.copy(skele / "default_pipeline.star", "default_pipeline.star")
-        jobs = list(skele.glob("*/job*"))
-        jobs.sort(key=lambda x: int(str(x)[-3:]))
-        for n in range(jobs_to):
-            shutil.copytree(jobs[n], jobs[n].relative_to(skele))
-
-    def test_setup_dirs_through_job10(self):
-        self.setup_dirs(10)
-        jobs = Path(os.getcwd()).glob("*/job*")
-        exp = [f"job{n + 1:03d}" for n in range(10)]
-        exp.sort()
-        actual = [str(x).split("/")[-1] for x in jobs]
-        actual.sort()
-        assert exp == actual
-        assert Path("default_pipeline.star").is_file()
-
-    def test_setup_dirs_all(self):
-        self.setup_dirs()
-        jobs = Path(os.getcwd()).glob("*/job*")
-        exp = [f"job{n + 1:03d}" for n in range(80)]
-        exp.sort()
-        actual = [str(x).split("/")[-1] for x in jobs]
-        actual.sort()
-        assert exp == actual
-        assert Path("default_pipeline.star").is_file()
-
     def test_instantiate_RelionMoviesStarFile(self):
         self.setup_dirs(3)
         msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
