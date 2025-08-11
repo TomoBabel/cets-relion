@@ -1,9 +1,19 @@
+import warnings
 from typing import List, Optional
 from gemmi import cif
 from src.cets_relion.relion_reader import RelionPipeline
-from src.models.models import MovieStack, MovieFrame, MovieStackSeries, CTFMetadata
+from src.models.models import (
+    MovieStack,
+    MovieFrame,
+    MovieStackSeries,
+    CTFMetadata,
+    MovieStackCollection,
+    DefectFile,
+    GainFile,
+)
 from src.cets_relion.utils import get_image_dims
 from src.cets_relion.ctf import RelionCtfStarFile
+from src.cets_relion.motion_corr import RelionMotionCorrStarFile
 
 
 class RelionMoviesStarFile(object):
@@ -25,6 +35,7 @@ class RelionMoviesStarFile(object):
         movies_file: str,
         pipeline: str = "default_pipeline.star",
         ctf_files: Optional[List[str]] = None,
+        mocorr_files: Optional[List[str]] = None,
     ) -> None:
         """Instantiate a RelionMoviesStarFile
 
@@ -33,12 +44,18 @@ class RelionMoviesStarFile(object):
             the movies
         pipeline (str): Relative path to the pipeline file. Almost always
             default_pipeline.star
-        ctf_files (Optional[List[str]]): A list of paths to files that provide information about
-            the CTF of the movies.  If the object is being instantiated starting at the
-            movies file this will be automatically determined and should be None.  If
-            the object is being created whilst tracing backward from a downstream file
-            this should be provided to make sure the correct ctf jobs are used.
-
+        ctf_files (Optional[List[str]]): A list of paths to files that provide
+            information about the CTF of the movies.  If the object is being
+            instantiated starting at the movies file this will be automatically
+            determined and should be None.  If the object is being created whilst
+            tracing backward from a downstream file this should be provided to make
+            sure the correct ctf jobs are used in the case of a forked workflow.
+        mocorr_files (Optional[List[str]]): A list of paths to files that provide
+            information about the motion correction of the movies.  If the object is
+            being instantiated starting at the movies file this will be automatically
+            determined and should be None.  If the object is being created whilst
+            tracing backward from a downstream file this should be provided to make
+            sure the correct motioncorr jobs are used in the case of a forked workflow.
         """
         self.pipeline = RelionPipeline(pipeline)
         self.movies_file = movies_file
@@ -46,7 +63,15 @@ class RelionMoviesStarFile(object):
             ctf_files = self.pipeline.next_downstream_file_of_type(
                 start=movies_file, relion_type="TomogramGroupMetadata", kwds=["ctffind"]
             )
-        self.ctf_files: List[str] = ctf_files
+        self.ctf_files = ctf_files
+
+        if mocorr_files is None:
+            mocorr_files = self.pipeline.next_downstream_file_of_type(
+                start=movies_file,
+                relion_type="TomogramGroupMetadata",
+                kwds=["motioncorr"],
+            )
+        self.mocorr_files = mocorr_files
 
     def get_tilt_movies_starfile(self, ts_name: str):
         """Get the starfile that contains info about movies for a specific tilt series
@@ -134,7 +159,7 @@ class RelionMoviesStarFile(object):
         # return a CETS MovieStackSeries for the tilt series
         return MovieStackSeries(stacks=movie_stacks)
 
-    def get_all_movies_stack_series(self):
+    def get_all_movies_stack_series(self) -> MovieStackCollection:
         """Get CETS MovieStackSeries for every tilt series in the file
 
         Returns:
@@ -145,4 +170,53 @@ class RelionMoviesStarFile(object):
             .sole_block()
             .find(prefix="_rln", tags=["TomoName"])
         )
-        return [self.make_movie_cets_for_tilt_series(x[0]) for x in all_tilt_series]
+        ts_names = [x[0] for x in all_tilt_series]
+
+        # find the gain ref and defect files
+        # assumes all tilt series have the same gain and defect files
+        # probably true but, might be an issue if multiple collections were combined
+        # gain and defect files should be moved one level up into MovieStackSeries
+
+        defect_files, gain_files = [], []
+        for mc_file in self.mocorr_files:
+            motioncorr = RelionMotionCorrStarFile(mc_file)
+            for ts_name in ts_names:
+                if motioncorr.tilt_series_in_file(ts_name):
+                    defect_files.append(motioncorr.get_defect_file())
+                    gain_files.append(motioncorr.get_gain_file())
+
+        # get DefectFile
+        if len(defect_files) > 1:
+            warnings.warn("More than one defect file found. Using last one")
+        if defect_files:
+            dff = defect_files[0]
+            if dff not in ("''", '""'):
+                defect_file = DefectFile(
+                    path=dff,
+                    width=get_image_dims(dff)[0],
+                    height=get_image_dims(dff)[1],
+                )
+            else:
+                defect_file = None
+        else:
+            defect_file = None
+
+        # get GainFile
+        if len(gain_files) > 1:
+            warnings.warn("More than one gain file found. Using last one")
+        if gain_files:
+            gf = gain_files[0]
+            if gf not in ("''", '""'):
+                gain_file = GainFile(
+                    path=gf, width=get_image_dims(gf)[0], height=get_image_dims(gf)[1]
+                )
+            else:
+                gain_file = None
+        else:
+            gain_file = None
+
+        return MovieStackCollection(
+            movie_stacks=[self.make_movie_cets_for_tilt_series(x) for x in ts_names],
+            gain_file=gain_file,
+            defect_file=defect_file,
+        )

@@ -2,7 +2,14 @@ from pytest import fixture
 from unittest.mock import patch, MagicMock
 from src.cets_relion.movies import RelionMoviesStarFile
 from tests.testing_tools import CetsRelionTest
-from src.models.models import CTFMetadata, MovieFrame, MovieStackSeries, MovieStack
+from src.models.models import (
+    CTFMetadata,
+    MovieFrame,
+    MovieStackSeries,
+    MovieStack,
+    MovieStackCollection,
+    GainFile,
+)
 from src.cets_relion.relion_reader import RelionPipeline
 
 
@@ -30,6 +37,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
         msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
         assert isinstance(msf.pipeline, RelionPipeline)
         assert msf.movies_file == "Import/job001/tilt_series.star"
+        assert msf.mocorr_files == ["MotionCorr/job002/corrected_tilt_series.star"]
         assert msf.ctf_files == ["CtfFind/job003/tilt_series_ctf.star"]
 
     def test_get_movies_starfile(self):
@@ -98,8 +106,11 @@ class RelionCetsMoviesTests(CetsRelionTest):
         self.setup_dirs(3)
         msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
         result = msf.get_all_movies_stack_series()
-        assert len(result) == 5
-        assert all([isinstance(x, MovieStackSeries) for x in result])
+        assert isinstance(result, MovieStackCollection)
+        assert len(result.movie_stacks) == 5
+        assert result.defect_file is None
+        assert isinstance(result.gain_file, GainFile)
+        assert result.gain_file.path == "gain_reference.mrc"
 
     def test_make_movie_cets_for_tilt_series_no_ctf_available(self):
         self.setup_dirs(1, pipeline="single_import_pipeline.star")

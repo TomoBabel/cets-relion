@@ -940,10 +940,10 @@ class MovieStackCollection(ConfiguredBaseModel):
     movie_stacks: Optional[list[MovieStackSeries]] = Field(
         default=None, description="""The movie stacks in the collection"""
     )
-    DetectorGainFile: Optional[GainFile] = Field(
+    gain_file: Optional[GainFile] = Field(
         default=None, description="""The gain file for the movie stacks"""
     )
-    DetectorDefectFile: Optional[DefectFile] = Field(
+    defect_file: Optional[DefectFile] = Field(
         default=None, description="""The defect file for the movie stacks"""
     )
 

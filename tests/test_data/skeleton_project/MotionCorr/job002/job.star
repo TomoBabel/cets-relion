@@ -24,7 +24,7 @@ do_own_motioncor        Yes
 do_save_ps        Yes 
 eer_grouping         32 
  fn_defect         "" 
-fn_gain_ref         "" 
+fn_gain_ref         gain_reference.mrc
 fn_motioncor2_exe /public/EM/MOTIONCOR2/MotionCor2 
  gain_flip "No flipping (0)" 
   gain_rot "No rotation (0)" 

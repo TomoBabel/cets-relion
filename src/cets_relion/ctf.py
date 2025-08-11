@@ -4,11 +4,12 @@ from gemmi import cif
 from logging import getLogger
 from src.cets_relion.relion_reader import RelionPipeline
 from src.models.models import CTFMetadata
+from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
 
 logger = getLogger(__name__)
 
 
-class RelionCtfStarFile(object):
+class RelionCtfStarFile(RelionTiltSeriesStarfile):
     """Object for handling the output file from a CtfFind job
 
     Attrs:
@@ -16,26 +17,7 @@ class RelionCtfStarFile(object):
     """
 
     def __init__(self, file_name: str) -> None:
-        self.name = file_name
-
-    def get_tilt_series_ctf_file(self, ts_name: str) -> str:
-        """Get the path of star file containing ctfinfo tilt series images
-
-        Args:
-            ts_name (str): The tilt series name
-
-        Returns:
-            str: Path of the starfile for that individual tilt series images
-        """
-        cifdata = (
-            cif.read_file(self.name)
-            .sole_block()
-            .find(prefix="_rln", tags=["TomoName", "TomoTiltSeriesStarFile"])
-        )
-        for line in cifdata:
-            if line[0] == ts_name:
-                return line[1]
-        return ""
+        super().__init__(file_name=file_name)
 
     def get_tilt_image_ctf(self, image_name: str) -> Optional[CTFMetadata]:
         """Get CTF  info for a tilt image from a tilt series
@@ -47,7 +29,7 @@ class RelionCtfStarFile(object):
             Optional[CTFMetadata]: CETS CTFMetadata object or None if tilt image not found
         """
         # read the starfile
-        tsstar = cif.read_file(self.get_tilt_series_ctf_file(image_name))
+        tsstar = cif.read_file(self.get_tilt_series_star_file(image_name))
         data_block = tsstar.find_block("global")
         data = data_block.find(
             prefix="_rln",
@@ -64,7 +46,7 @@ class RelionCtfStarFile(object):
         return CTFMetadata(defocus_u=vals[0], defocus_v=vals[1], defocus_angle=vals[2])
 
 
-def get_tilt_series_main_starfile(
+def get_tilt_series_main_ctf_starfile(
     file_name: str, ts_name: str, pipeline_name: str = "default_pipeline.star"
 ) -> str:
     """
@@ -74,7 +56,7 @@ def get_tilt_series_main_starfile(
     Args:
          file_name (str): The file to start the search backward from
          ts_name (str): Name of the tilt series
-         pipeliner_name(str): Name of the pipeline file
+         pipeline_name(str): Name of the pipeline file
 
     Returns:
         str: Path of the global results file from the appropriate CtfFind job
@@ -89,7 +71,7 @@ def get_tilt_series_main_starfile(
     # get the tomogram file(s)
     tomo_starfile = []
     for ctf_file in ctf_files:
-        ts_file = RelionCtfStarFile(ctf_file).get_tilt_series_ctf_file(ts_name=ts_name)
+        ts_file = RelionCtfStarFile(ctf_file).get_tilt_series_star_file(ts_name=ts_name)
         if ts_file:
             tomo_starfile.append(ts_file)
 
