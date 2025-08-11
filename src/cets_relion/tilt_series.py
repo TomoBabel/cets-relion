@@ -10,9 +10,10 @@ from gemmi import cif
 class RelionTiltSeriesStarfile(object):
     """Class for handling a global tilt series data file from RELION
 
-    will probably be subclassed for job-specific variants of this type of file
 
-    Many jobs create this type of file, this object shoudl enable tracing back to the
+    can be subclassed for job-specific variants of this type of file
+
+    Many jobs create this type of file, this object should enable tracing back to the
     original movies and making the necessary objects
     """
 

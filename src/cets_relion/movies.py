@@ -186,32 +186,28 @@ class RelionMoviesStarFile(object):
                     gain_files.append(motioncorr.get_gain_file())
 
         # get DefectFile
-        if len(defect_files) > 1:
-            warnings.warn("More than one defect file found. Using last one")
-        if defect_files:
-            dff = defect_files[0]
-            if dff not in ("''", '""'):
-                defect_file = DefectFile(
-                    path=dff,
-                    width=get_image_dims(dff)[0],
-                    height=get_image_dims(dff)[1],
-                )
-            else:
-                defect_file = None
+        clean_gain_files = [x for x in gain_files if x is not None]
+        clean_defect_files = [x for x in defect_files if x is not None]
+        if len(set(clean_defect_files)) > 1:
+            warnings.warn("More than one defect file found. Using last valid one")
+        if defect_files:  # ignore type can
+            dff = clean_defect_files[0]
+            defect_file = DefectFile(
+                path=dff,
+                width=get_image_dims(dff)[0],
+                height=get_image_dims(dff)[1],
+            )
         else:
             defect_file = None
 
         # get GainFile
-        if len(gain_files) > 1:
+        if len(set(clean_gain_files)) > 1:
             warnings.warn("More than one gain file found. Using last one")
         if gain_files:
-            gf = gain_files[0]
-            if gf not in ("''", '""'):
-                gain_file = GainFile(
-                    path=gf, width=get_image_dims(gf)[0], height=get_image_dims(gf)[1]
-                )
-            else:
-                gain_file = None
+            gf = clean_gain_files[0]
+            gain_file = GainFile(
+                path=gf, width=get_image_dims(gf)[0], height=get_image_dims(gf)[1]
+            )
         else:
             gain_file = None
 
