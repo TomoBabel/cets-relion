@@ -27,9 +27,9 @@ class RelionTiltSeriesStarfile(object):
         import_files = []
         for unode in upstream.nodes:
             if (
-                upstream.nodes[unode]["relion_type"] == "TomogramGroupMetadata"
-                and upstream.nodes[unode]["file_type"] == "star"
-                and "import" in upstream.nodes[unode]["kwds"]
+                upstream.nodes[unode].get("relion_type") == "TomogramGroupMetadata"
+                and upstream.nodes[unode].get("file_type") == "star"
+                and "import" in upstream.nodes[unode].get("kwds")
             ):
                 import_files.append(unode)
         raw_data_files: List[Union[RelionMoviesStarFile, RelionTiltSeriesStarfile]] = []

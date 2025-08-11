@@ -11,9 +11,17 @@ class TiltSeriesStarTest(CetsRelionTest):
         assert tssf.name == "MotionCorr/job002/corrected_tilt_series.star"
         assert isinstance(tssf.pipeline, RelionPipeline)
 
-    def test_get_raw_data_movies(self):
+    def test_get_raw_data_movies_from_motioncorr(self):
         self.setup_dirs(2)
         tssf = RelionTiltSeriesStarfile("MotionCorr/job002/corrected_tilt_series.star")
+        result = tssf.get_raw_files()
+        assert len(result) == 1
+        assert isinstance(result[0], RelionMoviesStarFile)
+        assert result[0].movies_file == "Import/job001/tilt_series.star"
+
+    def test_get_raw_data_movies_from_refine(self):
+        self.setup_dirs(74)
+        tssf = RelionTiltSeriesStarfile("Refine3D/job074/run_data.star")
         result = tssf.get_raw_files()
         assert len(result) == 1
         assert isinstance(result[0], RelionMoviesStarFile)
