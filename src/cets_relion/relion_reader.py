@@ -82,29 +82,31 @@ class RelionPipeline(object):
         all_edges = []
 
         inputs_block = self.data.find_block(PIPELINE_BLOCK.inputs)
-        in_edges = inputs_block.find(
-            prefix="_rlnPipeLine", tags=["EdgeFromNode", "EdgeProcess"]
-        )
-
-        for edge in in_edges:
-            parent_proc = str(Path(edge[0]).parent) + "/"
-            child_proc = edge[1]
-            all_edges.extend(
-                [
-                    [parent_proc, edge[0]],
-                    [edge[0], child_proc],
-                ]
+        if inputs_block:
+            in_edges = inputs_block.find(
+                prefix="_rlnPipeLine", tags=["EdgeFromNode", "EdgeProcess"]
             )
 
+            for edge in in_edges:
+                parent_proc = str(Path(edge[0]).parent) + "/"
+                child_proc = edge[1]
+                all_edges.extend(
+                    [
+                        [parent_proc, edge[0]],
+                        [edge[0], child_proc],
+                    ]
+                )
+
         outputs_block = self.data.find_block(PIPELINE_BLOCK.outputs)
-        out_edges = outputs_block.find(
-            prefix="_rlnPipeLine", tags=["EdgeProcess", "EdgeToNode"]
-        )
+        if outputs_block:
+            out_edges = outputs_block.find(
+                prefix="_rlnPipeLine", tags=["EdgeProcess", "EdgeToNode"]
+            )
 
-        for edge in out_edges:
-            all_edges.append([edge[0], edge[1]])
+            for edge in out_edges:
+                all_edges.append([edge[0], edge[1]])
+
         G.add_edges_from(all_edges)
-
         self.graph = G
 
         # add the edges to jobs graph

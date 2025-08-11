@@ -1,6 +1,7 @@
-from typing import Tuple
+from typing import Tuple, Dict
 import mrcfile
 import tifffile
+from gemmi import cif
 
 
 def get_mrc_dims(in_mrc: str) -> Tuple[int, int, int]:
@@ -48,3 +49,14 @@ def get_image_dims(in_img: str) -> Tuple[int, int, int]:
             return get_tiff_dims(in_img)
         except Exception:
             raise ValueError("File is not valid mrc or tiff format")
+
+
+def joboptions_from_jobstar_file(jobstar_file: str) -> Dict[str, str]:
+    jobop_block = cif.read_file(jobstar_file).find_block("joboptions_values")
+    return dict(
+        list(
+            jobop_block.find(
+                prefix="_rln", tags=["JobOptionVariable", "JobOptionValue"]
+            )
+        )
+    )

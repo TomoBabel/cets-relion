@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import List, Union
 from pathlib import Path
-from gemmi import cif
 from src.cets_relion.relion_reader import RelionPipeline
 from src.cets_relion.movies import RelionMoviesStarFile
+from src.cets_relion.utils import joboptions_from_jobstar_file
 
 
 class RelionTiltSeriesStarfile(object):
@@ -39,14 +39,7 @@ class RelionTiltSeriesStarfile(object):
 
             # determine if was import of movies or merged tomos
             jobfile = str(Path(importjob) / "job.star")
-            jobop_block = cif.read_file(jobfile).find_block("joboptions_values")
-            jobops = dict(
-                list(
-                    jobop_block.find(
-                        prefix="_rln", tags=["JobOptionVariable", "JobOptionValue"]
-                    )
-                )
-            )
+            jobops = joboptions_from_jobstar_file(jobfile)
             if jobops["images_are_motion_corrected"] == "No":
                 raw_data_files.append(RelionMoviesStarFile(file))
             else:

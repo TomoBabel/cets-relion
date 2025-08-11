@@ -100,3 +100,46 @@ class RelionCetsMoviesTests(CetsRelionTest):
         result = msf.get_all_movies_stack_series()
         assert len(result) == 5
         assert all([isinstance(x, MovieStackSeries) for x in result])
+
+    def test_make_movie_cets_for_tilt_series_no_ctf_available(self):
+        self.setup_dirs(1, pipeline="single_import_pipeline.star")
+        msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        result = msf.make_movie_cets_for_tilt_series("TS_01")
+        assert isinstance(result, MovieStackSeries)
+        assert len(result.stacks) == 41
+        assert result.stacks[0].path == "frames/TS_01_000_0.0.mrc"
+        assert isinstance(result.stacks[0], MovieStack)
+        assert len(result.stacks[0].images) == 8
+        assert result.stacks[0].images[0] == MovieFrame(
+            accumulated_dose=0.375,
+            coordinate_systems=None,
+            coordinate_transformations=None,
+            ctf_metadata=None,
+            height=2000,
+            nominal_tilt_angle=0.001,
+            path="00001@frames/TS_01_000_0.0.mrc",
+            section="0",
+            width=2000,
+        )
+        assert result.stacks[0].images[-1] == MovieFrame(
+            accumulated_dose=3.0,
+            coordinate_systems=None,
+            coordinate_transformations=None,
+            ctf_metadata=None,
+            height=2000,
+            nominal_tilt_angle=0.001,
+            path="00008@frames/TS_01_000_0.0.mrc",
+            section="7",
+            width=2000,
+        )
+        assert result.stacks[-1].images[-1] == MovieFrame(
+            accumulated_dose=123.0,
+            coordinate_systems=None,
+            coordinate_transformations=None,
+            ctf_metadata=None,
+            height=2000,
+            nominal_tilt_angle=60.0006,
+            path="00008@frames/TS_01_040_60.0.mrc",
+            section="7",
+            width=2000,
+        )

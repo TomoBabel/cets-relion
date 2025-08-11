@@ -94,14 +94,14 @@ class PipelineReaderTests(CetsRelionTest):
         ]
 
     def test_last_file_of_type_just_type(self):
-        rp = RelionPipeline(self.test_data / "skeleton_project/default_pipeline.star")
+        rp = RelionPipeline(self.test_data / "pipelines/default_pipeline.star")
         lf = rp.last_upstream_file_of_type(
             start="ModelAngelo/job080/", relion_type=["TomogramGroupMetadata"]
         )
         assert lf == ["Polish/job070/tomograms.star"]
 
     def test_last_file_of_type_with_kwds(self):
-        rp = RelionPipeline(self.test_data / "skeleton_project/default_pipeline.star")
+        rp = RelionPipeline(self.test_data / "pipelines/default_pipeline.star")
         lf = rp.last_upstream_file_of_type(
             start="ModelAngelo/job080/",
             relion_type=["TomogramGroupMetadata"],
