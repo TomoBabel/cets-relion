@@ -159,7 +159,7 @@ class RelionMoviesStarFile(object):
         # return a CETS MovieStackSeries for the tilt series
         return MovieStackSeries(stacks=movie_stacks)
 
-    def get_all_movies_stack_series(self) -> MovieStackCollection:
+    def get_all_movies_stack_series(self) -> List[MovieStackCollection]:
         """Get CETS MovieStackSeries for every tilt series in the file
 
         Returns:
@@ -211,8 +211,14 @@ class RelionMoviesStarFile(object):
         else:
             gain_file = None
 
-        return MovieStackCollection(
-            movie_stacks=[self.make_movie_cets_for_tilt_series(x) for x in ts_names],
-            gain_file=gain_file,
-            defect_file=defect_file,
-        )
+        movie_stack_collections = []
+        for moviestack in [self.make_movie_cets_for_tilt_series(x) for x in ts_names]:
+            movie_stack_collections.append(
+                MovieStackCollection(
+                    movie_stacks=[moviestack],
+                    gain_file=gain_file,
+                    defect_file=defect_file,
+                )
+            )
+
+        return movie_stack_collections

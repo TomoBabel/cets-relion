@@ -106,11 +106,11 @@ class RelionCetsMoviesTests(CetsRelionTest):
         self.setup_dirs(3)
         msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
         result = msf.get_all_movies_stack_series()
-        assert isinstance(result, MovieStackCollection)
-        assert len(result.movie_stacks) == 5
-        assert result.defect_file is None
-        assert isinstance(result.gain_file, GainFile)
-        assert result.gain_file.path == "gain_reference.mrc"
+        assert all([isinstance(x, MovieStackCollection) for x in result])
+        assert len(result) == 5
+        assert result[0].defect_file is None
+        assert isinstance(result[0].gain_file, GainFile)
+        assert result[0].gain_file.path == "gain_reference.mrc"
 
     def test_make_movie_cets_for_tilt_series_no_ctf_available(self):
         self.setup_dirs(1, pipeline="single_import_pipeline.star")
