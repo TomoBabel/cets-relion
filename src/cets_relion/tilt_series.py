@@ -82,3 +82,89 @@ class RelionTiltSeriesStarfile(object):
             if line[0] == ts_name:
                 return line[1]
         return ""
+
+    def find_tomograms_in_self(self, ts_name: str) -> List[str]:
+        """
+        Find a tomograms that have been generated from this tilt series by upstream or
+        down stream jobs.
+
+        ts_name (str): Name of the tomogram/tilt series EG: TS_01
+
+        Returns:
+              List[str]: Path(s) to the tomogram(s), relative to the project
+        """
+
+        # fist look in this file itself, only valid for TomoReconstruct jobs
+        # which aren't used for much in relion
+        data = cif.read_file(self.name).sole_block()
+        tomos = data.find(
+            prefix="_rln", tags=["TomoName", "TomoReconstructedTomogramDenoised"]
+        )
+        tomo = dict(list(tomos)).get(ts_name)
+        if tomo is not None:
+            return [tomo]
+        else:
+            return []
+
+    def find_tomograms_in_other_jobs(self, ts_name: str) -> List[str]:
+        # next search upstream for reconstruction jobs that might have generated tomos
+        upstream = self.pipeline.upstream_critical_path(start=self.name)
+        tomo_files, found_tomos = [], []
+        reconstruct_jobs = [
+            x
+            for x in upstream
+            if upstream.nodes[x]["relion_type"] == "relion.denoisetomo"
+        ]
+        if reconstruct_jobs:
+            for rec_job in reconstruct_jobs:
+                tomo_files.extend(
+                    self.pipeline.next_downstream_file_of_type(
+                        start=rec_job,
+                        relion_type="TomogramGroupMetadata",
+                        kwds=["denoise"],
+                    )
+                )
+        for tomo_file in tomo_files:
+            tf = RelionTiltSeriesStarfile(tomo_file)
+            tomo = tf.find_tomograms_in_self(ts_name)
+            if tomo:
+                found_tomos.extend(tomo)
+
+        # next search downstream for reconstruction jobs that might have generated tomos
+        downstream = self.pipeline.downstream_critical_path(start=self.name)
+        reconstruct_jobs = [
+            x
+            for x in downstream
+            if downstream.nodes[x]["relion_type"] == "relion.denoisetomo"
+        ]
+        if reconstruct_jobs:
+            for rec_job in reconstruct_jobs:
+                tomo_files.extend(
+                    self.pipeline.next_downstream_file_of_type(
+                        start=rec_job,
+                        relion_type="TomogramGroupMetadata",
+                        kwds=["denoise"],
+                    )
+                )
+
+        for f in tomo_files:
+            found_tomos.extend(
+                RelionTiltSeriesStarfile(f).find_tomograms_in_self(ts_name)
+            )
+        return found_tomos
+
+    def find_tomgrams(self, ts_name: str) -> List[str]:
+        """
+        Find any tomograms that have been generated from this tilt series
+
+        ts_name (str): Name of the tomogram/tilt series EG: TS_01
+
+        Returns:
+              List[str]: Path(s) to the tomogram(s), relative to the project. If the job
+              itself generated tomos those are returned otherwise tomos derived from
+              other jobs are returned if they are present
+        """
+        from_self = self.find_tomograms_in_self(ts_name)
+        if from_self:
+            return from_self
+        return self.find_tomograms_in_other_jobs(ts_name)

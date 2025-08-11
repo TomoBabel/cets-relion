@@ -240,10 +240,10 @@ class RelionPipeline(object):
         relion_type: str = "",
         ext: str = "",
         kwds: Optional[List[str]] = None,
-    ):
+    ) -> List[str]:
         kwds = [] if not kwds else kwds
         ds = self.downstream_critical_path(start)
-        found_files = []
+        found_files: List[str] = []
         for node in ds:
             succesors = ds.successors(node)
             for succ in [x for x in succesors if ds.nodes[x]["type"] == "file"]:

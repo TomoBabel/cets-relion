@@ -190,7 +190,7 @@ class RelionMoviesStarFile(object):
         clean_defect_files = [x for x in defect_files if x is not None]
         if len(set(clean_defect_files)) > 1:
             warnings.warn("More than one defect file found. Using last valid one")
-        if defect_files:  # ignore type can
+        if clean_defect_files:  # ignore type can
             dff = clean_defect_files[0]
             defect_file = DefectFile(
                 path=dff,
@@ -203,7 +203,7 @@ class RelionMoviesStarFile(object):
         # get GainFile
         if len(set(clean_gain_files)) > 1:
             warnings.warn("More than one gain file found. Using last one")
-        if gain_files:
+        if clean_gain_files:
             gf = clean_gain_files[0]
             gain_file = GainFile(
                 path=gf, width=get_image_dims(gf)[0], height=get_image_dims(gf)[1]
