@@ -1,7 +1,7 @@
 from typing import Tuple, Dict
 import mrcfile
+import tifffile
 from gemmi import cif
-from tifffile import TiffFile
 
 
 def get_mrc_dims(in_mrc: str) -> Tuple[int, int, int]:
@@ -26,7 +26,7 @@ def get_tiff_dims(in_tiff: str) -> Tuple[int, int, int]:
         tuple: (int,int,int) x,y,z size in pixels
 
     """
-    with TiffFile(in_tiff) as tif:
+    with tifffile.TiffFile(in_tiff) as tif:
         page = tif.pages[0]
         height, width = page.shape
         return width, height, len(tif.pages)
