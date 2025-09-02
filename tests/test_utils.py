@@ -1,4 +1,3 @@
-from tests.testing_tools import CetsRelionTest
 from src.cets_relion.utils import (
     get_job_name,
     joboptions_from_jobstar_file,
@@ -7,6 +6,7 @@ from src.cets_relion.utils import (
     get_image_dims,
     get_job_number,
 )
+from tests.testing_tools import CetsRelionTest
 
 
 class UtilsTests(CetsRelionTest):

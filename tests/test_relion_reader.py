@@ -1,5 +1,4 @@
 from src.cets_relion.relion_reader import RelionPipeline
-from tests.testing_tools import CetsRelionTest
 from tests.test_data.pipelines.short_pipeline_networks import (
     FULL_EDGES,
     FULL_NODES,
@@ -16,6 +15,7 @@ from tests.test_data.pipelines.short_pipeline_networks import (
     DOWNSTREAM_CRIT_FILES_EDGES,
     UPSTREAM_JOBS_CRIT_EDGES,
 )
+from tests.testing_tools import CetsRelionTest
 
 
 class PipelineReaderTests(CetsRelionTest):

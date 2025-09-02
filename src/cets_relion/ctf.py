@@ -1,9 +1,11 @@
-from typing import Optional, Union
 import os
-from gemmi import cif
 from logging import getLogger
-from src.models.models import CTFMetadata
+from typing import Optional, Union
+
+from gemmi import cif
+
 from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
+from src.models.models import CTFMetadata
 
 logger = getLogger(__name__)
 

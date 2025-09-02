@@ -1,7 +1,9 @@
-from pytest import fixture
 from unittest.mock import patch, MagicMock
+
+from pytest import fixture
+
 from src.cets_relion.movies import RelionMoviesStarFile
-from tests.testing_tools import CetsRelionTest
+from src.cets_relion.relion_reader import RelionPipeline
 from src.models.models import (
     CTFMetadata,
     MovieFrame,
@@ -10,7 +12,7 @@ from src.models.models import (
     MovieStackCollection,
     GainFile,
 )
-from src.cets_relion.relion_reader import RelionPipeline
+from tests.testing_tools import CetsRelionTest
 
 
 @fixture(autouse=True)

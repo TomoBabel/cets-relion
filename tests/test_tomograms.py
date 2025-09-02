@@ -1,8 +1,18 @@
-from tests.testing_tools import CetsRelionTest
 from src.cets_relion.tomograms import RelionTomosStarfile
+from tests.testing_tools import CetsRelionTest
+from src.cets_relion.relion_reader import RelionPipeline
+from pathlib import Path
 
 
 class TomogramsTests(CetsRelionTest):
+    def test_instantiate_subtomos_object(self):
+        self.setup_dirs(jobs_to=10)
+        tomos = RelionTomosStarfile(file_name="Tomograms/job006/tomograms.star")
+        assert tomos.name == "Tomograms/job006/tomograms.star"
+        assert isinstance(tomos.file, Path)
+        assert str(tomos.file) == "Tomograms/job006/tomograms.star"
+        assert isinstance(tomos.pipeline, RelionPipeline)
+
     def test_get_tomogram_halfset(self):
         self.setup_dirs(jobs_to=6)
         tomos = RelionTomosStarfile(file_name="Tomograms/job006/tomograms.star")

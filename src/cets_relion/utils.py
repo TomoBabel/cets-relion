@@ -1,10 +1,11 @@
 import os
+import re
+from pathlib import Path
 from typing import Tuple, Dict, Union
+
 import mrcfile
 import tifffile
 from gemmi import cif
-from pathlib import Path
-import re
 
 
 def get_mrc_dims(in_mrc: Union[str, os.PathLike]) -> Tuple[int, int, int]:

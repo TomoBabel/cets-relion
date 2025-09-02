@@ -1,8 +1,13 @@
-import warnings
 import os
+import warnings
 from typing import List, Optional, Union
+
 from gemmi import cif
+
+from src.cets_relion.ctf import RelionCtfStarFile
+from src.cets_relion.motion_corr import RelionMotionCorrStarFile
 from src.cets_relion.relion_reader import RelionPipeline
+from src.cets_relion.utils import get_image_dims
 from src.models.models import (
     MovieStack,
     MovieFrame,
@@ -12,9 +17,6 @@ from src.models.models import (
     DefectFile,
     GainFile,
 )
-from src.cets_relion.utils import get_image_dims
-from src.cets_relion.ctf import RelionCtfStarFile
-from src.cets_relion.motion_corr import RelionMotionCorrStarFile
 
 
 class RelionMoviesStarFile(object):

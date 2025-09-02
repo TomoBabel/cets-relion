@@ -1,10 +1,13 @@
 from __future__ import annotations
+
 import os
-from src.models.models import Tomogram
-from typing import Tuple, Optional, Union
-from src.cets_relion.relion_reader import RelionPipeline
-from gemmi import cif
 from pathlib import Path
+from typing import Tuple, Optional, Union
+
+from gemmi import cif
+
+from src.cets_relion.relion_reader import RelionPipeline
+from src.models.models import Tomogram
 
 
 class RelionTomosStarfile(object):

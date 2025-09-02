@@ -1,5 +1,6 @@
-from typing import Optional, Union
 import os
+from typing import Optional, Union
+
 from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
 
 

@@ -1,6 +1,7 @@
 import os
-from tests.testing_tools import CetsRelionTest
 from pathlib import Path
+
+from tests.testing_tools import CetsRelionTest
 
 
 class RelionCetsMoviesTests(CetsRelionTest):

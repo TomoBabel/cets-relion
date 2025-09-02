@@ -1,13 +1,14 @@
-from gemmi import cif
-from collections import namedtuple
-import networkx as nx
-from pathlib import Path
-import matplotlib.pyplot as plt
-import random
-from typing import Optional, Tuple, List, Union
 import os
-from src.cets_relion.utils import get_job_number
+import random
+from collections import namedtuple
+from pathlib import Path
+from typing import Optional, Tuple, List, Union
 
+import matplotlib.pyplot as plt
+import networkx as nx
+from gemmi import cif
+
+from src.cets_relion.utils import get_job_number
 
 # definitions for the names of blocks in the RELION pipeline cif file
 PipelineBlockNames = namedtuple(

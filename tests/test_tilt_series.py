@@ -1,8 +1,10 @@
-from pytest import fixture
 from unittest.mock import patch
-from tests.testing_tools import CetsRelionTest
-from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
+
+from pytest import fixture
+
 from src.cets_relion.relion_reader import RelionPipeline
+from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
+from tests.testing_tools import CetsRelionTest
 
 
 @fixture(autouse=True)

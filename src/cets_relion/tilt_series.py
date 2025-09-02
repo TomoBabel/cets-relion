@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import os
-from typing import List, Dict, Union, Optional
 from pathlib import Path
+from typing import List, Dict, Union, Optional
+
+from gemmi import cif
+
 from src.cets_relion.relion_reader import RelionPipeline
 from src.cets_relion.utils import joboptions_from_jobstar_file
-from gemmi import cif
 
 
 class RelionTiltSeriesStarfile(object):

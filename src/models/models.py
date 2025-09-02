@@ -5,7 +5,6 @@ from typing import Any, Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field, RootModel, conlist
 
-
 metamodel_version = "None"
 version = "0.0.1"
 
