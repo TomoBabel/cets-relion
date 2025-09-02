@@ -1,5 +1,6 @@
 import warnings
-from typing import List, Optional
+import os
+from typing import List, Optional, Union
 from gemmi import cif
 from src.cets_relion.relion_reader import RelionPipeline
 from src.models.models import (
@@ -32,8 +33,8 @@ class RelionMoviesStarFile(object):
 
     def __init__(
         self,
-        movies_file: str,
-        pipeline: str = "default_pipeline.star",
+        movies_file: Union[str, os.PathLike],
+        pipeline: Union[str, os.PathLike] = "default_pipeline.star",
         ctf_files: Optional[List[str]] = None,
         mocorr_files: Optional[List[str]] = None,
     ) -> None:
@@ -58,7 +59,7 @@ class RelionMoviesStarFile(object):
             sure the correct motioncorr jobs are used in the case of a forked workflow.
         """
         self.pipeline = RelionPipeline(pipeline)
-        self.movies_file = movies_file
+        self.movies_file = str(movies_file)
         if ctf_files is None:
             ctf_files = self.pipeline.next_downstream_file_of_type(
                 start=movies_file, relion_type="TomogramGroupMetadata", kwds=["ctffind"]
@@ -125,7 +126,7 @@ class RelionMoviesStarFile(object):
             # find the ctf data for this move - applies for all frames
             cets_ctf: Optional[CTFMetadata] = None
             for f in self.ctf_files:
-                cets_ctf = RelionCtfStarFile(f).get_tilt_image_ctf(movie_name)
+                cets_ctf = RelionCtfStarFile(f).get_tilt_image_ctf(ts_name, movie_name)
                 if cets_ctf:
                     break
 

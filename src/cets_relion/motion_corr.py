@@ -1,11 +1,12 @@
-from typing import Optional
+from typing import Optional, Union
+import os
 from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
 
 
 class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
     """Subclass for handling results from RELION motion corr jobs"""
 
-    def __init__(self, file_name: str) -> None:
+    def __init__(self, file_name: Union[str, os.PathLike]) -> None:
         """Instantiate a RelionMotionCorrStarFile"""
         super().__init__(file_name=file_name)
 
@@ -27,6 +28,6 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
             str: Path to the file, relative to the project
         """
         joval = self.get_joboptions().get("fn_defect")
-        if joval in ("''", '""'):
+        if joval in ("", ""):
             return None
         return joval

@@ -4,7 +4,10 @@ import networkx as nx
 from pathlib import Path
 import matplotlib.pyplot as plt
 import random
-from typing import Optional, Tuple, List
+from typing import Optional, Tuple, List, Union
+import os
+from src.cets_relion.utils import get_job_number
+
 
 # definitions for the names of blocks in the RELION pipeline cif file
 PipelineBlockNames = namedtuple(
@@ -28,7 +31,7 @@ class RelionPipeline(object):
         files_graph (nx.DiGraph): A DAG with just the files
     """
 
-    def __init__(self, pipeline_file: str) -> None:
+    def __init__(self, pipeline_file: Union[str, os.PathLike]) -> None:
         """Instantiate a RelionPipeline object
 
         Args:
@@ -135,7 +138,7 @@ class RelionPipeline(object):
         self.files_graph = files_graph
 
     def upstream_critical_path(
-        self, start: str, graph: Optional[nx.DiGraph] = None
+        self, start: Union[str, os.PathLike], graph: Optional[nx.DiGraph] = None
     ) -> nx.DiGraph:
         """Return a subgraph tracing a job and all of its upstream parents
 
@@ -152,7 +155,9 @@ class RelionPipeline(object):
         subgraph = graph.subgraph(sub_nodes).copy()
         return subgraph
 
-    def downstream_critical_path(self, start: str, graph: Optional[nx.DiGraph] = None):
+    def downstream_critical_path(
+        self, start: Union[str, os.PathLike], graph: Optional[nx.DiGraph] = None
+    ):
         """Return a subgraph tracing a job and all of its downstream children
 
         Args:
@@ -168,7 +173,9 @@ class RelionPipeline(object):
         subgraph = graph.subgraph(sub_nodes).copy()
         return subgraph
 
-    def last_job_of_type(self, start: str, jobtypes: List[str]) -> List[str]:
+    def last_job_of_type(
+        self, start: Union[str, os.PathLike], jobtypes: List[str]
+    ) -> List[str]:
         """Find the most recent job(s) of a specific type in the workflow
 
         Args:
@@ -193,7 +200,7 @@ class RelionPipeline(object):
 
     def last_upstream_file_of_type(
         self,
-        start: str,
+        start: Union[str, os.PathLike],
         relion_type: List[str],
         file_type: Optional[List[str]] = None,
         kwds: Optional[List[str]] = None,
@@ -236,7 +243,7 @@ class RelionPipeline(object):
 
     def next_downstream_file_of_type(
         self,
-        start: str,
+        start: Union[str, os.PathLike],
         relion_type: str = "",
         ext: str = "",
         kwds: Optional[List[str]] = None,
@@ -262,7 +269,7 @@ class RelionPipeline(object):
         return found_files
 
 
-def get_sort_key(node_name: str) -> Tuple[int, int]:
+def get_sort_key(node_name: Union[str, os.PathLike]) -> Tuple[int, int]:
     """Get the keys for sorting multiple nodes associated with the same job
 
     Returns the criteria that the nodes are sorted on in descending order of
@@ -272,16 +279,16 @@ def get_sort_key(node_name: str) -> Tuple[int, int]:
     backwards through a project
 
     Args:
-        node_name (str): The node name, a job or a file
+        node_name (Union[str, os.PathLike]): The node name; a job or a file
 
     Returns:
         Tuple[int, int]: (job number, depth)
 
     """
-    parts = node_name.split("/")
+    node_name = Path(str(node_name))
     try:
-        job_num = int(parts[1].replace("job", ""))
-        depth = 0 if parts[-1] == "" else 1
+        job_num = get_job_number(node_name)
+        depth = 0 if node_name.is_dir() == "" else 1
     except Exception:
         return 0, 0
     return job_num, depth

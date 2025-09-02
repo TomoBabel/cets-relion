@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import List, Dict
+import os
+from typing import List, Dict, Union, Optional
 from pathlib import Path
 from src.cets_relion.relion_reader import RelionPipeline
 from src.cets_relion.utils import joboptions_from_jobstar_file
@@ -10,15 +11,19 @@ from gemmi import cif
 class RelionTiltSeriesStarfile(object):
     """Class for handling a global tilt series data file from RELION
 
-
     can be subclassed for job-specific variants of this type of file
 
     Many jobs create this type of file, this object should enable tracing back to the
     original movies and making the necessary objects
     """
 
-    def __init__(self, file_name: str, pipeline: str = "default_pipeline.star") -> None:
-        self.name = file_name
+    def __init__(
+        self,
+        file_name: Union[str, os.PathLike],
+        pipeline: str = "default_pipeline.star",
+    ) -> None:
+        self.name = str(file_name)
+        self.file = Path(str(file_name))
         self.pipeline = RelionPipeline(pipeline)
 
     def get_raw_files(
@@ -64,7 +69,7 @@ class RelionTiltSeriesStarfile(object):
         names = data.find(prefix="_rln", tags=["TomoName"])
         return ts_name in [x[0] for x in names]
 
-    def get_tilt_series_star_file(self, ts_name: str) -> str:
+    def get_tilt_series_star_file(self, ts_name: str) -> Optional[Path]:
         """Get the path of star file containing info on a single tilt series image set
 
         Args:
@@ -80,8 +85,8 @@ class RelionTiltSeriesStarfile(object):
         )
         for line in cifdata:
             if line[0] == ts_name:
-                return line[1]
-        return ""
+                return Path(line[1])
+        return None
 
     def find_tomograms_in_self(self, ts_name: str) -> List[str]:
         """
