@@ -83,7 +83,6 @@ def get_job_name(file: Union[str, os.PathLike]) -> Path:
     fn = str(file)
     pattern = r"^job\d{3}$"
     splitname = fn.rstrip("/").split("/")[-1]
-    print(splitname, "****")
     if re.match(pattern, splitname):
         return Path(fn)
     parents = Path(fn).parents

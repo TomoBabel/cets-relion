@@ -26,10 +26,10 @@ PIPELINE_BLOCK = PipelineBlockNames(
 class RelionPipeline(object):
     """An object for reading a RELION pipeline file into networkx
     Attrs:
-        graph (nx.DiGraph):  a directed acyclic graph (DAG) with two types of nodes:
+        graph (nx.DiGraph):  a bipartate directed graph (BDG) with two types of nodes:
             files and jobs
-        jobs_graph (nx.DiGraph):A DAG with just the jobs
-        files_graph (nx.DiGraph): A DAG with just the files
+        jobs_graph (nx.DiGraph):A directed acyclic graph (DAG) with just the jobs
+        files_graph (nx.DiGraph): A directed acyclic graph (DAG) with just the files
     """
 
     def __init__(self, pipeline_file: Union[str, os.PathLike]) -> None:
@@ -174,36 +174,91 @@ class RelionPipeline(object):
         subgraph = graph.subgraph(sub_nodes).copy()
         return subgraph
 
-    def last_job_of_type(
-        self, start: Union[str, os.PathLike], jobtypes: List[str]
+    def next_upstream_jobs(
+        self, start: Union[str, os.PathLike], jobtypes: List[str] = []
     ) -> List[str]:
         """Find the most recent job(s) of a specific type in the workflow
+
+        Follows all upstream branches separately until it finds a job of the correct
+        type for that branch.
 
         Args:
             start (str): The job or file to start the search from
             jobtypes (List[str]): The job type(s) to find
 
         Returns:
-            List[str]: The most recent job(s) that match the criteria
+            List[str]: The most recent job(s) from upstream branches that match the
+            criteria
         """
-        crit_path = self.upstream_critical_path(start)
-        found: List[str] = []
-        ordered_nodes = list(crit_path)
-        ordered_nodes.sort(key=lambda x: get_sort_key(x), reverse=True)
-        for node in ordered_nodes:
-            preds = crit_path.predecessors(node)
-            for pred in preds:
-                if self.graph.nodes[pred].get("relion_type") in jobtypes:
-                    found.append(str(pred))
-            if found:
-                break
-        return found
+        found_nodes = set()
+        visited = set()
 
-    def last_upstream_file_of_type(
+        def dfs(node, initial=True):
+            if node in visited:
+                return
+            visited.add(node)
+
+            if self.graph.nodes[node].get("relion_type") in jobtypes or (
+                jobtypes == []
+                and not initial
+                and self.graph.nodes[node]["type"] == "process"
+            ):
+                found_nodes.add(node)
+                return
+
+            for pred in self.graph.predecessors(node):
+                dfs(pred, initial=False)
+
+        dfs(start)
+        nodes = list(found_nodes)
+        nodes.sort(key=lambda x: get_sort_key(x))
+        return nodes
+
+    def next_downstream_jobs(
+        self, start: Union[str, os.PathLike], jobtypes: List[str] = []
+    ) -> List[str]:
+        """Find the most recent job(s) of a specific type in the workflow
+
+        Follows all downstream branches separately until it finds a job of the correct
+        type for that branch.
+
+        Args:
+            start (str): The job or file to start the search from
+            jobtypes (List[str]): The job type(s) to find
+
+        Returns:
+            List[str]: The most recent job(s) from upstream branches that match the
+            criteria
+        """
+        found_nodes = set()
+        visited = set()
+
+        def dfs(node, initial=True):
+            if node in visited:
+                return
+            visited.add(node)
+
+            if self.graph.nodes[node].get("relion_type") in jobtypes or (
+                jobtypes == []
+                and not initial
+                and self.graph.nodes[node]["type"] == "process"
+            ):
+                found_nodes.add(node)
+                return
+
+            for succ in self.graph.successors(node):
+                dfs(succ, initial=False)
+
+        dfs(start)
+        nodes = list(found_nodes)
+        nodes.sort(key=lambda x: get_sort_key(x))
+        return nodes
+
+    def next_upstream_files(
         self,
         start: Union[str, os.PathLike],
-        relion_type: List[str],
-        file_type: Optional[List[str]] = None,
+        relion_type: Optional[List[str]] = None,
+        ext: Optional[List[str]] = None,
         kwds: Optional[List[str]] = None,
     ):
         """Find the most recent files(s) of a specific type in the workflow, working
@@ -213,61 +268,95 @@ class RelionPipeline(object):
         Args:
             start (str): The job or file to start the search from
             relion_type (List[str]): The relion top level node type
-            file_type (Optional(List[str]): The file extension, any if None
+            ext (Optional(List[str]): The file extension, any if None
             kwds (Optional(List[str]): kwds to match, all must be matched, any if None
 
         Returns:
             List[str]: The most recent file(s) that match the criteria
         """
-        crit_path = self.upstream_critical_path(start)
-        file_type = [] if file_type is None else file_type
+        found_nodes = set()
+        visited = set()
+        relion_type = [] if relion_type is None else relion_type
+        ext = [] if ext is None else ext
         kwds = [] if kwds is None else kwds
-        found: List[str] = []
-        ordered_nodes = list(crit_path)
-        ordered_nodes.sort(key=lambda x: get_sort_key(x), reverse=True)
-        for node in ordered_nodes:
-            preds = crit_path.predecessors(node)
-            for pred in preds:
-                rt_match = self.graph.nodes[pred].get("relion_type") in relion_type
-                found_kwds = self.graph.nodes[pred].get("kwds", [])
-                kwds_match = all([x in found_kwds for x in kwds])
-                ft_match = (
-                    True
-                    if not file_type
-                    else self.graph.nodes[pred].get("file_type") in file_type
-                )
-                if all([rt_match, kwds_match, ft_match]):
-                    found.append(str(pred))
-            if found:
-                break
-        return found
 
-    def next_downstream_file_of_type(
+        def dfs(node, initial=True):
+            if node in visited:
+                return
+            visited.add(node)
+
+            rt_match = self.graph.nodes[node].get("relion_type") in relion_type or (
+                relion_type == [] and not initial
+            )
+            found_kwds = self.graph.nodes[node].get("kwds", [])
+            kwds_match = all([x in found_kwds for x in kwds])
+            ft_match = (
+                True if not ext else self.graph.nodes[node].get("file_type") in ext
+            )
+            if all([rt_match, kwds_match, ft_match]):
+                found_nodes.add(node)
+                return
+
+            for pred in self.graph.predecessors(node):
+                dfs(pred, initial=False)
+
+        dfs(start)
+        nodes = list(found_nodes)
+        nodes.sort(key=lambda x: get_sort_key(x))
+        return nodes
+
+    def next_downstream_files(
         self,
         start: Union[str, os.PathLike],
-        relion_type: str = "",
-        ext: str = "",
+        relion_type: Optional[List[str]] = None,
+        ext: Optional[List[str]] = None,
         kwds: Optional[List[str]] = None,
-    ) -> List[str]:
-        kwds = [] if not kwds else kwds
-        ds = self.downstream_critical_path(start)
-        found_files: List[str] = []
-        for node in ds:
-            succesors = ds.successors(node)
-            for succ in [x for x in succesors if ds.nodes[x]["type"] == "file"]:
-                type_match = (
-                    ds.nodes[succ]["relion_type"] == relion_type or not relion_type
-                )
-                ext_match = ds.nodes[succ]["file_type"] == ext or not ext
-                kwds_match = (
-                    all([x in ds.nodes[succ]["kwds"] for x in kwds]) or not kwds
-                )
-                if all([type_match, ext_match, kwds_match]):
-                    found_files.append(succ)
-            if found_files:
-                return found_files
+    ):
+        """Find the most recent files(s) of a specific type in the workflow, working
+        backward from the specified job. May return multiple files EG: if the start job
+        took multiple inputs of the same file type
 
-        return found_files
+        Args:
+            start (str): The job or file to start the search from
+            relion_type (List[str]): The relion top level node type
+            ext (Optional(List[str]): The file extension, any if None
+            kwds (Optional(List[str]): kwds to match, all must be matched, any if None
+
+        Returns:
+            List[str]: The most recent file(s) that match the criteria
+        """
+        found_nodes = set()
+        visited = set()
+        relion_type = [] if relion_type is None else relion_type
+        ext = [] if ext is None else ext
+        kwds = [] if kwds is None else kwds
+
+        def dfs(node, initial=True):
+            if node in visited:
+                return
+            visited.add(node)
+
+            rt_match = (
+                self.graph.nodes[node].get("relion_type") in relion_type
+                or relion_type == []
+                and not initial
+            )
+            found_kwds = self.graph.nodes[node].get("kwds", [])
+            kwds_match = all([x in found_kwds for x in kwds])
+            ft_match = (
+                True if not ext else self.graph.nodes[node].get("file_type") in ext
+            )
+            if all([rt_match, kwds_match, ft_match]):
+                found_nodes.add(node)
+                return
+
+            for succ in self.graph.successors(node):
+                dfs(succ, initial=False)
+
+        dfs(start)
+        nodes = list(found_nodes)
+        nodes.sort(key=lambda x: get_sort_key(x))
+        return nodes
 
 
 def get_sort_key(node_name: Union[str, os.PathLike]) -> Tuple[int, int]:
@@ -378,6 +467,5 @@ def draw_graph(network: nx.DiGraph, outfile: str):
 
     # Draw labels
     nx.draw_networkx_labels(network, pos, font_size=4, font_color="black")
-
     plt.savefig(outfile, format="png", dpi=300)
     plt.close()

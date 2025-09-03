@@ -3,7 +3,7 @@
 
 data_pipeline_general
 
-_rlnPipeLineJobCounter                      84
+_rlnPipeLineJobCounter                     7
  
 
 # version 50001
@@ -19,8 +19,8 @@ Import/job001/       None relion.importtomo  Succeeded
 MotionCorr/job002/       None relion.motioncorr.own  Succeeded 
 CtfFind/job003/       None relion.ctffind.ctffind4  Succeeded 
 CtfFind/job004/       None relion.ctffind.ctffind4  Succeeded
-JoinStar/job005       None relion.joinstar          Succeeded
-
+JoinStar/job005/       None relion.joinstar          Succeeded
+AutoPick/job006/       None relion.autopick.log      Succeeded
 
 # version 50001
 
@@ -38,6 +38,7 @@ CtfFind/job003/logfile.pdf LogFile.pdf.relion.ctffind            1
 CtfFind/job004/tilt_series_ctf.star TomogramGroupMetadata.star.relion.tomo.ctffind            1
 CtfFind/job004/logfile.pdf LogFile.pdf.relion.ctffind            1
 JoinStar/job005/micrographs.star   MicrographsGroupMetadata.star                        1
+Autopick/job006/autopick.star      MicrographCoordsGroup.star                           1
 
 # version 50001
 
@@ -48,8 +49,10 @@ _rlnPipeLineEdgeFromNode #1
 _rlnPipeLineEdgeProcess #2 
 Import/job001/tilt_series.star MotionCorr/job002/ 
 MotionCorr/job002/corrected_tilt_series.star CtfFind/job003/ 
+MotionCorr/job002/corrected_tilt_series.star CtfFind/job004/
 CtfFind/job003/tilt_series_ctf.star JoinStar/job005/
 CtfFind/job004/tilt_series_ctf.star JoinStar/job005/
+JoinStar/job005/micrographs.star AutoPick/job006/
 
 
 
@@ -67,4 +70,6 @@ CtfFind/job003/ CtfFind/job003/tilt_series_ctf.star
 CtfFind/job003/ CtfFind/job003/logfile.pdf 
 CtfFind/job004/ CtfFind/job004/tilt_series_ctf.star
 CtfFind/job004/ CtfFind/job004/logfile.pdf
+JoinStar/job005/ JoinStar/job005/micrographs.star
+AutoPick/job006/ AutoPick/job006/autopick.star
 

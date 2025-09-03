@@ -78,14 +78,29 @@ class PipelineReaderTests(CetsRelionTest):
         assert list(full_crit.nodes()) == JOBS_NODES[1:]
         assert list(full_crit.edges()) == JOBS_EDGES[1:]
 
-    def test_last_job_of_type(self):
+    def test_next_upstream_jobs(self):
         rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")
-        lj = rp.last_job_of_type("JoinStar/job005/", ["relion.ctffind.ctffind4"])
-        assert lj == ["CtfFind/job004/"]
+        nj = rp.next_upstream_jobs("JoinStar/job005/")
+        assert nj == ["CtfFind/job003/", "CtfFind/job004/"]
 
-    def test_last_file_of_type_multple_returns(self):
+    def test_next_upstream_jobs_of_type(self):
         rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")
-        lf = rp.last_upstream_file_of_type(
+        nj = rp.next_upstream_jobs("AutoPick/job006/", ["relion.ctffind.ctffind4"])
+        assert nj == ["CtfFind/job003/", "CtfFind/job004/"]
+
+    def test_next_downstream_jobs(self):
+        rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")
+        nj = rp.next_downstream_jobs("MotionCorr/job002/", ["relion.ctffind.ctffind4"])
+        assert nj == ["CtfFind/job003/", "CtfFind/job004/"]
+
+    def test_next_downstream_jobs_of_type(self):
+        rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")
+        nj = rp.next_downstream_jobs("Import/job001/", ["relion.ctffind.ctffind4"])
+        assert nj == ["CtfFind/job003/", "CtfFind/job004/"]
+
+    def test_next_upstream_files_of_type_multple_returns(self):
+        rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")
+        lf = rp.next_upstream_files(
             start="JoinStar/job005/", relion_type=["TomogramGroupMetadata"]
         )
         assert lf == [
@@ -93,66 +108,48 @@ class PipelineReaderTests(CetsRelionTest):
             "CtfFind/job004/tilt_series_ctf.star",
         ]
 
-    def test_last_file_of_type_just_type(self):
+    def test_next_upstream_file_of_type_just_type(self):
         rp = RelionPipeline(self.test_data / "pipelines/default_pipeline.star")
-        lf = rp.last_upstream_file_of_type(
+        lf = rp.next_upstream_files(
             start="ModelAngelo/job080/", relion_type=["TomogramGroupMetadata"]
+        )
+        assert lf == ["Denoise/job008/tomograms.star", "Polish/job070/tomograms.star"]
+
+    def test_next_upstream_file_of_type_with_kwds(self):
+        rp = RelionPipeline(self.test_data / "pipelines/default_pipeline.star")
+        lf = rp.next_upstream_files(
+            start="ModelAngelo/job080/",
+            relion_type=["TomogramGroupMetadata"],
+            kwds=["polish"],
         )
         assert lf == ["Polish/job070/tomograms.star"]
 
-    def test_last_file_of_type_with_kwds(self):
-        rp = RelionPipeline(self.test_data / "pipelines/default_pipeline.star")
-        lf = rp.last_upstream_file_of_type(
-            start="ModelAngelo/job080/",
-            relion_type=["TomogramGroupMetadata"],
-            kwds=["ctffind"],
-        )
-        assert lf == ["CtfFind/job003/tilt_series_ctf.star"]
-
-    def test_next_downstream_file_of_type_from_file_no_args(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        found = rp.next_downstream_file_of_type(
-            start="MotionCorr/job002/corrected_tilt_series.star"
-        )
-        assert found == [
-            "CtfFind/job003/tilt_series_ctf.star",
-            "CtfFind/job003/logfile.pdf",
-        ]
-
-    def test_next_downstream_file_of_type_from_job_no_args(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        found = rp.next_downstream_file_of_type(start="MotionCorr/job002/")
-        assert found == [
-            "MotionCorr/job002/corrected_tilt_series.star",
-            "MotionCorr/job002/logfile.pdf",
-        ]
-
     def test_next_downstream_file_match_all_params(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        found = rp.next_downstream_file_of_type(
+        found = rp.next_downstream_files(
             start="MotionCorr/job002/corrected_tilt_series.star",
-            relion_type="TomogramGroupMetadata",
-            ext="star",
+            relion_type=["TomogramGroupMetadata"],
+            ext=["star"],
             kwds=["relion", "tomo", "ctffind"],
         )
         assert found == ["CtfFind/job003/tilt_series_ctf.star"]
 
     def test_next_downstream_file_one_kwd(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        found = rp.next_downstream_file_of_type(
+        found = rp.next_downstream_files(
             start="MotionCorr/job002/corrected_tilt_series.star", kwds=["ctffind"]
         )
-        assert found == [
-            "CtfFind/job003/tilt_series_ctf.star",
+        assert set(found) == {
             "CtfFind/job003/logfile.pdf",
-        ]
+            "CtfFind/job003/tilt_series_ctf.star",
+        }
 
     def test_next_downstream_file_no_match(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        found = rp.next_downstream_file_of_type(
+        found = rp.next_downstream_files(
             start="MotionCorr/job002/corrected_tilt_series.star",
-            relion_type="TomogramGroupMetadata",
-            ext="star",
+            relion_type=["TomogramGroupMetadata"],
+            ext=["star"],
             kwds=["relion", "tomo", "ctffind", "XXXXX"],
         )
         assert found == []

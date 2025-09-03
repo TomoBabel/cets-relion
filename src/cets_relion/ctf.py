@@ -47,7 +47,6 @@ class RelionCtfStarFile(RelionTiltSeriesStarfile):
         line = [x for x in data if x[0] == image_name]
         if not line:
             return None
-        print(line)
         vals = list(line[0])[1:]
         return CTFMetadata(defocus_u=vals[0], defocus_v=vals[1], defocus_angle=vals[2])
         # except Exception:

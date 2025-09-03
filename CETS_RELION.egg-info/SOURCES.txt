@@ -4,3 +4,12 @@ CETS_RELION.egg-info/SOURCES.txt
 CETS_RELION.egg-info/dependency_links.txt
 CETS_RELION.egg-info/requires.txt
 CETS_RELION.egg-info/top_level.txt
+tests/test_ctf.py
+tests/test_movies.py
+tests/test_relion_reader.py
+tests/test_subtomograms.py
+tests/test_test_class.py
+tests/test_tilt_series.py
+tests/test_tomograms.py
+tests/test_utils.py
+tests/testing_tools.py

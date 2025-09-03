@@ -125,9 +125,9 @@ class RelionTiltSeriesStarfile(object):
         if reconstruct_jobs:
             for rec_job in reconstruct_jobs:
                 tomo_files.extend(
-                    self.pipeline.next_downstream_file_of_type(
+                    self.pipeline.next_downstream_files(
                         start=rec_job,
-                        relion_type="TomogramGroupMetadata",
+                        relion_type=["TomogramGroupMetadata"],
                         kwds=["denoise"],
                     )
                 )
@@ -147,9 +147,9 @@ class RelionTiltSeriesStarfile(object):
         if reconstruct_jobs:
             for rec_job in reconstruct_jobs:
                 tomo_files.extend(
-                    self.pipeline.next_downstream_file_of_type(
+                    self.pipeline.next_downstream_files(
                         start=rec_job,
-                        relion_type="TomogramGroupMetadata",
+                        relion_type=["TomogramGroupMetadata"],
                         kwds=["denoise"],
                     )
                 )

@@ -4,6 +4,7 @@ pydantic>=2
 networkx
 matplotlib
 gemmi
+tiffile
 
 [dev]
 deepdiff

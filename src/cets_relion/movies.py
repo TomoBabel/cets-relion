@@ -63,15 +63,17 @@ class RelionMoviesStarFile(object):
         self.pipeline = RelionPipeline(pipeline)
         self.movies_file = str(movies_file)
         if ctf_files is None:
-            ctf_files = self.pipeline.next_downstream_file_of_type(
-                start=movies_file, relion_type="TomogramGroupMetadata", kwds=["ctffind"]
+            ctf_files = self.pipeline.next_downstream_files(
+                start=movies_file,
+                relion_type=["TomogramGroupMetadata"],
+                kwds=["ctffind"],
             )
         self.ctf_files = ctf_files
 
         if mocorr_files is None:
-            mocorr_files = self.pipeline.next_downstream_file_of_type(
+            mocorr_files = self.pipeline.next_downstream_files(
                 start=movies_file,
-                relion_type="TomogramGroupMetadata",
+                relion_type=["TomogramGroupMetadata"],
                 kwds=["motioncorr"],
             )
         self.mocorr_files = mocorr_files
