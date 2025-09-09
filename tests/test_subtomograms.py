@@ -1,7 +1,7 @@
-from src.cets_relion.subtomograms import RelionSubTomosStarfile
+from cets_relion.subtomograms import RelionSubTomosStarfile
 from tests.testing_tools import CetsRelionTest
 from pathlib import Path
-from src.cets_relion.relion_reader import RelionPipeline
+from cets_relion.relion_reader import RelionPipeline
 
 
 class SubTomogramsTests(CetsRelionTest):

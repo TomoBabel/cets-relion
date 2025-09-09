@@ -6,8 +6,8 @@ from typing import List, Dict, Union, Optional
 
 from gemmi import cif
 
-from src.cets_relion.relion_reader import RelionPipeline
-from src.cets_relion.utils import joboptions_from_jobstar_file
+from cets_relion.relion_reader import RelionPipeline
+from cets_relion.utils import joboptions_from_jobstar_file
 
 
 class RelionTiltSeriesStarfile(object):

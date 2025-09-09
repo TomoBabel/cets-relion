@@ -6,8 +6,8 @@ from typing import Union, List
 
 from gemmi import cif
 
-from src.cets_relion.relion_reader import RelionPipeline
-from src.models.models import SubProjectionImage
+from cets_relion.relion_reader import RelionPipeline
+from cets_data_model.models.models import SubProjectionImage
 
 
 class RelionSubTomosStarfile(object):

@@ -1,7 +1,7 @@
 import os
 from typing import Optional, Union
 
-from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.tilt_series import RelionTiltSeriesStarfile
 
 
 class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):

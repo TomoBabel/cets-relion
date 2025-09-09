@@ -6,8 +6,8 @@ from typing import Tuple, Optional, Union
 
 from gemmi import cif
 
-from src.cets_relion.relion_reader import RelionPipeline
-from src.models.models import Tomogram
+from cets_relion.relion_reader import RelionPipeline
+from cets_data_model.models.models import Tomogram
 
 
 class RelionTomosStarfile(object):

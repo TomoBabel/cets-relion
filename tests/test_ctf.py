@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from src.cets_relion.ctf import RelionCtfStarFile
-from src.cets_relion.relion_reader import RelionPipeline
-from src.models.models import CTFMetadata
+from cets_relion.ctf import RelionCtfStarFile
+from cets_relion.relion_reader import RelionPipeline
+from cets_data_model.models.models import CTFMetadata
 from tests.testing_tools import CetsRelionTest
 
 

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import networkx as nx
 from gemmi import cif
 
-from src.cets_relion.utils import get_job_number
+from cets_relion.utils import get_job_number
 
 # definitions for the names of blocks in the RELION pipeline cif file
 PipelineBlockNames = namedtuple(

@@ -6,6 +6,8 @@ from typing import Tuple, Dict, Union
 import mrcfile
 import tifffile
 from gemmi import cif
+from scipy import spatial
+import numpy as np
 
 
 def get_mrc_dims(in_mrc: Union[str, os.PathLike]) -> Tuple[int, int, int]:
@@ -103,3 +105,21 @@ def get_job_number(file: Union[str, os.PathLike]) -> int:
     """
     jobname = get_job_name(file).name
     return int(jobname.lstrip("job"))
+
+
+def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> np.ndarray:
+    """Convert the Euler angles from a RELION star file into a rotation matrix
+
+    Args:
+        tilt (float): _rlnAngleTilt (Phi)
+        rot (float): _rlnAngleRot (Theta)
+        psi (float): _rlnAnglePsi (Psi)
+
+    Returns:
+        np.ndarray: The transformation matrix
+
+    """
+    sipy_rot = spatial.transform.Rotation.from_euler(
+        seq="ZYZ", angles=[tilt, rot, psi], degrees=True
+    )
+    return sipy_rot.as_matrix()

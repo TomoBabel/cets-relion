@@ -1,39 +1,8 @@
-from src.cets_relion.utils import (
-    get_job_name,
-    joboptions_from_jobstar_file,
-    get_mrc_dims,
-    get_tiff_dims,
-    get_image_dims,
-    get_job_number,
-)
+from cets_relion.utils import get_job_name, joboptions_from_jobstar_file, get_job_number
 from tests.testing_tools import CetsRelionTest
 
 
 class UtilsTests(CetsRelionTest):
-    def test_get_image_dims_tiff(self):
-        img = self.test_data / "tiff_stack.tiff"
-        assert get_image_dims(img) == (78, 78, 5)
-
-    def test_get_image_dims_mrc(self):
-        img = self.test_data / "mrc_stack.mrcs"
-        assert get_image_dims(img) == (64, 64, 215)
-
-    def test_get_tiff_dims_3D(self):
-        img = self.test_data / "tiff_stack.tiff"
-        assert get_tiff_dims(img) == (78, 78, 5)
-
-    def test_get_mrc_dims_3D(self):
-        img = self.test_data / "mrc_stack.mrcs"
-        assert get_mrc_dims(img) == (64, 64, 215)
-
-    def test_get_tiff_dims_2D(self):
-        img = self.test_data / "single.tif"
-        assert get_tiff_dims(img) == (78, 78, 1)
-
-    def test_get_mrc_dims_2D(self):
-        img = self.test_data / "single.mrc"
-        assert get_mrc_dims(img) == (100, 100, 1)
-
     def test_joboptions_from_jobstar(self):
         jobstar = self.test_data / "skeleton_project/Import/job001/job.star"
         jobops = joboptions_from_jobstar_file(jobstar)

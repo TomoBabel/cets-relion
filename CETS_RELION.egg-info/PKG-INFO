@@ -23,6 +23,8 @@ Requires-Dist: networkx
 Requires-Dist: matplotlib
 Requires-Dist: gemmi
 Requires-Dist: tiffile
+Requires-Dist: scipy
+Requires-Dist: cets-data-models@ file:/Users/tjg99114/CCPEM/cets-data-models
 Provides-Extra: dev
 Requires-Dist: deepdiff; extra == "dev"
 Requires-Dist: mypy==1.8.0; extra == "dev"

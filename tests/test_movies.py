@@ -1,10 +1,9 @@
 from unittest.mock import patch, MagicMock
 
 from pytest import fixture
-
-from src.cets_relion.movies import RelionMoviesStarFile
-from src.cets_relion.relion_reader import RelionPipeline
-from src.models.models import (
+from cets_relion.movies import RelionMoviesStarFile
+from cets_relion.relion_reader import RelionPipeline
+from cets_data_model.models.models import (
     CTFMetadata,
     MovieFrame,
     MovieStackSeries,
@@ -17,14 +16,14 @@ from tests.testing_tools import CetsRelionTest
 
 @fixture(autouse=True)
 def mock_get_image_size():
-    with patch("src.cets_relion.movies.get_image_dims") as mock:
+    with patch("cets_relion.movies.get_image_dims") as mock:
         mock.return_value = (2000, 2000, 8)
         yield mock
 
 
 @fixture(autouse=True)
 def mock_get_ctf_data():
-    with patch("src.cets_relion.movies.RelionCtfStarFile") as MockClass:
+    with patch("cets_relion.movies.RelionCtfStarFile") as MockClass:
         mock_instance = MagicMock()
         mock_instance.get_tilt_image_ctf.return_value = CTFMetadata(
             defocus_u=1111, defocus_v=2222, defocus_angle=33

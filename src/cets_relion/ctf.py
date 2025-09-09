@@ -4,8 +4,8 @@ from typing import Optional, Union
 
 from gemmi import cif
 
-from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
-from src.models.models import CTFMetadata
+from cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_data_model.models.models import CTFMetadata
 
 logger = getLogger(__name__)
 

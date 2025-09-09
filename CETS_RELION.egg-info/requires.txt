@@ -5,6 +5,8 @@ networkx
 matplotlib
 gemmi
 tiffile
+scipy
+cets-data-models@ file:/Users/tjg99114/CCPEM/cets-data-models
 
 [dev]
 deepdiff

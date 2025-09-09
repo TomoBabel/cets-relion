@@ -2,14 +2,14 @@ from unittest.mock import patch
 
 from pytest import fixture
 
-from src.cets_relion.relion_reader import RelionPipeline
-from src.cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.relion_reader import RelionPipeline
+from cets_relion.tilt_series import RelionTiltSeriesStarfile
 from tests.testing_tools import CetsRelionTest
 
 
 @fixture(autouse=True)
 def mock_get_image_size():
-    with patch("src.cets_relion.utils.get_image_dims") as mock:
+    with patch("cets_relion.utils.get_image_dims") as mock:
         mock.return_value = (2000, 2000, 8)
         yield mock
 

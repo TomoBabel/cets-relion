@@ -1,14 +1,14 @@
 import os
 import warnings
 from typing import List, Optional, Union
+from cets_data_model.utils.image_utils import get_image_dims
 
 from gemmi import cif
 
-from src.cets_relion.ctf import RelionCtfStarFile
-from src.cets_relion.motion_corr import RelionMotionCorrStarFile
-from src.cets_relion.relion_reader import RelionPipeline
-from src.cets_relion.utils import get_image_dims
-from src.models.models import (
+from cets_relion.ctf import RelionCtfStarFile
+from cets_relion.motion_corr import RelionMotionCorrStarFile
+from cets_relion.relion_reader import RelionPipeline
+from cets_data_model.models.models import (
     MovieStack,
     MovieFrame,
     MovieStackSeries,

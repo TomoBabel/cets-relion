@@ -1,6 +1,6 @@
-from src.cets_relion.tomograms import RelionTomosStarfile
+from cets_relion.tomograms import RelionTomosStarfile
 from tests.testing_tools import CetsRelionTest
-from src.cets_relion.relion_reader import RelionPipeline
+from cets_relion.relion_reader import RelionPipeline
 from pathlib import Path
 
 
