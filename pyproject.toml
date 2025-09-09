@@ -40,8 +40,7 @@ dependencies = [
     "gemmi",
     "tiffile",
     "scipy",
-    "cets-data-models @ file:/Users/tjg99114/CCPEM/cets-data-models", # just for dev
-    # "cets-data-models @ git+https://github.com/TomoBabel/cets-data-models.git",
+    "cets-data-model @ git+https://github.com/TomoBabel/cets-data-models.git@add-utils", # until it's merged
 ]
 
 optional-dependencies.dev = [
