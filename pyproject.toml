@@ -40,7 +40,7 @@ dependencies = [
     "gemmi",
     "tiffile",
     "scipy",
-    "cets-data-model @ git+https://github.com/TomoBabel/cets-data-models.git@add-utils", # until it's merged
+    "cets-data-model @ git+https://github.com/TomoBabel/cets-data-models.git",
 ]
 
 optional-dependencies.dev = [
