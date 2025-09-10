@@ -34,6 +34,10 @@ def test_get_job_name():
     assert str(get_job_name("Reconstruct/job001/")) == "Reconstruct/job001"
     assert str(get_job_name("Denoise/job008/tomograms.star")) == "Denoise/job008"
     assert str(get_job_name("Denoise/job008/tomograms/ts_01.star")) == "Denoise/job008"
+    assert (
+        str(get_job_name("Other/Dirs/Denoise/job008/tomograms/ts_01.star"))
+        == "Denoise/job008"
+    )
 
 
 def test_get_job_number():

@@ -9,7 +9,7 @@ from tests.testing_tools import CetsRelionTest
 
 @fixture(autouse=True)
 def mock_get_image_size():
-    with patch("cets_relion.utils.get_image_dims") as mock:
+    with patch("cets_data_model.utils.image_utils.get_image_dims") as mock:
         mock.return_value = (2000, 2000, 8)
         yield mock
 

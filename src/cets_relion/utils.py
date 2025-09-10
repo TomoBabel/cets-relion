@@ -1,60 +1,15 @@
 import os
 import re
 from pathlib import Path
-from typing import Tuple, Dict, Union
+from typing import Dict, Union
 
-import mrcfile
-import tifffile
 from gemmi import cif
 from scipy import spatial
 import numpy as np
 
 
-def get_mrc_dims(in_mrc: Union[str, os.PathLike]) -> Tuple[int, int, int]:
-    """Get the shape of a mrc file
-
-    Args:
-        in_mrc (str): The name of the file
-    Returns:
-        tuple: (int,int,int) x,y,z size in pixels
-
-    """
-    with mrcfile.open(in_mrc, header_only=True) as mrc:
-        return int(mrc.header.nx), int(mrc.header.ny), int(mrc.header.nz)
-
-
-def get_tiff_dims(in_tiff: Union[str, os.PathLike]) -> Tuple[int, int, int]:
-    """Get the shape of a tiff file
-
-    Args:
-        in_tiff (str): The name of the file
-    Returns:
-        tuple: (int,int,int) x,y,z size in pixels
-
-    """
-    with tifffile.TiffFile(in_tiff) as tif:
-        page = tif.pages[0]
-        height, width = page.shape
-        return width, height, len(tif.pages)
-
-
-def get_image_dims(in_img: Union[str, os.PathLike]) -> Tuple[int, int, int]:
-    """Get the shape of an image file, automatically determines if it's mrc or tiff
-
-    Args:
-        in_img (str): The name of the file
-    Returns:
-        tuple: (int,int,int) x,y,z size in pixels
-    Raises:
-        ValueError: If the image isn't a valid mrc or tiff
-    """
-    try:
-        return get_mrc_dims(in_img)
-    except Exception:
-        try:
-            return get_tiff_dims(in_img)
-        except Exception:
-            raise ValueError("File is not valid mrc or tiff format")
+def clean_file_input(in_val: Union[str, os.PathLike]) -> str:
+    return str(in_val)
 
 
 def joboptions_from_jobstar_file(
@@ -80,7 +35,8 @@ def get_job_name(file: Union[str, os.PathLike]) -> Path:
         file (str): Name for the file
 
     Returns:
-        Path: pathlib.Path object for the job that produced the file
+        Path: pathlib.Path object for the job that produced the file relative to
+            the project directory
     """
     fn = str(file)
     pattern = r"^job\d{3}$"
@@ -90,7 +46,7 @@ def get_job_name(file: Union[str, os.PathLike]) -> Path:
     parents = Path(fn).parents
     for parent in parents:
         if re.match(pattern, str(parent).split("/")[-1]):
-            return parent
+            return Path(*parent.parts[-2:])
     raise ValueError(f" {fn} does not contain a valid RELION job path")
 
 

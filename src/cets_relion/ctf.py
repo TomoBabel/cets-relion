@@ -32,22 +32,28 @@ class RelionCtfStarFile(RelionTiltSeriesStarfile):
             Optional[CTFMetadata]: CETS CTFMetadata object or None if tilt image not found
         """
         # read the starfile
-        # try:
-        tsstar = cif.read_file(str(self.get_tilt_series_star_file(ts_name)))
-        data_block = tsstar.find_block(ts_name)
-        data = data_block.find(
-            prefix="_rln",
-            tags=[
-                "MicrographMovieName",
-                "DefocusU",
-                "DefocusV",
-                "DefocusAngle",
-            ],
-        )
-        line = [x for x in data if x[0] == image_name]
-        if not line:
+        try:
+            tsstar = cif.read_file(str(self.get_tilt_series_star_file(ts_name)))
+            data_block = tsstar.find_block(ts_name)
+            data = data_block.find(
+                prefix="_rln",
+                tags=[
+                    "MicrographMovieName",
+                    "DefocusU",
+                    "DefocusV",
+                    "DefocusAngle",
+                ],
+            )
+            line = [x for x in data if x[0] == image_name]
+            if not line:
+                return None
+            vals = list(line[0])[1:]
+            return CTFMetadata(
+                defocus_u=vals[0], defocus_v=vals[1], defocus_angle=vals[2]
+            )
+        except Exception:
+            logger.debug(
+                f"Couldn't get CETS ctf object for {ts_name}, {image_name}",
+                exc_info=True,
+            )
             return None
-        vals = list(line[0])[1:]
-        return CTFMetadata(defocus_u=vals[0], defocus_v=vals[1], defocus_angle=vals[2])
-        # except Exception:
-        #     return None
