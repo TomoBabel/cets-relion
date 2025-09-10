@@ -7,3 +7,4 @@ src/models/__pycache__/
 /cryoet-env/
 tests/test_data/pipelines/__pycache__/
 src/CETS_RELION.egg-info/
+CETS_RELION.egg-info
