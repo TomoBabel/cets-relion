@@ -2,6 +2,7 @@ from cets_relion.subtomograms import RelionSubTomosStarfile
 from tests.testing_tools import CetsRelionTest
 from pathlib import Path
 from cets_relion.relion_reader import RelionPipeline
+from unittest.mock import patch
 
 
 class SubTomogramsTests(CetsRelionTest):
@@ -12,19 +13,35 @@ class SubTomogramsTests(CetsRelionTest):
         assert isinstance(sub.file, Path)
         assert str(sub.file) == "Extract/job010/particles.star"
         assert isinstance(sub.pipeline, RelionPipeline)
-
-    def test_get_subtomograms(self):
-        self.setup_dirs(jobs_to=10)
-        sub = RelionSubTomosStarfile(file_name="Extract/job010/particles.star")
-        subtomos = sub.get_all_subtomos("TS_01")
-        assert len(subtomos) == 6623
-        assert [str(x) for x in subtomos[:3]] == [
+        assert len(sub.subtomos) == 30596
+        assert sub.subtomos[0] == [
             "Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
-            "Extract/job010/Subtomograms/TS_01/2_stack2d.mrcs",
-            "Extract/job010/Subtomograms/TS_01/3_stack2d.mrcs",
+            1,
+            "TS_01/1",
+            1771.079893,
+            -846.9901,
+            1176.862669,
         ]
-        assert [str(x) for x in subtomos[-3:]] == [
-            "Extract/job010/Subtomograms/TS_01/6979_stack2d.mrcs",
-            "Extract/job010/Subtomograms/TS_01/6980_stack2d.mrcs",
-            "Extract/job010/Subtomograms/TS_01/6981_stack2d.mrcs",
+        assert len(sub.subtomo_orientations) == 30596
+        assert sub.subtomo_orientations[0] == [
+            "Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
+            -177.41074,
+            90.33369,
+            -97.33852,
         ]
+        assert len(sub.subtomo_alignments) == 30596
+        assert sub.subtomo_alignments[0] == [
+            "Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
+            90.0,
+            0.0,
+            0.0,
+        ]
+
+    # mocking the return of matrix until type is fixed in cets-model
+    @patch("cets_relion.subtomograms.relion_eulers_to_matrix")
+    def test_get_subtomo(self, matrix_mock):
+        matrix_mock.return_value = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+        self.setup_dirs(jobs_to=10)
+        sub = RelionSubTomosStarfile("Extract/job010/particles.star")
+        subtomo = sub.get_subtomo("Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs")
+        print(subtomo.__dict__)
