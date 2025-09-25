@@ -3,8 +3,8 @@ from tests.test_data.pipelines.short_pipeline_networks import (
     FULL_EDGES,
     FULL_NODES,
     FILES_CRIT_EDGES,
-    FILES_NODES,
     FILES_EDGES,
+    FILES_NODES,
     FILES_CRIT_NODES,
     JOBS_EDGES,
     JOBS_NODES,
@@ -16,67 +16,76 @@ from tests.test_data.pipelines.short_pipeline_networks import (
     UPSTREAM_JOBS_CRIT_EDGES,
 )
 from tests.testing_tools import CetsRelionTest
+from cets_relion.utils import get_job_number
 
 
 class PipelineReaderTests(CetsRelionTest):
-    def test_instatiate_RelionPipeline_obj_main_graph(self):
+    @staticmethod
+    def compare_nodes_edges(test_network, exp_nodes, exp_edges):
+        nodes = list(test_network.graph.nodes)
+        nodes.sort(key=lambda x: get_job_number(x))
+        assert nodes == exp_nodes
+        edges = list(test_network.graph.edges)
+        edges.sort(key=lambda x: get_job_number(x[0]))
+        assert edges == exp_edges
+
+    def test_instantiate_RelionPipeline_obj_main_graph(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        assert list(rp.graph.nodes()) == FULL_NODES
-        assert list(rp.graph.edges()) == FULL_EDGES
+        self.compare_nodes_edges(rp, FULL_NODES, FULL_EDGES)
 
     def test_instatiate_RelionPipeline_obj_jobs_graph(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        assert list((rp.jobs_graph.nodes())) == JOBS_NODES
-        assert list(rp.jobs_graph.edges()) == JOBS_EDGES
+        rp = RelionPipeline(
+            self.test_data / "pipelines/short_pipeline.star"
+        ).process_layer()
+        self.compare_nodes_edges(rp, JOBS_NODES, JOBS_EDGES)
 
     def test_instatiate_RelionPipeline_obj_files_graph(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        assert list((rp.files_graph.nodes())) == FILES_NODES
-        assert list(rp.files_graph.edges()) == FILES_EDGES
+        rp = RelionPipeline(
+            self.test_data / "pipelines/short_pipeline.star"
+        ).files_layer()
+        self.compare_nodes_edges(rp, FILES_NODES, FILES_EDGES)
 
     def test_upstream_full_critical_path(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
         full_crit = rp.upstream_critical_path(start="Denoise/job008/tomograms.star")
-        assert list(full_crit.nodes()) == FULL_CRIT_NODES
-        assert list(full_crit.edges()) == FULL_CRIT_EDGES
+        self.compare_nodes_edges(full_crit, FULL_CRIT_NODES, FULL_CRIT_EDGES)
 
     def test_upstream_files_critical_path(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        full_crit = rp.upstream_critical_path(
-            start="Denoise/job008/tomograms.star", graph=rp.files_graph
-        )
-        assert list(full_crit.nodes()) == FILES_CRIT_NODES
-        assert list(full_crit.edges()) == FILES_CRIT_EDGES
+        rp = RelionPipeline(
+            self.test_data / "pipelines/short_pipeline.star"
+        ).files_layer()
+        files_crit = rp.upstream_critical_path(start="Denoise/job008/tomograms.star")
+        self.compare_nodes_edges(files_crit, FILES_CRIT_NODES, FILES_CRIT_EDGES)
 
     def test_upstream_jobs_critical_path(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        full_crit = rp.upstream_critical_path(
-            start="Denoise/job008/", graph=rp.jobs_graph
-        )
-        assert list(full_crit.nodes()) == JOBS_CRIT_NODES
-        assert list(full_crit.edges()) == UPSTREAM_JOBS_CRIT_EDGES
+        rp = RelionPipeline(
+            self.test_data / "pipelines/short_pipeline.star"
+        ).process_layer()
+        jobs_crit = rp.upstream_critical_path(start="Denoise/job008/")
+        self.compare_nodes_edges(jobs_crit, JOBS_CRIT_NODES, UPSTREAM_JOBS_CRIT_EDGES)
 
     def test_downstream_full_critical_path(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
         full_crit = rp.downstream_critical_path(start="Import/job001/tilt_series.star")
-        assert list(full_crit.nodes()) == FULL_NODES[1:]
-        assert list(full_crit.edges()) == FULL_EDGES[1:]
+        self.compare_nodes_edges(full_crit, FULL_NODES[1:], FULL_EDGES[1:])
 
     def test_downstream_files_critical_path(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
+        rp = RelionPipeline(
+            self.test_data / "pipelines/short_pipeline.star"
+        ).files_layer()
         full_crit = rp.downstream_critical_path(
-            start="MotionCorr/job002/corrected_tilt_series.star", graph=rp.files_graph
+            start="MotionCorr/job002/corrected_tilt_series.star"
         )
-        assert list(full_crit.nodes()) == DOWNSTREAM_CRIT_FILES_NODES
-        assert list(full_crit.edges()) == DOWNSTREAM_CRIT_FILES_EDGES
+        self.compare_nodes_edges(
+            full_crit, DOWNSTREAM_CRIT_FILES_NODES, DOWNSTREAM_CRIT_FILES_EDGES
+        )
 
     def test_jobs_downstream_critical_path(self):
-        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        full_crit = rp.downstream_critical_path(
-            start="MotionCorr/job002/", graph=rp.jobs_graph
-        )
-        assert list(full_crit.nodes()) == JOBS_NODES[1:]
-        assert list(full_crit.edges()) == JOBS_EDGES[1:]
+        rp = RelionPipeline(
+            self.test_data / "pipelines/short_pipeline.star"
+        ).process_layer()
+        full_crit = rp.downstream_critical_path(start="MotionCorr/job002/")
+        self.compare_nodes_edges(full_crit, JOBS_NODES[1:], JOBS_EDGES[1:])
 
     def test_next_upstream_jobs(self):
         rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")

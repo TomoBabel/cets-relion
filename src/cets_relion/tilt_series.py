@@ -33,11 +33,12 @@ class RelionTiltSeriesStarfile(object):
     ) -> List[str]:
         upstream = self.pipeline.upstream_critical_path(start=self.name)
         import_files = []
-        for unode in upstream.nodes:
+        for unode in upstream.graph.nodes:
             if (
-                upstream.nodes[unode].get("relion_type") == "TomogramGroupMetadata"
-                and upstream.nodes[unode].get("file_type") == "star"
-                and "import" in upstream.nodes[unode].get("kwds")
+                upstream.graph.nodes[unode].get("relion_type")
+                == "TomogramGroupMetadata"
+                and upstream.graph.nodes[unode].get("file_type") == "star"
+                and "import" in upstream.graph.nodes[unode].get("kwds")
             ):
                 import_files.append(unode)
         raw_data_files = []
@@ -119,8 +120,8 @@ class RelionTiltSeriesStarfile(object):
         tomo_files, found_tomos = [], []
         reconstruct_jobs = [
             x
-            for x in upstream
-            if upstream.nodes[x]["relion_type"] == "relion.denoisetomo"
+            for x in upstream.graph.nodes
+            if upstream.graph.nodes[x]["relion_type"] == "relion.denoisetomo"
         ]
         if reconstruct_jobs:
             for rec_job in reconstruct_jobs:
@@ -141,8 +142,8 @@ class RelionTiltSeriesStarfile(object):
         downstream = self.pipeline.downstream_critical_path(start=self.name)
         reconstruct_jobs = [
             x
-            for x in downstream
-            if downstream.nodes[x]["relion_type"] == "relion.denoisetomo"
+            for x in downstream.graph.nodes
+            if downstream.graph.nodes[x]["relion_type"] == "relion.denoisetomo"
         ]
         if reconstruct_jobs:
             for rec_job in reconstruct_jobs:
