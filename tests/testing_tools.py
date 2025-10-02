@@ -21,9 +21,19 @@ class CetsRelionTest(unittest.TestCase):
         if self.test_dir.is_dir():
             shutil.rmtree(self.test_dir)
 
-    def setup_dirs(self, jobs_to: int = 80, pipeline: str = "default_pipeline.star"):
+    def setup_dirs(self, jobs_to: int = 80, pipeline: str = "DEFAULT"):
         skele = self.test_data / "skeleton_project"
-        shutil.copy(self.test_data / f"pipelines/{pipeline}", "default_pipeline.star")
+
+        if pipeline != "DEFAULT":
+            shutil.copy(
+                self.test_data / f"pipelines/{pipeline}", "default_pipeline.star"
+            )
+        else:
+            pipeline_file = list(
+                skele.glob(f"*/job{jobs_to:03d}/default_pipeline.star")
+            )[0]
+            shutil.copy(pipeline_file, "default_pipeline.star")
+
         jobs = list(skele.glob("*/job*"))
         jobs.sort(key=lambda x: int(str(x)[-3:]))
         for n in range(jobs_to):

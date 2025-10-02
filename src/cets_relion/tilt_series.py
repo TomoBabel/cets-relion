@@ -1,17 +1,30 @@
 from __future__ import annotations
 
-import os
 from pathlib import Path
-from typing import List, Dict, Union, Optional
-
-from gemmi import cif
-
 from cets_relion.relion_reader import RelionPipeline
+import os
+from typing import List, Union, Optional, Dict
+from logging import getLogger
+from cets_data_model.models.models import (
+    CTFMetadata,
+    ProjectionImage,
+    Translation,
+    Affine,
+)
+from cets_data_model.utils.image_utils import get_mrc_dims
+from cets_relion.utils import rotation_to_matrix
 from cets_relion.utils import joboptions_from_jobstar_file
+from gemmi import cif
+from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
+
+logger = getLogger(__name__)
 
 
 class RelionTiltSeriesStarfile(object):
     """Class for handling a global tilt series data file from RELION
+
+    The tilt series data file is expected to contain merged single frame micrographs
+    for each tilt angle
 
     can be subclassed for job-specific variants of this type of file
 
@@ -27,33 +40,6 @@ class RelionTiltSeriesStarfile(object):
         self.name = str(file_name)
         self.file = Path(str(file_name))
         self.pipeline = RelionPipeline(pipeline)
-
-    def get_raw_files(
-        self,
-    ) -> List[str]:
-        upstream = self.pipeline.upstream_critical_path(start=self.name)
-        import_files = []
-        for unode in upstream.graph.nodes:
-            if (
-                upstream.graph.nodes[unode].get("relion_type")
-                == "TomogramGroupMetadata"
-                and upstream.graph.nodes[unode].get("file_type") == "star"
-                and "import" in upstream.graph.nodes[unode].get("kwds")
-            ):
-                import_files.append(unode)
-        raw_data_files = []
-        for file in import_files:
-            # get the job the file came from
-            importjob = list(self.pipeline.graph.predecessors(file))[0]
-            # determine if was import of movies or merged tomos
-            jobfile = str(Path(importjob) / "job.star")
-            jobops = joboptions_from_jobstar_file(jobfile)
-            if jobops["images_are_motion_corrected"] == "No":
-                raw_data_files.append(file)
-            else:
-                raw_data_files.append(file)
-
-        return raw_data_files
 
     def get_joboptions(self) -> Dict[str, str]:
         jobfile = Path(self.name).parent / "job.star"
@@ -72,7 +58,7 @@ class RelionTiltSeriesStarfile(object):
         names = data.find(prefix="_rln", tags=["TomoName"])
         return ts_name in [x[0] for x in names]
 
-    def get_tilt_series_star_file(self, ts_name: str) -> Optional[Path]:
+    def get_specific_tilt_series_star_file(self, ts_name: str) -> Optional[Path]:
         """Get the path of star file containing info on a single tilt series image set
 
         Args:
@@ -91,88 +77,154 @@ class RelionTiltSeriesStarfile(object):
                 return Path(line[1])
         return None
 
-    def find_tomograms_in_self(self, ts_name: str) -> List[str]:
-        """
-        Find a tomograms that have been generated from this tilt series by upstream or
-        down stream jobs.
+    def get_tilt_image_ctfs(self, ts_name: str) -> Dict[str, CTFMetadata]:
+        """Get CTF  info for a tilt image from a tilt series
 
-        ts_name (str): Name of the tomogram/tilt series EG: TS_01
+        Uses the movie names as key rather than the merge micrograph names so the
+        Movies object can use it for lookup
+
+        Args:
+            ts_name: Name of the tilt series
+            image_name (str): The name of the movie frame image
 
         Returns:
-              List[str]: Path(s) to the tomogram(s), relative to the project
+            Optional[CTFMetadata]: CETS CTFMetadata object or None if tilt image not found
         """
-
-        # fist look in this file itself, only valid for TomoReconstruct jobs
-        # which aren't used for much in relion
-        data = cif.read_file(self.name).sole_block()
-        tomos = data.find(
-            prefix="_rln", tags=["TomoName", "TomoReconstructedTomogramDenoised"]
+        # read the starfile
+        ctfs_dict = {}
+        tsstar = cif.read_file(str(self.get_specific_tilt_series_star_file(ts_name)))
+        data_block = tsstar.find_block(ts_name)
+        data = data_block.find(
+            prefix="_rln",
+            tags=[
+                "MicrographMovieName",
+                "DefocusU",
+                "DefocusV",
+                "DefocusAngle",
+            ],
         )
-        tomo = dict(list(tomos)).get(ts_name)
-        if tomo is not None:
-            return [tomo]
-        else:
-            return []
-
-    def find_tomograms_in_other_jobs(self, ts_name: str) -> List[str]:
-        # next search upstream for reconstruction jobs that might have generated tomos
-        upstream = self.pipeline.upstream_critical_path(start=self.name)
-        tomo_files, found_tomos = [], []
-        reconstruct_jobs = [
-            x
-            for x in upstream.graph.nodes
-            if upstream.graph.nodes[x]["relion_type"] == "relion.denoisetomo"
-        ]
-        if reconstruct_jobs:
-            for rec_job in reconstruct_jobs:
-                tomo_files.extend(
-                    self.pipeline.next_downstream_files(
-                        start=rec_job,
-                        relion_type=["TomogramGroupMetadata"],
-                        kwds=["denoise"],
-                    )
-                )
-        for tomo_file in tomo_files:
-            tf = RelionTiltSeriesStarfile(tomo_file)
-            tomo = tf.find_tomograms_in_self(ts_name)
-            if tomo:
-                found_tomos.extend(tomo)
-
-        # next search downstream for reconstruction jobs that might have generated tomos
-        downstream = self.pipeline.downstream_critical_path(start=self.name)
-        reconstruct_jobs = [
-            x
-            for x in downstream.graph.nodes
-            if downstream.graph.nodes[x]["relion_type"] == "relion.denoisetomo"
-        ]
-        if reconstruct_jobs:
-            for rec_job in reconstruct_jobs:
-                tomo_files.extend(
-                    self.pipeline.next_downstream_files(
-                        start=rec_job,
-                        relion_type=["TomogramGroupMetadata"],
-                        kwds=["denoise"],
-                    )
-                )
-
-        for f in tomo_files:
-            found_tomos.extend(
-                RelionTiltSeriesStarfile(f).find_tomograms_in_self(ts_name)
+        for line in data:
+            ctfs_dict[cif.as_string(line[0])] = CTFMetadata(
+                defocus_u=float(line[1]),
+                defocus_v=float(line[2]),
+                defocus_angle=float(line[3]),
             )
-        return found_tomos
+        return ctfs_dict
 
-    def find_tomgrams(self, ts_name: str) -> List[str]:
-        """
-        Find any tomograms that have been generated from this tilt series
+    def get_tilt_image_doses(self, ts_name: str) -> Dict[str, float]:
+        """Get CTF  info for a tilt image from a tilt series
 
-        ts_name (str): Name of the tomogram/tilt series EG: TS_01
+        Args:
+            ts_name: Name of the tilt series
+            image_name (str): The name of the movie frame image
 
         Returns:
-              List[str]: Path(s) to the tomogram(s), relative to the project. If the job
-              itself generated tomos those are returned otherwise tomos derived from
-              other jobs are returned if they are present
+            float: The total accumulated dose for the tilt angle image
         """
-        from_self = self.find_tomograms_in_self(ts_name)
-        if from_self:
-            return from_self
-        return self.find_tomograms_in_other_jobs(ts_name)
+        tsstar = cif.read_file(str(self.get_specific_tilt_series_star_file(ts_name)))
+        data_block = tsstar.find_block(ts_name)
+        data = data_block.find(
+            prefix="_rln",
+            tags=[
+                "MicrographName",
+                "MicrographPreExposure",
+            ],
+        )
+        mic_vals = {cif.as_string(x[0]): float(x[1]) for x in data}
+        dose_rate = list(mic_vals.values())[1] - list(mic_vals.values())[0]
+        dose_dict = {}
+        for img, preexp in mic_vals.items():
+            dose_dict[img] = preexp + dose_rate
+        return dose_dict
+
+    def get_cets_projection_images(
+        self, ts_name: str, dose_dict: Optional[Dict[str, float]] = None
+    ) -> List[ProjectionImage]:
+        """Get cets ProjectionImage objects (merged motion corrected images) for a tilt
+        series
+
+        ts_starfile (str): The starfile for the tilt series
+        dose_dict (Optional[Dict[str, float]): Dictionary of total accumulated dose for
+            each tilt angle image
+
+        Returns:
+            List[ProjectionImage]: List of cets ProjectionImage objects
+        """
+        tiltimgs_file = self.get_specific_tilt_series_star_file(ts_name)
+        block = cif.read_file(str(tiltimgs_file)).find_block(ts_name)
+        dose_dict = self.get_tilt_image_doses(ts_name)
+        data = block.find(
+            prefix="_rln",
+            tags=[
+                "MicrographName",
+                "TomoNominalStageTiltAngle",
+                "DefocusU",
+                "DefocusV",
+                "DefocusAngle",
+            ],
+        )
+        alignment_data = block.find(
+            prefix="_rln",
+            tags=[
+                "TomoXTilt",
+                "TomoYTilt",
+                "TomoZRot",
+                "TomoXShiftAngst",
+                "TomoYShiftAngst",
+            ],
+        )
+        cets_objects = []
+        for n, row in enumerate(data):
+            micname = cif.as_string(row[0])
+            x_size, y_size, _z_size = get_mrc_dims(micname)
+            defocus_u = row[2]
+            defocus_v = row[3]
+            defocus_angle = row[4]
+            nom_tilt = row[1]
+            ctf = CTFMetadata(
+                defocus_u=defocus_u,
+                defocus_v=defocus_v,
+                defocus_angle=defocus_angle,
+                defocus_handedness=-1,
+            )
+            cets_obj = ProjectionImage(
+                path=micname,
+                section=str(n),
+                width=x_size,
+                height=y_size,
+                coordinate_systems=[RELION_COORDS_PHYSICAL],
+                nominal_tilt_angle=nom_tilt,
+                ctf_metadata=ctf,
+                accumulated_dose=dose_dict[micname],
+            )
+            try:
+                xtilt, ytilt, zrot, xshift, yshift = [
+                    float(x) for x in alignment_data[n]
+                ]
+                translation = Translation(
+                    name="Tilt image alignment translation",
+                    translation=[xshift, yshift],
+                )
+                x_affine = Affine(
+                    name="Tilt image alignment x tilt",
+                    affine=rotation_to_matrix(xtilt, "x"),
+                )
+                y_affine = Affine(
+                    name="Tilt image alignment y tilt",
+                    affine=rotation_to_matrix(ytilt, "y"),
+                )
+                z_affine = Affine(
+                    name="Tilt image alignment x rotation",
+                    affine=rotation_to_matrix(zrot, "z"),
+                )
+                cets_obj.coordinate_transformations = [
+                    translation,
+                    x_affine,
+                    y_affine,
+                    z_affine,
+                ]
+            except IndexError:
+                pass
+            cets_objects.append(cets_obj)
+
+        return cets_objects

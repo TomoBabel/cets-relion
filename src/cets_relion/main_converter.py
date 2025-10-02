@@ -1,0 +1,156 @@
+"""Script to convert CryoET data from RELION to TomoBabel CETS format"""
+
+from pathlib import Path
+from gemmi import cif
+from typing import List, Dict, Union
+from cets_relion.tomograms import RelionTomosStarfile
+from cets_relion.utils import get_job_type
+from cets_relion.relion_reader import RelionPipeline
+from cets_relion.movies import RelionMoviesStarFile
+from cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.motion_corr import RelionMotionCorrStarFile
+from cets_relion.particle_coords import (
+    RelionCoordsStarFile,
+    RelionParticlesStarFile,
+    parse_particles_file,
+)
+
+# cets converters for specific jobtypes
+# {job_type: (file_to_use, converter_class, attr to set)}
+converters = {
+    "relion.importtomo": ("tilt_series.star", RelionMoviesStarFile, "movies"),
+    "relion.motioncorr.own": (
+        "corrected_tilt_series.star",
+        RelionMotionCorrStarFile,
+        "mocorr",
+    ),
+    "relion.ctffind.ctffind4": (
+        "tilt_series_ctf.star",
+        RelionTiltSeriesStarfile,
+        "ctf",
+    ),
+    "relion.excludetilts": (
+        "selected_tilt_series.star",
+        RelionTiltSeriesStarfile,
+        "tilt_series",
+    ),
+    "relion.aligntiltseries": (
+        "aligned_tilt_series.star",
+        RelionTiltSeriesStarfile,
+        "tilt_series",
+    ),
+    "relion.reconstructtomograms": ("tomograms.star", RelionTomosStarfile, "tomos"),
+    "relion.denoisetomo": ("tomograms.star", RelionTomosStarfile, "tomos"),
+}
+
+
+def parse_optimisation_set(opt_set_file: Path) -> dict:
+    opt_block = cif.read_file(str(opt_set_file)).sole_block()
+
+    # it might have pairs
+    parts = opt_block.find_pair("_rlnTomoParticlesFile")
+    tomos = opt_block.find_pair("_rlnTomoTomogramsFile")
+    vals_dict: Dict[
+        str, Union[RelionParticlesStarFile, RelionCoordsStarFile, RelionTomosStarfile]
+    ] = {}
+    if parts is not None and tomos is not None:
+        part_attr, part_obj = parse_particles_file(parts[1])
+        vals_dict[part_attr] = part_obj
+        vals_dict["tomos"] = RelionTomosStarfile(tomos[1])
+
+    # or it might have a loop
+    else:
+        loop = opt_block.find(
+            prefix="_rln", tags=["TomoParticlesFile", "TomoTomogramsFile"]
+        )
+        if loop is not None:
+            vals_dict["tomos"] = RelionTomosStarfile(loop[0][1])
+            # get the correct object and attr for the files with particles
+            parts_value, parts_obj = parse_particles_file(loop[0][0])
+            vals_dict[parts_value] = parts_obj
+
+    return vals_dict
+
+
+class RelionCetsConverter:
+    def __init__(self, terminal_job: str) -> None:
+        self.pipeline = RelionPipeline("default_pipeline.star")
+
+        # init empty attrs
+        self.movies: List[RelionMoviesStarFile] = []
+        self.ctf: List[RelionTiltSeriesStarfile] = []
+        self.mocorr: List[RelionMotionCorrStarFile] = []
+        self.picks: List[RelionCoordsStarFile] = []
+        self.particles: List[RelionParticlesStarFile] = []
+        self.tilt_series: List[RelionTiltSeriesStarfile] = []
+        self.tomos: List[RelionTomosStarfile] = []
+        # self.averages = [] # ToDo: haven't got objs for this yet...
+
+        # first try to set attrs based on the terminal job data if it is a type without
+        # an optimisation set. Possibly sets any attr, depending on the terminal job
+        tjob_type = get_job_type(terminal_job)
+        if converters.get(tjob_type) is not None:
+            file, obj, attr = converters[tjob_type]
+            setattr(self, attr, [obj(Path(terminal_job) / file)])
+
+        # try to get info from an optimization set if it exists
+        # possibly sets picks, particles, and/or tomos attrs
+        opt_set = list(Path(terminal_job).glob("*optimisation_set.star"))
+        if opt_set:
+            opt_values = parse_optimisation_set(opt_set[0])
+            if opt_values:
+                for key, val in opt_values.items():
+                    setattr(self, key, [val])
+
+        # if extracted particles have been found get the associated coords
+        if self.particles and not self.picks:
+            pick_files = []
+            for partfile in self.particles:
+                pick_files.extend(partfile.get_coords_object())
+            self.picks = pick_files
+
+        # if tomograms have been found try to find the aligned tilt series
+        if self.tomos and not self.tilt_series:
+            ts_files = self.pipeline.next_upstream_files(
+                start=terminal_job,
+                relion_type=["TomogramGroupMetadata"],
+                kwds=["aligntiltseries"],
+            )
+            for tsfile in ts_files:
+                self.tilt_series.append(RelionTiltSeriesStarfile(tsfile))
+
+        # set the ctf attr if not already set
+        if not self.ctf:
+            ctf_jobs = self.pipeline.next_upstream_jobs(
+                terminal_job, jobtypes=["relion.ctffind.ctffind4"]
+            )
+            for ctf_job in ctf_jobs:
+                output = Path(ctf_job) / "tilt_series_ctf.star"
+                self.ctf.append(RelionTiltSeriesStarfile(output))
+
+        # find any motion correction jobs
+        self.mocorr = []
+        mocorr_jobs = self.pipeline.next_upstream_jobs(
+            terminal_job, jobtypes=["relion.motioncorr.own"]
+        )
+        for mocorr_job in mocorr_jobs:
+            output = Path(mocorr_job) / "corrected_tilt_series.star"
+            self.mocorr.append(RelionMotionCorrStarFile(output))
+
+        # set the movies attr of not already set
+        if not self.movies:
+            movies_jobs = self.pipeline.next_upstream_jobs(
+                terminal_job, jobtypes=["relion.importtomo"]
+            )
+            # ToDo: add case for merged images import
+            for movie_job in movies_jobs:
+                output = Path(movie_job) / "tilt_series.star"
+                movobj = RelionMoviesStarFile(output)
+                movobj.ctf_files = self.ctf
+                movobj.mocorr_files = self.mocorr
+                self.movies.append(movobj)
+
+
+if __name__ == "__main__":
+    """Do the conversion"""
+    pass

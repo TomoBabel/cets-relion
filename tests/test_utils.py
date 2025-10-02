@@ -1,4 +1,9 @@
-from cets_relion.utils import get_job_name, joboptions_from_jobstar_file, get_job_number
+from cets_relion.utils import (
+    get_job_name,
+    joboptions_from_jobstar_file,
+    get_job_number,
+    get_job_type,
+)
 from tests.testing_tools import CetsRelionTest
 
 
@@ -28,6 +33,10 @@ class UtilsTests(CetsRelionTest):
             "queuename": "openmpi",
             "tilt_axis_angle": "85",
         }
+
+    def test_get_job_type(self):
+        job = self.test_data / "skeleton_project/Import/job001"
+        assert get_job_type(job) == "relion.importtomo"
 
 
 def test_get_job_name():

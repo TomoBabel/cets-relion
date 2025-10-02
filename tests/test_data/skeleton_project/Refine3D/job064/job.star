@@ -62,7 +62,7 @@ offset_step          1
 other_args         "" 
 particle_diameter        230 
       qsub     sbatch 
-qsubscript my-gpu-localbuild.sh 
+qsubscript "my-gpu-localbuild.sh"
  queuename        gpu 
  range_psi         10 
  range_rot         -1 
@@ -70,7 +70,7 @@ range_tilt         15
 ref_correct_greyscale        Yes 
  relax_sym         "" 
   sampling "0.9 degrees" 
-scratch_dir $RELION_SCRATCH_DIR 
+scratch_dir ""$RELION_SCRATCH_DIR""
 sigma_tilt         10 
   sym_name         C6 
 trust_ref_size        Yes 

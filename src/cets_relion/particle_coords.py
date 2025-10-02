@@ -1,9 +1,22 @@
 import os
-from typing import Dict, Union, Tuple, List
+from typing import Union, Tuple, List
 from gemmi import cif
+from pathlib import Path
 from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
-from cets_data_model.models.models import PointSet3D, ConfiguredBaseModel
-from cets_relion.utils import get_job_name
+from cets_data_model.models.models import (
+    PointSet3D,
+    ConfiguredBaseModel,
+    ParticleMap,
+    Affine,
+    Translation,
+)
+from cets_data_model.utils.image_utils import get_mrc_dims
+
+from cets_relion.relion_reader import RelionPipeline
+from cets_relion.utils import (
+    get_job_name,
+    relion_eulers_to_matrix,
+)
 
 
 # ToDo: These classes will probably be superseded by CETS objects in cets_data_model
@@ -87,8 +100,14 @@ class RelionPointAnnotations(RelionAnnotationFile):
         ]
 
 
-class RelionParticleCoordsFile(object):
-    """A class to hold RELION particle coordinates."""
+class RelionCoordsStarFile(object):
+    """A class to hold RELION particle coordinates
+
+    RELION makes two 'particles.star' files one which has only coordinates with
+    associated annotations and a 2nd with actual extracted particles.  This one is for
+    only coords.
+
+    """
 
     def __init__(self, in_file: Union[str, os.PathLike]) -> None:
         """Initialize the relion particle coordinates file."""
@@ -121,35 +140,6 @@ class RelionParticleCoordsFile(object):
         return PointSet3D(
             origin3D=coords, coordinate_systems=[RELION_COORDS_PHYSICAL], path=self.name
         )
-
-    def all_particle_sets(self) -> Dict[str, PointSet3D]:
-        data = cif.read_file(self.name).find_block("particles")
-        parts = data.find(
-            prefix="_rln",
-            tags=[
-                "TomoName",
-                "CenteredCoordinateXAngst",
-                "CenteredCoordinateYAngst",
-                "CenteredCoordinateZAngst",
-            ],
-        )
-        tomo_coords: Dict[str, List[List[float]]] = {}
-        # get all particles for each tomo
-        for part in parts:
-            coords = [float(x) for x in (part[1], part[2], part[3])]
-            if tomo_coords.get(part[0]) is None:
-                tomo_coords[part[0]] = [coords]
-            else:
-                tomo_coords[part[0]].append(coords)
-        # make PointSet3D objs for each tomo
-        tomo_sets = {}
-        for tomo in tomo_coords:
-            tomo_sets[tomo] = PointSet3D(
-                origin3D=tomo_coords[tomo],
-                coordinate_systems=[RELION_COORDS_PHYSICAL],
-                path=self.name,
-            )
-        return tomo_sets
 
     @staticmethod
     def determine_annotation_type(annotation_file: Union[str, os.PathLike]):
@@ -193,3 +183,111 @@ class RelionParticleCoordsFile(object):
             else:
                 annotations = []  # ToDo: add other annotation types here
         return annotations
+
+
+class RelionParticlesStarFile(object):
+    """A class for holding a RELION particle star file containing extracted particles
+
+    Not just coordinates, should also have optics data and alignments
+    """
+
+    def __init__(self, file_name: str):
+        self.file = Path(str(file_name))
+        self.name = str(file_name)
+
+    def get_cets_particles(self, tomo_name: str) -> List[ParticleMap]:
+        """Get CETS ParticleMap objects for extracted particles
+
+        Args:
+            tomo_name (str): The name of the tomo
+
+        Returns:
+            List[ParticleMap]: CETS ParticleMap object for each particle
+        """
+        data = cif.read_file(self.name)
+        parts_block = data.find_block("particles")
+        all_parts = parts_block.find(
+            prefix="_rln",
+            tags=[
+                "TomoName",
+                "TomoSubtomogramRot",
+                "TomoSubtomogramTilt",
+                "TomoSubtomogramPsi",
+                "AngleRot",
+                "AngleTilt",
+                "AnglePsi",
+                "OriginXAngst",
+                "OriginYAngst",
+                "OriginZAngst",
+                "TomoParticleName",
+                "ImageName",
+            ],
+        )
+        parts = [x for x in all_parts if x[0] == tomo_name]
+        cets_particles = []
+        for part in parts:
+            tomorot, tomotilt, tomopsi = float(part[1]), float(part[2]), float(part[3])
+            tilt, rot, psi = float(part[4]), float(part[5]), float(part[6])
+            x, y, z = (float(part[7]), float(part[8]), float(part[9]))
+            image_number = int(part[10].split("/")[-1])
+            image_name = f"{image_number:06}@{part[11]}"
+            align_affine = Affine(
+                name="Averaging alignment",
+                affine=list(relion_eulers_to_matrix(tilt, rot, psi)),
+            )
+            align_translate = Translation(
+                name="Averaging translation",
+                translation=[x, y, z],
+            )
+            subtomo_affine = Affine(
+                name="Alignment relative to parent tomogram",
+                affine=list(relion_eulers_to_matrix(tomotilt, tomorot, tomopsi)),
+            )
+            dims = get_mrc_dims(part[4])
+            cets_part = ParticleMap(
+                path=image_name,
+                width=dims[0],
+                height=dims[1],
+                depth=dims[2],
+                coordinate_systems=[RELION_COORDS_PHYSICAL],
+                coordinate_transformations=[
+                    subtomo_affine,
+                    align_affine,
+                    align_translate,
+                ],
+            )
+            cets_particles.append(cets_part)
+        return cets_particles
+
+    def get_coords_object(self) -> List[RelionCoordsStarFile]:
+        """Get the data for the original picking of the particles
+
+        Returns:
+            List[RelionParticlesStarFile]: RelionParticlesStarFile object
+        """
+        pipeline = RelionPipeline("default_pipeline.star")
+        pick_jobs = pipeline.next_upstream_jobs(self.name, jobtypes=["relion.picktomo"])
+        return [RelionCoordsStarFile(Path(x) / "particles.star") for x in pick_jobs]
+
+
+def parse_particles_file(
+    in_file: str,
+) -> Tuple[str, Union[RelionParticlesStarFile, RelionCoordsStarFile]]:
+    """Parse a RELION particle star file and return the right object
+
+    figure out if it's actual particles or just coords
+
+    Args:
+        in_file (str): The file to parse
+    Returns:
+        Tuple[str, Union[RelionParticlesStarFile, RelionCoordsStarFile]]: (the type,
+           (picks or particles), correct object for it (ReliionCoordsStarFile or
+           RelionParticlesStarFile))
+    """
+    data = cif.read_file(in_file)
+    # if the file contains extracted particles it wil have an optics block
+    optics = data.find_block("optics")
+    if optics is None:
+        return "picks", RelionCoordsStarFile(in_file)
+    else:
+        return "particles", RelionParticlesStarFile(in_file)

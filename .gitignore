@@ -9,3 +9,4 @@ tests/test_data/pipelines/__pycache__/
 src/CETS_RELION.egg-info/
 CETS_RELION.egg-info
 src/cets_relion/objs/__pycache__/
+tests/test_data/results/__pycache__/

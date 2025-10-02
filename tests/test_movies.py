@@ -1,6 +1,8 @@
 from unittest.mock import patch, MagicMock
 
 from pytest import fixture
+
+from cets_relion.tilt_series import RelionTiltSeriesStarfile
 from cets_relion.movies import RelionMoviesStarFile
 from cets_relion.relion_reader import RelionPipeline
 from cets_data_model.models.models import (
@@ -8,8 +10,6 @@ from cets_data_model.models.models import (
     MovieFrame,
     MovieStackSeries,
     MovieStack,
-    MovieStackCollection,
-    GainFile,
 )
 from tests.testing_tools import CetsRelionTest
 
@@ -23,7 +23,7 @@ def mock_get_image_size():
 
 @fixture(autouse=True)
 def mock_get_ctf_data():
-    with patch("cets_relion.movies.RelionCtfStarFile") as MockClass:
+    with patch("cets_relion.movies.RelionTiltSeriesStarfile") as MockClass:
         mock_instance = MagicMock()
         mock_instance.get_tilt_image_ctf.return_value = CTFMetadata(
             defocus_u=1111, defocus_v=2222, defocus_angle=33
@@ -37,9 +37,9 @@ class RelionCetsMoviesTests(CetsRelionTest):
         self.setup_dirs(3)
         msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
         assert isinstance(msf.pipeline, RelionPipeline)
-        assert msf.movies_file == "Import/job001/tilt_series.star"
-        assert msf.mocorr_files == ["MotionCorr/job002/corrected_tilt_series.star"]
-        assert msf.ctf_files == ["CtfFind/job003/tilt_series_ctf.star"]
+        assert msf.name == "Import/job001/tilt_series.star"
+        assert msf.mocorr_files == []
+        assert msf.ctf_files == []
 
     def test_get_movies_starfile(self):
         self.setup_dirs(3)
@@ -48,9 +48,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
             "Import/job001/tilt_series/TS_01.star"
         )
 
-    def test_make_movie_cets_for_tilt_series(self):
+    def test_make_movie_cets_for_tilt_series_with_ctf(self):
         self.setup_dirs(3)
-        msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        msf = RelionMoviesStarFile(
+            "Import/job001/tilt_series.star",
+            ctf_files=[RelionTiltSeriesStarfile("CtfFind/job003/tilt_series_ctf.star")],
+        )
         result = msf.make_movie_cets_for_tilt_series("TS_01")
         assert isinstance(result, MovieStackSeries)
         assert len(result.stacks) == 41
@@ -62,9 +65,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_systems=None,
             coordinate_transformations=None,
             ctf_metadata=CTFMetadata(
-                defocus_u=1111.0,
-                defocus_v=2222.0,
-                defocus_angle=33.0,
+                defocus_u=38855.828125,
+                defocus_v=38750.828125,
+                defocus_angle=35.154533,
+                defocus_handedness=-1,
             ),
             height=2000,
             nominal_tilt_angle=0.001,
@@ -77,9 +81,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_systems=None,
             coordinate_transformations=None,
             ctf_metadata=CTFMetadata(
-                defocus_u=1111.0,
-                defocus_v=2222.0,
-                defocus_angle=33.0,
+                defocus_u=38855.828125,
+                defocus_v=38750.828125,
+                defocus_angle=35.154533,
+                defocus_handedness=-1,
             ),
             height=2000,
             nominal_tilt_angle=0.001,
@@ -92,9 +97,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_systems=None,
             coordinate_transformations=None,
             ctf_metadata=CTFMetadata(
-                defocus_u=1111.0,
-                defocus_v=2222.0,
-                defocus_angle=33.0,
+                defocus_u=38544.476562,
+                defocus_v=38449.148438,
+                defocus_angle=-10.13496,
+                defocus_handedness=-1,
             ),
             height=2000,
             nominal_tilt_angle=60.0006,
@@ -102,16 +108,6 @@ class RelionCetsMoviesTests(CetsRelionTest):
             section="7",
             width=2000,
         )
-
-    def test_get_all_movies_stack_series(self):
-        self.setup_dirs(3)
-        msf = RelionMoviesStarFile("Import/job001/tilt_series.star")
-        result = msf.get_all_movies_stack_series()
-        assert all([isinstance(x, MovieStackCollection) for x in result])
-        assert len(result) == 5
-        assert result[0].defect_file is None
-        assert isinstance(result[0].gain_file, GainFile)
-        assert result[0].gain_file.path == "gain_reference.mrc"
 
     def test_make_movie_cets_for_tilt_series_no_ctf_available(self):
         self.setup_dirs(1, pipeline="single_import_pipeline.star")

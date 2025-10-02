@@ -1,11 +1,10 @@
 import os
 import re
 from pathlib import Path
-from typing import Dict, Union
+from typing import Dict, Union, List, Literal
 
 from gemmi import cif
-from scipy import spatial
-import numpy as np
+from scipy.spatial.transform import Rotation as R
 
 
 def clean_file_input(in_val: Union[str, os.PathLike]) -> str:
@@ -26,6 +25,21 @@ def joboptions_from_jobstar_file(
     for key, val in jobops_dict.items():
         jobops_dict[key] = "" if val in ["''", '""'] else val
     return jobops_dict
+
+
+def get_job_type(job_name: str) -> str:
+    """Get the RELION/pipeliner type of a job
+
+    Args:
+        job_name (str): name of the job
+
+    Returns:
+        str: RELION/pipeliner jobtype
+    """
+    jobstar = Path(job_name) / "job.star"
+    jt_block = cif.read_file(str(jobstar)).find_block("job")
+    job_type = jt_block.find_pair("_rlnJobTypeLabel")
+    return cif.as_string(job_type[1])
 
 
 def get_job_name(file: Union[str, os.PathLike]) -> Path:
@@ -63,7 +77,8 @@ def get_job_number(file: Union[str, os.PathLike]) -> int:
     return int(jobname.lstrip("job"))
 
 
-def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> np.ndarray:
+# ToDo: Change return type to float when model is fixed
+def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> List[List[int]]:
     """Convert the Euler angles from a RELION star file into a rotation matrix
 
     Args:
@@ -75,7 +90,22 @@ def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> np.ndarray:
         np.ndarray: The transformation matrix
 
     """
-    sipy_rot = spatial.transform.Rotation.from_euler(
-        seq="ZYZ", angles=[tilt, rot, psi], degrees=True
-    )
-    return sipy_rot.as_matrix()
+    sipy_rot = R.from_euler(seq="ZYZ", angles=[tilt, rot, psi], degrees=True)
+    matrix = sipy_rot.as_matrix().tolist()
+    # tmp fix because affine is incorrectly typed, wants ints instead of floats
+    return [[int(x) for x in row] for row in matrix]
+
+
+# ToDo: Change return type to float when model is fixed
+def rotation_to_matrix(
+    rot_angle: float, axis: Literal["x", "y", "z"]
+) -> List[List[int]]:
+    """Convert rotation angle float into a rotation matrix
+    Args:
+        rot_angle (float): rotation angle
+        axis (str): "x" or "y" or "z
+    """
+    matrix = R.from_euler(axis, rot_angle, degrees=True).as_matrix()
+    # return matrix.tolist()
+    # temp fix for incorrectly typed affine in models
+    return [[int(x) for x in row] for row in matrix]

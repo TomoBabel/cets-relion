@@ -1,5 +1,7 @@
 import os
-from typing import Optional, Union
+from typing import Optional, Union, Dict
+
+from cets_data_model.models.models import CTFMetadata
 
 from cets_relion.tilt_series import RelionTiltSeriesStarfile
 
@@ -29,6 +31,13 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
             str: Path to the file, relative to the project
         """
         joval = self.get_joboptions().get("fn_defect")
-        if joval in ("", ""):
+        if joval in ('""', "''"):
             return None
         return joval
+
+    def get_tilt_image_ctfs(self, ts_name: str) -> Dict[str, CTFMetadata]:
+        raise NotImplementedError("Motion corr starfiles have no ctf information")
+
+    def get_motioncorr_cets_for_tilt_series(self) -> None:
+        """This object has not been added to the model yet"""
+        return None

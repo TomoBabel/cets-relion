@@ -70,7 +70,7 @@ range_tilt         15
 ref_correct_greyscale        Yes 
  relax_sym         "" 
   sampling "1.8 degrees" 
-scratch_dir $RELION_SCRATCH_DIR 
+scratch_dir "$RELION_SCRATCH_DIR"
 sigma_tilt         10 
   sym_name         C6 
 trust_ref_size        Yes 
