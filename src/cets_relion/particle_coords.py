@@ -1,7 +1,8 @@
 import os
-from typing import Union, Tuple, List
+from typing import Union, Tuple, List, Optional
 from gemmi import cif
 from pathlib import Path
+
 from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
 from cets_data_model.models.models import (
     PointSet3D,
@@ -13,13 +14,10 @@ from cets_data_model.models.models import (
 from cets_data_model.utils.image_utils import get_mrc_dims
 
 from cets_relion.relion_reader import RelionPipeline
-from cets_relion.utils import (
-    get_job_name,
-    relion_eulers_to_matrix,
-)
+from cets_relion.utils import relion_eulers_to_matrix, joboptions_from_job
 
 
-# ToDo: These classes will probably be superseded by CETS objects in cets_data_model
+# ToDo: This class will probably be superseded by CETS objects in cets_data_model
 class Sphere(object):
     """A sphere this is a temp annotation object until a CETS Sphere model is available"""
 
@@ -29,10 +27,23 @@ class Sphere(object):
 
 
 class RelionAnnotationFile(object):
-    """Superclass for handling starfiles in the RELION annotations dir"""
+    """Superclass for handling starfiles in the RELION annotations dir
+
+    Attributes:
+        name (str): str of the path to the annotation file
+        file (Path): Path object for the annotation file
+        data (List[object]): CETS objects for the annotations
+
+    """
 
     def __init__(self, in_file: Union[str, os.PathLike]) -> None:
+        """Instantiate a Relion Annotation File
+
+        Args:
+            in_file (Union[str, os.PathLike]): Path to the starfile
+        """
         self.name = str(in_file)
+        self.file = Path(self.name)
 
     def get_cets(self) -> List[ConfiguredBaseModel]:
         """Get a list of CETS annotation objects - must be implemented in subclasses"""
@@ -40,11 +51,17 @@ class RelionAnnotationFile(object):
 
 
 class RelionSphereAnnotations(RelionAnnotationFile):
-    """A class to hold RELION sphere annotation files"""
+    """A class to hold RELION sphere annotation files for a single tomogram"""
 
     def __init__(self, in_file: Union[str, os.PathLike]) -> None:
+        """Instantiate a Relion Sphere Annotation File
+
+        Args:
+            in_file (Union[str, os.PathLike]): Path to the starfile
+        """
         super().__init__(in_file)
 
+    def get_cets(self) -> list:
         # get the tomo name from the data rather than file name for robustness
         data = (
             cif.read_file(self.name)
@@ -64,40 +81,15 @@ class RelionSphereAnnotations(RelionAnnotationFile):
             raise ValueError(
                 "Invalid sphere annotation file; should have exactly one name"
             )
-        self.tomo_name = data[0][0]
-        self.spheres: List[Sphere] = []
+        spheres: List[Sphere] = []
         for line in data:
-            self.spheres.append(
+            spheres.append(
                 Sphere(
                     origin=(float(line[1]), float(line[2]), float(line[3])),
                     radius=line[4],
                 ),
             )
-
-    def get_cets(self) -> List[ConfiguredBaseModel]:
-        # ToDo: Need a CETS model for spheres
-        return []
-
-
-class RelionPointAnnotations(RelionAnnotationFile):
-    """A class to hold RELION point annotation files"""
-
-    def __init__(self, in_file: Union[str, os.PathLike]):
-        super().__init__(in_file)
-
-    def get_cets(self) -> List[ConfiguredBaseModel]:
-        data = (
-            cif.read_file(self.name)
-            .sole_block()
-            .find(
-                prefix="_rln",
-                tags=["CoordinateX", "CoordinateY", "CoordinateZ"],
-            )
-        )
-        coords = [[float(x[0]), float(x[1]), float(x[2])] for x in data]
-        return [
-            PointSet3D(origin3D=coords, coordinate_systems=[RELION_COORDS_PHYSICAL])
-        ]
+        return spheres
 
 
 class RelionCoordsStarFile(object):
@@ -107,22 +99,28 @@ class RelionCoordsStarFile(object):
     associated annotations and a 2nd with actual extracted particles.  This one is for
     only coords.
 
+    Attributes:
+        name (str): String with the path to the starfile relative to the project
+        file (Path): Path for the starfile
     """
 
     def __init__(self, in_file: Union[str, os.PathLike]) -> None:
-        """Initialize the relion particle coordinates file."""
+        """Instantiate the relion particle coordinates file.
+        Args:
+            in_file (Union[str, os.PathLike]): Path to the starfile
+        """
         self.name = str(in_file)
-        job = get_job_name(self.name)
-        annotations = job.glob("annotations/*.star")
+        self.file = Path(str(in_file))
 
-        # parse the names of the annotation files
-        self.annotation_files = {}
-        for f in annotations:
-            fnsplit = str(f).split("_")
-            tomoname = str(f.name).rstrip(f"_{fnsplit[-1]}")
-            self.annotation_files[tomoname] = f
+    def get_tomo_cets_coords_set(self, tomo_name: str) -> PointSet3D:
+        """Get a CETS object for the picked coordinates associated with a tomogram
 
-    def get_tomo_cets_particle_set(self, tomo_name: str) -> PointSet3D:
+        Args:
+            tomo_name (str): The name of the tomogram
+
+        Returns:
+            PointSet3D: A PointSet3D object that contains the coordinates
+        """
         data = cif.read_file(self.name).find_block("particles")
         parts = data.find(
             prefix="_rln",
@@ -141,48 +139,33 @@ class RelionCoordsStarFile(object):
             origin3D=coords, coordinate_systems=[RELION_COORDS_PHYSICAL], path=self.name
         )
 
-    @staticmethod
-    def determine_annotation_type(annotation_file: Union[str, os.PathLike]):
+    def determine_annotation_type(self):
         """Determine the type of annotation in annotation file
         Args:
             annotation_file (Union[str,os.PathLike]): The file
         Returns:
             str: The type of annotation
         """
-        print(cif.read_file(str(annotation_file)).sole_block())
-        data = (
-            cif.read_file(str(annotation_file))
-            .sole_block()
-            .find(prefix="_rln", tags=["TomoName"])
-        )
-        tags = data.loop.tags
-        if len(tags) == 4:
-            return "points"
-        elif "_rlnSphereRadius" in tags:
-            return "spheres"
-        else:
-            # ToDo: find out what the other annotation file formats are and return names
-            #  for them.
-            return "other"
+        jobops = joboptions_from_job(self.file.parent)
+        return jobops.get("pick_mode")
 
-    def get_secondary_annotations(self, tomo_name: str) -> List[Sphere]:
+    def get_secondary_annotations(
+        self, tomo_name: str
+    ) -> Optional[RelionAnnotationFile]:
         """Get the annotations for a particular tomo
         Args:
             tomo_name (str): The name of the tomo
         Returns:
             List[Union[Point, Sphere]]: The annotations
         """
-        anno_file = self.annotation_files.get(tomo_name)
-        annotations = []
-        if anno_file is not None:
-            annotype = self.determine_annotation_type(str(anno_file))
-            if annotype == "points":
-                pass
-            if annotype == "spheres":
-                annotations = RelionSphereAnnotations(anno_file).spheres
-            else:
-                annotations = []  # ToDo: add other annotation types here
-        return annotations
+        annotype = self.determine_annotation_type()
+        if annotype is None or annotype == "particles":
+            return None
+        annofile = self.file.parent / f"annotations/{tomo_name}_{annotype}.star"
+        if annotype == "spheres":
+            return RelionSphereAnnotations(annofile)
+        else:
+            raise NotImplementedError(f"Can't handle this annotation type: {annotype}")
 
 
 class RelionParticlesStarFile(object):
@@ -191,7 +174,12 @@ class RelionParticlesStarFile(object):
     Not just coordinates, should also have optics data and alignments
     """
 
-    def __init__(self, file_name: str):
+    def __init__(self, file_name: str) -> None:
+        """Instantiate a RELION particle star file.
+
+        Args:
+            file_name (str): Path to the starfile
+        """
         self.file = Path(str(file_name))
         self.name = str(file_name)
 
@@ -275,7 +263,7 @@ def parse_particles_file(
 ) -> Tuple[str, Union[RelionParticlesStarFile, RelionCoordsStarFile]]:
     """Parse a RELION particle star file and return the right object
 
-    figure out if it's actual particles or just coords
+    Figure out if it's actual particles or just coords
 
     Args:
         in_file (str): The file to parse

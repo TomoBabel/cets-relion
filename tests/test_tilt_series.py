@@ -1,7 +1,6 @@
 from unittest.mock import patch
 
 from pytest import fixture
-from cets_relion.relion_reader import RelionPipeline
 from tests.testing_tools import CetsRelionTest
 from cets_relion.tilt_series import RelionTiltSeriesStarfile
 from tests.test_data.results import proj, proj_aligned
@@ -25,7 +24,6 @@ class TiltSeriesStarTest(CetsRelionTest):
             "ExcludeTiltSeries/job004/selected_tilt_series.star",
         )
         assert tssf.name == "ExcludeTiltSeries/job004/selected_tilt_series.star"
-        assert isinstance(tssf.pipeline, RelionPipeline)
 
     def test_name_in_ts_file(self):
         self.setup_dirs(2)
@@ -39,7 +37,6 @@ class TiltSeriesStarTest(CetsRelionTest):
             "ExcludeTiltSeries/job004/selected_tilt_series.star",
         )
         assert tssf.name == "ExcludeTiltSeries/job004/selected_tilt_series.star"
-        assert isinstance(tssf.pipeline, RelionPipeline)
 
     def test_get_tilt_image_ctfs(self):
         self.setup_dirs(jobs_to=3)

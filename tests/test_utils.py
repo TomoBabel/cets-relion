@@ -1,6 +1,6 @@
 from cets_relion.utils import (
     get_job_name,
-    joboptions_from_jobstar_file,
+    joboptions_from_job,
     get_job_number,
     get_job_type,
 )
@@ -9,8 +9,8 @@ from tests.testing_tools import CetsRelionTest
 
 class UtilsTests(CetsRelionTest):
     def test_joboptions_from_jobstar(self):
-        jobstar = self.test_data / "skeleton_project/Import/job001/job.star"
-        jobops = joboptions_from_jobstar_file(jobstar)
+        jobstar = self.test_data / "skeleton_project/Import/job001/"
+        jobops = joboptions_from_job(jobstar)
         assert jobops == {
             "Cs": "2.7",
             "Q0": "0.1",

@@ -26,7 +26,6 @@ class RelionMoviesStarFile(object):
             the movies
         ctf_files (List[str]): A list of files that provide information about the CTF
             of the movies. These should be the global results files from CtfFind jobs
-
     """
 
     def __init__(
@@ -54,7 +53,7 @@ class RelionMoviesStarFile(object):
         self.ctf_files = ctf_files if ctf_files is not None else []
         self.mocorr_files = mocorr_files if mocorr_files is not None else []
 
-    def get_tilt_movies_starfile(self, ts_name: str):
+    def get_tilt_movies_starfile(self, ts_name: str) -> str:
         """Get the starfile that contains info about movies for a specific tilt series
 
         Args:
@@ -76,7 +75,7 @@ class RelionMoviesStarFile(object):
             # there will only ever be one ts starfile associated with a ts name
             return ts_file[0]
 
-    def make_movie_cets_for_tilt_series(self, ts_name: str):
+    def make_movie_cets_for_tilt_series(self, ts_name: str) -> MovieStackSeries:
         """Get a CETS object for the movies associated with a specific tilt series
 
         Args:

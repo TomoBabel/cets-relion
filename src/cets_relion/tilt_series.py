@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from cets_relion.relion_reader import RelionPipeline
 import os
 from typing import List, Union, Optional, Dict
 from logging import getLogger
@@ -13,7 +12,6 @@ from cets_data_model.models.models import (
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from cets_relion.utils import rotation_to_matrix
-from cets_relion.utils import joboptions_from_jobstar_file
 from gemmi import cif
 from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
 
@@ -35,15 +33,14 @@ class RelionTiltSeriesStarfile(object):
     def __init__(
         self,
         file_name: Union[str, os.PathLike],
-        pipeline: str = "default_pipeline.star",
     ) -> None:
+        """Instantiate a tilt series data file from RELION
+
+        Args:
+            file_name (Union[str, os.PathLike]): Path to the tilt series data file
+        """
         self.name = str(file_name)
         self.file = Path(str(file_name))
-        self.pipeline = RelionPipeline(pipeline)
-
-    def get_joboptions(self) -> Dict[str, str]:
-        jobfile = Path(self.name).parent / "job.star"
-        return joboptions_from_jobstar_file(str(jobfile))
 
     def tilt_series_in_file(self, ts_name: str) -> bool:
         """Check if a specific tilt series is in this file
@@ -130,6 +127,8 @@ class RelionTiltSeriesStarfile(object):
                 "MicrographPreExposure",
             ],
         )
+        # RELION records pre-exposure rather than accumulated dose so it must be
+        # calculated: pre-exp + dose from this exposure
         mic_vals = {cif.as_string(x[0]): float(x[1]) for x in data}
         dose_rate = list(mic_vals.values())[1] - list(mic_vals.values())[0]
         dose_dict = {}

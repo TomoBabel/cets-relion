@@ -44,7 +44,24 @@ converters = {
 }
 
 
-def parse_optimisation_set(opt_set_file: Path) -> dict:
+def parse_optimisation_set(
+    opt_set_file: Path,
+) -> Dict[
+    str, Union[RelionParticlesStarFile, RelionCoordsStarFile, RelionTomosStarfile]
+]:
+    """Parse an optimisation_set file to get tomogram and particles/coords
+
+    Depending on what job the file came from it will return either extracted particles
+    or raw particle coordinates
+
+    Args:
+        opt_set_file (Path): Path to the optimisation_set file
+    Returns:
+        Dict[
+            str,
+            Union[RelionParticlesStarFile, RelionCoordsStarFile, RelionTomosStarfile]
+        ]: Dictionary of tomogram and particles/coords
+    """
     opt_block = cif.read_file(str(opt_set_file)).sole_block()
 
     # it might have pairs
@@ -73,9 +90,34 @@ def parse_optimisation_set(opt_set_file: Path) -> dict:
 
 
 class RelionCetsConverter:
-    def __init__(self, terminal_job: str) -> None:
-        self.pipeline = RelionPipeline("default_pipeline.star")
+    """An object that holds all the data necessary for RELION -> CETS conversion
+    Attributes:
+        pipeline (RelionPipeline): A Relion pipeline object for the project workflow
+        movies (List[RelionMoviesStarFile]): Objects that contains data about the raw
+            movies
+        mocorr (List[RelionMotionCorrStarFile]): Objects that contains data about the
+            motion correction jobs for each tilt series
+        ctf (List[RelionTiltSeriesStarfile]): Objects that contains data about the
+            ctf determination jobs for each tilt series
+        tilt_series (List[RelionTiltSeriesStarfile]): Objects that contains data about
+            the final tilt series (after alignment, tilt exclusion & etc...)
+        tomos (List[RelionTomosStarfile]): Objects that contains data about the
+            tomograms generated from each tilt series
+        picks (List[RelionCoordsStarFile]): Objects that contains data about the
+            coordinates picked on tomograms
+        particles (List[RelionParticlesStarFile]): Objects that contains data about the
+            particles extracted from tomograms
 
+
+    """
+
+    def __init__(self, terminal_job: str) -> None:
+        """Instantiate a Relion CetsConverter object
+
+        Args:
+            terminal_job (str): The name of the terminal job
+        """
+        self.pipeline = RelionPipeline("default_pipeline.star")
         # init empty attrs
         self.movies: List[RelionMoviesStarFile] = []
         self.ctf: List[RelionTiltSeriesStarfile] = []
@@ -149,8 +191,3 @@ class RelionCetsConverter:
                 movobj.ctf_files = self.ctf
                 movobj.mocorr_files = self.mocorr
                 self.movies.append(movobj)
-
-
-if __name__ == "__main__":
-    """Do the conversion"""
-    pass

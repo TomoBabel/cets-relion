@@ -7,14 +7,12 @@ from gemmi import cif
 from scipy.spatial.transform import Rotation as R
 
 
-def clean_file_input(in_val: Union[str, os.PathLike]) -> str:
-    return str(in_val)
-
-
-def joboptions_from_jobstar_file(
-    jobstar_file: Union[str, os.PathLike],
+def joboptions_from_job(
+    job_name: Union[str, os.PathLike],
 ) -> Dict[str, str]:
-    jobop_block = cif.read_file(str(jobstar_file)).find_block("joboptions_values")
+    job_name = Path(job_name)
+    jobstar = str(job_name / "job.star")
+    jobop_block = cif.read_file(jobstar).find_block("joboptions_values")
     jobops_dict = dict(
         list(
             jobop_block.find(

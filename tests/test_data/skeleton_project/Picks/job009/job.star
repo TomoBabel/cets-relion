@@ -6,9 +6,6 @@ data_job
 _rlnJobTypeLabel             relion.picktomo
 _rlnJobIsContinue                       1
 _rlnJobIsTomo                           0
- 
-
-# version 50001
 
 data_joboptions_values
 
