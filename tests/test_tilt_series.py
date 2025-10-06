@@ -57,3 +57,8 @@ class TiltSeriesStarTest(CetsRelionTest):
         self.setup_dirs(jobs_to=5)
         ts = RelionTiltSeriesStarfile("AlignTiltSeries/job005/aligned_tilt_series.star")
         assert ts.get_cets_projection_images("TS_01") == proj_aligned.RESULT
+
+    def test_get_all_tomo_names(self):
+        self.setup_dirs(5)
+        mf = RelionTiltSeriesStarfile("AlignTiltSeries/job005/aligned_tilt_series.star")
+        assert mf.get_all_tomo_names() == ["TS_01", "TS_03", "TS_43", "TS_45", "TS_54"]

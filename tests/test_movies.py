@@ -151,3 +151,8 @@ class RelionCetsMoviesTests(CetsRelionTest):
             section="7",
             width=2000,
         )
+
+    def test_get_all_tomo_names(self):
+        self.setup_dirs(1)
+        mf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        assert mf.get_all_tomo_names() == ["TS_01", "TS_03", "TS_43", "TS_45", "TS_54"]

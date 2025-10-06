@@ -141,6 +141,16 @@ class TestRelionParticlesStarFile(CetsRelionTest):
         assert len(coordsobj) == 1
         assert coordsobj[0].name == "Picks/job009/particles.star"
 
+    def test_get_all_tomo_names_coords_file(self):
+        self.setup_dirs(9)
+        cf = RelionCoordsStarFile("Picks/job009/particles.star")
+        assert cf.get_all_tomo_names() == ["TS_01", "TS_03", "TS_43", "TS_45", "TS_54"]
+
+    def test_get_all_tomo_names_parts_file(self):
+        self.setup_dirs(10)
+        cf = RelionParticlesStarFile("Extract/job010/particles.star")
+        assert cf.get_all_tomo_names() == ["TS_01", "TS_03", "TS_43", "TS_45", "TS_54"]
+
 
 # ToDo: This is a placeholder class that will be replaced with a CETS model later
 def test_instantiate_sphere():

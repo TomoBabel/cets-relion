@@ -86,3 +86,11 @@ class RelionTomosStarfile(object):
             width=dims[0],
             depth=dims[2],
         )
+
+    def get_all_tomo_names(self):
+        data = (
+            cif.read_file(self.name)
+            .find_block("global")
+            .find(prefix="_rln", tags=["TomoName"])
+        )
+        return sorted([cif.as_string(x[0]) for x in data])

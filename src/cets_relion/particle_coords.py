@@ -167,6 +167,12 @@ class RelionCoordsStarFile(object):
         else:
             raise NotImplementedError(f"Can't handle this annotation type: {annotype}")
 
+    def get_all_tomo_names(self):
+        data = (
+            cif.read_file(self.name).sole_block().find(prefix="_rln", tags=["TomoName"])
+        )
+        return sorted(list(set([cif.as_string(x[0]) for x in data])))
+
 
 class RelionParticlesStarFile(object):
     """A class for holding a RELION particle star file containing extracted particles
@@ -256,6 +262,14 @@ class RelionParticlesStarFile(object):
         pipeline = RelionPipeline("default_pipeline.star")
         pick_jobs = pipeline.next_upstream_jobs(self.name, jobtypes=["relion.picktomo"])
         return [RelionCoordsStarFile(Path(x) / "particles.star") for x in pick_jobs]
+
+    def get_all_tomo_names(self):
+        data = (
+            cif.read_file(self.name)
+            .find_block("particles")
+            .find(prefix="_rln", tags=["TomoName"])
+        )
+        return sorted(list(set([cif.as_string(x[0]) for x in data])))
 
 
 def parse_particles_file(

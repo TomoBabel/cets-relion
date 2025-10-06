@@ -2,7 +2,7 @@
 
 from pathlib import Path
 from gemmi import cif
-from typing import List, Dict, Union
+from typing import List, Dict, Union, Optional
 from cets_relion.tomograms import RelionTomosStarfile
 from cets_relion.utils import get_job_type
 from cets_relion.relion_reader import RelionPipeline
@@ -191,3 +191,64 @@ class RelionCetsConverter:
                 movobj.ctf_files = self.ctf
                 movobj.mocorr_files = self.mocorr
                 self.movies.append(movobj)
+
+    def find_gain_file(self, tomo_name: str) -> Optional[str]:
+        """Find the Gain file for the given tomogram.
+        Searches all files in self.mocorr in case of multiple mocorr files
+
+        Args:
+            tomo_name: The name of the tomogram.
+        Returns:
+            The path to the Gain file for the given tomogram.
+        """
+        for mocorrfile in self.mocorr:
+            if mocorrfile.tilt_series_in_file(tomo_name):
+                return mocorrfile.get_gain_file()
+        return None
+
+    def find_defect_file(self, tomo_name: str) -> Optional[str]:
+        """Find the Gain file for the given tomogram.
+        Searches all files in self.mocorr in case of multiple mocorr files
+
+        Args:
+            tomo_name: The name of the tomogram.
+        Returns:
+            The path to the Gain file for the given tomogram.
+        """
+        for mocorrfile in self.mocorr:
+            if mocorrfile.tilt_series_in_file(tomo_name):
+                return mocorrfile.get_defect_file()
+        return None
+
+    def get_all_tomo_names(self):
+        # get names of all tomos/tilt series in the project
+        # start at the movies and work down through the workflow
+        all_tomo_names = []
+        for movfile in self.movies:
+            all_tomo_names.extend(movfile.get_all_tomo_names())
+        if all_tomo_names:
+            return all_tomo_names
+        for ctffile in self.ctf:
+            all_tomo_names.extend(ctffile.get_all_tomo_names())
+        if all_tomo_names:
+            return all_tomo_names
+        for ts_file in self.tilt_series:
+            all_tomo_names.extend(ts_file.get_all_tomo_names())
+        if all_tomo_names:
+            return all_tomo_names
+        for tomofile in self.tomos:
+            all_tomo_names.extend(tomofile.get_all_tomo_names())
+        if all_tomo_names:
+            return all_tomo_names
+
+        # only default to coords/particles if nothing else in available
+        # both should have tomos in mode ceases
+        for partfile in self.particles:
+            all_tomo_names.extend(partfile.get_all_tomo_names())
+        if all_tomo_names:
+            return all_tomo_names
+        for coordfile in self.picks:
+            all_tomo_names.extend(coordfile.get_all_tomo_names())
+        if all_tomo_names:
+            return all_tomo_names
+        raise ValueError("No tomogram names found")

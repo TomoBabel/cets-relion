@@ -136,9 +136,7 @@ class RelionTiltSeriesStarfile(object):
             dose_dict[img] = preexp + dose_rate
         return dose_dict
 
-    def get_cets_projection_images(
-        self, ts_name: str, dose_dict: Optional[Dict[str, float]] = None
-    ) -> List[ProjectionImage]:
+    def get_cets_projection_images(self, ts_name: str) -> List[ProjectionImage]:
         """Get cets ProjectionImage objects (merged motion corrected images) for a tilt
         series
 
@@ -227,3 +225,11 @@ class RelionTiltSeriesStarfile(object):
             cets_objects.append(cets_obj)
 
         return cets_objects
+
+    def get_all_tomo_names(self):
+        data = (
+            cif.read_file(self.name)
+            .find_block("global")
+            .find(prefix="_rln", tags=["TomoName"])
+        )
+        return sorted([cif.as_string(x[0]) for x in data])

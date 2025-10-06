@@ -45,3 +45,8 @@ class TomogramsTests(CetsRelionTest):
             coordinate_transformations=None,
             path="Denoise/job008/tomograms/rec_TS_01.mrc",
         )
+
+    def test_get_all_tomo_names(self):
+        self.setup_dirs(8)
+        mf = RelionTomosStarfile("Denoise/job008/tomograms.star")
+        assert mf.get_all_tomo_names() == ["TS_01", "TS_03", "TS_43", "TS_45", "TS_54"]
