@@ -4,10 +4,10 @@ import os
 from pathlib import Path
 from typing import Optional, Union
 
+from cets_data_model.models.models import Tomogram
 from gemmi import cif
 
 from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
-from cets_data_model.models.models import Tomogram
 
 
 class RelionTomosStarfile(object):

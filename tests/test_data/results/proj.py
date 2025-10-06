@@ -11,21 +11,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -48,21 +48,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -85,21 +85,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -122,21 +122,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -159,21 +159,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -196,21 +196,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -233,21 +233,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -270,21 +270,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -307,21 +307,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -344,21 +344,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -381,21 +381,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -418,21 +418,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -455,21 +455,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -492,21 +492,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -529,21 +529,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -566,21 +566,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -603,21 +603,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -640,21 +640,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -677,21 +677,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -714,21 +714,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -751,21 +751,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -788,21 +788,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -825,21 +825,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -862,21 +862,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -899,21 +899,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -936,21 +936,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -973,21 +973,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1010,21 +1010,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1047,21 +1047,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1084,21 +1084,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1121,21 +1121,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1158,21 +1158,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1195,21 +1195,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1232,21 +1232,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1269,21 +1269,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1306,21 +1306,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1343,21 +1343,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1380,21 +1380,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1417,21 +1417,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1454,21 +1454,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],
@@ -1491,21 +1491,21 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="physical coordinates",
+                name="logical coordinates",
                 axes=[
                     Axis(
-                        name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates x axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                     Axis(
-                        name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        name="logical coordinates z axis",
+                        axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
                 ],

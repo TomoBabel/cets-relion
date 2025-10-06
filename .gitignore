@@ -10,3 +10,5 @@ src/CETS_RELION.egg-info/
 CETS_RELION.egg-info
 src/cets_relion/objs/__pycache__/
 tests/test_data/results/__pycache__/
+src/cets_relion/scripts/__pycache__/
+tests/scripts_tests/__pycache__/

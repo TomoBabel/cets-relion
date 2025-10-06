@@ -1,19 +1,24 @@
 """Script to convert CryoET data from RELION to TomoBabel CETS format"""
 
 from pathlib import Path
-from gemmi import cif
 from typing import List, Dict, Union, Optional
-from cets_relion.tomograms import RelionTomosStarfile
-from cets_relion.utils import get_job_type
-from cets_relion.relion_reader import RelionPipeline
-from cets_relion.movies import RelionMoviesStarFile
-from cets_relion.tilt_series import RelionTiltSeriesStarfile
+
+from cets_data_model.models.models import GainFile, DefectFile
+from cets_data_model.utils.image_utils import get_mrc_dims
+from gemmi import cif
+
 from cets_relion.motion_corr import RelionMotionCorrStarFile
+from cets_relion.movies import RelionMoviesStarFile
+from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
 from cets_relion.particle_coords import (
     RelionCoordsStarFile,
     RelionParticlesStarFile,
     parse_particles_file,
 )
+from cets_relion.relion_reader import RelionPipeline
+from cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.tomograms import RelionTomosStarfile
+from cets_relion.utils import get_job_type
 
 # cets converters for specific jobtypes
 # {job_type: (file_to_use, converter_class, attr to set)}
@@ -192,7 +197,7 @@ class RelionCetsConverter:
                 movobj.mocorr_files = self.mocorr
                 self.movies.append(movobj)
 
-    def find_gain_file(self, tomo_name: str) -> Optional[str]:
+    def find_gain_file(self, tomo_name: str) -> Optional[GainFile]:
         """Find the Gain file for the given tomogram.
         Searches all files in self.mocorr in case of multiple mocorr files
 
@@ -203,10 +208,18 @@ class RelionCetsConverter:
         """
         for mocorrfile in self.mocorr:
             if mocorrfile.tilt_series_in_file(tomo_name):
-                return mocorrfile.get_gain_file()
+                gf = mocorrfile.get_gain_file()
+                if gf:
+                    height, width, _depth = get_mrc_dims(gf)
+                    return GainFile(
+                        path=gf,
+                        width=width,
+                        height=height,
+                        coordinate_systems=[RELION_COORDS_LOGICAL],
+                    )
         return None
 
-    def find_defect_file(self, tomo_name: str) -> Optional[str]:
+    def find_defect_file(self, tomo_name: str) -> Optional[DefectFile]:
         """Find the Gain file for the given tomogram.
         Searches all files in self.mocorr in case of multiple mocorr files
 
@@ -217,7 +230,15 @@ class RelionCetsConverter:
         """
         for mocorrfile in self.mocorr:
             if mocorrfile.tilt_series_in_file(tomo_name):
-                return mocorrfile.get_defect_file()
+                df = mocorrfile.get_defect_file()
+                if df:
+                    height, width, _depth = get_mrc_dims(df)
+                    return DefectFile(
+                        path=df,
+                        width=width,
+                        height=height,
+                        coordinate_systems=[RELION_COORDS_LOGICAL],
+                    )
         return None
 
     def get_all_tomo_names(self):

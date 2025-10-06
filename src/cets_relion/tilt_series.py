@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from pathlib import Path
 import os
-from typing import List, Union, Optional, Dict
 from logging import getLogger
+from pathlib import Path
+from typing import List, Union, Optional, Dict
+
 from cets_data_model.models.models import (
     CTFMetadata,
     ProjectionImage,
@@ -11,9 +12,10 @@ from cets_data_model.models.models import (
     Affine,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
-from cets_relion.utils import rotation_to_matrix
 from gemmi import cif
-from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
+
+from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
+from cets_relion.utils import rotation_to_matrix
 
 logger = getLogger(__name__)
 
@@ -189,7 +191,7 @@ class RelionTiltSeriesStarfile(object):
                 section=str(n),
                 width=x_size,
                 height=y_size,
-                coordinate_systems=[RELION_COORDS_PHYSICAL],
+                coordinate_systems=[RELION_COORDS_LOGICAL],
                 nominal_tilt_angle=nom_tilt,
                 ctf_metadata=ctf,
                 accumulated_dose=dose_dict[micname],
@@ -223,7 +225,6 @@ class RelionTiltSeriesStarfile(object):
             except IndexError:
                 pass
             cets_objects.append(cets_obj)
-
         return cets_objects
 
     def get_all_tomo_names(self):

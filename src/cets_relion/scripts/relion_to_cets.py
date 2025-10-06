@@ -1,7 +1,6 @@
 import argparse
 from typing import List
 
-from cets_relion.main_converter import RelionCetsConverter
 from cets_data_model.models.models import (
     Region,
     Dataset,
@@ -11,6 +10,8 @@ from cets_data_model.models.models import (
     Tomogram,
     ParticleMap,
 )
+
+from cets_relion.main_converter import RelionCetsConverter
 
 
 def parse_args(argv=None):
@@ -76,6 +77,11 @@ def get_tilt_series(con: RelionCetsConverter, tomo_name: str) -> List[TiltSeries
         for con_ctf in con.ctf:
             all_tilt_series.extend(con_ctf.get_cets_projection_images(tomo_name))
 
+    # if not finally try the motioncorr entry
+    if not all_tilt_series:
+        for con_mocorr in con.mocorr:
+            all_tilt_series.extend(con_mocorr.get_cets_projection_images(tomo_name))
+
     return all_tilt_series
 
 
@@ -100,8 +106,10 @@ def get_coord_annotations(con: RelionCetsConverter, tomo_name: str) -> list:
 
 
 def get_particles(con, tomo_name: str) -> List[ParticleMap]:
-    # ToDo: write this
-    return []
+    parts = []
+    for part_set in con.particles:
+        parts.append(part_set.get_cets_particles(tomo_name))
+    return parts
 
 
 def main(argv=None):

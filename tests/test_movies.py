@@ -12,6 +12,7 @@ from cets_data_model.models.models import (
     MovieStack,
 )
 from tests.testing_tools import CetsRelionTest
+from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
 
 
 @fixture(autouse=True)
@@ -62,7 +63,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
         assert len(result.stacks[0].images) == 8
         assert result.stacks[0].images[0] == MovieFrame(
             accumulated_dose=0.375,
-            coordinate_systems=None,
+            coordinate_systems=[RELION_COORDS_LOGICAL],
             coordinate_transformations=None,
             ctf_metadata=CTFMetadata(
                 defocus_u=38855.828125,
@@ -78,7 +79,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
         )
         assert result.stacks[0].images[-1] == MovieFrame(
             accumulated_dose=3.0,
-            coordinate_systems=None,
+            coordinate_systems=[RELION_COORDS_LOGICAL],
             coordinate_transformations=None,
             ctf_metadata=CTFMetadata(
                 defocus_u=38855.828125,
@@ -94,7 +95,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
         )
         assert result.stacks[-1].images[-1] == MovieFrame(
             accumulated_dose=123.0,
-            coordinate_systems=None,
+            coordinate_systems=[RELION_COORDS_LOGICAL],
             coordinate_transformations=None,
             ctf_metadata=CTFMetadata(
                 defocus_u=38544.476562,
@@ -120,7 +121,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
         assert len(result.stacks[0].images) == 8
         assert result.stacks[0].images[0] == MovieFrame(
             accumulated_dose=0.375,
-            coordinate_systems=None,
+            coordinate_systems=[RELION_COORDS_LOGICAL],
             coordinate_transformations=None,
             ctf_metadata=None,
             height=2000,
@@ -131,7 +132,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
         )
         assert result.stacks[0].images[-1] == MovieFrame(
             accumulated_dose=3.0,
-            coordinate_systems=None,
+            coordinate_systems=[RELION_COORDS_LOGICAL],
             coordinate_transformations=None,
             ctf_metadata=None,
             height=2000,
@@ -142,7 +143,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
         )
         assert result.stacks[-1].images[-1] == MovieFrame(
             accumulated_dose=123.0,
-            coordinate_systems=None,
+            coordinate_systems=[RELION_COORDS_LOGICAL],
             coordinate_transformations=None,
             ctf_metadata=None,
             height=2000,

@@ -1,18 +1,21 @@
 import os
-from typing import List, Optional, Union
-from cets_data_model.utils.image_utils import get_image_dims
-from pathlib import Path
-from gemmi import cif
 from collections import ChainMap
-from cets_relion.tilt_series import RelionTiltSeriesStarfile
-from cets_relion.relion_reader import RelionPipeline
+from pathlib import Path
+from typing import List, Optional, Union
+
 from cets_data_model.models.models import (
     MovieStack,
     MovieFrame,
     MovieStackSeries,
     CTFMetadata,
 )
+from cets_data_model.utils.image_utils import get_image_dims
+from gemmi import cif
+
 from cets_relion.motion_corr import RelionMotionCorrStarFile
+from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
+from cets_relion.relion_reader import RelionPipeline
+from cets_relion.tilt_series import RelionTiltSeriesStarfile
 
 
 class RelionMoviesStarFile(object):
@@ -131,6 +134,7 @@ class RelionMoviesStarFile(object):
                         ctf_metadata=cets_ctf,
                         width=width,
                         height=height,
+                        coordinate_systems=[RELION_COORDS_LOGICAL],
                     )
                 )
 

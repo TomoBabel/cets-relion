@@ -1,9 +1,7 @@
 import os
-from typing import Union, Tuple, List, Optional
-from gemmi import cif
 from pathlib import Path
+from typing import Union, Tuple, List, Optional
 
-from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
 from cets_data_model.models.models import (
     PointSet3D,
     ConfiguredBaseModel,
@@ -12,7 +10,9 @@ from cets_data_model.models.models import (
     Translation,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
+from gemmi import cif
 
+from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
 from cets_relion.relion_reader import RelionPipeline
 from cets_relion.utils import relion_eulers_to_matrix, joboptions_from_job
 

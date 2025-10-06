@@ -253,3 +253,104 @@ class RelionCetsConverterTest(CetsRelionTest):
         assert converter.tomos[0].name == "Polish/job060/tomograms.star"
         assert converter.picks[0].name == "Picks/job009/particles.star"
         assert converter.particles[0].name == "Refine3D/job064/run_data.star"
+
+    def test_get_all_tomos_with_full_project(self):
+        self.setup_dirs(64)
+        converter = RelionCetsConverter(terminal_job="Refine3D/job064/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_extract_job(self):
+        """every attr in the converter should now be filled"""
+        self.setup_dirs(10)
+        converter = RelionCetsConverter(terminal_job="Extract/job010/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_picking_job(self):
+        """First instance of using a optimisation set for tomos and picks/parts"""
+        self.setup_dirs(9)
+        converter = RelionCetsConverter(terminal_job="Picks/job009/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_reconstruct_job(self):
+        self.setup_dirs(6)
+        converter = RelionCetsConverter(terminal_job="Tomograms/job006/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_align_job(self):
+        self.setup_dirs(5)
+        converter = RelionCetsConverter(terminal_job="AlignTiltSeries/job005/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_exclude_job(self):
+        self.setup_dirs(4)
+        converter = RelionCetsConverter(terminal_job="ExcludeTiltImages/job004/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_ctf_job(self):
+        self.setup_dirs(3)
+        converter = RelionCetsConverter(terminal_job="CtfFind/job003/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_mocorr_job(self):
+        self.setup_dirs(2)
+        converter = RelionCetsConverter(terminal_job="MotionCorr/job002/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]
+
+    def test_get_all_tomos_with_import_job(self):
+        self.setup_dirs(1)
+        converter = RelionCetsConverter(terminal_job="Import/job001/")
+        assert converter.get_all_tomo_names() == [
+            "TS_01",
+            "TS_03",
+            "TS_43",
+            "TS_45",
+            "TS_54",
+        ]

@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import os
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, Tuple, List, Union, Literal, Hashable, Any
-from dataclasses import dataclass
+
 import networkx as nx
 from gemmi import cif
+
 from cets_relion.utils import get_job_number
 
 
