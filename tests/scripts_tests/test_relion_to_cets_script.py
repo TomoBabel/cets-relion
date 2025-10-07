@@ -35,7 +35,7 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         self.setup_dirs(1)
         con = RelionCetsConverter("Import/job001/")
         movs = get_raw_movies(con, "TS_01")
-        actual = movs[0].model_dump()
+        actual = movs[0].model_dump(mode="json")
         with open(self.test_data / "results/raw_movs_no_ctf.json") as f:
             expected = json.load(f)
         assert actual == expected
@@ -44,7 +44,7 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         self.setup_dirs(2)
         con = RelionCetsConverter("MotionCorr/job002/")
         movs = get_raw_movies(con, "TS_01")
-        actual = movs[0].model_dump()
+        actual = movs[0].model_dump(mode="json")
         with open(self.test_data / "results/raw_movs_no_ctf.json") as f:
             expected = json.load(f)
         assert actual["movie_stacks"] == expected["movie_stacks"]
@@ -55,7 +55,7 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         self.setup_dirs(3)
         con = RelionCetsConverter("CtfFind/job003/")
         movs = get_raw_movies(con, "TS_01")
-        actual = movs[0].model_dump()
+        actual = movs[0].model_dump(mode="json")
         with open(self.test_data / "results/raw_movs_ctf.json") as f:
             expected = json.load(f)
         assert actual == expected
@@ -64,7 +64,7 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         self.setup_dirs(30)
         con = RelionCetsConverter("Polish/job030/")
         movs = get_raw_movies(con, "TS_01")
-        actual = movs[0].model_dump()
+        actual = movs[0].model_dump(mode="json")
         with open(self.test_data / "results/raw_movs_ctf.json") as f:
             expected = json.load(f)
         assert actual == expected
@@ -79,8 +79,8 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
         con = RelionCetsConverter("MotionCorr/job002/")
         ts = get_tilt_series(con, "TS_01")
         assert len(ts) == 41
-        assert ts[0].model_dump() == MOCORR_0
-        assert ts[-1].model_dump() == MOCORR_40
+        assert ts[0].model_dump(mode="json") == MOCORR_0
+        assert ts[-1].model_dump(mode="json") == MOCORR_40
 
     @patch("cets_relion.tilt_series.get_mrc_dims")
     def test_get_tilt_series_from_ctf(self, mock_dims):
@@ -90,8 +90,8 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
         con = RelionCetsConverter("CtfFind/job003/")
         ts = get_tilt_series(con, "TS_01")
         assert len(ts) == 41
-        assert ts[0].model_dump() == CTF_0
-        assert ts[-1].model_dump() == CTF_40
+        assert ts[0].model_dump(mode="json") == CTF_0
+        assert ts[-1].model_dump(mode="json") == CTF_40
 
     # ToDo: Output of dumping transformation objects to JSON is not correct
     #  fix before adding these tests
@@ -104,8 +104,8 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
     #     con = RelionCetsConverter("AlignTiltSeries/job005/")
     #     ts = get_tilt_series(con, "TS_01")
     #     assert len(ts) == 40
-    #     assert ts[0].model_dump() == {}
-    #     assert ts[-1].model_dump() == {}
+    #     assert ts[0].model_dump(mode="json") == {}
+    #     assert ts[-1].model_dump(mode="json") == {}
     #
     # @patch("cets_relion.tilt_series.get_mrc_dims")
     # def test_get_tilt_series_from_late_job(self, mock_dims):
@@ -115,5 +115,5 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
     #     con = RelionCetsConverter("Polish/job040/")
     #     ts = get_tilt_series(con, "TS_01")
     #     assert len(ts) == 40
-    #     assert ts[0].model_dump() == {}
-    #     assert ts[-1].model_dump() == {}
+    #     assert ts[0].model_dump(mode="json") == {}
+    #     assert ts[-1].model_dump(mode="json") == {}

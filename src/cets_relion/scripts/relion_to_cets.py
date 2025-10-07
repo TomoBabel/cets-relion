@@ -1,6 +1,6 @@
 import argparse
 from typing import List
-
+from pathlib import Path
 from cets_data_model.models.models import (
     Region,
     Dataset,
@@ -42,6 +42,13 @@ def parse_args(argv=None):
         required=False,
         help="Name to give the Dataset in the CETS data",
         default=None,
+    )
+
+    parser.add_argument(
+        "--output_name",
+        "-o",
+        required=False,
+        default="relion_to_cets.json",
     )
 
     return parser.parse_args(argv)
@@ -115,7 +122,7 @@ def get_particles(con, tomo_name: str) -> List[ParticleMap]:
 def main(argv=None):
     args = parse_args(argv)
     con = RelionCetsConverter(args.job)
-    dataset = Dataset(name=args.dataset_name)
+    dataset = Dataset(name=args.dataset_name, regions=[])
     # make a region for each tomogram
     tomos = args.tomos
     if not tomos:
@@ -126,13 +133,15 @@ def main(argv=None):
         region = Region(
             movie_stack_collections=[], tomograms=[], tilt_series=[], annotations=[]
         )
-        region.movie_stacks = get_raw_movies(con, tomo_name)
+        region.movie_stack_collections = get_raw_movies(con, tomo_name)
         region.tilt_series = get_tilt_series(con, tomo_name)
         region.tomograms = get_tomos(con, tomo_name)
         region.annotations = get_coord_annotations(con, tomo_name)
 
         dataset.regions.append(region)
-    with open(args.result, "w") as out:
+    outname = args.output_name
+    outname = outname + ".json" if not Path(outname).suffix == ".json" else outname
+    with open(outname, "w") as out:
         out.write(dataset.model_dump_json(indent=2))
 
 
