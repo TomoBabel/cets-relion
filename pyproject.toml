@@ -40,7 +40,8 @@ dependencies = [
     "gemmi",
     "tiffile",
     "scipy",
-    "cets-data-model @ git+https://github.com/TomoBabel/cets-data-models.git",
+    "cets-data-model @ git+https://github.com/TomoBabel/cets-data-models.git@add-names",
+    "pydash",
 ]
 
 optional-dependencies.dev = [

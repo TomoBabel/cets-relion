@@ -11,7 +11,7 @@ from cets_data_model.models.models import (
     ParticleMap,
 )
 
-from cets_relion.main_converter import RelionCetsConverter
+from cets_relion.relion_to_cets_converter import RelionCetsConverter
 
 
 def parse_args(argv=None):
@@ -89,7 +89,7 @@ def get_tilt_series(con: RelionCetsConverter, tomo_name: str) -> List[TiltSeries
         for con_mocorr in con.mocorr:
             all_tilt_series.extend(con_mocorr.get_cets_projection_images(tomo_name))
 
-    return all_tilt_series
+    return [TiltSeries(name=tomo_name, images=all_tilt_series)]
 
 
 def get_tomos(con: RelionCetsConverter, tomo_name: str) -> List[Tomogram]:
@@ -97,7 +97,7 @@ def get_tomos(con: RelionCetsConverter, tomo_name: str) -> List[Tomogram]:
     for tomofile in con.tomos:
         cets_tomo = tomofile.get_cets_tomo(tomo_name)
         if cets_tomo is not None:
-            tomos.append(tomofile)
+            tomos.append(cets_tomo)
     return tomos
 
 

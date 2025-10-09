@@ -142,7 +142,7 @@ class RelionMoviesStarFile(object):
             movie_stacks.append(MovieStack(images=frames, path=movie_name))
 
         # return a CETS MovieStackSeries for the tilt series
-        return MovieStackSeries(stacks=movie_stacks)
+        return MovieStackSeries(name=ts_name, stacks=movie_stacks)
 
     def get_all_tomo_names(self):
         data = (

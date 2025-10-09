@@ -10707,6 +10707,33 @@
       ]
     }
   ],
-  "gain_file": null,
+  "gain_file": {
+    "width": 1000,
+    "height": 1000,
+    "coordinate_systems": [
+      {
+        "name": "logical coordinates",
+        "axes": [
+          {
+            "name": "logical coordinates x axis",
+            "axis_unit": "pixel/voxel",
+            "axis_type": null
+          },
+          {
+            "name": "logical coordinates y axis",
+            "axis_unit": "pixel/voxel",
+            "axis_type": null
+          },
+          {
+            "name": "logical coordinates z axis",
+            "axis_unit": "pixel/voxel",
+            "axis_type": null
+          }
+        ]
+      }
+    ],
+    "coordinate_transformations": null,
+    "path": "gain_reference.mrc"
+  },
   "defect_file": null
 }

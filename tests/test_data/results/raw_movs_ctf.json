@@ -1,6 +1,7 @@
 {
   "movie_stacks": [
     {
+      "name": "TS_01",
       "stacks": [
         {
           "images": [
@@ -35,8 +36,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00001@frames/TS_01_000_0.0.mrc",
               "section": "0"
@@ -72,8 +72,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00002@frames/TS_01_000_0.0.mrc",
               "section": "1"
@@ -109,8 +108,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00003@frames/TS_01_000_0.0.mrc",
               "section": "2"
@@ -146,8 +144,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00004@frames/TS_01_000_0.0.mrc",
               "section": "3"
@@ -183,8 +180,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00005@frames/TS_01_000_0.0.mrc",
               "section": "4"
@@ -220,8 +216,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00006@frames/TS_01_000_0.0.mrc",
               "section": "5"
@@ -257,8 +252,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00007@frames/TS_01_000_0.0.mrc",
               "section": "6"
@@ -294,8 +288,7 @@
               "ctf_metadata": {
                 "defocus_u": 38855.828125,
                 "defocus_v": 38750.828125,
-                "defocus_angle": 35.154533,
-                "defocus_handedness": -1
+                "defocus_angle": 35.154533
               },
               "path": "00008@frames/TS_01_000_0.0.mrc",
               "section": "7"
@@ -336,8 +329,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00001@frames/TS_01_001_3.0.mrc",
               "section": "0"
@@ -373,8 +365,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00002@frames/TS_01_001_3.0.mrc",
               "section": "1"
@@ -410,8 +401,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00003@frames/TS_01_001_3.0.mrc",
               "section": "2"
@@ -447,8 +437,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00004@frames/TS_01_001_3.0.mrc",
               "section": "3"
@@ -484,8 +473,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00005@frames/TS_01_001_3.0.mrc",
               "section": "4"
@@ -521,8 +509,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00006@frames/TS_01_001_3.0.mrc",
               "section": "5"
@@ -558,8 +545,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00007@frames/TS_01_001_3.0.mrc",
               "section": "6"
@@ -595,8 +581,7 @@
               "ctf_metadata": {
                 "defocus_u": 39181.238281,
                 "defocus_v": 39140.960938,
-                "defocus_angle": 12.550397,
-                "defocus_handedness": -1
+                "defocus_angle": 12.550397
               },
               "path": "00008@frames/TS_01_001_3.0.mrc",
               "section": "7"
@@ -637,8 +622,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00001@frames/TS_01_002_-3.0.mrc",
               "section": "0"
@@ -674,8 +658,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00002@frames/TS_01_002_-3.0.mrc",
               "section": "1"
@@ -711,8 +694,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00003@frames/TS_01_002_-3.0.mrc",
               "section": "2"
@@ -748,8 +730,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00004@frames/TS_01_002_-3.0.mrc",
               "section": "3"
@@ -785,8 +766,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00005@frames/TS_01_002_-3.0.mrc",
               "section": "4"
@@ -822,8 +802,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00006@frames/TS_01_002_-3.0.mrc",
               "section": "5"
@@ -859,8 +838,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00007@frames/TS_01_002_-3.0.mrc",
               "section": "6"
@@ -896,8 +874,7 @@
               "ctf_metadata": {
                 "defocus_u": 39039.273438,
                 "defocus_v": 38788.375,
-                "defocus_angle": 48.905102,
-                "defocus_handedness": -1
+                "defocus_angle": 48.905102
               },
               "path": "00008@frames/TS_01_002_-3.0.mrc",
               "section": "7"
@@ -938,8 +915,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00001@frames/TS_01_003_-6.0.mrc",
               "section": "0"
@@ -975,8 +951,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00002@frames/TS_01_003_-6.0.mrc",
               "section": "1"
@@ -1012,8 +987,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00003@frames/TS_01_003_-6.0.mrc",
               "section": "2"
@@ -1049,8 +1023,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00004@frames/TS_01_003_-6.0.mrc",
               "section": "3"
@@ -1086,8 +1059,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00005@frames/TS_01_003_-6.0.mrc",
               "section": "4"
@@ -1123,8 +1095,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00006@frames/TS_01_003_-6.0.mrc",
               "section": "5"
@@ -1160,8 +1131,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00007@frames/TS_01_003_-6.0.mrc",
               "section": "6"
@@ -1197,8 +1167,7 @@
               "ctf_metadata": {
                 "defocus_u": 38916.207031,
                 "defocus_v": 38578.90625,
-                "defocus_angle": -42.83319,
-                "defocus_handedness": -1
+                "defocus_angle": -42.83319
               },
               "path": "00008@frames/TS_01_003_-6.0.mrc",
               "section": "7"
@@ -1239,8 +1208,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00001@frames/TS_01_004_6.0.mrc",
               "section": "0"
@@ -1276,8 +1244,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00002@frames/TS_01_004_6.0.mrc",
               "section": "1"
@@ -1313,8 +1280,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00003@frames/TS_01_004_6.0.mrc",
               "section": "2"
@@ -1350,8 +1316,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00004@frames/TS_01_004_6.0.mrc",
               "section": "3"
@@ -1387,8 +1352,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00005@frames/TS_01_004_6.0.mrc",
               "section": "4"
@@ -1424,8 +1388,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00006@frames/TS_01_004_6.0.mrc",
               "section": "5"
@@ -1461,8 +1424,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00007@frames/TS_01_004_6.0.mrc",
               "section": "6"
@@ -1498,8 +1460,7 @@
               "ctf_metadata": {
                 "defocus_u": 38871.554688,
                 "defocus_v": 38659.703125,
-                "defocus_angle": -86.54452,
-                "defocus_handedness": -1
+                "defocus_angle": -86.54452
               },
               "path": "00008@frames/TS_01_004_6.0.mrc",
               "section": "7"
@@ -1540,8 +1501,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00001@frames/TS_01_005_9.0.mrc",
               "section": "0"
@@ -1577,8 +1537,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00002@frames/TS_01_005_9.0.mrc",
               "section": "1"
@@ -1614,8 +1573,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00003@frames/TS_01_005_9.0.mrc",
               "section": "2"
@@ -1651,8 +1609,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00004@frames/TS_01_005_9.0.mrc",
               "section": "3"
@@ -1688,8 +1645,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00005@frames/TS_01_005_9.0.mrc",
               "section": "4"
@@ -1725,8 +1681,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00006@frames/TS_01_005_9.0.mrc",
               "section": "5"
@@ -1762,8 +1717,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00007@frames/TS_01_005_9.0.mrc",
               "section": "6"
@@ -1799,8 +1753,7 @@
               "ctf_metadata": {
                 "defocus_u": 39463.386719,
                 "defocus_v": 38568.289062,
-                "defocus_angle": 40.258121,
-                "defocus_handedness": -1
+                "defocus_angle": 40.258121
               },
               "path": "00008@frames/TS_01_005_9.0.mrc",
               "section": "7"
@@ -1841,8 +1794,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00001@frames/TS_01_006_-9.0.mrc",
               "section": "0"
@@ -1878,8 +1830,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00002@frames/TS_01_006_-9.0.mrc",
               "section": "1"
@@ -1915,8 +1866,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00003@frames/TS_01_006_-9.0.mrc",
               "section": "2"
@@ -1952,8 +1902,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00004@frames/TS_01_006_-9.0.mrc",
               "section": "3"
@@ -1989,8 +1938,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00005@frames/TS_01_006_-9.0.mrc",
               "section": "4"
@@ -2026,8 +1974,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00006@frames/TS_01_006_-9.0.mrc",
               "section": "5"
@@ -2063,8 +2010,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00007@frames/TS_01_006_-9.0.mrc",
               "section": "6"
@@ -2100,8 +2046,7 @@
               "ctf_metadata": {
                 "defocus_u": 39666.992188,
                 "defocus_v": 38692.070312,
-                "defocus_angle": 67.526459,
-                "defocus_handedness": -1
+                "defocus_angle": 67.526459
               },
               "path": "00008@frames/TS_01_006_-9.0.mrc",
               "section": "7"
@@ -2142,8 +2087,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00001@frames/TS_01_007_-12.0.mrc",
               "section": "0"
@@ -2179,8 +2123,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00002@frames/TS_01_007_-12.0.mrc",
               "section": "1"
@@ -2216,8 +2159,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00003@frames/TS_01_007_-12.0.mrc",
               "section": "2"
@@ -2253,8 +2195,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00004@frames/TS_01_007_-12.0.mrc",
               "section": "3"
@@ -2290,8 +2231,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00005@frames/TS_01_007_-12.0.mrc",
               "section": "4"
@@ -2327,8 +2267,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00006@frames/TS_01_007_-12.0.mrc",
               "section": "5"
@@ -2364,8 +2303,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00007@frames/TS_01_007_-12.0.mrc",
               "section": "6"
@@ -2401,8 +2339,7 @@
               "ctf_metadata": {
                 "defocus_u": 39587.886719,
                 "defocus_v": 39267.863281,
-                "defocus_angle": 16.908651,
-                "defocus_handedness": -1
+                "defocus_angle": 16.908651
               },
               "path": "00008@frames/TS_01_007_-12.0.mrc",
               "section": "7"
@@ -2443,8 +2380,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00001@frames/TS_01_008_12.0.mrc",
               "section": "0"
@@ -2480,8 +2416,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00002@frames/TS_01_008_12.0.mrc",
               "section": "1"
@@ -2517,8 +2452,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00003@frames/TS_01_008_12.0.mrc",
               "section": "2"
@@ -2554,8 +2488,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00004@frames/TS_01_008_12.0.mrc",
               "section": "3"
@@ -2591,8 +2524,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00005@frames/TS_01_008_12.0.mrc",
               "section": "4"
@@ -2628,8 +2560,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00006@frames/TS_01_008_12.0.mrc",
               "section": "5"
@@ -2665,8 +2596,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00007@frames/TS_01_008_12.0.mrc",
               "section": "6"
@@ -2702,8 +2632,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.433594,
                 "defocus_v": 38699.5625,
-                "defocus_angle": 25.551586,
-                "defocus_handedness": -1
+                "defocus_angle": 25.551586
               },
               "path": "00008@frames/TS_01_008_12.0.mrc",
               "section": "7"
@@ -2744,8 +2673,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00001@frames/TS_01_009_15.0.mrc",
               "section": "0"
@@ -2781,8 +2709,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00002@frames/TS_01_009_15.0.mrc",
               "section": "1"
@@ -2818,8 +2745,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00003@frames/TS_01_009_15.0.mrc",
               "section": "2"
@@ -2855,8 +2781,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00004@frames/TS_01_009_15.0.mrc",
               "section": "3"
@@ -2892,8 +2817,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00005@frames/TS_01_009_15.0.mrc",
               "section": "4"
@@ -2929,8 +2853,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00006@frames/TS_01_009_15.0.mrc",
               "section": "5"
@@ -2966,8 +2889,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00007@frames/TS_01_009_15.0.mrc",
               "section": "6"
@@ -3003,8 +2925,7 @@
               "ctf_metadata": {
                 "defocus_u": 39014.972656,
                 "defocus_v": 38768.765625,
-                "defocus_angle": -0.90581,
-                "defocus_handedness": -1
+                "defocus_angle": -0.90581
               },
               "path": "00008@frames/TS_01_009_15.0.mrc",
               "section": "7"
@@ -3045,8 +2966,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00001@frames/TS_01_010_-15.0.mrc",
               "section": "0"
@@ -3082,8 +3002,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00002@frames/TS_01_010_-15.0.mrc",
               "section": "1"
@@ -3119,8 +3038,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00003@frames/TS_01_010_-15.0.mrc",
               "section": "2"
@@ -3156,8 +3074,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00004@frames/TS_01_010_-15.0.mrc",
               "section": "3"
@@ -3193,8 +3110,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00005@frames/TS_01_010_-15.0.mrc",
               "section": "4"
@@ -3230,8 +3146,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00006@frames/TS_01_010_-15.0.mrc",
               "section": "5"
@@ -3267,8 +3182,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00007@frames/TS_01_010_-15.0.mrc",
               "section": "6"
@@ -3304,8 +3218,7 @@
               "ctf_metadata": {
                 "defocus_u": 39371.125,
                 "defocus_v": 39312.433594,
-                "defocus_angle": 43.634537,
-                "defocus_handedness": -1
+                "defocus_angle": 43.634537
               },
               "path": "00008@frames/TS_01_010_-15.0.mrc",
               "section": "7"
@@ -3346,8 +3259,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00001@frames/TS_01_011_-18.0.mrc",
               "section": "0"
@@ -3383,8 +3295,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00002@frames/TS_01_011_-18.0.mrc",
               "section": "1"
@@ -3420,8 +3331,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00003@frames/TS_01_011_-18.0.mrc",
               "section": "2"
@@ -3457,8 +3367,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00004@frames/TS_01_011_-18.0.mrc",
               "section": "3"
@@ -3494,8 +3403,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00005@frames/TS_01_011_-18.0.mrc",
               "section": "4"
@@ -3531,8 +3439,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00006@frames/TS_01_011_-18.0.mrc",
               "section": "5"
@@ -3568,8 +3475,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00007@frames/TS_01_011_-18.0.mrc",
               "section": "6"
@@ -3605,8 +3511,7 @@
               "ctf_metadata": {
                 "defocus_u": 39367.917969,
                 "defocus_v": 38797.90625,
-                "defocus_angle": 69.937973,
-                "defocus_handedness": -1
+                "defocus_angle": 69.937973
               },
               "path": "00008@frames/TS_01_011_-18.0.mrc",
               "section": "7"
@@ -3647,8 +3552,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00001@frames/TS_01_012_18.0.mrc",
               "section": "0"
@@ -3684,8 +3588,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00002@frames/TS_01_012_18.0.mrc",
               "section": "1"
@@ -3721,8 +3624,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00003@frames/TS_01_012_18.0.mrc",
               "section": "2"
@@ -3758,8 +3660,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00004@frames/TS_01_012_18.0.mrc",
               "section": "3"
@@ -3795,8 +3696,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00005@frames/TS_01_012_18.0.mrc",
               "section": "4"
@@ -3832,8 +3732,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00006@frames/TS_01_012_18.0.mrc",
               "section": "5"
@@ -3869,8 +3768,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00007@frames/TS_01_012_18.0.mrc",
               "section": "6"
@@ -3906,8 +3804,7 @@
               "ctf_metadata": {
                 "defocus_u": 38690.386719,
                 "defocus_v": 38564.035156,
-                "defocus_angle": 5.383391,
-                "defocus_handedness": -1
+                "defocus_angle": 5.383391
               },
               "path": "00008@frames/TS_01_012_18.0.mrc",
               "section": "7"
@@ -3948,8 +3845,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00001@frames/TS_01_013_21.0.mrc",
               "section": "0"
@@ -3985,8 +3881,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00002@frames/TS_01_013_21.0.mrc",
               "section": "1"
@@ -4022,8 +3917,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00003@frames/TS_01_013_21.0.mrc",
               "section": "2"
@@ -4059,8 +3953,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00004@frames/TS_01_013_21.0.mrc",
               "section": "3"
@@ -4096,8 +3989,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00005@frames/TS_01_013_21.0.mrc",
               "section": "4"
@@ -4133,8 +4025,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00006@frames/TS_01_013_21.0.mrc",
               "section": "5"
@@ -4170,8 +4061,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00007@frames/TS_01_013_21.0.mrc",
               "section": "6"
@@ -4207,8 +4097,7 @@
               "ctf_metadata": {
                 "defocus_u": 39183.546875,
                 "defocus_v": 38977.851562,
-                "defocus_angle": -75.17061,
-                "defocus_handedness": -1
+                "defocus_angle": -75.17061
               },
               "path": "00008@frames/TS_01_013_21.0.mrc",
               "section": "7"
@@ -4249,8 +4138,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00001@frames/TS_01_014_-21.0.mrc",
               "section": "0"
@@ -4286,8 +4174,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00002@frames/TS_01_014_-21.0.mrc",
               "section": "1"
@@ -4323,8 +4210,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00003@frames/TS_01_014_-21.0.mrc",
               "section": "2"
@@ -4360,8 +4246,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00004@frames/TS_01_014_-21.0.mrc",
               "section": "3"
@@ -4397,8 +4282,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00005@frames/TS_01_014_-21.0.mrc",
               "section": "4"
@@ -4434,8 +4318,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00006@frames/TS_01_014_-21.0.mrc",
               "section": "5"
@@ -4471,8 +4354,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00007@frames/TS_01_014_-21.0.mrc",
               "section": "6"
@@ -4508,8 +4390,7 @@
               "ctf_metadata": {
                 "defocus_u": 39191.355469,
                 "defocus_v": 38752.570312,
-                "defocus_angle": 41.521111,
-                "defocus_handedness": -1
+                "defocus_angle": 41.521111
               },
               "path": "00008@frames/TS_01_014_-21.0.mrc",
               "section": "7"
@@ -4550,8 +4431,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00001@frames/TS_01_015_-24.0.mrc",
               "section": "0"
@@ -4587,8 +4467,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00002@frames/TS_01_015_-24.0.mrc",
               "section": "1"
@@ -4624,8 +4503,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00003@frames/TS_01_015_-24.0.mrc",
               "section": "2"
@@ -4661,8 +4539,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00004@frames/TS_01_015_-24.0.mrc",
               "section": "3"
@@ -4698,8 +4575,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00005@frames/TS_01_015_-24.0.mrc",
               "section": "4"
@@ -4735,8 +4611,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00006@frames/TS_01_015_-24.0.mrc",
               "section": "5"
@@ -4772,8 +4647,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00007@frames/TS_01_015_-24.0.mrc",
               "section": "6"
@@ -4809,8 +4683,7 @@
               "ctf_metadata": {
                 "defocus_u": 39957.90625,
                 "defocus_v": 39131.46875,
-                "defocus_angle": 44.914368,
-                "defocus_handedness": -1
+                "defocus_angle": 44.914368
               },
               "path": "00008@frames/TS_01_015_-24.0.mrc",
               "section": "7"
@@ -4851,8 +4724,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00001@frames/TS_01_016_24.0.mrc",
               "section": "0"
@@ -4888,8 +4760,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00002@frames/TS_01_016_24.0.mrc",
               "section": "1"
@@ -4925,8 +4796,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00003@frames/TS_01_016_24.0.mrc",
               "section": "2"
@@ -4962,8 +4832,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00004@frames/TS_01_016_24.0.mrc",
               "section": "3"
@@ -4999,8 +4868,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00005@frames/TS_01_016_24.0.mrc",
               "section": "4"
@@ -5036,8 +4904,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00006@frames/TS_01_016_24.0.mrc",
               "section": "5"
@@ -5073,8 +4940,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00007@frames/TS_01_016_24.0.mrc",
               "section": "6"
@@ -5110,8 +4976,7 @@
               "ctf_metadata": {
                 "defocus_u": 39091.230469,
                 "defocus_v": 38781.570312,
-                "defocus_angle": 76.682976,
-                "defocus_handedness": -1
+                "defocus_angle": 76.682976
               },
               "path": "00008@frames/TS_01_016_24.0.mrc",
               "section": "7"
@@ -5152,8 +5017,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00001@frames/TS_01_017_27.0.mrc",
               "section": "0"
@@ -5189,8 +5053,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00002@frames/TS_01_017_27.0.mrc",
               "section": "1"
@@ -5226,8 +5089,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00003@frames/TS_01_017_27.0.mrc",
               "section": "2"
@@ -5263,8 +5125,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00004@frames/TS_01_017_27.0.mrc",
               "section": "3"
@@ -5300,8 +5161,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00005@frames/TS_01_017_27.0.mrc",
               "section": "4"
@@ -5337,8 +5197,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00006@frames/TS_01_017_27.0.mrc",
               "section": "5"
@@ -5374,8 +5233,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00007@frames/TS_01_017_27.0.mrc",
               "section": "6"
@@ -5411,8 +5269,7 @@
               "ctf_metadata": {
                 "defocus_u": 38935.335938,
                 "defocus_v": 38806.46875,
-                "defocus_angle": -83.8278,
-                "defocus_handedness": -1
+                "defocus_angle": -83.8278
               },
               "path": "00008@frames/TS_01_017_27.0.mrc",
               "section": "7"
@@ -5453,8 +5310,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00001@frames/TS_01_018_-27.0.mrc",
               "section": "0"
@@ -5490,8 +5346,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00002@frames/TS_01_018_-27.0.mrc",
               "section": "1"
@@ -5527,8 +5382,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00003@frames/TS_01_018_-27.0.mrc",
               "section": "2"
@@ -5564,8 +5418,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00004@frames/TS_01_018_-27.0.mrc",
               "section": "3"
@@ -5601,8 +5454,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00005@frames/TS_01_018_-27.0.mrc",
               "section": "4"
@@ -5638,8 +5490,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00006@frames/TS_01_018_-27.0.mrc",
               "section": "5"
@@ -5675,8 +5526,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00007@frames/TS_01_018_-27.0.mrc",
               "section": "6"
@@ -5712,8 +5562,7 @@
               "ctf_metadata": {
                 "defocus_u": 39395.929688,
                 "defocus_v": 38934.125,
-                "defocus_angle": 70.461578,
-                "defocus_handedness": -1
+                "defocus_angle": 70.461578
               },
               "path": "00008@frames/TS_01_018_-27.0.mrc",
               "section": "7"
@@ -5754,8 +5603,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00001@frames/TS_01_019_-30.0.mrc",
               "section": "0"
@@ -5791,8 +5639,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00002@frames/TS_01_019_-30.0.mrc",
               "section": "1"
@@ -5828,8 +5675,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00003@frames/TS_01_019_-30.0.mrc",
               "section": "2"
@@ -5865,8 +5711,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00004@frames/TS_01_019_-30.0.mrc",
               "section": "3"
@@ -5902,8 +5747,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00005@frames/TS_01_019_-30.0.mrc",
               "section": "4"
@@ -5939,8 +5783,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00006@frames/TS_01_019_-30.0.mrc",
               "section": "5"
@@ -5976,8 +5819,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00007@frames/TS_01_019_-30.0.mrc",
               "section": "6"
@@ -6013,8 +5855,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.554688,
                 "defocus_v": 39219.816406,
-                "defocus_angle": 25.755552,
-                "defocus_handedness": -1
+                "defocus_angle": 25.755552
               },
               "path": "00008@frames/TS_01_019_-30.0.mrc",
               "section": "7"
@@ -6055,8 +5896,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00001@frames/TS_01_020_30.0.mrc",
               "section": "0"
@@ -6092,8 +5932,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00002@frames/TS_01_020_30.0.mrc",
               "section": "1"
@@ -6129,8 +5968,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00003@frames/TS_01_020_30.0.mrc",
               "section": "2"
@@ -6166,8 +6004,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00004@frames/TS_01_020_30.0.mrc",
               "section": "3"
@@ -6203,8 +6040,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00005@frames/TS_01_020_30.0.mrc",
               "section": "4"
@@ -6240,8 +6076,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00006@frames/TS_01_020_30.0.mrc",
               "section": "5"
@@ -6277,8 +6112,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00007@frames/TS_01_020_30.0.mrc",
               "section": "6"
@@ -6314,8 +6148,7 @@
               "ctf_metadata": {
                 "defocus_u": 38910.875,
                 "defocus_v": 38214.078125,
-                "defocus_angle": 55.941147,
-                "defocus_handedness": -1
+                "defocus_angle": 55.941147
               },
               "path": "00008@frames/TS_01_020_30.0.mrc",
               "section": "7"
@@ -6356,8 +6189,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00001@frames/TS_01_021_33.0.mrc",
               "section": "0"
@@ -6393,8 +6225,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00002@frames/TS_01_021_33.0.mrc",
               "section": "1"
@@ -6430,8 +6261,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00003@frames/TS_01_021_33.0.mrc",
               "section": "2"
@@ -6467,8 +6297,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00004@frames/TS_01_021_33.0.mrc",
               "section": "3"
@@ -6504,8 +6333,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00005@frames/TS_01_021_33.0.mrc",
               "section": "4"
@@ -6541,8 +6369,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00006@frames/TS_01_021_33.0.mrc",
               "section": "5"
@@ -6578,8 +6405,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00007@frames/TS_01_021_33.0.mrc",
               "section": "6"
@@ -6615,8 +6441,7 @@
               "ctf_metadata": {
                 "defocus_u": 38949.035156,
                 "defocus_v": 38796.992188,
-                "defocus_angle": 45.229416,
-                "defocus_handedness": -1
+                "defocus_angle": 45.229416
               },
               "path": "00008@frames/TS_01_021_33.0.mrc",
               "section": "7"
@@ -6657,8 +6482,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00001@frames/TS_01_022_-33.0.mrc",
               "section": "0"
@@ -6694,8 +6518,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00002@frames/TS_01_022_-33.0.mrc",
               "section": "1"
@@ -6731,8 +6554,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00003@frames/TS_01_022_-33.0.mrc",
               "section": "2"
@@ -6768,8 +6590,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00004@frames/TS_01_022_-33.0.mrc",
               "section": "3"
@@ -6805,8 +6626,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00005@frames/TS_01_022_-33.0.mrc",
               "section": "4"
@@ -6842,8 +6662,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00006@frames/TS_01_022_-33.0.mrc",
               "section": "5"
@@ -6879,8 +6698,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00007@frames/TS_01_022_-33.0.mrc",
               "section": "6"
@@ -6916,8 +6734,7 @@
               "ctf_metadata": {
                 "defocus_u": 39546.019531,
                 "defocus_v": 39414.261719,
-                "defocus_angle": -48.23753,
-                "defocus_handedness": -1
+                "defocus_angle": -48.23753
               },
               "path": "00008@frames/TS_01_022_-33.0.mrc",
               "section": "7"
@@ -6958,8 +6775,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00001@frames/TS_01_023_-36.0.mrc",
               "section": "0"
@@ -6995,8 +6811,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00002@frames/TS_01_023_-36.0.mrc",
               "section": "1"
@@ -7032,8 +6847,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00003@frames/TS_01_023_-36.0.mrc",
               "section": "2"
@@ -7069,8 +6883,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00004@frames/TS_01_023_-36.0.mrc",
               "section": "3"
@@ -7106,8 +6919,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00005@frames/TS_01_023_-36.0.mrc",
               "section": "4"
@@ -7143,8 +6955,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00006@frames/TS_01_023_-36.0.mrc",
               "section": "5"
@@ -7180,8 +6991,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00007@frames/TS_01_023_-36.0.mrc",
               "section": "6"
@@ -7217,8 +7027,7 @@
               "ctf_metadata": {
                 "defocus_u": 39759.144531,
                 "defocus_v": 39368.929688,
-                "defocus_angle": 18.869625,
-                "defocus_handedness": -1
+                "defocus_angle": 18.869625
               },
               "path": "00008@frames/TS_01_023_-36.0.mrc",
               "section": "7"
@@ -7259,8 +7068,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00001@frames/TS_01_024_36.0.mrc",
               "section": "0"
@@ -7296,8 +7104,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00002@frames/TS_01_024_36.0.mrc",
               "section": "1"
@@ -7333,8 +7140,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00003@frames/TS_01_024_36.0.mrc",
               "section": "2"
@@ -7370,8 +7176,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00004@frames/TS_01_024_36.0.mrc",
               "section": "3"
@@ -7407,8 +7212,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00005@frames/TS_01_024_36.0.mrc",
               "section": "4"
@@ -7444,8 +7248,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00006@frames/TS_01_024_36.0.mrc",
               "section": "5"
@@ -7481,8 +7284,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00007@frames/TS_01_024_36.0.mrc",
               "section": "6"
@@ -7518,8 +7320,7 @@
               "ctf_metadata": {
                 "defocus_u": 38909.515625,
                 "defocus_v": 38473.996094,
-                "defocus_angle": 34.372036,
-                "defocus_handedness": -1
+                "defocus_angle": 34.372036
               },
               "path": "00008@frames/TS_01_024_36.0.mrc",
               "section": "7"
@@ -7560,8 +7361,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00001@frames/TS_01_025_39.0.mrc",
               "section": "0"
@@ -7597,8 +7397,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00002@frames/TS_01_025_39.0.mrc",
               "section": "1"
@@ -7634,8 +7433,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00003@frames/TS_01_025_39.0.mrc",
               "section": "2"
@@ -7671,8 +7469,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00004@frames/TS_01_025_39.0.mrc",
               "section": "3"
@@ -7708,8 +7505,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00005@frames/TS_01_025_39.0.mrc",
               "section": "4"
@@ -7745,8 +7541,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00006@frames/TS_01_025_39.0.mrc",
               "section": "5"
@@ -7782,8 +7577,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00007@frames/TS_01_025_39.0.mrc",
               "section": "6"
@@ -7819,8 +7613,7 @@
               "ctf_metadata": {
                 "defocus_u": 39229.929688,
                 "defocus_v": 38722.871094,
-                "defocus_angle": 40.212944,
-                "defocus_handedness": -1
+                "defocus_angle": 40.212944
               },
               "path": "00008@frames/TS_01_025_39.0.mrc",
               "section": "7"
@@ -7861,8 +7654,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00001@frames/TS_01_026_-39.0.mrc",
               "section": "0"
@@ -7898,8 +7690,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00002@frames/TS_01_026_-39.0.mrc",
               "section": "1"
@@ -7935,8 +7726,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00003@frames/TS_01_026_-39.0.mrc",
               "section": "2"
@@ -7972,8 +7762,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00004@frames/TS_01_026_-39.0.mrc",
               "section": "3"
@@ -8009,8 +7798,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00005@frames/TS_01_026_-39.0.mrc",
               "section": "4"
@@ -8046,8 +7834,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00006@frames/TS_01_026_-39.0.mrc",
               "section": "5"
@@ -8083,8 +7870,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00007@frames/TS_01_026_-39.0.mrc",
               "section": "6"
@@ -8120,8 +7906,7 @@
               "ctf_metadata": {
                 "defocus_u": 39656.90625,
                 "defocus_v": 39248.902344,
-                "defocus_angle": 44.287949,
-                "defocus_handedness": -1
+                "defocus_angle": 44.287949
               },
               "path": "00008@frames/TS_01_026_-39.0.mrc",
               "section": "7"
@@ -8162,8 +7947,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00001@frames/TS_01_027_-42.0.mrc",
               "section": "0"
@@ -8199,8 +7983,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00002@frames/TS_01_027_-42.0.mrc",
               "section": "1"
@@ -8236,8 +8019,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00003@frames/TS_01_027_-42.0.mrc",
               "section": "2"
@@ -8273,8 +8055,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00004@frames/TS_01_027_-42.0.mrc",
               "section": "3"
@@ -8310,8 +8091,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00005@frames/TS_01_027_-42.0.mrc",
               "section": "4"
@@ -8347,8 +8127,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00006@frames/TS_01_027_-42.0.mrc",
               "section": "5"
@@ -8384,8 +8163,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00007@frames/TS_01_027_-42.0.mrc",
               "section": "6"
@@ -8421,8 +8199,7 @@
               "ctf_metadata": {
                 "defocus_u": 39632.832031,
                 "defocus_v": 39503.171875,
-                "defocus_angle": -73.60011,
-                "defocus_handedness": -1
+                "defocus_angle": -73.60011
               },
               "path": "00008@frames/TS_01_027_-42.0.mrc",
               "section": "7"
@@ -8463,8 +8240,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00001@frames/TS_01_028_42.0.mrc",
               "section": "0"
@@ -8500,8 +8276,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00002@frames/TS_01_028_42.0.mrc",
               "section": "1"
@@ -8537,8 +8312,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00003@frames/TS_01_028_42.0.mrc",
               "section": "2"
@@ -8574,8 +8348,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00004@frames/TS_01_028_42.0.mrc",
               "section": "3"
@@ -8611,8 +8384,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00005@frames/TS_01_028_42.0.mrc",
               "section": "4"
@@ -8648,8 +8420,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00006@frames/TS_01_028_42.0.mrc",
               "section": "5"
@@ -8685,8 +8456,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00007@frames/TS_01_028_42.0.mrc",
               "section": "6"
@@ -8722,8 +8492,7 @@
               "ctf_metadata": {
                 "defocus_u": 38625.375,
                 "defocus_v": 38329.550781,
-                "defocus_angle": 38.231094,
-                "defocus_handedness": -1
+                "defocus_angle": 38.231094
               },
               "path": "00008@frames/TS_01_028_42.0.mrc",
               "section": "7"
@@ -8764,8 +8533,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00001@frames/TS_01_029_45.0.mrc",
               "section": "0"
@@ -8801,8 +8569,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00002@frames/TS_01_029_45.0.mrc",
               "section": "1"
@@ -8838,8 +8605,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00003@frames/TS_01_029_45.0.mrc",
               "section": "2"
@@ -8875,8 +8641,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00004@frames/TS_01_029_45.0.mrc",
               "section": "3"
@@ -8912,8 +8677,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00005@frames/TS_01_029_45.0.mrc",
               "section": "4"
@@ -8949,8 +8713,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00006@frames/TS_01_029_45.0.mrc",
               "section": "5"
@@ -8986,8 +8749,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00007@frames/TS_01_029_45.0.mrc",
               "section": "6"
@@ -9023,8 +8785,7 @@
               "ctf_metadata": {
                 "defocus_u": 38758.140625,
                 "defocus_v": 38564.382812,
-                "defocus_angle": 53.667973,
-                "defocus_handedness": -1
+                "defocus_angle": 53.667973
               },
               "path": "00008@frames/TS_01_029_45.0.mrc",
               "section": "7"
@@ -9065,8 +8826,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00001@frames/TS_01_030_-45.0.mrc",
               "section": "0"
@@ -9102,8 +8862,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00002@frames/TS_01_030_-45.0.mrc",
               "section": "1"
@@ -9139,8 +8898,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00003@frames/TS_01_030_-45.0.mrc",
               "section": "2"
@@ -9176,8 +8934,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00004@frames/TS_01_030_-45.0.mrc",
               "section": "3"
@@ -9213,8 +8970,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00005@frames/TS_01_030_-45.0.mrc",
               "section": "4"
@@ -9250,8 +9006,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00006@frames/TS_01_030_-45.0.mrc",
               "section": "5"
@@ -9287,8 +9042,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00007@frames/TS_01_030_-45.0.mrc",
               "section": "6"
@@ -9324,8 +9078,7 @@
               "ctf_metadata": {
                 "defocus_u": 39621.261719,
                 "defocus_v": 39378.523438,
-                "defocus_angle": -51.37516,
-                "defocus_handedness": -1
+                "defocus_angle": -51.37516
               },
               "path": "00008@frames/TS_01_030_-45.0.mrc",
               "section": "7"
@@ -9366,8 +9119,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00001@frames/TS_01_031_-48.0.mrc",
               "section": "0"
@@ -9403,8 +9155,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00002@frames/TS_01_031_-48.0.mrc",
               "section": "1"
@@ -9440,8 +9191,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00003@frames/TS_01_031_-48.0.mrc",
               "section": "2"
@@ -9477,8 +9227,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00004@frames/TS_01_031_-48.0.mrc",
               "section": "3"
@@ -9514,8 +9263,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00005@frames/TS_01_031_-48.0.mrc",
               "section": "4"
@@ -9551,8 +9299,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00006@frames/TS_01_031_-48.0.mrc",
               "section": "5"
@@ -9588,8 +9335,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00007@frames/TS_01_031_-48.0.mrc",
               "section": "6"
@@ -9625,8 +9371,7 @@
               "ctf_metadata": {
                 "defocus_u": 40543.109375,
                 "defocus_v": 40288.300781,
-                "defocus_angle": 34.091747,
-                "defocus_handedness": -1
+                "defocus_angle": 34.091747
               },
               "path": "00008@frames/TS_01_031_-48.0.mrc",
               "section": "7"
@@ -9667,8 +9412,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00001@frames/TS_01_032_48.0.mrc",
               "section": "0"
@@ -9704,8 +9448,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00002@frames/TS_01_032_48.0.mrc",
               "section": "1"
@@ -9741,8 +9484,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00003@frames/TS_01_032_48.0.mrc",
               "section": "2"
@@ -9778,8 +9520,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00004@frames/TS_01_032_48.0.mrc",
               "section": "3"
@@ -9815,8 +9556,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00005@frames/TS_01_032_48.0.mrc",
               "section": "4"
@@ -9852,8 +9592,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00006@frames/TS_01_032_48.0.mrc",
               "section": "5"
@@ -9889,8 +9628,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00007@frames/TS_01_032_48.0.mrc",
               "section": "6"
@@ -9926,8 +9664,7 @@
               "ctf_metadata": {
                 "defocus_u": 38438.015625,
                 "defocus_v": 38173.0625,
-                "defocus_angle": 63.245338,
-                "defocus_handedness": -1
+                "defocus_angle": 63.245338
               },
               "path": "00008@frames/TS_01_032_48.0.mrc",
               "section": "7"
@@ -9968,8 +9705,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00001@frames/TS_01_033_51.0.mrc",
               "section": "0"
@@ -10005,8 +9741,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00002@frames/TS_01_033_51.0.mrc",
               "section": "1"
@@ -10042,8 +9777,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00003@frames/TS_01_033_51.0.mrc",
               "section": "2"
@@ -10079,8 +9813,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00004@frames/TS_01_033_51.0.mrc",
               "section": "3"
@@ -10116,8 +9849,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00005@frames/TS_01_033_51.0.mrc",
               "section": "4"
@@ -10153,8 +9885,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00006@frames/TS_01_033_51.0.mrc",
               "section": "5"
@@ -10190,8 +9921,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00007@frames/TS_01_033_51.0.mrc",
               "section": "6"
@@ -10227,8 +9957,7 @@
               "ctf_metadata": {
                 "defocus_u": 38861.210938,
                 "defocus_v": 38739.855469,
-                "defocus_angle": 21.330759,
-                "defocus_handedness": -1
+                "defocus_angle": 21.330759
               },
               "path": "00008@frames/TS_01_033_51.0.mrc",
               "section": "7"
@@ -10269,8 +9998,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00001@frames/TS_01_034_-51.0.mrc",
               "section": "0"
@@ -10306,8 +10034,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00002@frames/TS_01_034_-51.0.mrc",
               "section": "1"
@@ -10343,8 +10070,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00003@frames/TS_01_034_-51.0.mrc",
               "section": "2"
@@ -10380,8 +10106,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00004@frames/TS_01_034_-51.0.mrc",
               "section": "3"
@@ -10417,8 +10142,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00005@frames/TS_01_034_-51.0.mrc",
               "section": "4"
@@ -10454,8 +10178,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00006@frames/TS_01_034_-51.0.mrc",
               "section": "5"
@@ -10491,8 +10214,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00007@frames/TS_01_034_-51.0.mrc",
               "section": "6"
@@ -10528,8 +10250,7 @@
               "ctf_metadata": {
                 "defocus_u": 39716.988281,
                 "defocus_v": 39676.960938,
-                "defocus_angle": -89.50993,
-                "defocus_handedness": -1
+                "defocus_angle": -89.50993
               },
               "path": "00008@frames/TS_01_034_-51.0.mrc",
               "section": "7"
@@ -10570,8 +10291,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00001@frames/TS_01_035_-54.0.mrc",
               "section": "0"
@@ -10607,8 +10327,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00002@frames/TS_01_035_-54.0.mrc",
               "section": "1"
@@ -10644,8 +10363,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00003@frames/TS_01_035_-54.0.mrc",
               "section": "2"
@@ -10681,8 +10399,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00004@frames/TS_01_035_-54.0.mrc",
               "section": "3"
@@ -10718,8 +10435,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00005@frames/TS_01_035_-54.0.mrc",
               "section": "4"
@@ -10755,8 +10471,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00006@frames/TS_01_035_-54.0.mrc",
               "section": "5"
@@ -10792,8 +10507,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00007@frames/TS_01_035_-54.0.mrc",
               "section": "6"
@@ -10829,8 +10543,7 @@
               "ctf_metadata": {
                 "defocus_u": 38593.777344,
                 "defocus_v": 38453.007812,
-                "defocus_angle": -77.46074,
-                "defocus_handedness": -1
+                "defocus_angle": -77.46074
               },
               "path": "00008@frames/TS_01_035_-54.0.mrc",
               "section": "7"
@@ -10871,8 +10584,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00001@frames/TS_01_036_54.0.mrc",
               "section": "0"
@@ -10908,8 +10620,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00002@frames/TS_01_036_54.0.mrc",
               "section": "1"
@@ -10945,8 +10656,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00003@frames/TS_01_036_54.0.mrc",
               "section": "2"
@@ -10982,8 +10692,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00004@frames/TS_01_036_54.0.mrc",
               "section": "3"
@@ -11019,8 +10728,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00005@frames/TS_01_036_54.0.mrc",
               "section": "4"
@@ -11056,8 +10764,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00006@frames/TS_01_036_54.0.mrc",
               "section": "5"
@@ -11093,8 +10800,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00007@frames/TS_01_036_54.0.mrc",
               "section": "6"
@@ -11130,8 +10836,7 @@
               "ctf_metadata": {
                 "defocus_u": 38656.089844,
                 "defocus_v": 38493.3125,
-                "defocus_angle": -8.29779,
-                "defocus_handedness": -1
+                "defocus_angle": -8.29779
               },
               "path": "00008@frames/TS_01_036_54.0.mrc",
               "section": "7"
@@ -11172,8 +10877,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00001@frames/TS_01_037_57.0.mrc",
               "section": "0"
@@ -11209,8 +10913,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00002@frames/TS_01_037_57.0.mrc",
               "section": "1"
@@ -11246,8 +10949,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00003@frames/TS_01_037_57.0.mrc",
               "section": "2"
@@ -11283,8 +10985,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00004@frames/TS_01_037_57.0.mrc",
               "section": "3"
@@ -11320,8 +11021,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00005@frames/TS_01_037_57.0.mrc",
               "section": "4"
@@ -11357,8 +11057,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00006@frames/TS_01_037_57.0.mrc",
               "section": "5"
@@ -11394,8 +11093,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00007@frames/TS_01_037_57.0.mrc",
               "section": "6"
@@ -11431,8 +11129,7 @@
               "ctf_metadata": {
                 "defocus_u": 37450.847656,
                 "defocus_v": 37448.03125,
-                "defocus_angle": -35.11659,
-                "defocus_handedness": -1
+                "defocus_angle": -35.11659
               },
               "path": "00008@frames/TS_01_037_57.0.mrc",
               "section": "7"
@@ -11473,8 +11170,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00001@frames/TS_01_038_-57.0.mrc",
               "section": "0"
@@ -11510,8 +11206,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00002@frames/TS_01_038_-57.0.mrc",
               "section": "1"
@@ -11547,8 +11242,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00003@frames/TS_01_038_-57.0.mrc",
               "section": "2"
@@ -11584,8 +11278,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00004@frames/TS_01_038_-57.0.mrc",
               "section": "3"
@@ -11621,8 +11314,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00005@frames/TS_01_038_-57.0.mrc",
               "section": "4"
@@ -11658,8 +11350,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00006@frames/TS_01_038_-57.0.mrc",
               "section": "5"
@@ -11695,8 +11386,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00007@frames/TS_01_038_-57.0.mrc",
               "section": "6"
@@ -11732,8 +11422,7 @@
               "ctf_metadata": {
                 "defocus_u": 39527.78125,
                 "defocus_v": 39418.410156,
-                "defocus_angle": 44.527622,
-                "defocus_handedness": -1
+                "defocus_angle": 44.527622
               },
               "path": "00008@frames/TS_01_038_-57.0.mrc",
               "section": "7"
@@ -11774,8 +11463,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00001@frames/TS_01_039_-60.0.mrc",
               "section": "0"
@@ -11811,8 +11499,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00002@frames/TS_01_039_-60.0.mrc",
               "section": "1"
@@ -11848,8 +11535,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00003@frames/TS_01_039_-60.0.mrc",
               "section": "2"
@@ -11885,8 +11571,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00004@frames/TS_01_039_-60.0.mrc",
               "section": "3"
@@ -11922,8 +11607,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00005@frames/TS_01_039_-60.0.mrc",
               "section": "4"
@@ -11959,8 +11643,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00006@frames/TS_01_039_-60.0.mrc",
               "section": "5"
@@ -11996,8 +11679,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00007@frames/TS_01_039_-60.0.mrc",
               "section": "6"
@@ -12033,8 +11715,7 @@
               "ctf_metadata": {
                 "defocus_u": 41770.4375,
                 "defocus_v": 41740.082031,
-                "defocus_angle": -0.45871,
-                "defocus_handedness": -1
+                "defocus_angle": -0.45871
               },
               "path": "00008@frames/TS_01_039_-60.0.mrc",
               "section": "7"
@@ -12075,8 +11756,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00001@frames/TS_01_040_60.0.mrc",
               "section": "0"
@@ -12112,8 +11792,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00002@frames/TS_01_040_60.0.mrc",
               "section": "1"
@@ -12149,8 +11828,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00003@frames/TS_01_040_60.0.mrc",
               "section": "2"
@@ -12186,8 +11864,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00004@frames/TS_01_040_60.0.mrc",
               "section": "3"
@@ -12223,8 +11900,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00005@frames/TS_01_040_60.0.mrc",
               "section": "4"
@@ -12260,8 +11936,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00006@frames/TS_01_040_60.0.mrc",
               "section": "5"
@@ -12297,8 +11972,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00007@frames/TS_01_040_60.0.mrc",
               "section": "6"
@@ -12334,8 +12008,7 @@
               "ctf_metadata": {
                 "defocus_u": 38544.476562,
                 "defocus_v": 38449.148438,
-                "defocus_angle": -10.13496,
-                "defocus_handedness": -1
+                "defocus_angle": -10.13496
               },
               "path": "00008@frames/TS_01_040_60.0.mrc",
               "section": "7"

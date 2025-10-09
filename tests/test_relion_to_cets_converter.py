@@ -5,7 +5,10 @@ from cets_relion.movies import RelionMoviesStarFile
 from cets_relion.tilt_series import RelionTiltSeriesStarfile
 from cets_relion.tomograms import RelionTomosStarfile
 from tests.testing_tools import CetsRelionTest
-from cets_relion.main_converter import parse_optimisation_set, RelionCetsConverter
+from cets_relion.relion_to_cets_converter import (
+    parse_optimisation_set,
+    RelionCetsConverter,
+)
 from cets_relion.particle_coords import RelionCoordsStarFile, RelionParticlesStarFile
 from cets_relion.relion_reader import RelionPipeline
 

@@ -1,0 +1,11 @@
+data_global
+loop_
+_rlnTomoName
+_rlnTomoTiltSeriesStarFile
+_rlnVoltage
+_rlnSphericalAberration
+_rlnAmplitudeContrast
+_rlnMicrographOriginalPixelSize
+_rlnTomoHand
+_rlnOpticsGroupName
+TILTSERIES_000 tilt_series/TILTSERIES_000.star -VOLTAGE-1 SPABB-1 AMPCON-1 APIX-1 TOMOHAND-1 Optics1

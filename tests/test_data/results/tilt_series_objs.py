@@ -90,7 +90,6 @@ CTF_0 = {
     "coordinate_transformations": None,
     "ctf_metadata": {
         "defocus_angle": 35.154533,
-        "defocus_handedness": -1,
         "defocus_u": 38855.828125,
         "defocus_v": 38750.828125,
     },
@@ -127,7 +126,6 @@ CTF_40 = {
     "coordinate_transformations": None,
     "ctf_metadata": {
         "defocus_angle": -10.13496,
-        "defocus_handedness": -1,
         "defocus_u": 38544.476562,
         "defocus_v": 38449.148438,
     },

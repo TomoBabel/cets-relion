@@ -5,7 +5,7 @@ from cets_relion.scripts.relion_to_cets import (
     get_raw_movies,
     get_tilt_series,
 )
-from cets_relion.main_converter import RelionCetsConverter
+from cets_relion.relion_to_cets_converter import RelionCetsConverter
 import json
 from tests.test_data.results.tilt_series_objs import (
     MOCORR_0,
@@ -18,7 +18,7 @@ from tests.test_data.results.tilt_series_objs import (
 
 @fixture(autouse=True)
 def mock_get_image_size_main():
-    with patch("cets_relion.main_converter.get_mrc_dims") as mock:
+    with patch("cets_relion.relion_to_cets_converter.get_mrc_dims") as mock:
         mock.return_value = (1000, 1000, 8)
         yield mock
 
@@ -78,9 +78,8 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
         self.setup_dirs(2)
         con = RelionCetsConverter("MotionCorr/job002/")
         ts = get_tilt_series(con, "TS_01")
-        assert len(ts) == 41
-        assert ts[0].model_dump(mode="json") == MOCORR_0
-        assert ts[-1].model_dump(mode="json") == MOCORR_40
+        assert ts[0].images[0].model_dump(mode="json") == MOCORR_0
+        assert ts[0].images[-1].model_dump(mode="json") == MOCORR_40
 
     @patch("cets_relion.tilt_series.get_mrc_dims")
     def test_get_tilt_series_from_ctf(self, mock_dims):
@@ -89,9 +88,8 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
         self.setup_dirs(3)
         con = RelionCetsConverter("CtfFind/job003/")
         ts = get_tilt_series(con, "TS_01")
-        assert len(ts) == 41
-        assert ts[0].model_dump(mode="json") == CTF_0
-        assert ts[-1].model_dump(mode="json") == CTF_40
+        assert ts[0].images[0].model_dump(mode="json") == CTF_0
+        assert ts[0].images[-1].model_dump(mode="json") == CTF_40
 
     # ToDo: Output of dumping transformation objects to JSON is not correct
     #  fix before adding these tests

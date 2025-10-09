@@ -184,7 +184,7 @@ class RelionTiltSeriesStarfile(object):
                 defocus_u=defocus_u,
                 defocus_v=defocus_v,
                 defocus_angle=defocus_angle,
-                defocus_handedness=-1,
+                # defocus_handedness=-1,
             )
             cets_obj = ProjectionImage(
                 path=micname,
