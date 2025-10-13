@@ -10,9 +10,11 @@ from cets_data_model.models.models import (
     MovieFrame,
     MovieStackSeries,
     MovieStack,
+    CoordinateSystem,
+    Axis,
+    Scale,
 )
 from tests.testing_tools import CetsRelionTest
-from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
 
 
 @fixture(autouse=True)
@@ -62,52 +64,190 @@ class RelionCetsMoviesTests(CetsRelionTest):
         assert isinstance(result.stacks[0], MovieStack)
         assert len(result.stacks[0].images) == 8
         assert result.stacks[0].images[0] == MovieFrame(
-            accumulated_dose=0.375,
-            coordinate_systems=[RELION_COORDS_LOGICAL],
-            coordinate_transformations=None,
-            ctf_metadata=CTFMetadata(
-                defocus_u=38855.828125,
-                defocus_v=38750.828125,
-                defocus_angle=35.154533,
-                # defocus_handedness=-1,
-            ),
+            width=2000,
             height=2000,
+            coordinate_systems=[
+                CoordinateSystem(
+                    name="logical coordinates",
+                    axes=[
+                        Axis(
+                            name="logical coordinates x axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates y axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates z axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+                CoordinateSystem(
+                    name="physical coordinates",
+                    axes=[
+                        Axis(
+                            name="physical coordinates x axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates y axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates z axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+            ],
+            coordinate_transformations=[
+                Scale(
+                    type="scale",
+                    name="pixel size",
+                    input="logical coordinates",
+                    output="physical_coordinates",
+                    scale=[0.675, 0.675],
+                )
+            ],
             nominal_tilt_angle=0.001,
+            accumulated_dose=0.375,
+            ctf_metadata=CTFMetadata(
+                defocus_u=38855.828125, defocus_v=38750.828125, defocus_angle=35.154533
+            ),
             path="00001@frames/TS_01_000_0.0.mrc",
             section="0",
-            width=2000,
         )
         assert result.stacks[0].images[-1] == MovieFrame(
-            accumulated_dose=3.0,
-            coordinate_systems=[RELION_COORDS_LOGICAL],
-            coordinate_transformations=None,
-            ctf_metadata=CTFMetadata(
-                defocus_u=38855.828125,
-                defocus_v=38750.828125,
-                defocus_angle=35.154533,
-                # defocus_handedness=-1,
-            ),
+            width=2000,
             height=2000,
+            coordinate_systems=[
+                CoordinateSystem(
+                    name="logical coordinates",
+                    axes=[
+                        Axis(
+                            name="logical coordinates x axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates y axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates z axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+                CoordinateSystem(
+                    name="physical coordinates",
+                    axes=[
+                        Axis(
+                            name="physical coordinates x axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates y axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates z axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+            ],
+            coordinate_transformations=[
+                Scale(
+                    type="scale",
+                    name="pixel size",
+                    input="logical coordinates",
+                    output="physical_coordinates",
+                    scale=[0.675, 0.675],
+                )
+            ],
             nominal_tilt_angle=0.001,
+            accumulated_dose=3.0,
+            ctf_metadata=CTFMetadata(
+                defocus_u=38855.828125, defocus_v=38750.828125, defocus_angle=35.154533
+            ),
             path="00008@frames/TS_01_000_0.0.mrc",
             section="7",
-            width=2000,
         )
         assert result.stacks[-1].images[-1] == MovieFrame(
-            accumulated_dose=123.0,
-            coordinate_systems=[RELION_COORDS_LOGICAL],
-            coordinate_transformations=None,
-            ctf_metadata=CTFMetadata(
-                defocus_u=38544.476562,
-                defocus_v=38449.148438,
-                defocus_angle=-10.13496,
-                # defocus_handedness=-1,
-            ),
+            width=2000,
             height=2000,
+            coordinate_systems=[
+                CoordinateSystem(
+                    name="logical coordinates",
+                    axes=[
+                        Axis(
+                            name="logical coordinates x axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates y axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates z axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+                CoordinateSystem(
+                    name="physical coordinates",
+                    axes=[
+                        Axis(
+                            name="physical coordinates x axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates y axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates z axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+            ],
+            coordinate_transformations=[
+                Scale(
+                    type="scale",
+                    name="pixel size",
+                    input="logical coordinates",
+                    output="physical_coordinates",
+                    scale=[0.675, 0.675],
+                )
+            ],
             nominal_tilt_angle=60.0006,
+            accumulated_dose=123.0,
+            ctf_metadata=CTFMetadata(
+                defocus_u=38544.476562, defocus_v=38449.148438, defocus_angle=-10.13496
+            ),
             path="00008@frames/TS_01_040_60.0.mrc",
             section="7",
-            width=2000,
         )
 
     def test_make_movie_cets_for_tilt_series_no_ctf_available(self):
@@ -120,40 +260,198 @@ class RelionCetsMoviesTests(CetsRelionTest):
         assert isinstance(result.stacks[0], MovieStack)
         assert len(result.stacks[0].images) == 8
         assert result.stacks[0].images[0] == MovieFrame(
-            accumulated_dose=0.375,
-            coordinate_systems=[RELION_COORDS_LOGICAL],
-            coordinate_transformations=None,
-            ctf_metadata=None,
+            width=2000,
             height=2000,
+            coordinate_systems=[
+                CoordinateSystem(
+                    name="logical coordinates",
+                    axes=[
+                        Axis(
+                            name="logical coordinates x axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates y axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates z axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+                CoordinateSystem(
+                    name="physical coordinates",
+                    axes=[
+                        Axis(
+                            name="physical coordinates x axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates y axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates z axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+            ],
+            coordinate_transformations=[
+                Scale(
+                    type="scale",
+                    name="pixel size",
+                    input="logical coordinates",
+                    output="physical_coordinates",
+                    scale=[0.675, 0.675],
+                )
+            ],
             nominal_tilt_angle=0.001,
+            accumulated_dose=0.375,
+            ctf_metadata=None,
             path="00001@frames/TS_01_000_0.0.mrc",
             section="0",
-            width=2000,
         )
         assert result.stacks[0].images[-1] == MovieFrame(
-            accumulated_dose=3.0,
-            coordinate_systems=[RELION_COORDS_LOGICAL],
-            coordinate_transformations=None,
-            ctf_metadata=None,
+            width=2000,
             height=2000,
+            coordinate_systems=[
+                CoordinateSystem(
+                    name="logical coordinates",
+                    axes=[
+                        Axis(
+                            name="logical coordinates x axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates y axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates z axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+                CoordinateSystem(
+                    name="physical coordinates",
+                    axes=[
+                        Axis(
+                            name="physical coordinates x axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates y axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates z axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+            ],
+            coordinate_transformations=[
+                Scale(
+                    type="scale",
+                    name="pixel size",
+                    input="logical coordinates",
+                    output="physical_coordinates",
+                    scale=[0.675, 0.675],
+                )
+            ],
             nominal_tilt_angle=0.001,
+            accumulated_dose=3.0,
+            ctf_metadata=None,
             path="00008@frames/TS_01_000_0.0.mrc",
             section="7",
-            width=2000,
         )
         assert result.stacks[-1].images[-1] == MovieFrame(
-            accumulated_dose=123.0,
-            coordinate_systems=[RELION_COORDS_LOGICAL],
-            coordinate_transformations=None,
-            ctf_metadata=None,
+            width=2000,
             height=2000,
+            coordinate_systems=[
+                CoordinateSystem(
+                    name="logical coordinates",
+                    axes=[
+                        Axis(
+                            name="logical coordinates x axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates y axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="logical coordinates z axis",
+                            axis_unit="pixel/voxel",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+                CoordinateSystem(
+                    name="physical coordinates",
+                    axes=[
+                        Axis(
+                            name="physical coordinates x axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates y axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                        Axis(
+                            name="physical coordinates z axis",
+                            axis_unit="Ångstrom",
+                            axis_type=None,
+                        ),
+                    ],
+                ),
+            ],
+            coordinate_transformations=[
+                Scale(
+                    type="scale",
+                    name="pixel size",
+                    input="logical coordinates",
+                    output="physical_coordinates",
+                    scale=[0.675, 0.675],
+                )
+            ],
             nominal_tilt_angle=60.0006,
+            accumulated_dose=123.0,
+            ctf_metadata=None,
             path="00008@frames/TS_01_040_60.0.mrc",
             section="7",
-            width=2000,
         )
 
     def test_get_all_tomo_names(self):
         self.setup_dirs(1)
         mf = RelionMoviesStarFile("Import/job001/tilt_series.star")
         assert mf.get_all_tomo_names() == ["TS_01", "TS_03", "TS_43", "TS_45", "TS_54"]
+
+    def test_get_all_tomo_pixel_sizes(self):
+        self.setup_dirs(1)
+        mf = RelionMoviesStarFile("Import/job001/tilt_series.star")
+        assert mf.get_all_pixel_sizes() == {
+            "TS_01": "0.675000",
+            "TS_03": "0.675000",
+            "TS_43": "0.675000",
+            "TS_45": "0.675000",
+            "TS_54": "0.675000",
+        }

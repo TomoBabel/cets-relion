@@ -18,3 +18,15 @@ RELION_COORDS_PHYSICAL = CoordinateSystem(
     name="physical coordinates",
     axes=[x_axis_physical, y_axis_physical, z_axis_physical],
 )
+
+
+def physical_coords(name: str) -> CoordinateSystem:
+    coords = RELION_COORDS_PHYSICAL
+    coords.name = name
+    return coords
+
+
+def logical_coords(name: str) -> CoordinateSystem:
+    coords = RELION_COORDS_LOGICAL
+    coords.name = name
+    return coords

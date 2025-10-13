@@ -1,19 +1,23 @@
 import os
 from collections import ChainMap
 from pathlib import Path
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Dict
 
 from cets_data_model.models.models import (
     MovieStack,
     MovieFrame,
     MovieStackSeries,
     CTFMetadata,
+    Scale,
 )
 from cets_data_model.utils.image_utils import get_image_dims
 from gemmi import cif
 
 from cets_relion.motion_corr import RelionMotionCorrStarFile
-from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
+from cets_relion.objs.coordinate_systems import (
+    RELION_COORDS_LOGICAL,
+    RELION_COORDS_PHYSICAL,
+)
 from cets_relion.relion_reader import RelionPipeline
 from cets_relion.tilt_series import RelionTiltSeriesStarfile
 
@@ -122,6 +126,9 @@ class RelionMoviesStarFile(object):
             except IndexError:
                 dose = float(cifdata[row_n][4]) - float(cifdata[row_n - 1][4])
 
+            # get the size transform
+            apix = self.get_all_pixel_sizes()[ts_name]
+
             for n in range(int(row[1])):
                 frame_n = f"{n + 1:05}"
                 frame_dose = dose * (float(n + 1) / float(row[1]))
@@ -134,7 +141,18 @@ class RelionMoviesStarFile(object):
                         ctf_metadata=cets_ctf,
                         width=width,
                         height=height,
-                        coordinate_systems=[RELION_COORDS_LOGICAL],
+                        coordinate_systems=[
+                            RELION_COORDS_LOGICAL,
+                            RELION_COORDS_PHYSICAL,
+                        ],
+                        coordinate_transformations=[
+                            Scale(
+                                name="pixel size",
+                                scale=[apix, apix],
+                                input="logical coordinates",
+                                output="physical_coordinates",
+                            )
+                        ],
                     )
                 )
 
@@ -144,10 +162,18 @@ class RelionMoviesStarFile(object):
         # return a CETS MovieStackSeries for the tilt series
         return MovieStackSeries(name=ts_name, stacks=movie_stacks)
 
-    def get_all_tomo_names(self):
+    def get_all_tomo_names(self) -> List[str]:
         data = (
             cif.read_file(self.name)
             .find_block("global")
             .find(prefix="_rln", tags=["TomoName"])
         )
         return sorted([cif.as_string(x[0]) for x in data])
+
+    def get_all_pixel_sizes(self) -> Dict[str, float]:
+        data = (
+            cif.read_file(self.name)
+            .find_block("global")
+            .find(prefix="_rln", tags=["TomoName", "MicrographOriginalPixelSize"])
+        )
+        return {x[0]: x[1] for x in data}

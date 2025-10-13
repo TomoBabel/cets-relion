@@ -75,7 +75,6 @@ def get_job_number(file: Union[str, os.PathLike]) -> int:
     return int(jobname.lstrip("job"))
 
 
-# ToDo: Change return type to float when model is fixed
 def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> List[List[int]]:
     """Convert the Euler angles from a RELION star file into a rotation matrix
 
@@ -88,13 +87,12 @@ def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> List[List[in
         np.ndarray: The transformation matrix
 
     """
-    sipy_rot = R.from_euler(seq="ZYZ", angles=[tilt, rot, psi], degrees=True)
+    sipy_rot = R.from_euler(seq="zyz", angles=[tilt, rot, psi], degrees=True)
     matrix = sipy_rot.as_matrix().tolist()
     # tmp fix because affine is incorrectly typed, wants ints instead of floats
-    return [[int(x) for x in row] for row in matrix]
+    return matrix
 
 
-# ToDo: Change return type to float when model is fixed
 def rotation_to_matrix(
     rot_angle: float, axis: Literal["x", "y", "z"]
 ) -> List[List[int]]:
@@ -104,6 +102,4 @@ def rotation_to_matrix(
         axis (str): "x" or "y" or "z
     """
     matrix = R.from_euler(axis, rot_angle, degrees=True).as_matrix()
-    # return matrix.tolist()
-    # temp fix for incorrectly typed affine in models
-    return [[int(x) for x in row] for row in matrix]
+    return matrix.tolist()

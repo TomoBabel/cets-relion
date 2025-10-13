@@ -85,9 +85,31 @@ CTF_0 = {
                 },
             ],
             "name": "logical coordinates",
-        }
+        },
+        {
+            "axes": [
+                {
+                    "axis_type": None,
+                    "axis_unit": "Ångstrom",
+                    "name": "physical coordinates x axis",
+                },
+                {
+                    "axis_type": None,
+                    "axis_unit": "Ångstrom",
+                    "name": "physical coordinates y axis",
+                },
+                {
+                    "axis_type": None,
+                    "axis_unit": "Ångstrom",
+                    "name": "physical coordinates z axis",
+                },
+            ],
+            "name": "physical coordinates",
+        },
     ],
-    "coordinate_transformations": None,
+    "coordinate_transformations": [
+        {"input": "logical", "name": "Å/pix", "output": "physical", "type": "scale"}
+    ],
     "ctf_metadata": {
         "defocus_angle": 35.154533,
         "defocus_u": 38855.828125,
@@ -121,9 +143,31 @@ CTF_40 = {
                 },
             ],
             "name": "logical coordinates",
-        }
+        },
+        {
+            "axes": [
+                {
+                    "axis_type": None,
+                    "axis_unit": "Ångstrom",
+                    "name": "physical coordinates x axis",
+                },
+                {
+                    "axis_type": None,
+                    "axis_unit": "Ångstrom",
+                    "name": "physical coordinates y axis",
+                },
+                {
+                    "axis_type": None,
+                    "axis_unit": "Ångstrom",
+                    "name": "physical coordinates z axis",
+                },
+            ],
+            "name": "physical coordinates",
+        },
     ],
-    "coordinate_transformations": None,
+    "coordinate_transformations": [
+        {"input": "logical", "name": "Å/pix", "output": "physical", "type": "scale"}
+    ],
     "ctf_metadata": {
         "defocus_angle": -10.13496,
         "defocus_u": 38544.476562,

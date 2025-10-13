@@ -10,11 +10,16 @@ from cets_data_model.models.models import (
     ProjectionImage,
     Translation,
     Affine,
+    Scale,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
 
-from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
+from cets_relion.objs.coordinate_systems import (
+    RELION_COORDS_LOGICAL,
+    RELION_COORDS_PHYSICAL,
+    logical_coords,
+)
 from cets_relion.utils import rotation_to_matrix
 
 logger = getLogger(__name__)
@@ -191,11 +196,27 @@ class RelionTiltSeriesStarfile(object):
                 section=str(n),
                 width=x_size,
                 height=y_size,
-                coordinate_systems=[RELION_COORDS_LOGICAL],
+                coordinate_systems=[RELION_COORDS_LOGICAL, RELION_COORDS_PHYSICAL],
                 nominal_tilt_angle=nom_tilt,
                 ctf_metadata=ctf,
                 accumulated_dose=dose_dict[micname],
             )
+            # add te scaling transformation
+            glo_block = cif.read_file(self.name).find_block("global")
+            apix_data = list(
+                glo_block.find(
+                    prefix="_rln", tags=["TomoName", "TomoTiltSeriesPixelSize"]
+                )
+            )
+            apix_dict: Dict[str, float] = {x[0]: float(x[1]) for x in apix_data}
+            scaling_xform = Scale(
+                name="Å/pix",
+                input="logical",
+                output="physical",
+                scale=[apix_dict[ts_name]],
+            )
+            cets_obj.coordinate_transformations = [scaling_xform]
+
             try:
                 xtilt, ytilt, zrot, xshift, yshift = [
                     float(x) for x in alignment_data[n]
@@ -203,25 +224,44 @@ class RelionTiltSeriesStarfile(object):
                 translation = Translation(
                     name="Tilt image alignment translation",
                     translation=[xshift, yshift],
+                    input="logical",
+                    output="alignment translation",
                 )
-                x_affine = Affine(
-                    name="Tilt image alignment x tilt",
-                    affine=rotation_to_matrix(xtilt, "x"),
-                )
-                y_affine = Affine(
-                    name="Tilt image alignment y tilt",
-                    affine=rotation_to_matrix(ytilt, "y"),
-                )
+                cets_obj.coordinate_transformations.append(translation)
+
+                trans_coord_sys = logical_coords("alignment translation")
+                cets_obj.coordinate_systems.append(trans_coord_sys)
+
                 z_affine = Affine(
                     name="Tilt image alignment x rotation",
                     affine=rotation_to_matrix(zrot, "z"),
+                    input="alignment translation",
+                    output="alignment z rotation",
                 )
-                cets_obj.coordinate_transformations = [
-                    translation,
-                    x_affine,
-                    y_affine,
-                    z_affine,
-                ]
+                zr_coord_sys = logical_coords("alignment z rotation")
+                cets_obj.coordinate_transformations.append(z_affine)
+                cets_obj.coordinate_systems.append(zr_coord_sys)
+
+                x_affine = Affine(
+                    name="Tilt image alignment x tilt",
+                    affine=rotation_to_matrix(xtilt, "x"),
+                    input="alignment z rotation",
+                    output="alignment x tilt",
+                )
+                ax_coord_sys = logical_coords("alignment x tilt")
+                cets_obj.coordinate_transformations.append(x_affine)
+                cets_obj.coordinate_systems.append(ax_coord_sys)
+
+                y_affine = Affine(
+                    name="Tilt image alignment y tilt",
+                    affine=rotation_to_matrix(ytilt, "y"),
+                    input="alignment x tilt",
+                    output="alignment y tilt",
+                )
+                ay_coord_sys = logical_coords("alignment y tilt")
+                cets_obj.coordinate_transformations.append(y_affine)
+                cets_obj.coordinate_systems.append(ay_coord_sys)
+
             except IndexError:
                 pass
             cets_objects.append(cets_obj)
