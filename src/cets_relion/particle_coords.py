@@ -194,7 +194,7 @@ class RelionParticlesStarFile(object):
         self.file = Path(str(file_name))
         self.name = str(file_name)
 
-    def get_cets_particles(self, tomo_name: str) -> List[ParticleMap]:
+    def get_cets_particles(self, tomo_name: str = "") -> List[ParticleMap]:
         """Get CETS ParticleMap objects for extracted particles
 
         Args:
@@ -229,7 +229,7 @@ class RelionParticlesStarFile(object):
                 "OpticsGroup",
             ],
         )
-        parts = [x for x in all_parts if x[0] == tomo_name]
+        parts = [x for x in all_parts if x[0] == tomo_name] if tomo_name else all_parts
         cets_particles = []
         for part in parts:
             tomorot, tomotilt, tomopsi = float(part[1]), float(part[2]), float(part[3])

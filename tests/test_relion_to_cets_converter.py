@@ -49,6 +49,7 @@ class RelionCetsConverterTest(CetsRelionTest):
             "particles",
             "tilt_series",
             "tomos",
+            "averages",
         ]:
             assert converter.__getattribute__(f) == []
 
@@ -70,6 +71,7 @@ class RelionCetsConverterTest(CetsRelionTest):
             "particles",
             "tilt_series",
             "tomos",
+            "averages",
         ]:
             assert converter.__getattribute__(f) == []
 
@@ -92,6 +94,7 @@ class RelionCetsConverterTest(CetsRelionTest):
             "particles",
             "tilt_series",
             "tomos",
+            "averages",
         ]:
             assert converter.__getattribute__(f) == []
 
@@ -118,6 +121,7 @@ class RelionCetsConverterTest(CetsRelionTest):
             "picks",
             "particles",
             "tomos",
+            "averages",
         ]:
             assert converter.__getattribute__(f) == []
 
@@ -144,33 +148,7 @@ class RelionCetsConverterTest(CetsRelionTest):
             "picks",
             "particles",
             "tomos",
-        ]:
-            assert converter.__getattribute__(f) == []
-
-    def test_instantiate_converter_with_reconstruct_job(self):
-        self.setup_dirs(6)
-        converter = RelionCetsConverter(terminal_job="Tomograms/job006/")
-        assert isinstance(converter.pipeline, RelionPipeline)
-        assert isinstance(converter.movies[0], RelionMoviesStarFile)
-        assert isinstance(converter.mocorr[0], RelionMotionCorrStarFile)
-        assert isinstance(converter.ctf[0], RelionTiltSeriesStarfile)
-        assert isinstance(converter.tilt_series[0], RelionTiltSeriesStarfile)
-        assert isinstance(converter.tomos[0], RelionTomosStarfile)
-        assert converter.movies[0].ctf_files == converter.ctf
-        assert converter.movies[0].mocorr_files == converter.mocorr
-        assert converter.movies[0].name == "Import/job001/tilt_series.star"
-        assert (
-            converter.mocorr[0].name == "MotionCorr/job002/corrected_tilt_series.star"
-        )
-        assert converter.ctf[0].name == "CtfFind/job003/tilt_series_ctf.star"
-        assert (
-            converter.tilt_series[0].name
-            == "AlignTiltSeries/job005/aligned_tilt_series.star"
-        )
-        assert converter.tomos[0].name == "Tomograms/job006/tomograms.star"
-        for f in [
-            "picks",
-            "particles",
+            "averages",
         ]:
             assert converter.__getattribute__(f) == []
 
@@ -200,6 +178,7 @@ class RelionCetsConverterTest(CetsRelionTest):
         assert converter.picks[0].name == "Picks/job009/particles.star"
         for f in [
             "particles",
+            "averages",
         ]:
             assert converter.__getattribute__(f) == []
 
@@ -226,11 +205,12 @@ class RelionCetsConverterTest(CetsRelionTest):
             converter.tilt_series[0].name
             == "AlignTiltSeries/job005/aligned_tilt_series.star"
         )
+        assert converter.averages == []
         assert converter.tomos[0].name == "Denoise/job008/tomograms.star"
         assert converter.picks[0].name == "Picks/job009/particles.star"
         assert converter.particles[0].name == "Extract/job010/particles.star"
 
-    def test_instantiate_converter_with_later_job(self):
+    def test_instantiate_converter_with_refine_job(self):
         """every attr in the converter should now be filled"""
         self.setup_dirs(64)
         converter = RelionCetsConverter(terminal_job="Refine3D/job064/")
@@ -256,6 +236,64 @@ class RelionCetsConverterTest(CetsRelionTest):
         assert converter.tomos[0].name == "Polish/job060/tomograms.star"
         assert converter.picks[0].name == "Picks/job009/particles.star"
         assert converter.particles[0].name == "Refine3D/job064/run_data.star"
+        assert converter.averages[0].path == Path("Refine3D/job064/run_class001.mrc")
+        assert converter.averages[0].particles == converter.particles[0].name
+
+    def test_instantiate_converter_with_postprocess_job(self):
+        self.setup_dirs(22)
+        converter = RelionCetsConverter(terminal_job="PostProcess/job022/")
+        assert isinstance(converter.pipeline, RelionPipeline)
+        assert isinstance(converter.movies[0], RelionMoviesStarFile)
+        assert isinstance(converter.mocorr[0], RelionMotionCorrStarFile)
+        assert isinstance(converter.ctf[0], RelionTiltSeriesStarfile)
+        assert isinstance(converter.tilt_series[0], RelionTiltSeriesStarfile)
+        assert isinstance(converter.tomos[0], RelionTomosStarfile)
+        assert isinstance(converter.picks[0], RelionCoordsStarFile)
+        assert isinstance(converter.particles[0], RelionParticlesStarFile)
+        assert converter.movies[0].ctf_files == converter.ctf
+        assert converter.movies[0].mocorr_files == converter.mocorr
+        assert converter.movies[0].name == "Import/job001/tilt_series.star"
+        assert (
+            converter.mocorr[0].name == "MotionCorr/job002/corrected_tilt_series.star"
+        )
+        assert converter.ctf[0].name == "CtfFind/job003/tilt_series_ctf.star"
+        assert (
+            converter.tilt_series[0].name
+            == "AlignTiltSeries/job005/aligned_tilt_series.star"
+        )
+        assert converter.tomos[0].name == "Denoise/job008/tomograms.star"
+        assert converter.picks[0].name == "Picks/job009/particles.star"
+        assert converter.particles[0].name == "Refine3D/job015/run_data.star"
+        assert converter.averages[0].path == Path("PostProcess/job022/postprocess.mrc")
+        assert converter.averages[0].particles == converter.particles[0].name
+
+    def test_instantiate_converter_with_reconstruct_job(self):
+        self.setup_dirs(42)
+        converter = RelionCetsConverter(terminal_job="Reconstruct/job042/")
+        assert isinstance(converter.pipeline, RelionPipeline)
+        assert isinstance(converter.movies[0], RelionMoviesStarFile)
+        assert isinstance(converter.mocorr[0], RelionMotionCorrStarFile)
+        assert isinstance(converter.ctf[0], RelionTiltSeriesStarfile)
+        assert isinstance(converter.tilt_series[0], RelionTiltSeriesStarfile)
+        assert isinstance(converter.tomos[0], RelionTomosStarfile)
+        assert isinstance(converter.picks[0], RelionCoordsStarFile)
+        assert isinstance(converter.particles[0], RelionParticlesStarFile)
+        assert converter.movies[0].ctf_files == converter.ctf
+        assert converter.movies[0].mocorr_files == converter.mocorr
+        assert converter.movies[0].name == "Import/job001/tilt_series.star"
+        assert (
+            converter.mocorr[0].name == "MotionCorr/job002/corrected_tilt_series.star"
+        )
+        assert converter.ctf[0].name == "CtfFind/job003/tilt_series_ctf.star"
+        assert (
+            converter.tilt_series[0].name
+            == "AlignTiltSeries/job005/aligned_tilt_series.star"
+        )
+        assert converter.tomos[0].name == "Polish/job040/tomograms.star"
+        assert converter.picks[0].name == "Picks/job009/particles.star"
+        assert converter.particles[0].name == "Extract/job041/particles.star"
+        assert converter.averages[0].path == Path("Reconstruct/job042/merged.mrc")
+        assert converter.averages[0].particles == converter.particles[0].name
 
     def test_get_all_tomos_with_full_project(self):
         self.setup_dirs(64)

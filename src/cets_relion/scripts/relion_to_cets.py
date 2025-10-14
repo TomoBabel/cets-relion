@@ -1,4 +1,5 @@
 import argparse
+import warnings
 from typing import List
 from pathlib import Path
 from cets_data_model.models.models import (
@@ -8,7 +9,7 @@ from cets_data_model.models.models import (
     MovieStackSeries,
     TiltSeries,
     Tomogram,
-    ParticleMap,
+    Average,
 )
 
 from cets_relion.relion_to_cets_converter import RelionCetsConverter
@@ -101,6 +102,13 @@ def get_tomos(con: RelionCetsConverter, tomo_name: str) -> List[Tomogram]:
     return tomos
 
 
+def get_averages(con: RelionCetsConverter) -> List[Average]:
+    avgs = []
+    for avg in con.averages:
+        avgs.append(avg.get_cets_average())
+    return avgs
+
+
 # ToDo: Fix output type annotation when model has proper sphere object
 def get_coord_annotations(con: RelionCetsConverter, tomo_name: str) -> list:
     annotations = []
@@ -110,13 +118,6 @@ def get_coord_annotations(con: RelionCetsConverter, tomo_name: str) -> list:
         if coords_sec is not None:
             annotations.extend(coords_sec.get_cets())
     return annotations
-
-
-def get_particles(con, tomo_name: str) -> List[ParticleMap]:
-    parts = []
-    for part_set in con.particles:
-        parts.append(part_set.get_cets_particles(tomo_name))
-    return parts
 
 
 def main(argv=None):
@@ -139,6 +140,14 @@ def main(argv=None):
         region.annotations = get_coord_annotations(con, tomo_name)
 
         dataset.regions.append(region)
+    if args.tomos and con.averages:
+        warnings.warn(
+            "Cannot generate CETS objects for Subtomograms when specifying specific"
+            "tilt series/tomograms with the --tomos argument."
+        )
+    else:
+        dataset.averages = get_averages(con)
+
     outname = args.output_name
     outname = outname + ".json" if not Path(outname).suffix == ".json" else outname
     with open(outname, "w") as out:

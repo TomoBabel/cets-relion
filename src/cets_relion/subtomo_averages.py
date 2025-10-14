@@ -11,13 +11,16 @@ from cets_relion.particle_coords import RelionParticlesStarFile
 class RelionSubtomoAverage(object):
     """A subtomo average from a relion Refine3D, CLass3D, Reconstruct, or PostProcess job"""
 
-    def __init__(self, file_name: Union[str, os.PathLike], tomo_name: str):
+    def __init__(self, file_name: Union[str, os.PathLike]):
         self.file_name = str(file_name)
         self.path = Path(self.file_name)
-        self.tomo_name = tomo_name
-        if self.path.parts[0] in ("Class3D", "Refine3D"):
+        if self.path.parts[0] == "Class3D":
+            raise NotImplementedError(
+                "Class3D classes cannot be used for generating CETS averages"
+            )
+        if self.path.parts[0] == "Refine3D":
             opt_sets = sorted(list(self.path.parent.glob("*_optimisation_set.star")))
-            opt_set = opt_sets[-1]
+            self.opt_set = opt_sets[-1]
         elif self.path.parts[0] == "PostProcess":
             # find refine dir from the previous refine3D
             pipeline = RelionPipeline("default_pipeline.star")
@@ -25,7 +28,7 @@ class RelionSubtomoAverage(object):
                 start=str(self.path.parent) + "/",
                 jobtypes=["relion.refine3d.tomo", "relion.refine3d.tomo.helical"],
             )[0]
-            opt_set = Path(refine_job) / "run_optimisation_set.star"
+            self.opt_set = Path(refine_job) / "run_optimisation_set.star"
 
         elif self.path.parts[0] == "Reconstruct":
             # find the optimization set from the extract job
@@ -33,7 +36,7 @@ class RelionSubtomoAverage(object):
             extract_job = pipeline.next_upstream_jobs(
                 start=str(self.path.parent) + "/", jobtypes=["relion.pseudosubtomo"]
             )[0]
-            opt_set = Path(extract_job) / "optimisation_set.star"
+            self.opt_set = Path(extract_job) / "optimisation_set.star"
 
         else:
             raise ValueError(
@@ -41,13 +44,13 @@ class RelionSubtomoAverage(object):
                 "or 'Refine3D'"
             )
 
-        opt = cif.read_file(str(opt_set)).sole_block()
+        opt = cif.read_file(str(self.opt_set)).sole_block()
         self.tomos = opt.find_pair("_rlnTomoTomogramsFile")[1]
         self.particles = opt.find_pair("_rlnTomoParticlesFile")[1]
 
     def get_particle_maps(self) -> List[ParticleMap]:
         parts = RelionParticlesStarFile(self.particles)
-        return parts.get_cets_particles(self.tomo_name)
+        return parts.get_cets_particles()
 
     def get_cets_average(self) -> Average:
         return Average(name=self.file_name, particle_maps=self.get_particle_maps())

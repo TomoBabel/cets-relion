@@ -16,6 +16,7 @@ from cets_relion.particle_coords import (
     parse_particles_file,
 )
 from cets_relion.relion_reader import RelionPipeline
+from cets_relion.subtomo_averages import RelionSubtomoAverage
 from cets_relion.tilt_series import RelionTiltSeriesStarfile
 from cets_relion.tomograms import RelionTomosStarfile
 from cets_relion.utils import get_job_type
@@ -110,8 +111,10 @@ class RelionCetsConverter:
             tomograms generated from each tilt series
         picks (List[RelionCoordsStarFile]): Objects that contains data about the
             coordinates picked on tomograms
-        particles (List[RelionParticlesStarFile]): Objects that contains data about the
-            particles extracted from tomograms
+        averages (List[RelionSubtomogramAverage]): Objects that contains data about sub
+            tomograms averages generated from the data.
+        )
+
 
 
     """
@@ -128,10 +131,10 @@ class RelionCetsConverter:
         self.ctf: List[RelionTiltSeriesStarfile] = []
         self.mocorr: List[RelionMotionCorrStarFile] = []
         self.picks: List[RelionCoordsStarFile] = []
-        self.particles: List[RelionParticlesStarFile] = []
         self.tilt_series: List[RelionTiltSeriesStarfile] = []
         self.tomos: List[RelionTomosStarfile] = []
-        # self.averages = [] # ToDo: haven't got objs for this yet...
+        self.particles: List[RelionParticlesStarFile] = []
+        self.averages: List[RelionSubtomoAverage] = []
 
         # first try to set attrs based on the terminal job data if it is a type without
         # an optimisation set. Possibly sets any attr, depending on the terminal job
@@ -140,14 +143,37 @@ class RelionCetsConverter:
             file, obj, attr = converters[tjob_type]
             setattr(self, attr, [obj(Path(terminal_job) / file)])
 
+        # Find and subtomogram averages associated with the terminal job
+        pipe = RelionPipeline("default_pipeline.star")
+        stas = [
+            x
+            for x in list(pipe.graph.successors(terminal_job))
+            if pipe.graph.nodes()[x]["relion_type"] == "DensityMap"
+            and "halfmap" not in pipe.graph.nodes()[x]["kwds"]
+        ]
+        if stas:
+            try:
+                self.averages = [RelionSubtomoAverage(x) for x in stas]
+            except NotImplementedError:
+                pass
+
         # try to get info from an optimization set if it exists
         # possibly sets picks, particles, and/or tomos attrs
-        opt_set = list(Path(terminal_job).glob("*optimisation_set.star"))
+        opt_set = sorted(list(Path(terminal_job).glob("*optimisation_set.star")))
         if opt_set:
-            opt_values = parse_optimisation_set(opt_set[0])
+            opt_values = parse_optimisation_set(opt_set[-1])
             if opt_values:
                 for key, val in opt_values.items():
                     setattr(self, key, [val])
+        # of one is not in terminal job see if any associated with averages
+        elif self.averages:
+            opt_sets = [x.opt_set for x in self.averages]
+            for optset in opt_sets:
+                opt_values = parse_optimisation_set(optset)
+                # ignore type checking here because parse function has multiple return
+                # types
+                self.tomos.append(opt_values["tomos"])  # type: ignore[arg-type]
+                self.particles.append(opt_values["particles"])  # type: ignore[arg-type]
 
         # if extracted particles have been found get the associated coords
         if self.particles and not self.picks:
