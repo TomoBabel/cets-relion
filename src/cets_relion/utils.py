@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 from typing import Dict, Union, List, Literal
-
+import numpy as np
 from gemmi import cif
 from scipy.spatial.transform import Rotation as R
 
@@ -75,7 +75,7 @@ def get_job_number(file: Union[str, os.PathLike]) -> int:
     return int(jobname.lstrip("job"))
 
 
-def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> List[List[int]]:
+def relion_eulers_to_matrix(rot: float, tilt: float, psi: float) -> List[List[int]]:
     """Convert the Euler angles from a RELION star file into a rotation matrix
 
     Args:
@@ -87,19 +87,53 @@ def relion_eulers_to_matrix(tilt: float, rot: float, psi: float) -> List[List[in
         np.ndarray: The transformation matrix
 
     """
-    sipy_rot = R.from_euler(seq="zyz", angles=[tilt, rot, psi], degrees=True)
+    sipy_rot = R.from_euler(seq="zyz", angles=[rot, tilt, psi], degrees=True)
     matrix = sipy_rot.as_matrix().tolist()
     # tmp fix because affine is incorrectly typed, wants ints instead of floats
     return matrix
 
 
-def rotation_to_matrix(
+def affine_to_eulers(matrix: List[List[float]]) -> List[float]:
+    """Convert an affine matrix to RELION Euler angles
+
+    Args:
+        matrix (List[List[float]]): affine transformation matrix
+    Returns:
+        Tuple[float, float, float]: euler angles tilt, rot, psi
+    """
+    affine = R.from_matrix(np.array(matrix))
+    zyz_angles = affine.as_euler("zyz", degrees=True)
+    return [float(x) for x in zyz_angles]
+
+
+def rotation_to_matrix_3d(
     rot_angle: float, axis: Literal["x", "y", "z"]
-) -> List[List[int]]:
+) -> List[List[float]]:
     """Convert rotation angle float into a rotation matrix
     Args:
         rot_angle (float): rotation angle
         axis (str): "x" or "y" or "z
+    Returns:
+        List[List[float]]: rotation matrix
     """
     matrix = R.from_euler(axis, rot_angle, degrees=True).as_matrix()
     return matrix.tolist()
+
+
+def rotation_to_matrix_2d(rot_angle: float) -> List[List[float]]:
+    """Convert rotation angle float into a rotation matrix
+    Args:
+        rot_angle (float): rotation angle
+        axis (str): "x" or "y" or "z
+    Returns:
+        List[List[float]]: rotation matrix
+    """
+    angle = np.deg2rad(rot_angle)
+    c, s = np.cos(angle), np.sin(angle)
+    return [[c, -s], [s, c]]
+
+
+def matrix_2d_to_angle(matrix: List[List[float]]) -> float:
+    array = np.array(matrix)
+    angle_rad = np.arctan2(array[1, 0], array[0, 0])
+    return np.degrees(angle_rad)

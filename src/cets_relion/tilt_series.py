@@ -20,7 +20,7 @@ from cets_relion.objs.coordinate_systems import (
     RELION_COORDS_PHYSICAL,
     logical_coords,
 )
-from cets_relion.utils import rotation_to_matrix
+from cets_relion.utils import rotation_to_matrix_3d
 
 logger = getLogger(__name__)
 
@@ -234,7 +234,7 @@ class RelionTiltSeriesStarfile(object):
 
                 z_affine = Affine(
                     name="Tilt image alignment x rotation",
-                    affine=rotation_to_matrix(zrot, "z"),
+                    affine=rotation_to_matrix_3d(zrot, "z"),
                     input="alignment translation",
                     output="alignment z rotation",
                 )
@@ -244,7 +244,7 @@ class RelionTiltSeriesStarfile(object):
 
                 x_affine = Affine(
                     name="Tilt image alignment x tilt",
-                    affine=rotation_to_matrix(xtilt, "x"),
+                    affine=rotation_to_matrix_3d(xtilt, "x"),
                     input="alignment z rotation",
                     output="alignment x tilt",
                 )
@@ -254,7 +254,7 @@ class RelionTiltSeriesStarfile(object):
 
                 y_affine = Affine(
                     name="Tilt image alignment y tilt",
-                    affine=rotation_to_matrix(ytilt, "y"),
+                    affine=rotation_to_matrix_3d(ytilt, "y"),
                     input="alignment x tilt",
                     output="alignment y tilt",
                 )
