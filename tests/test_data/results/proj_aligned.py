@@ -14,7 +14,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -54,7 +54,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -74,7 +74,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -94,7 +94,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -192,7 +192,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -232,7 +232,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -252,7 +252,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -272,7 +272,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -370,7 +370,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -410,7 +410,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -430,7 +430,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -450,7 +450,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -548,7 +548,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -588,7 +588,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -608,7 +608,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -628,7 +628,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -726,7 +726,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -766,7 +766,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -786,7 +786,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -806,7 +806,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -904,7 +904,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -944,7 +944,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -964,7 +964,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -984,7 +984,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1082,7 +1082,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1122,7 +1122,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1142,7 +1142,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1162,7 +1162,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1260,7 +1260,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1300,7 +1300,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1320,7 +1320,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1340,7 +1340,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1438,7 +1438,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1478,7 +1478,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1498,7 +1498,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1518,7 +1518,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1616,7 +1616,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1656,7 +1656,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1676,7 +1676,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1696,7 +1696,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1794,7 +1794,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1834,7 +1834,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1854,7 +1854,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1874,7 +1874,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1972,7 +1972,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2012,7 +2012,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2032,7 +2032,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2052,7 +2052,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2150,7 +2150,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2190,7 +2190,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2210,7 +2210,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2230,7 +2230,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2328,7 +2328,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2368,7 +2368,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2388,7 +2388,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2408,7 +2408,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2506,7 +2506,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2546,7 +2546,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2566,7 +2566,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2586,7 +2586,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2684,7 +2684,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2724,7 +2724,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2744,7 +2744,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2764,7 +2764,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2862,7 +2862,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2902,7 +2902,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2922,7 +2922,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2942,7 +2942,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3040,7 +3040,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3080,7 +3080,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3100,7 +3100,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3120,7 +3120,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3218,7 +3218,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3258,7 +3258,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3278,7 +3278,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3298,7 +3298,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3396,7 +3396,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3436,7 +3436,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3456,7 +3456,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3476,7 +3476,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3570,7 +3570,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3610,7 +3610,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3630,7 +3630,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3650,7 +3650,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3748,7 +3748,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3788,7 +3788,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3808,7 +3808,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3828,7 +3828,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3926,7 +3926,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3966,7 +3966,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3986,7 +3986,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4006,7 +4006,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4104,7 +4104,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4144,7 +4144,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4164,7 +4164,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4184,7 +4184,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4282,7 +4282,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4322,7 +4322,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4342,7 +4342,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4362,7 +4362,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4460,7 +4460,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4500,7 +4500,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4520,7 +4520,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4540,7 +4540,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4638,7 +4638,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4678,7 +4678,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4698,7 +4698,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4718,7 +4718,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4816,7 +4816,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4856,7 +4856,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4876,7 +4876,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4896,7 +4896,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4994,7 +4994,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5034,7 +5034,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5054,7 +5054,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5074,7 +5074,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5172,7 +5172,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5212,7 +5212,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5232,7 +5232,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5252,7 +5252,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5350,7 +5350,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5390,7 +5390,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5410,7 +5410,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5430,7 +5430,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5528,7 +5528,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5568,7 +5568,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5588,7 +5588,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5608,7 +5608,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5706,7 +5706,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5746,7 +5746,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5766,7 +5766,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5786,7 +5786,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5884,7 +5884,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5924,7 +5924,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5944,7 +5944,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5964,7 +5964,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6062,7 +6062,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6102,7 +6102,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6122,7 +6122,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6142,7 +6142,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6240,7 +6240,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6280,7 +6280,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6300,7 +6300,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6320,7 +6320,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6418,7 +6418,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6458,7 +6458,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6478,7 +6478,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6498,7 +6498,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6596,7 +6596,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6636,7 +6636,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6656,7 +6656,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6676,7 +6676,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6774,7 +6774,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6814,7 +6814,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6834,7 +6834,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6854,7 +6854,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6952,7 +6952,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="alignment y tilt",
+                name="logical coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6992,7 +6992,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment translation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -7012,7 +7012,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment z rotation",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -7032,7 +7032,7 @@ RESULT = [
                 ],
             ),
             CoordinateSystem(
-                name="alignment y tilt",
+                name="alignment x tilt",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",

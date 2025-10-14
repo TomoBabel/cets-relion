@@ -21,12 +21,12 @@ RELION_COORDS_PHYSICAL = CoordinateSystem(
 
 
 def physical_coords(name: str) -> CoordinateSystem:
-    coords = RELION_COORDS_PHYSICAL
+    coords = RELION_COORDS_PHYSICAL.model_copy()
     coords.name = name
     return coords
 
 
 def logical_coords(name: str) -> CoordinateSystem:
-    coords = RELION_COORDS_LOGICAL
+    coords = RELION_COORDS_LOGICAL.model_copy()
     coords.name = name
     return coords

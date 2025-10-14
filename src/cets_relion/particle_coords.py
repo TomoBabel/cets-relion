@@ -8,11 +8,16 @@ from cets_data_model.models.models import (
     ParticleMap,
     Affine,
     Translation,
+    Scale,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
 
-from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
+from cets_relion.objs.coordinate_systems import (
+    RELION_COORDS_PHYSICAL,
+    RELION_COORDS_LOGICAL,
+    physical_coords,
+)
 from cets_relion.relion_reader import RelionPipeline
 from cets_relion.utils import relion_eulers_to_matrix, joboptions_from_job
 
@@ -198,7 +203,13 @@ class RelionParticlesStarFile(object):
         Returns:
             List[ParticleMap]: CETS ParticleMap object for each particle
         """
+
         data = cif.read_file(self.name)
+        optics_block = data.find_block("optics")
+        optics_data = optics_block.find(
+            prefix="_rln", tags=["OpticsGroup", "ImagePixelSize"]
+        )
+        optics_dict = {x[0]: x[1] for x in optics_data}
         parts_block = data.find_block("particles")
         all_parts = parts_block.find(
             prefix="_rln",
@@ -215,6 +226,7 @@ class RelionParticlesStarFile(object):
                 "OriginZAngst",
                 "TomoParticleName",
                 "ImageName",
+                "OpticsGroup",
             ],
         )
         parts = [x for x in all_parts if x[0] == tomo_name]
@@ -225,26 +237,57 @@ class RelionParticlesStarFile(object):
             x, y, z = (float(part[7]), float(part[8]), float(part[9]))
             image_number = int(part[10].split("/")[-1])
             image_name = f"{image_number:06}@{part[11]}"
-            align_affine = Affine(
-                name="Averaging alignment",
-                affine=list(relion_eulers_to_matrix(tilt, rot, psi)),
+            apix = float(optics_dict[part[12]])
+
+            # add scale transformation for logical coords
+            scale_xform = Scale(
+                name="Å/pix",
+                input="logical coordinates",
+                output="physical coordinates",
+                scale=[apix],
             )
-            align_translate = Translation(
-                name="Averaging translation",
-                translation=[x, y, z],
-            )
+
             subtomo_affine = Affine(
                 name="Alignment relative to parent tomogram",
                 affine=list(relion_eulers_to_matrix(tomotilt, tomorot, tomopsi)),
+                input="physical coordinates",
+                output="Alignment relative to parent tomogram",
             )
+            subtomo_coordsys = physical_coords(
+                name="Alignment relative to parent tomogram"
+            )
+
+            align_translate = Translation(
+                name="Averaging translation",
+                translation=[x, y, z],
+                input="Alignment relative to parent tomogram",
+                output="Averaging translation",
+            )
+            align_trans_coord_sys = physical_coords(name="Averaging translation")
+
+            align_affine = Affine(
+                name="Averaging alignment",
+                affine=list(relion_eulers_to_matrix(tilt, rot, psi)),
+                input="Averaging translation",
+                output="Alignment for averaging",
+            )
+            align_affine_coord_sys = physical_coords(name="Averaging alignment")
+
             dims = get_mrc_dims(part[4])
             cets_part = ParticleMap(
                 path=image_name,
                 width=dims[0],
                 height=dims[1],
                 depth=dims[2],
-                coordinate_systems=[RELION_COORDS_PHYSICAL],
+                coordinate_systems=[
+                    RELION_COORDS_LOGICAL,
+                    RELION_COORDS_PHYSICAL,
+                    subtomo_coordsys,
+                    align_trans_coord_sys,
+                    align_affine_coord_sys,
+                ],
                 coordinate_transformations=[
+                    scale_xform,
                     subtomo_affine,
                     align_affine,
                     align_translate,

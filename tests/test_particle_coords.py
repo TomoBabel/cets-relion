@@ -1,3 +1,4 @@
+from tests.test_data.results.particle_map_objs import TS_01_1
 from tests.testing_tools import CetsRelionTest
 from cets_relion.particle_coords import (
     RelionCoordsStarFile,
@@ -6,7 +7,6 @@ from cets_relion.particle_coords import (
     RelionParticlesStarFile,
 )
 from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
-from cets_data_model.models.models import Translation, Axis, Affine, CoordinateSystem
 from pathlib import Path
 from pytest import fixture
 
@@ -85,54 +85,7 @@ class TestRelionParticlesStarFile(CetsRelionTest):
         pf = RelionParticlesStarFile("Extract/job010/particles.star")
         cets_parts = pf.get_cets_particles("TS_01")
         assert len(cets_parts) == 6623
-        assert cets_parts[0].__dict__ == {
-            "coordinate_systems": [
-                CoordinateSystem(
-                    name="physical coordinates",
-                    axes=[
-                        Axis(
-                            name="physical coordinates x axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
-                        Axis(
-                            name="physical coordinates y axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
-                        Axis(
-                            name="physical coordinates z axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
-                    ],
-                )
-            ],
-            "coordinate_transformations": [
-                Affine(
-                    name="Alignment relative to parent tomogram",
-                    input=None,
-                    output=None,
-                    affine=[[1, 2, 3], [4, 5, 6], [7, 8, 9]],
-                ),
-                Affine(
-                    name="Averaging alignment",
-                    input=None,
-                    output=None,
-                    affine=[[1, 2, 3], [4, 5, 6], [7, 8, 9]],
-                ),
-                Translation(
-                    name="Averaging translation",
-                    input=None,
-                    output=None,
-                    translation=[0.0, 0.0, 0.0],
-                ),
-            ],
-            "depth": 3,
-            "height": 2,
-            "path": "000001@Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
-            "width": 1,
-        }
+        assert cets_parts[0].__dict__ == TS_01_1
 
     def test_get_coords_object(self):
         self.setup_dirs(10)
