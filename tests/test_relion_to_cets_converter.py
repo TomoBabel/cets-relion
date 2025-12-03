@@ -1,16 +1,19 @@
 from pathlib import Path
 
-from cets_relion.motion_corr import RelionMotionCorrStarFile
-from cets_relion.movies import RelionMoviesStarFile
-from cets_relion.tilt_series import RelionTiltSeriesStarfile
-from cets_relion.tomograms import RelionTomosStarfile
+from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
+from cets_relion.relion_to_cets.movies import RelionMoviesStarFile
+from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.relion_to_cets.tomograms import RelionTomosStarfile
 from tests.testing_tools import CetsRelionTest
-from cets_relion.relion_to_cets_converter import (
+from cets_relion.relion_to_cets.relion_to_cets_converter import (
     parse_optimisation_set,
     RelionCetsConverter,
 )
-from cets_relion.particle_coords import RelionCoordsStarFile, RelionParticlesStarFile
-from cets_relion.relion_reader import RelionPipeline
+from cets_relion.relion_to_cets.particle_coords import (
+    RelionCoordsStarFile,
+    RelionParticlesStarFile,
+)
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 
 
 class TestParseOptimisationSet(CetsRelionTest):

@@ -7,18 +7,18 @@ from cets_data_model.models.models import GainFile, DefectFile
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
 
-from cets_relion.motion_corr import RelionMotionCorrStarFile
-from cets_relion.movies import RelionMoviesStarFile
+from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
+from cets_relion.relion_to_cets.movies import RelionMoviesStarFile
 from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
-from cets_relion.particle_coords import (
+from cets_relion.relion_to_cets.particle_coords import (
     RelionCoordsStarFile,
     RelionParticlesStarFile,
     parse_particles_file,
 )
-from cets_relion.relion_reader import RelionPipeline
-from cets_relion.subtomo_averages import RelionSubtomoAverage
-from cets_relion.tilt_series import RelionTiltSeriesStarfile
-from cets_relion.tomograms import RelionTomosStarfile
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline
+from cets_relion.relion_to_cets.subtomo_averages import RelionSubtomoAverage
+from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.relion_to_cets.tomograms import RelionTomosStarfile
 from cets_relion.utils import get_job_type
 
 # cets converters for specific jobtypes

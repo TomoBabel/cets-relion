@@ -1,7 +1,7 @@
 from cets_data_model.models.models import Dataset
 
 from tests.testing_tools import CetsRelionTest
-from cets_relion.cets_reader import CetsReader
+from cets_relion.cets_to_relion.cets_reader import CetsReader
 from tests.test_data.results.TS_03_all_movie_stacks import ALL_MOVIE_STACKS
 from tests.test_data.results.TS_03_all_projection_imgs import ALL_PROJECTION_IMGS
 

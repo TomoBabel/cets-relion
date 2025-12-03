@@ -3,9 +3,9 @@ from typing import Union, List
 from pathlib import Path
 from gemmi import cif
 
-from cets_relion.relion_reader import RelionPipeline
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from cets_data_model.models.models import Average, ParticleMap
-from cets_relion.particle_coords import RelionParticlesStarFile
+from cets_relion.relion_to_cets.particle_coords import RelionParticlesStarFile
 
 
 class RelionSubtomoAverage(object):

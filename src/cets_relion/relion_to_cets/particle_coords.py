@@ -18,7 +18,7 @@ from cets_relion.objs.coordinate_systems import (
     RELION_COORDS_LOGICAL,
     physical_coords,
 )
-from cets_relion.relion_reader import RelionPipeline
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from cets_relion.utils import relion_eulers_to_matrix, joboptions_from_job
 
 

@@ -12,7 +12,7 @@ from cets_data_model.models.models import (
     Average,
 )
 
-from cets_relion.relion_to_cets_converter import RelionCetsConverter
+from cets_relion.relion_to_cets.relion_to_cets_converter import RelionCetsConverter
 
 
 def parse_args(argv=None):

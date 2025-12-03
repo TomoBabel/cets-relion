@@ -5,7 +5,7 @@ from cets_relion.scripts.relion_to_cets import (
     get_raw_movies,
     get_tilt_series,
 )
-from cets_relion.relion_to_cets_converter import RelionCetsConverter
+from cets_relion.relion_to_cets.relion_to_cets_converter import RelionCetsConverter
 import json
 from tests.test_data.results.tilt_series_objs import (
     MOCORR_0,
@@ -18,7 +18,9 @@ from tests.test_data.results.tilt_series_objs import (
 
 @fixture(autouse=True)
 def mock_get_image_size_main():
-    with patch("cets_relion.relion_to_cets_converter.get_mrc_dims") as mock:
+    with patch(
+        "cets_relion.relion_to_cets.relion_to_cets_converter.get_mrc_dims"
+    ) as mock:
         mock.return_value = (1000, 1000, 8)
         yield mock
 
@@ -27,7 +29,7 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
     @staticmethod
     @fixture(autouse=True)
     def mock_get_image_size_movies():
-        with patch("cets_relion.movies.get_image_dims") as mock:
+        with patch("cets_relion.relion_to_cets.movies.get_image_dims") as mock:
             mock.return_value = (2000, 2000, 8)
             yield mock
 
@@ -73,7 +75,7 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
 
 
 class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
-    @patch("cets_relion.motion_corr.get_mrc_dims")
+    @patch("cets_relion.relion_to_cets.motion_corr.get_mrc_dims")
     def test_get_tilt_series_from_motioncorr(self, mock_dims):
         """The first job that would generate a tilt series item"""
         mock_dims.return_value = (2000, 2000, 8)
@@ -83,7 +85,7 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
         assert ts[0].images[0].model_dump(mode="json") == MOCORR_0
         assert ts[0].images[-1].model_dump(mode="json") == MOCORR_40
 
-    @patch("cets_relion.tilt_series.get_mrc_dims")
+    @patch("cets_relion.relion_to_cets.tilt_series.get_mrc_dims")
     def test_get_tilt_series_from_ctf(self, mock_dims):
         """Tilt series with ctf but no alignment"""
         mock_dims.return_value = (2000, 2000, 8)

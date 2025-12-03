@@ -1,6 +1,6 @@
 from tests.test_data.results.particle_map_objs import TS_01_1
 from tests.testing_tools import CetsRelionTest
-from cets_relion.particle_coords import (
+from cets_relion.relion_to_cets.particle_coords import (
     RelionCoordsStarFile,
     Sphere,
     RelionSphereAnnotations,
@@ -61,14 +61,14 @@ class TestRelionParticlesStarFile(CetsRelionTest):
     @fixture(autouse=True)
     def _mock_get_mrc_dims(self, monkeypatch):
         monkeypatch.setattr(
-            "cets_relion.particle_coords.get_mrc_dims",
+            "cets_relion.relion_to_cets.particle_coords.get_mrc_dims",
             lambda *args, **kwargs: (1, 2, 3),
         )
 
     @fixture(autouse=True)
     def _mock_matrix_from_euler(self, monkeypatch):
         monkeypatch.setattr(
-            "cets_relion.particle_coords.relion_eulers_to_matrix",
+            "cets_relion.relion_to_cets.particle_coords.relion_eulers_to_matrix",
             lambda *args, **kwargs: [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
         )
 

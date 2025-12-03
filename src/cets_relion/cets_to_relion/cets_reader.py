@@ -7,7 +7,14 @@ from cets_data_model.models.models import Dataset, MovieFrame, ProjectionImage, 
 
 
 class CetsReader(object):
+    """An object for reding CETS data"""
+
     def __init__(self, cets_dataset_path: Union[str, Path]):
+        """INstantiate a CETS reader
+        Args:
+            cets_dataset_path (Union[str, Path]): Path to the CETS data in json format
+        """
+
         with open(cets_dataset_path) as f:
             data = json.load(f)
         self.data = Dataset.model_validate(data)
@@ -32,3 +39,4 @@ class CetsReader(object):
         for tomo in all_tomos:
             all_tomograms[tomo.path] = tomo
         self.tomograms = all_tomograms
+        self.averages = self.data.averages

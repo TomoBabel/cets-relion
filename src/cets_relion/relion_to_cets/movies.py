@@ -13,13 +13,13 @@ from cets_data_model.models.models import (
 from cets_data_model.utils.image_utils import get_image_dims
 from gemmi import cif
 
-from cets_relion.motion_corr import RelionMotionCorrStarFile
+from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
 from cets_relion.objs.coordinate_systems import (
     RELION_COORDS_LOGICAL,
     RELION_COORDS_PHYSICAL,
 )
-from cets_relion.relion_reader import RelionPipeline
-from cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline
+from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
 
 
 class RelionMoviesStarFile(object):

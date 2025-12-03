@@ -4,7 +4,7 @@ from tests.test_data.results.particle_map_objs import (
     FROM_PP,
     FROM_REC,
 )
-from cets_relion.subtomo_averages import RelionSubtomoAverage
+from cets_relion.relion_to_cets.subtomo_averages import RelionSubtomoAverage
 from pathlib import Path
 from unittest.mock import patch
 from pytest import fixture
@@ -12,7 +12,7 @@ from pytest import fixture
 
 @fixture(autouse=True)
 def mock_get_mrc_dims():
-    with patch("cets_relion.particle_coords.get_mrc_dims") as mock:
+    with patch("cets_relion.relion_to_cets.particle_coords.get_mrc_dims") as mock:
         mock.return_value = (127, 127, 127)
         yield mock
 

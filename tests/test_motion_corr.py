@@ -1,4 +1,4 @@
-from cets_relion.motion_corr import RelionMotionCorrStarFile
+from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
 from tests.testing_tools import CetsRelionTest
 from pathlib import Path
 from unittest.mock import patch
@@ -23,7 +23,7 @@ class TestMotionCorr(CetsRelionTest):
         mco = RelionMotionCorrStarFile("MotionCorr/job002/corrected_tilt_series.star")
         assert mco.get_defect_file() is None
 
-    @patch("cets_relion.motion_corr.joboptions_from_job")
+    @patch("cets_relion.relion_to_cets.motion_corr.joboptions_from_job")
     def test_get_defect_file(self, mock_jo):
         """No defect file in the test data"""
         mock_jo.return_value = {"fn_defect": "defect.mrc"}

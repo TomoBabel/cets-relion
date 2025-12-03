@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 from pytest import fixture
 from tests.testing_tools import CetsRelionTest
-from cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
 from tests.test_data.results import proj, proj_aligned
 from tests.test_data.results.ts_01_doses import DOSES
 from tests.test_data.results.ctfs import CTFS
@@ -10,7 +10,7 @@ from tests.test_data.results.ctfs import CTFS
 
 @fixture(autouse=True)
 def mock_get_mrc_dims():
-    with patch("cets_relion.tilt_series.get_mrc_dims") as mock:
+    with patch("cets_relion.relion_to_cets.tilt_series.get_mrc_dims") as mock:
         mock.return_value = (2000, 2000, 8)
         yield mock
 

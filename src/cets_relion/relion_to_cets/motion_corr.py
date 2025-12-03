@@ -6,7 +6,7 @@ from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
 
 from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
-from cets_relion.tilt_series import RelionTiltSeriesStarfile
+from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
 from cets_relion.utils import joboptions_from_job
 
 

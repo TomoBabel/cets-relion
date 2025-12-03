@@ -1,4 +1,4 @@
-from cets_relion.relion_reader import RelionPipeline
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from tests.test_data.pipelines.short_pipeline_networks import (
     FULL_EDGES,
     FULL_NODES,

@@ -12,3 +12,5 @@ src/cets_relion/objs/__pycache__/
 tests/test_data/results/__pycache__/
 src/cets_relion/scripts/__pycache__/
 tests/scripts_tests/__pycache__/
+src/cets_relion/cets_to_relion/__pycache__/
+src/cets_relion/relion_to_cets/__pycache__/
