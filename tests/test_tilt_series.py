@@ -51,6 +51,7 @@ class TiltSeriesStarTest(CetsRelionTest):
     def test_get_tilt_projections_cets_objs_no_alignments(self):
         self.setup_dirs(jobs_to=3)
         ts = RelionTiltSeriesStarfile("CtfFind/job003/tilt_series_ctf.star")
+        print(ts.get_cets_projection_images("TS_01"))
         assert ts.get_cets_projection_images("TS_01") == proj.RESULT
 
     def test_make_cets_projection_image_object_with_alignments(self):

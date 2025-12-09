@@ -12,7 +12,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -21,6 +21,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -39,13 +44,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -70,7 +80,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -79,6 +89,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -97,13 +112,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -128,7 +148,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -137,6 +157,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -155,13 +180,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -186,7 +216,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -195,6 +225,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -213,13 +248,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -244,7 +284,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -253,6 +293,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -271,13 +316,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -302,7 +352,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -311,6 +361,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -329,13 +384,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -360,7 +420,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -369,6 +429,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -387,13 +452,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -418,7 +488,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -427,6 +497,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -445,13 +520,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -476,7 +556,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -485,6 +565,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -503,13 +588,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -534,7 +624,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -543,6 +633,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -561,13 +656,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -592,7 +692,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -601,6 +701,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -619,13 +724,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -650,7 +760,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -659,6 +769,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -677,13 +792,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -708,7 +828,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -717,6 +837,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -735,13 +860,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -766,7 +896,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -775,6 +905,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -793,13 +928,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -824,7 +964,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -833,6 +973,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -851,13 +996,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -882,7 +1032,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -891,6 +1041,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -909,13 +1064,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -940,7 +1100,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -949,6 +1109,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -967,13 +1132,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -998,7 +1168,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1007,6 +1177,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1025,13 +1200,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1056,7 +1236,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1065,6 +1245,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1083,13 +1268,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1114,7 +1304,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1123,6 +1313,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1141,13 +1336,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1172,7 +1372,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1181,6 +1381,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1199,13 +1404,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1230,7 +1440,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1239,6 +1449,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1257,13 +1472,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1288,7 +1508,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1297,6 +1517,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1315,13 +1540,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1346,7 +1576,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1355,6 +1585,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1373,13 +1608,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1404,7 +1644,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1413,6 +1653,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1431,13 +1676,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1462,7 +1712,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1471,6 +1721,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1489,13 +1744,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1520,7 +1780,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1529,6 +1789,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1547,13 +1812,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1578,7 +1848,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1587,6 +1857,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1605,13 +1880,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1636,7 +1916,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1645,6 +1925,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1663,13 +1948,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1694,7 +1984,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1703,6 +1993,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1721,13 +2016,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1752,7 +2052,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1761,6 +2061,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1779,13 +2084,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1810,7 +2120,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1819,6 +2129,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1837,13 +2152,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1868,7 +2188,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1877,6 +2197,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1895,13 +2220,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1926,7 +2256,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1935,6 +2265,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -1953,13 +2288,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -1984,7 +2324,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1993,6 +2333,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -2011,13 +2356,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -2042,7 +2392,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2051,6 +2401,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -2069,13 +2424,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -2100,7 +2460,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2109,6 +2469,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -2127,13 +2492,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -2158,7 +2528,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2167,6 +2537,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -2185,13 +2560,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -2216,7 +2596,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2225,6 +2605,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -2243,13 +2628,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -2274,7 +2664,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2283,6 +2673,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -2301,13 +2696,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
@@ -2332,7 +2732,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_2d",
+                name="base_logical_coordinates_3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2341,6 +2741,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel/voxel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel/voxel",
                         axis_type=None,
                     ),
@@ -2359,13 +2764,18 @@ RESULT = [
                         axis_unit="Ångstrom",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="physical coordinates z axis",
+                        axis_unit="Ångstrom",
+                        axis_type=None,
+                    ),
                 ],
             ),
         ],
         coordinate_transformations=[
             Scale(
                 name="image_pixel_size",
-                input="base_logical_coordinates_2d",
+                input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 type="scale",
                 scale=[1.35],
