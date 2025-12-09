@@ -90,7 +90,12 @@ def get_tilt_series(con: RelionCetsConverter, tomo_name: str) -> List[TiltSeries
         for con_mocorr in con.mocorr:
             all_tilt_series.extend(con_mocorr.get_cets_projection_images(tomo_name))
 
-    return [TiltSeries(name=tomo_name, images=all_tilt_series)]
+    return [
+        TiltSeries(
+            # name=tomo_name,  # ToDo: add this field to model
+            images=all_tilt_series
+        )
+    ]
 
 
 def get_tomos(con: RelionCetsConverter, tomo_name: str) -> List[Tomogram]:

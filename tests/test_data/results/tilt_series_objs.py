@@ -1,5 +1,6 @@
 MOCORR_0 = {
     "accumulated_dose": 3.0,
+    "acquisition_order": None,
     "coordinate_systems": [
         {
             "axes": [
@@ -13,13 +14,8 @@ MOCORR_0 = {
                     "axis_unit": "pixel/voxel",
                     "name": "logical coordinates y axis",
                 },
-                {
-                    "axis_type": None,
-                    "axis_unit": "pixel/voxel",
-                    "name": "logical coordinates z axis",
-                },
             ],
-            "name": "base_logical_coordinates",
+            "name": "base_logical_coordinates_2d",
         }
     ],
     "coordinate_transformations": None,
@@ -27,11 +23,13 @@ MOCORR_0 = {
     "height": 2000,
     "nominal_tilt_angle": 0.001,
     "path": "MotionCorr/job002/frames/TS_01_000_0_0.mrc",
-    "section": "0",
+    "section": 0,
     "width": 2000,
+    "type": "projection",
 }
 MOCORR_40 = {
     "accumulated_dose": 123.0,
+    "acquisition_order": None,
     "coordinate_systems": [
         {
             "axes": [
@@ -45,13 +43,8 @@ MOCORR_40 = {
                     "axis_unit": "pixel/voxel",
                     "name": "logical coordinates y axis",
                 },
-                {
-                    "axis_type": None,
-                    "axis_unit": "pixel/voxel",
-                    "name": "logical coordinates z axis",
-                },
             ],
-            "name": "base_logical_coordinates",
+            "name": "base_logical_coordinates_2d",
         }
     ],
     "coordinate_transformations": None,
@@ -59,8 +52,9 @@ MOCORR_40 = {
     "height": 2000,
     "nominal_tilt_angle": 60.0006,
     "path": "MotionCorr/job002/frames/TS_01_040_60_0.mrc",
-    "section": "40",
+    "section": 40,
     "width": 2000,
+    "type": "projection",
 }
 
 CTF_0 = {
@@ -78,13 +72,8 @@ CTF_0 = {
                     "axis_unit": "pixel/voxel",
                     "name": "logical coordinates y axis",
                 },
-                {
-                    "axis_type": None,
-                    "axis_unit": "pixel/voxel",
-                    "name": "logical coordinates z axis",
-                },
             ],
-            "name": "base_logical_coordinates",
+            "name": "base_logical_coordinates_2d",
         },
         {
             "axes": [
@@ -98,17 +87,17 @@ CTF_0 = {
                     "axis_unit": "Ångstrom",
                     "name": "physical coordinates y axis",
                 },
-                {
-                    "axis_type": None,
-                    "axis_unit": "Ångstrom",
-                    "name": "physical coordinates z axis",
-                },
             ],
             "name": "physical coordinates",
         },
     ],
     "coordinate_transformations": [
-        {"input": "logical", "name": "Å/pix", "output": "physical", "type": "scale"}
+        {
+            "input": "base_logical_coordinates_2d",
+            "name": "image_pixel_size",
+            "output": "image_pixel_size",
+            "type": "scale",
+        }
     ],
     "ctf_metadata": {
         "defocus_angle": 35.154533,
@@ -118,7 +107,7 @@ CTF_0 = {
     "height": 2000,
     "nominal_tilt_angle": 0.001,
     "path": "MotionCorr/job002/frames/TS_01_000_0_0.mrc",
-    "section": "0",
+    "section": 0,
     "width": 2000,
 }
 CTF_40 = {
@@ -136,13 +125,8 @@ CTF_40 = {
                     "axis_unit": "pixel/voxel",
                     "name": "logical coordinates y axis",
                 },
-                {
-                    "axis_type": None,
-                    "axis_unit": "pixel/voxel",
-                    "name": "logical coordinates z axis",
-                },
             ],
-            "name": "base_logical_coordinates",
+            "name": "base_logical_coordinates_2d",
         },
         {
             "axes": [
@@ -155,11 +139,6 @@ CTF_40 = {
                     "axis_type": None,
                     "axis_unit": "Ångstrom",
                     "name": "physical coordinates y axis",
-                },
-                {
-                    "axis_type": None,
-                    "axis_unit": "Ångstrom",
-                    "name": "physical coordinates z axis",
                 },
             ],
             "name": "physical coordinates",
@@ -176,7 +155,7 @@ CTF_40 = {
     "height": 2000,
     "nominal_tilt_angle": 60.0006,
     "path": "MotionCorr/job002/frames/TS_01_040_60_0.mrc",
-    "section": "40",
+    "section": 40,
     "width": 2000,
 }
 GAIN_FILE = {
@@ -184,7 +163,7 @@ GAIN_FILE = {
     "height": 1000,
     "coordinate_systems": [
         {
-            "name": "base_logical_coordinates",
+            "name": "base_logical_coordinates_2d",
             "axes": [
                 {
                     "name": "logical coordinates x axis",
@@ -193,11 +172,6 @@ GAIN_FILE = {
                 },
                 {
                     "name": "logical coordinates y axis",
-                    "axis_unit": "pixel/voxel",
-                    "axis_type": None,
-                },
-                {
-                    "name": "logical coordinates z axis",
                     "axis_unit": "pixel/voxel",
                     "axis_type": None,
                 },

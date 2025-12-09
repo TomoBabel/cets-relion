@@ -75,7 +75,7 @@ def matrix_2d_to_angle(matrix: List[List[float]]) -> float:
     return np.degrees(angle_rad)
 
 
-def flip_matrix_2d(axes: Optional[List[str]] = None) -> List[List[float]]:
+def flip_matrix_2d(axes: Optional[List[str]] = None) -> List[List[int]]:
     """Generate a 2D flip matrix
 
     Args:
@@ -89,12 +89,12 @@ def flip_matrix_2d(axes: Optional[List[str]] = None) -> List[List[float]]:
         return IDENTITY2D
     if any([x not in ("x", "y") for x in axes]):
         raise ValueError("axes must be 'x' or 'y'")
-    x = -1.0 if "x" in axes else 1.0
-    y = -1.0 if "y" in axes else 1.0
-    return [[x, 0.0], [0.0, y]]
+    x = -1 if "x" in axes else 1
+    y = -1 if "y" in axes else 1
+    return [[x, 0], [0, y]]
 
 
-def flip_matrix_3d(axes: Optional[List[str]] = None) -> List[List[float]]:
+def flip_matrix_3d(axes: Optional[List[str]] = None) -> List[List[int]]:
     """Generate a 3D flip matrix
 
     Args:
@@ -108,7 +108,7 @@ def flip_matrix_3d(axes: Optional[List[str]] = None) -> List[List[float]]:
         return IDENTITY3D
     if any([x not in ("x", "y", "z") for x in axes]):
         raise ValueError("axes must be 'x', 'y' or 'z'")
-    x = -1.0 if "x" in axes else 1.0
-    y = -1.0 if "y" in axes else 1.0
-    z = -1.0 if "z" in axes else 1.0
-    return [[x, 0.0, 0.0], [0.0, y, 0.0], [0.0, 0.0, z]]
+    x = -1 if "x" in axes else 1
+    y = -1 if "y" in axes else 1
+    z = -1 if "z" in axes else 1
+    return [[x, 0, 0], [0, y, 0], [0, 0, z]]

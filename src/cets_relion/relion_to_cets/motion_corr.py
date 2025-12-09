@@ -45,8 +45,8 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
         return joval
 
     def get_gain_rot_flip(self) -> Optional[Tuple[Sequence, List[CoordinateSystem]]]:
-        gain_rot = joboptions_from_job(self.file.parent).get("gain_rot")
-        gain_flip = joboptions_from_job(self.file.parent).get("gain_flip")
+        gain_rot = joboptions_from_job(self.file.parent)["gain_rot"]
+        gain_flip = joboptions_from_job(self.file.parent)["gain_flip"]
         if gain_rot == "No rotation (0)" and gain_flip == "No flipping (0)":
             return None
         gain_rot_vals = {
@@ -57,8 +57,8 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
         }
         gain_flip_vals = {
             "No flipping (0)": None,
-            "Flip upside down (1)": "x",
-            "Flip left to right (2)": "y",
+            "Flip upside down (1)": ["x"],
+            "Flip left to right (2)": ["y"],
         }
 
         gain_flip_xform = Flip2D(
@@ -129,7 +129,7 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
             nom_tilt = row[1]
             cets_obj = ProjectionImage(
                 path=micname,
-                section=str(n),
+                section=n,
                 width=x_size,
                 height=y_size,
                 coordinate_systems=[logical_coords()],

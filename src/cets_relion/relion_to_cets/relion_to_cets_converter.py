@@ -236,12 +236,13 @@ class RelionCetsConverter:
             if mocorrfile.tilt_series_in_file(tomo_name):
                 gf = mocorrfile.get_gain_file()
                 if gf:
+                    # ToDo: add gain reference transformations here
                     height, width, _depth = get_mrc_dims(gf)
                     return GainFile(
                         path=gf,
                         width=width,
                         height=height,
-                        coordinate_systems=[logical_coords(tomo_name)],
+                        coordinate_systems=[logical_coords()],
                     )
         return None
 

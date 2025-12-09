@@ -38,8 +38,6 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         con = RelionCetsConverter("Import/job001/")
         movs = get_raw_movies(con, "TS_01")
         actual = movs[0].model_dump(mode="json")
-        with open(self.test_data / "results/raw_movs_no_ctf.json", "w") as f:
-            json.dump(actual, f, indent=2)
         with open(self.test_data / "results/raw_movs_no_ctf.json") as f:
             expected = json.load(f)
         assert actual == expected
@@ -49,6 +47,8 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         con = RelionCetsConverter("MotionCorr/job002/")
         movs = get_raw_movies(con, "TS_01")
         actual = movs[0].model_dump(mode="json")
+        with open(self.test_data / "results/raw_movs_no_ctf.json", "w") as f:
+            json.dump(actual, f, indent=2)
         with open(self.test_data / "results/raw_movs_no_ctf.json") as f:
             expected = json.load(f)
         assert actual["movie_stacks"] == expected["movie_stacks"]

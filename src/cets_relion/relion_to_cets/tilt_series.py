@@ -18,7 +18,14 @@ from gemmi import cif
 
 
 from cets_relion.math_utils import rotation_to_matrix_3d
-from tmp_transformations import align_projection_image_to_tomogram, logical_coords
+from tmp_transformations import (
+    align_projection_image_to_tomogram,
+    logical_coords,
+    physical_coords,
+    IMAGE_PIXEL_SIZE_COORDS,
+    IMAGE_PIXEL_SIZE_XFROM,
+    BASE_LOGICAL_COORDS_2D,
+)
 
 logger = getLogger(__name__)
 
@@ -194,12 +201,15 @@ class RelionTiltSeriesStarfile(object):
                 section=str(n),
                 width=x_size,
                 height=y_size,
-                coordinate_systems=[logical_coords()],
+                coordinate_systems=[
+                    logical_coords(dim=2),
+                    physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=2),
+                ],
                 nominal_tilt_angle=nom_tilt,
                 ctf_metadata=ctf,
                 accumulated_dose=dose_dict[micname],
             )
-            # add te scaling transformation
+            # add the scaling transformation
             glo_block = cif.read_file(self.name).find_block("global")
             apix_data = list(
                 glo_block.find(
@@ -208,9 +218,9 @@ class RelionTiltSeriesStarfile(object):
             )
             apix_dict: Dict[str, float] = {x[0]: float(x[1]) for x in apix_data}
             scaling_xform = Scale(
-                name="Å/pix",
-                input="logical",
-                output="physical",
+                name=IMAGE_PIXEL_SIZE_XFROM,
+                input=BASE_LOGICAL_COORDS_2D,
+                output=IMAGE_PIXEL_SIZE_COORDS,
                 scale=[apix_dict[ts_name]],
             )
             cets_obj.coordinate_transformations = [scaling_xform]
