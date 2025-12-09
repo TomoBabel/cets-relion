@@ -12,7 +12,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -74,7 +74,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -136,7 +136,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -198,7 +198,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -260,7 +260,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -322,7 +322,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -384,7 +384,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -446,7 +446,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -508,7 +508,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -570,7 +570,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -632,7 +632,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -694,7 +694,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -756,7 +756,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -818,7 +818,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -880,7 +880,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -942,7 +942,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1004,7 +1004,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1066,7 +1066,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1128,7 +1128,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1190,7 +1190,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1252,7 +1252,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1314,7 +1314,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1376,7 +1376,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1438,7 +1438,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1500,7 +1500,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1562,7 +1562,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1624,7 +1624,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1686,7 +1686,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1748,7 +1748,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1810,7 +1810,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1872,7 +1872,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1934,7 +1934,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1996,7 +1996,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2058,7 +2058,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2120,7 +2120,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2182,7 +2182,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2244,7 +2244,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2306,7 +2306,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2368,7 +2368,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2430,7 +2430,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2492,7 +2492,7 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="logical coordinates",
+                name="base_logical_coordinates",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",

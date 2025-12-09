@@ -6,7 +6,7 @@ from cets_relion.relion_to_cets.particle_coords import (
     RelionSphereAnnotations,
     RelionParticlesStarFile,
 )
-from cets_relion.objs.coordinate_systems import RELION_COORDS_PHYSICAL
+from tmp_transformations import physical_coords
 from pathlib import Path
 from pytest import fixture
 
@@ -22,7 +22,10 @@ class TestRelionParticleCoordsStarFile(CetsRelionTest):
         self.setup_dirs(9)
         pcf = RelionCoordsStarFile("Picks/job009/particles.star")
         parts = pcf.get_tomo_cets_coords_set("TS_01")
-        self.assertEqual(parts.coordinate_systems, [RELION_COORDS_PHYSICAL])
+        self.assertEqual(
+            parts.coordinate_systems,
+            [physical_coords(name="Relion bas physical coords", dim=2)],
+        )
         assert parts.path == pcf.name
         assert len(parts.origin3D) == 6981
 

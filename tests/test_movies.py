@@ -70,7 +70,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="logical coordinates",
+                    name="base_logical_coordinates_2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
@@ -82,15 +82,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="pixel/voxel",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
-                            axis_type=None,
-                        ),
                     ],
                 ),
                 CoordinateSystem(
-                    name="physical coordinates",
+                    name="image_pixel_size",
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
@@ -102,20 +97,15 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="Ångstrom",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="physical coordinates z axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
                     ],
                 ),
             ],
             coordinate_transformations=[
                 Scale(
                     type="scale",
-                    name="pixel size",
-                    input="logical coordinates",
-                    output="physical_coordinates",
+                    name="image_pixel_size",
+                    input="base_logical_coordinates_2d",
+                    output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
             ],
@@ -132,7 +122,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="logical coordinates",
+                    name="base_logical_coordinates_2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
@@ -144,15 +134,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="pixel/voxel",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
-                            axis_type=None,
-                        ),
                     ],
                 ),
                 CoordinateSystem(
-                    name="physical coordinates",
+                    name="image_pixel_size",
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
@@ -164,20 +149,15 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="Ångstrom",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="physical coordinates z axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
                     ],
                 ),
             ],
             coordinate_transformations=[
                 Scale(
                     type="scale",
-                    name="pixel size",
-                    input="logical coordinates",
-                    output="physical_coordinates",
+                    name="image_pixel_size",
+                    input="base_logical_coordinates_2d",
+                    output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
             ],
@@ -194,7 +174,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="logical coordinates",
+                    name="base_logical_coordinates_2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
@@ -206,15 +186,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="pixel/voxel",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
-                            axis_type=None,
-                        ),
                     ],
                 ),
                 CoordinateSystem(
-                    name="physical coordinates",
+                    name="image_pixel_size",
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
@@ -226,20 +201,15 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="Ångstrom",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="physical coordinates z axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
                     ],
                 ),
             ],
             coordinate_transformations=[
                 Scale(
                     type="scale",
-                    name="pixel size",
-                    input="logical coordinates",
-                    output="physical_coordinates",
+                    name="image_pixel_size",
+                    input="base_logical_coordinates_2d",
+                    output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
             ],
@@ -266,7 +236,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="logical coordinates",
+                    name="base_logical_coordinates_2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
@@ -278,15 +248,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="pixel/voxel",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
-                            axis_type=None,
-                        ),
                     ],
                 ),
                 CoordinateSystem(
-                    name="physical coordinates",
+                    name="image_pixel_size",
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
@@ -298,20 +263,15 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="Ångstrom",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="physical coordinates z axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
                     ],
                 ),
             ],
             coordinate_transformations=[
                 Scale(
                     type="scale",
-                    name="pixel size",
-                    input="logical coordinates",
-                    output="physical_coordinates",
+                    name="image_pixel_size",
+                    input="base_logical_coordinates_2d",
+                    output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
             ],
@@ -326,7 +286,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="logical coordinates",
+                    name="base_logical_coordinates_2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
@@ -338,15 +298,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="pixel/voxel",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
-                            axis_type=None,
-                        ),
                     ],
                 ),
                 CoordinateSystem(
-                    name="physical coordinates",
+                    name="image_pixel_size",
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
@@ -358,20 +313,15 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="Ångstrom",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="physical coordinates z axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
                     ],
                 ),
             ],
             coordinate_transformations=[
                 Scale(
                     type="scale",
-                    name="pixel size",
-                    input="logical coordinates",
-                    output="physical_coordinates",
+                    name="image_pixel_size",
+                    input="base_logical_coordinates_2d",
+                    output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
             ],
@@ -386,7 +336,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="logical coordinates",
+                    name="base_logical_coordinates_2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
@@ -398,15 +348,10 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="pixel/voxel",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
-                            axis_type=None,
-                        ),
                     ],
                 ),
                 CoordinateSystem(
-                    name="physical coordinates",
+                    name="image_pixel_size",
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
@@ -418,20 +363,15 @@ class RelionCetsMoviesTests(CetsRelionTest):
                             axis_unit="Ångstrom",
                             axis_type=None,
                         ),
-                        Axis(
-                            name="physical coordinates z axis",
-                            axis_unit="Ångstrom",
-                            axis_type=None,
-                        ),
                     ],
                 ),
             ],
             coordinate_transformations=[
                 Scale(
                     type="scale",
-                    name="pixel size",
-                    input="logical coordinates",
-                    output="physical_coordinates",
+                    name="image_pixel_size",
+                    input="base_logical_coordinates_2d",
+                    output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
             ],

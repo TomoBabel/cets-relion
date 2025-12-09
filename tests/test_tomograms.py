@@ -3,7 +3,7 @@ from tests.testing_tools import CetsRelionTest
 from pathlib import Path
 from pytest import fixture
 from cets_data_model.models.models import Tomogram
-from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
+from tmp_transformations import logical_coords
 
 
 class TestRelionParticlesStarFile(CetsRelionTest):
@@ -41,7 +41,7 @@ class TomogramsTests(CetsRelionTest):
             width=4000,
             height=4000,
             depth=2000,
-            coordinate_systems=[RELION_COORDS_LOGICAL],
+            coordinate_systems=[logical_coords()],
             coordinate_transformations=None,
             path="Denoise/job008/tomograms/rec_TS_01.mrc",
         )

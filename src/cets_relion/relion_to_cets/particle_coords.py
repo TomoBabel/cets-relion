@@ -9,17 +9,21 @@ from cets_data_model.models.models import (
     Affine,
     Translation,
     Scale,
+    Sequence,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
 
-from cets_relion.objs.coordinate_systems import (
-    RELION_COORDS_PHYSICAL,
-    RELION_COORDS_LOGICAL,
+
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline
+from cets_relion.math_utils import relion_eulers_to_matrix
+from cets_relion.job_utils import joboptions_from_job
+from tmp_transformations import (
+    BASE_LOGICAL_COORDS_3D,
+    align_subtomogram_to_tomogram,
+    logical_coords,
     physical_coords,
 )
-from cets_relion.relion_to_cets.relion_reader import RelionPipeline
-from cets_relion.utils import relion_eulers_to_matrix, joboptions_from_job
 
 
 # ToDo: This class will probably be superseded by CETS objects in cets_data_model
@@ -141,7 +145,9 @@ class RelionCoordsStarFile(object):
             if part[0] == tomo_name:
                 coords.append([float(x) for x in [part[1], part[2], part[3]]])
         return PointSet3D(
-            origin3D=coords, coordinate_systems=[RELION_COORDS_PHYSICAL], path=self.name
+            origin3D=coords,
+            coordinate_systems=[physical_coords(name="image_pixel_size", dim=3)],
+            path=self.name,
         )
 
     def determine_annotation_type(self):
@@ -250,28 +256,31 @@ class RelionParticlesStarFile(object):
             subtomo_affine = Affine(
                 name="Alignment relative to parent tomogram",
                 affine=list(relion_eulers_to_matrix(tomotilt, tomorot, tomopsi)),
-                input="physical coordinates",
+                input=BASE_LOGICAL_COORDS_3D,
                 output="Alignment relative to parent tomogram",
             )
             subtomo_coordsys = physical_coords(
-                name="Alignment relative to parent tomogram"
+                name="Alignment relative to parent tomogram", dim=3
             )
 
             align_translate = Translation(
                 name="Averaging translation",
-                translation=[x, y, z],
+                translation=[x / apix, y / apix, z / apix],
                 input="Alignment relative to parent tomogram",
                 output="Averaging translation",
             )
-            align_trans_coord_sys = physical_coords(name="Averaging translation")
+            align_trans_coord_sys = logical_coords(name="Averaging translation")
 
             align_affine = Affine(
                 name="Averaging alignment",
                 affine=list(relion_eulers_to_matrix(tilt, rot, psi)),
                 input="Averaging translation",
-                output="Alignment for averaging",
             )
-            align_affine_coord_sys = physical_coords(name="Averaging alignment")
+            final_alignment, final_coords = align_subtomogram_to_tomogram(
+                transformation=Sequence(
+                    sequence=[subtomo_affine, align_translate, align_affine]
+                )
+            )
 
             dims = get_mrc_dims(part[4])
             cets_part = ParticleMap(
@@ -280,17 +289,15 @@ class RelionParticlesStarFile(object):
                 height=dims[1],
                 depth=dims[2],
                 coordinate_systems=[
-                    RELION_COORDS_LOGICAL,
-                    RELION_COORDS_PHYSICAL,
+                    logical_coords(dim=2),
+                    physical_coords(name="image_pixel_size", dim=2),
                     subtomo_coordsys,
                     align_trans_coord_sys,
-                    align_affine_coord_sys,
+                    final_coords,
                 ],
                 coordinate_transformations=[
                     scale_xform,
-                    subtomo_affine,
-                    align_affine,
-                    align_translate,
+                    final_alignment,
                 ],
             )
             cets_particles.append(cets_part)

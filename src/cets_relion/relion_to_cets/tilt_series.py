@@ -11,16 +11,14 @@ from cets_data_model.models.models import (
     Translation,
     Affine,
     Scale,
+    Sequence,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
 
-from cets_relion.objs.coordinate_systems import (
-    RELION_COORDS_LOGICAL,
-    RELION_COORDS_PHYSICAL,
-    logical_coords,
-)
-from cets_relion.utils import rotation_to_matrix_3d
+
+from cets_relion.math_utils import rotation_to_matrix_3d
+from tmp_transformations import align_projection_image_to_tomogram, logical_coords
 
 logger = getLogger(__name__)
 
@@ -196,7 +194,7 @@ class RelionTiltSeriesStarfile(object):
                 section=str(n),
                 width=x_size,
                 height=y_size,
-                coordinate_systems=[RELION_COORDS_LOGICAL, RELION_COORDS_PHYSICAL],
+                coordinate_systems=[logical_coords()],
                 nominal_tilt_angle=nom_tilt,
                 ctf_metadata=ctf,
                 accumulated_dose=dose_dict[micname],
@@ -239,7 +237,6 @@ class RelionTiltSeriesStarfile(object):
                     output="alignment z rotation",
                 )
                 zr_coord_sys = logical_coords("alignment z rotation")
-                cets_obj.coordinate_transformations.append(z_affine)
                 cets_obj.coordinate_systems.append(zr_coord_sys)
 
                 x_affine = Affine(
@@ -249,7 +246,6 @@ class RelionTiltSeriesStarfile(object):
                     output="alignment x tilt",
                 )
                 ax_coord_sys = logical_coords("alignment x tilt")
-                cets_obj.coordinate_transformations.append(x_affine)
                 cets_obj.coordinate_systems.append(ax_coord_sys)
 
                 y_affine = Affine(
@@ -259,8 +255,12 @@ class RelionTiltSeriesStarfile(object):
                     output="alignment y tilt",
                 )
                 ay_coord_sys = logical_coords("alignment y tilt")
-                cets_obj.coordinate_transformations.append(y_affine)
                 cets_obj.coordinate_systems.append(ay_coord_sys)
+                alignment_xform, alignment_coords = align_projection_image_to_tomogram(
+                    transformation=Sequence(sequence=[z_affine, y_affine, x_affine])
+                )
+                cets_obj.coordinate_transformations.append(alignment_xform)
+                cets_obj.coordinate_systems.append(alignment_coords)
 
             except IndexError:
                 pass

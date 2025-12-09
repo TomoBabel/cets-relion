@@ -16,7 +16,10 @@ from tests.test_data.pipelines.short_pipeline_networks import (
     UPSTREAM_JOBS_CRIT_EDGES,
 )
 from tests.testing_tools import CetsRelionTest
-from cets_relion.utils import get_job_number
+from cets_relion.job_utils import get_job_number
+
+# temp
+import networkx as nx
 
 
 class PipelineReaderTests(CetsRelionTest):
@@ -162,3 +165,33 @@ class PipelineReaderTests(CetsRelionTest):
             kwds=["relion", "tomo", "ctffind", "XXXXX"],
         )
         assert found == []
+
+    def test_all_parent_files(self):
+        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
+        res = rp.get_all_parent_files("Denoise/job008/tomograms.star")
+        assert res == [
+            "Import/job001/tilt_series.star",
+            "MotionCorr/job002/corrected_tilt_series.star",
+            "CtfFind/job003/tilt_series_ctf.star",
+            "ExcludeTiltImages/job004/selected_tilt_series.star",
+            "AlignTiltSeries/job005/aligned_tilt_series.star",
+            "Tomograms/job006/tomograms.star",
+        ]
+
+    def test_all_child_files(self):
+        rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
+        res = rp.get_all_child_files("MotionCorr/job002/corrected_tilt_series.star")
+        assert res == [
+            "CtfFind/job003/tilt_series_ctf.star",
+            "CtfFind/job003/logfile.pdf",
+            "ExcludeTiltImages/job004/selected_tilt_series.star",
+            "AlignTiltSeries/job005/aligned_tilt_series.star",
+            "Tomograms/job006/tomograms.star",
+            "Denoise/job007/tomograms.star",
+            "Denoise/job008/tomograms.star",
+        ]
+
+    def test_levels(self):
+        rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")
+        res = nx.topological_sort(rp.process_layer().graph)
+        print(list(res))

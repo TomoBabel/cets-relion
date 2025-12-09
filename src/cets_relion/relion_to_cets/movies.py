@@ -8,18 +8,14 @@ from cets_data_model.models.models import (
     MovieFrame,
     MovieStackSeries,
     CTFMetadata,
-    Scale,
 )
 from cets_data_model.utils.image_utils import get_image_dims
 from gemmi import cif
 
 from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
-from cets_relion.objs.coordinate_systems import (
-    RELION_COORDS_LOGICAL,
-    RELION_COORDS_PHYSICAL,
-)
 from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
+from tmp_transformations import logical_coords, image_pixel_size
 
 
 class RelionMoviesStarFile(object):
@@ -132,6 +128,7 @@ class RelionMoviesStarFile(object):
             for n in range(int(row[1])):
                 frame_n = f"{n + 1:05}"
                 frame_dose = dose * (float(n + 1) / float(row[1]))
+                scale_xform, scale_coords = image_pixel_size(apix)
                 frames.append(
                     MovieFrame(
                         path=f"{frame_n}@{movie_name}",
@@ -141,18 +138,8 @@ class RelionMoviesStarFile(object):
                         ctf_metadata=cets_ctf,
                         width=width,
                         height=height,
-                        coordinate_systems=[
-                            RELION_COORDS_LOGICAL,
-                            RELION_COORDS_PHYSICAL,
-                        ],
-                        coordinate_transformations=[
-                            Scale(
-                                name="pixel size",
-                                scale=[apix, apix],
-                                input="logical coordinates",
-                                output="physical_coordinates",
-                            )
-                        ],
+                        coordinate_systems=[logical_coords(), scale_coords],
+                        coordinate_transformations=[scale_xform],
                     )
                 )
 
@@ -160,7 +147,10 @@ class RelionMoviesStarFile(object):
             movie_stacks.append(MovieStack(images=frames, path=movie_name))
 
         # return a CETS MovieStackSeries for the tilt series
-        return MovieStackSeries(name=ts_name, stacks=movie_stacks)
+        return MovieStackSeries(
+            # name=ts_name,   # ToDo: Add this field to model?
+            stacks=movie_stacks
+        )
 
     def get_all_tomo_names(self) -> List[str]:
         data = (

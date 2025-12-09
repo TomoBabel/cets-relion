@@ -8,7 +8,7 @@ from typing import Optional, Tuple, List, Union, Literal, Hashable, Any
 import networkx as nx
 from gemmi import cif
 
-from cets_relion.utils import get_job_number
+from cets_relion.job_utils import get_job_number
 
 
 @dataclass()
@@ -199,7 +199,6 @@ class RelionPipeline(object):
         """
         sub_nodes = nx.ancestors(self.graph, start) | {start}
         subgraph = self.graph.subgraph(sub_nodes).copy()
-
         # add output nodes that aren't directly a part of the subgraph
         for node in list(subgraph.nodes):
             if subgraph.nodes[node] and subgraph.nodes[node]["type"] == "process":
@@ -450,6 +449,41 @@ class RelionPipeline(object):
         nodes = list(found_nodes)
         nodes.sort(key=lambda x: get_sort_key(x))
         return nodes
+
+    def get_parents(
+        self, node: Union[os.PathLike, str], n_type: Literal["", "file", "process"]
+    ) -> List[str]:
+        tc_dag = nx.transitive_closure_dag(self.graph)
+        linked = [x[0] for x in list(tc_dag.edges()) if x[1] == str(node)]
+        if n_type:
+            parents = [x for x in linked if self.graph.nodes[x]["type"] == n_type]
+        else:
+            parents = [x for x in linked if self.graph.nodes[x]]
+        parents.sort(key=lambda x: get_sort_key(x))
+        return parents
+
+    def get_children(
+        self, node: Union[os.PathLike, str], n_type: Literal["", "file", "process"]
+    ) -> List[str]:
+        tc_dag = nx.transitive_closure_dag(self.graph)
+        linked = [x[1] for x in list(tc_dag.edges()) if x[0] == str(node)]
+        if n_type:
+            children = [x for x in linked if self.graph.nodes[x]["type"] == n_type]
+        else:
+            children = [x for x in linked if self.graph.nodes[x]]
+        children.sort(key=lambda x: get_sort_key(x))
+        return children
+
+    def get_all_parent_files(self, file: Union[os.PathLike, str]) -> List[str]:
+        return self.get_parents(file, "file")
+
+    def get_all_child_files(self, file: Union[os.PathLike, str]) -> List[str]:
+        return self.get_children(file, "file")
+
+    def levels(self):
+        levels = nx.algorithms.dag.topological_generations(self.graph)
+        for i, layer in enumerate(levels):
+            print(f"Level {i}: {list(layer)}")
 
 
 def get_sort_key(node_name: Union[str, os.PathLike]) -> Tuple[int, int]:

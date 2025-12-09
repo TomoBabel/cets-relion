@@ -6,6 +6,9 @@ from cets_data_model.models.models import MovieFrame
 from gemmi import cif
 from cets_relion.cets_to_relion.cets_reader import CetsReader
 
+# ToDo: All data field values preceded with 'XXX_' are currently not available in CETS
+#  format need to decide how to handle them...
+
 
 class CetsToRelionConverter(object):
     def __init__(self, input_file: Union[Path, str]):
@@ -67,8 +70,10 @@ class CetsToRelionConverter(object):
                         ]
                     )
 
-                # TODO: get the alignment data here and add it to vals
-                #  if found
+                for frame in frames:
+                    pass
+                    # TODO: get the alignment data here and add it to vals
+                    #  if found
 
                 if data.get(name) is None:
                     data[name] = [vals]

@@ -9,7 +9,6 @@ from gemmi import cif
 
 from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
 from cets_relion.relion_to_cets.movies import RelionMoviesStarFile
-from cets_relion.objs.coordinate_systems import RELION_COORDS_LOGICAL
 from cets_relion.relion_to_cets.particle_coords import (
     RelionCoordsStarFile,
     RelionParticlesStarFile,
@@ -19,7 +18,8 @@ from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from cets_relion.relion_to_cets.subtomo_averages import RelionSubtomoAverage
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
 from cets_relion.relion_to_cets.tomograms import RelionTomosStarfile
-from cets_relion.utils import get_job_type
+from cets_relion.job_utils import get_job_type
+from tmp_transformations import logical_coords
 
 # cets converters for specific jobtypes
 # {job_type: (file_to_use, converter_class, attr to set)}
@@ -241,7 +241,7 @@ class RelionCetsConverter:
                         path=gf,
                         width=width,
                         height=height,
-                        coordinate_systems=[RELION_COORDS_LOGICAL],
+                        coordinate_systems=[logical_coords(tomo_name)],
                     )
         return None
 
@@ -263,7 +263,7 @@ class RelionCetsConverter:
                         path=df,
                         width=width,
                         height=height,
-                        coordinate_systems=[RELION_COORDS_LOGICAL],
+                        coordinate_systems=[logical_coords(tomo_name)],
                     )
         return None
 

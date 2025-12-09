@@ -1,13 +1,8 @@
-from cets_relion.utils import (
+from cets_relion.job_utils import (
     get_job_name,
     joboptions_from_job,
     get_job_number,
     get_job_type,
-    affine_to_eulers,
-    relion_eulers_to_matrix,
-    rotation_to_matrix_3d,
-    rotation_to_matrix_2d,
-    matrix_2d_to_angle,
 )
 from tests.testing_tools import CetsRelionTest
 
@@ -58,62 +53,3 @@ def test_get_job_number():
     assert get_job_number("Reconstruct/job001/") == 1
     assert get_job_number("Denoise/job008/tomograms.star") == 8
     assert get_job_number("Denoise/job008/tomograms/ts_01.star") == 8
-
-
-def test_euler_to_matrix():
-    # testing with values from first subtomo in TS_03
-    rot, tilt, psi = (-1.40135, 97.396086, 4.337919)
-    m = relion_eulers_to_matrix(rot, tilt, psi)
-    assert m == [
-        [-0.1264708962411244, -0.07875515190078805, 0.988839086228417],
-        [-0.03411956457485091, 0.9965989433656185, 0.07500934205654208],
-        [-0.9913833606215051, -0.024252260340359096, -0.12872785305128842],
-    ]
-
-
-def test_matrix_to_eulers():
-    rtp = affine_to_eulers(
-        [
-            [-0.1264708962411244, -0.07875515190078805, 0.988839086228417],
-            [-0.03411956457485091, 0.9965989433656185, 0.07500934205654208],
-            [-0.9913833606215051, -0.024252260340359096, -0.12872785305128842],
-        ]
-    )
-    assert [round(x, 6) for x in rtp] == [-1.40135, 97.396086, 4.337919]
-
-
-def test_rotation_to_matrix3d():
-    r = rotation_to_matrix_3d(45, "x")
-    assert r == [
-        [1.0, 0.0, 0.0],
-        [0.0, 0.7071067811865475, -0.7071067811865476],
-        [0.0, 0.7071067811865476, 0.7071067811865475],
-    ]
-    r = rotation_to_matrix_3d(45, "y")
-    assert r == [
-        [0.7071067811865475, 0.0, 0.7071067811865476],
-        [0.0, 1.0, 0.0],
-        [-0.7071067811865476, 0.0, 0.7071067811865475],
-    ]
-    r = rotation_to_matrix_3d(45, "z")
-    assert r == [
-        [0.7071067811865475, -0.7071067811865476, 0.0],
-        [0.7071067811865476, 0.7071067811865475, 0.0],
-        [0.0, 0.0, 1.0],
-    ]
-
-
-def test_rotations_to_matrix_2d():
-    r = rotation_to_matrix_2d(45)
-    assert r == [
-        [0.7071067811865476, -0.7071067811865475],
-        [0.7071067811865475, 0.7071067811865476],
-    ]
-
-
-def test_matrix_to_angle_2d():
-    r = [
-        [0.7071067811865476, -0.7071067811865475],
-        [0.7071067811865475, 0.7071067811865476],
-    ]
-    assert round(matrix_2d_to_angle(r), 6) == 45.0

@@ -19,7 +19,7 @@ MOCORR_0 = {
                     "name": "logical coordinates z axis",
                 },
             ],
-            "name": "logical coordinates",
+            "name": "base_logical_coordinates",
         }
     ],
     "coordinate_transformations": None,
@@ -51,7 +51,7 @@ MOCORR_40 = {
                     "name": "logical coordinates z axis",
                 },
             ],
-            "name": "logical coordinates",
+            "name": "base_logical_coordinates",
         }
     ],
     "coordinate_transformations": None,
@@ -84,7 +84,7 @@ CTF_0 = {
                     "name": "logical coordinates z axis",
                 },
             ],
-            "name": "logical coordinates",
+            "name": "base_logical_coordinates",
         },
         {
             "axes": [
@@ -142,7 +142,7 @@ CTF_40 = {
                     "name": "logical coordinates z axis",
                 },
             ],
-            "name": "logical coordinates",
+            "name": "base_logical_coordinates",
         },
         {
             "axes": [
@@ -184,7 +184,7 @@ GAIN_FILE = {
     "height": 1000,
     "coordinate_systems": [
         {
-            "name": "logical coordinates",
+            "name": "base_logical_coordinates",
             "axes": [
                 {
                     "name": "logical coordinates x axis",
