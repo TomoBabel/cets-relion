@@ -5,6 +5,7 @@ from cets_data_model.models.models import (
     Affine,
     Translation,
     Scale,
+    Sequence,
 )
 
 FROM_REFINE = ParticleMap(
@@ -13,7 +14,7 @@ FROM_REFINE = ParticleMap(
     depth=127,
     coordinate_systems=[
         CoordinateSystem(
-            name="logical coordinates",
+            name="base_logical_coordinates_3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
@@ -33,7 +34,7 @@ FROM_REFINE = ParticleMap(
             ],
         ),
         CoordinateSystem(
-            name="physical coordinates",
+            name="image_pixel_size",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -117,14 +118,14 @@ FROM_REFINE = ParticleMap(
         Scale(
             type="scale",
             name="Å/pix",
-            input="logical coordinates",
-            output="physical coordinates",
+            input="base_logical_coordinates_3d",
+            output="image_pixel_size",
             scale=[8.1],
         ),
         Affine(
             type="affine",
             name="Alignment relative to parent tomogram",
-            input="physical coordinates",
+            input="image_pixel_size",
             output="Alignment relative to parent tomogram",
             affine=[
                 [0.9910488295477008, -0.13337511157340148, 0.005770360899859925],
@@ -159,7 +160,7 @@ FROM_REC = ParticleMap(
     depth=127,
     coordinate_systems=[
         CoordinateSystem(
-            name="logical coordinates",
+            name="base_logical_coordinates_3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
@@ -179,7 +180,7 @@ FROM_REC = ParticleMap(
             ],
         ),
         CoordinateSystem(
-            name="physical coordinates",
+            name="image_pixel_size",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -263,14 +264,14 @@ FROM_REC = ParticleMap(
         Scale(
             type="scale",
             name="Å/pix",
-            input="logical coordinates",
-            output="physical coordinates",
+            input="base_logical_coordinates_3d",
+            output="image_pixel_size",
             scale=[1.35],
         ),
         Affine(
             type="affine",
             name="Alignment relative to parent tomogram",
-            input="physical coordinates",
+            input="image_pixel_size",
             output="Alignment relative to parent tomogram",
             affine=[
                 [0.13092364625824407, -0.9698575059870079, -0.20551257122401773],
@@ -305,7 +306,7 @@ FROM_PP = ParticleMap(
     depth=127,
     coordinate_systems=[
         CoordinateSystem(
-            name="logical coordinates",
+            name="base_logical_coordinates_3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
@@ -325,7 +326,7 @@ FROM_PP = ParticleMap(
             ],
         ),
         CoordinateSystem(
-            name="physical coordinates",
+            name="image_pixel_size",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -409,14 +410,14 @@ FROM_PP = ParticleMap(
         Scale(
             type="scale",
             name="Å/pix",
-            input="logical coordinates",
-            output="physical coordinates",
+            input="base_logical_coordinates_3d",
+            output="image_pixel_size",
             scale=[1.35],
         ),
         Affine(
             type="affine",
             name="Alignment relative to parent tomogram",
-            input="physical coordinates",
+            input="image_pixel_size",
             output="Alignment relative to parent tomogram",
             affine=[
                 [0.13092364625824407, -0.9698575059870079, -0.20551257122401773],
@@ -447,9 +448,12 @@ FROM_PP = ParticleMap(
 )
 
 TS_01_1 = {
+    "width": 1,
+    "height": 2,
+    "depth": 3,
     "coordinate_systems": [
         CoordinateSystem(
-            name="logical coordinates",
+            name="base_logical_coordinates_3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
@@ -469,7 +473,7 @@ TS_01_1 = {
             ],
         ),
         CoordinateSystem(
-            name="physical coordinates",
+            name="image_pixel_size",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -512,24 +516,19 @@ TS_01_1 = {
             name="Averaging translation",
             axes=[
                 Axis(
-                    name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates x axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
                 Axis(
-                    name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
-                    axis_type=None,
-                ),
-                Axis(
-                    name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates y axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
             ],
         ),
         CoordinateSystem(
-            name="Averaging alignment",
+            name="aligned_subtomogram",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -551,36 +550,41 @@ TS_01_1 = {
     ],
     "coordinate_transformations": [
         Scale(
-            type="scale",
             name="Å/pix",
-            input="logical coordinates",
-            output="physical coordinates",
+            input="base_logical_coordinates_3d",
+            output="image_pixel_size",
+            type="scale",
             scale=[8.1],
         ),
-        Affine(
-            type="affine",
-            name="Alignment relative to parent tomogram",
-            input="physical coordinates",
-            output="Alignment relative to parent tomogram",
-            affine=[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]],
-        ),
-        Affine(
-            type="affine",
-            name="Averaging alignment",
-            input="Averaging translation",
-            output="Alignment for averaging",
-            affine=[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]],
-        ),
-        Translation(
-            type="translation",
-            name="Averaging translation",
-            input="Alignment relative to parent tomogram",
-            output="Averaging translation",
-            translation=[0.0, 0.0, 0.0],
+        Sequence(
+            name="align_subtomogram_to_tomogram",
+            input="image_pixel_size",
+            output="aligned_subtomogram",
+            type="sequence",
+            sequence=[
+                Affine(
+                    name="Alignment relative to parent tomogram",
+                    input="image_pixel_size",
+                    output="Alignment relative to parent tomogram",
+                    type="affine",
+                    affine=[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]],
+                ),
+                Translation(
+                    name="Averaging translation",
+                    input="Alignment relative to parent tomogram",
+                    output="Averaging translation",
+                    type="translation",
+                    translation=[0.0, 0.0, 0.0],
+                ),
+                Affine(
+                    name="Averaging alignment",
+                    input="Averaging translation",
+                    output=None,
+                    type="affine",
+                    affine=[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]],
+                ),
+            ],
         ),
     ],
-    "depth": 3,
-    "height": 2,
     "path": "000001@Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
-    "width": 1,
 }

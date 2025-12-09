@@ -6,7 +6,7 @@ from cets_relion.relion_to_cets.particle_coords import (
     RelionSphereAnnotations,
     RelionParticlesStarFile,
 )
-from tmp_transformations import physical_coords
+from tmp_transformations import physical_coords, IMAGE_PIXEL_SIZE_COORDS
 from pathlib import Path
 from pytest import fixture
 
@@ -24,7 +24,7 @@ class TestRelionParticleCoordsStarFile(CetsRelionTest):
         parts = pcf.get_tomo_cets_coords_set("TS_01")
         self.assertEqual(
             parts.coordinate_systems,
-            [physical_coords(name="Relion bas physical coords", dim=2)],
+            [physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=3)],
         )
         assert parts.path == pcf.name
         assert len(parts.origin3D) == 6981

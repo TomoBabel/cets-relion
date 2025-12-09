@@ -20,9 +20,11 @@ from cets_relion.math_utils import relion_eulers_to_matrix
 from cets_relion.job_utils import joboptions_from_job
 from tmp_transformations import (
     BASE_LOGICAL_COORDS_3D,
-    align_subtomogram_to_tomogram,
     logical_coords,
     physical_coords,
+    IMAGE_PIXEL_SIZE_COORDS,
+    ALIGN_SUBTOMOGRAM_COORDS,
+    ALIGN_SUBTOMOGRAM_XFROM,
 )
 
 
@@ -248,15 +250,15 @@ class RelionParticlesStarFile(object):
             # add scale transformation for logical coords
             scale_xform = Scale(
                 name="Å/pix",
-                input="logical coordinates",
-                output="physical coordinates",
+                input=BASE_LOGICAL_COORDS_3D,
+                output=IMAGE_PIXEL_SIZE_COORDS,
                 scale=[apix],
             )
 
             subtomo_affine = Affine(
                 name="Alignment relative to parent tomogram",
                 affine=list(relion_eulers_to_matrix(tomotilt, tomorot, tomopsi)),
-                input=BASE_LOGICAL_COORDS_3D,
+                input=IMAGE_PIXEL_SIZE_COORDS,
                 output="Alignment relative to parent tomogram",
             )
             subtomo_coordsys = physical_coords(
@@ -276,11 +278,13 @@ class RelionParticlesStarFile(object):
                 affine=list(relion_eulers_to_matrix(tilt, rot, psi)),
                 input="Averaging translation",
             )
-            final_alignment, final_coords = align_subtomogram_to_tomogram(
-                transformation=Sequence(
-                    sequence=[subtomo_affine, align_translate, align_affine]
-                )
+            final_alignment = Sequence(
+                sequence=[subtomo_affine, align_translate, align_affine],
+                input=IMAGE_PIXEL_SIZE_COORDS,
+                output=ALIGN_SUBTOMOGRAM_COORDS,
+                name=ALIGN_SUBTOMOGRAM_XFROM,
             )
+            final_coords = physical_coords(dim=3, name=ALIGN_SUBTOMOGRAM_COORDS)
 
             dims = get_mrc_dims(part[4])
             cets_part = ParticleMap(
@@ -289,8 +293,8 @@ class RelionParticlesStarFile(object):
                 height=dims[1],
                 depth=dims[2],
                 coordinate_systems=[
-                    logical_coords(dim=2),
-                    physical_coords(name="image_pixel_size", dim=2),
+                    logical_coords(dim=3),
+                    physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=3),
                     subtomo_coordsys,
                     align_trans_coord_sys,
                     final_coords,
