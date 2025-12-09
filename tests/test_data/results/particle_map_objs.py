@@ -77,24 +77,19 @@ FROM_REFINE = ParticleMap(
             name="Averaging translation",
             axes=[
                 Axis(
-                    name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates x axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
                 Axis(
-                    name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
-                    axis_type=None,
-                ),
-                Axis(
-                    name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates y axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
             ],
         ),
         CoordinateSystem(
-            name="Averaging alignment",
+            name="aligned_subtomogram",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -116,40 +111,68 @@ FROM_REFINE = ParticleMap(
     ],
     coordinate_transformations=[
         Scale(
-            type="scale",
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
+            type="scale",
             scale=[8.1],
         ),
-        Affine(
-            type="affine",
-            name="Alignment relative to parent tomogram",
+        Sequence(
+            name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
-            output="Alignment relative to parent tomogram",
-            affine=[
-                [0.9910488295477008, -0.13337511157340148, 0.005770360899859925],
-                [-0.133499618837432, -0.9900355054638975, 0.04480568815569209],
-                [-0.00026310148668653435, -0.04517496578446365, -0.9989790554581112],
+            output="aligned_subtomogram",
+            type="sequence",
+            sequence=[
+                Affine(
+                    name="Alignment relative to parent tomogram",
+                    input="image_pixel_size",
+                    output="Alignment relative to parent tomogram",
+                    type="affine",
+                    affine=[
+                        [
+                            0.9910488295477008,
+                            -0.13337511157340148,
+                            0.005770360899859925,
+                        ],
+                        [-0.133499618837432, -0.9900355054638975, 0.04480568815569209],
+                        [
+                            -0.00026310148668653435,
+                            -0.04517496578446365,
+                            -0.9989790554581112,
+                        ],
+                    ],
+                ),
+                Translation(
+                    name="Averaging translation",
+                    input="Alignment relative to parent tomogram",
+                    output="Averaging translation",
+                    type="translation",
+                    translation=[
+                        -4.658004938271605,
+                        -4.658004938271605,
+                        2.1702444444444446,
+                    ],
+                ),
+                Affine(
+                    name="Averaging alignment",
+                    input="Averaging translation",
+                    output=None,
+                    type="affine",
+                    affine=[
+                        [
+                            -0.10251085961280204,
+                            0.057973834532939375,
+                            0.9930410657022155,
+                        ],
+                        [-0.08628111017328001, 0.994019574957615, -0.06693769213491753],
+                        [
+                            -0.9909828927326196,
+                            -0.09254252595769173,
+                            -0.09689575429635322,
+                        ],
+                    ],
+                ),
             ],
-        ),
-        Affine(
-            type="affine",
-            name="Averaging alignment",
-            input="Averaging translation",
-            output="Alignment for averaging",
-            affine=[
-                [-0.10251085961280204, 0.057973834532939375, 0.9930410657022155],
-                [-0.08628111017328001, 0.994019574957615, -0.06693769213491753],
-                [-0.9909828927326196, -0.09254252595769173, -0.09689575429635322],
-            ],
-        ),
-        Translation(
-            type="translation",
-            name="Averaging translation",
-            input="Alignment relative to parent tomogram",
-            output="Averaging translation",
-            translation=[-37.72984, -37.72984, 17.57898],
         ),
     ],
     path="000001@Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
@@ -223,24 +246,19 @@ FROM_REC = ParticleMap(
             name="Averaging translation",
             axes=[
                 Axis(
-                    name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates x axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
                 Axis(
-                    name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
-                    axis_type=None,
-                ),
-                Axis(
-                    name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates y axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
             ],
         ),
         CoordinateSystem(
-            name="Averaging alignment",
+            name="aligned_subtomogram",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -262,44 +280,69 @@ FROM_REC = ParticleMap(
     ],
     coordinate_transformations=[
         Scale(
-            type="scale",
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
+            type="scale",
             scale=[1.35],
         ),
-        Affine(
-            type="affine",
-            name="Alignment relative to parent tomogram",
+        Sequence(
+            name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
-            output="Alignment relative to parent tomogram",
-            affine=[
-                [0.13092364625824407, -0.9698575059870079, -0.20551257122401773],
-                [-0.9909367229741296, -0.12173608334852255, -0.056786768461101464],
-                [0.030056778133049328, 0.21108468464486557, -0.977005550647814],
+            output="aligned_subtomogram",
+            type="sequence",
+            sequence=[
+                Affine(
+                    name="Alignment relative to parent tomogram",
+                    input="image_pixel_size",
+                    output="Alignment relative to parent tomogram",
+                    type="affine",
+                    affine=[
+                        [
+                            0.13092364625824407,
+                            -0.9698575059870079,
+                            -0.20551257122401773,
+                        ],
+                        [
+                            -0.9909367229741296,
+                            -0.12173608334852255,
+                            -0.056786768461101464,
+                        ],
+                        [0.030056778133049328, 0.21108468464486557, -0.977005550647814],
+                    ],
+                ),
+                Translation(
+                    name="Averaging translation",
+                    input="Alignment relative to parent tomogram",
+                    output="Averaging translation",
+                    type="translation",
+                    translation=[0.0, 0.0, 0.0],
+                ),
+                Affine(
+                    name="Averaging alignment",
+                    input="Averaging translation",
+                    output=None,
+                    type="affine",
+                    affine=[
+                        [
+                            -0.12565781272105925,
+                            -0.11642509927386767,
+                            0.9852184074413294,
+                        ],
+                        [-0.03202850847922693, 0.9930484030505851, 0.11326536912613247],
+                        [
+                            -0.991556498010454,
+                            -0.017322397575191877,
+                            -0.12851321253276526,
+                        ],
+                    ],
+                ),
             ],
-        ),
-        Affine(
-            type="affine",
-            name="Averaging alignment",
-            input="Averaging translation",
-            output="Alignment for averaging",
-            affine=[
-                [-0.12565781272105925, -0.11642509927386767, 0.9852184074413294],
-                [-0.03202850847922693, 0.9930484030505851, 0.11326536912613247],
-                [-0.991556498010454, -0.017322397575191877, -0.12851321253276526],
-            ],
-        ),
-        Translation(
-            type="translation",
-            name="Averaging translation",
-            input="Alignment relative to parent tomogram",
-            output="Averaging translation",
-            translation=[0.0, 0.0, 0.0],
         ),
     ],
     path="000012@Extract/job020/Subtomograms/TS_01/12_stack2d.mrcs",
 )
+
 FROM_PP = ParticleMap(
     width=127,
     height=127,
@@ -369,24 +412,19 @@ FROM_PP = ParticleMap(
             name="Averaging translation",
             axes=[
                 Axis(
-                    name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates x axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
                 Axis(
-                    name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
-                    axis_type=None,
-                ),
-                Axis(
-                    name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    name="logical coordinates y axis",
+                    axis_unit="pixel/voxel",
                     axis_type=None,
                 ),
             ],
         ),
         CoordinateSystem(
-            name="Averaging alignment",
+            name="aligned_subtomogram",
             axes=[
                 Axis(
                     name="physical coordinates x axis",
@@ -408,40 +446,68 @@ FROM_PP = ParticleMap(
     ],
     coordinate_transformations=[
         Scale(
-            type="scale",
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
+            type="scale",
             scale=[1.35],
         ),
-        Affine(
-            type="affine",
-            name="Alignment relative to parent tomogram",
+        Sequence(
+            name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
-            output="Alignment relative to parent tomogram",
-            affine=[
-                [0.13092364625824407, -0.9698575059870079, -0.20551257122401773],
-                [-0.9909367229741296, -0.12173608334852255, -0.056786768461101464],
-                [0.030056778133049328, 0.21108468464486557, -0.977005550647814],
+            output="aligned_subtomogram",
+            type="sequence",
+            sequence=[
+                Affine(
+                    name="Alignment relative to parent tomogram",
+                    input="image_pixel_size",
+                    output="Alignment relative to parent tomogram",
+                    type="affine",
+                    affine=[
+                        [
+                            0.13092364625824407,
+                            -0.9698575059870079,
+                            -0.20551257122401773,
+                        ],
+                        [
+                            -0.9909367229741296,
+                            -0.12173608334852255,
+                            -0.056786768461101464,
+                        ],
+                        [0.030056778133049328, 0.21108468464486557, -0.977005550647814],
+                    ],
+                ),
+                Translation(
+                    name="Averaging translation",
+                    input="Alignment relative to parent tomogram",
+                    output="Averaging translation",
+                    type="translation",
+                    translation=[
+                        0.20488592592592592,
+                        -0.06661481481481481,
+                        -0.06661481481481481,
+                    ],
+                ),
+                Affine(
+                    name="Averaging alignment",
+                    input="Averaging translation",
+                    output=None,
+                    type="affine",
+                    affine=[
+                        [
+                            -0.12859958749903055,
+                            -0.08704297677291388,
+                            0.9878692556657431,
+                        ],
+                        [-0.03642505354906922, 0.9958830256812498, 0.08300731674922938],
+                        [
+                            -0.9910274272536692,
+                            -0.025308483843751572,
+                            -0.131240691389919,
+                        ],
+                    ],
+                ),
             ],
-        ),
-        Affine(
-            type="affine",
-            name="Averaging alignment",
-            input="Averaging translation",
-            output="Alignment for averaging",
-            affine=[
-                [-0.12859958749903055, -0.08704297677291388, 0.9878692556657431],
-                [-0.03642505354906922, 0.9958830256812498, 0.08300731674922938],
-                [-0.9910274272536692, -0.025308483843751572, -0.131240691389919],
-            ],
-        ),
-        Translation(
-            type="translation",
-            name="Averaging translation",
-            input="Alignment relative to parent tomogram",
-            output="Averaging translation",
-            translation=[0.276596, -0.08993, -0.08993],
         ),
     ],
     path="000012@Extract/job041/Subtomograms/TS_01/12_stack2d.mrcs",

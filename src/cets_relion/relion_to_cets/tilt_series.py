@@ -19,12 +19,13 @@ from gemmi import cif
 
 from cets_relion.math_utils import rotation_to_matrix_3d
 from tmp_transformations import (
-    align_projection_image_to_tomogram,
     logical_coords,
     physical_coords,
     IMAGE_PIXEL_SIZE_COORDS,
     IMAGE_PIXEL_SIZE_XFROM,
-    BASE_LOGICAL_COORDS_2D,
+    ALIGN_PROJECTION_IMAGE_COORDS,
+    ALIGN_PROJECTION_IMAGE_XFROM,
+    BASE_LOGICAL_COORDS_3D,
 )
 
 logger = getLogger(__name__)
@@ -202,8 +203,8 @@ class RelionTiltSeriesStarfile(object):
                 width=x_size,
                 height=y_size,
                 coordinate_systems=[
-                    logical_coords(dim=2),
-                    physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=2),
+                    logical_coords(dim=3),
+                    physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=3),
                 ],
                 nominal_tilt_angle=nom_tilt,
                 ctf_metadata=ctf,
@@ -219,7 +220,7 @@ class RelionTiltSeriesStarfile(object):
             apix_dict: Dict[str, float] = {x[0]: float(x[1]) for x in apix_data}
             scaling_xform = Scale(
                 name=IMAGE_PIXEL_SIZE_XFROM,
-                input=BASE_LOGICAL_COORDS_2D,
+                input=BASE_LOGICAL_COORDS_3D,
                 output=IMAGE_PIXEL_SIZE_COORDS,
                 scale=[apix_dict[ts_name]],
             )
@@ -266,8 +267,14 @@ class RelionTiltSeriesStarfile(object):
                 )
                 ay_coord_sys = logical_coords("alignment y tilt")
                 cets_obj.coordinate_systems.append(ay_coord_sys)
-                alignment_xform, alignment_coords = align_projection_image_to_tomogram(
-                    transformation=Sequence(sequence=[z_affine, y_affine, x_affine])
+                alignment_xform = Sequence(
+                    sequence=[z_affine, y_affine, x_affine],
+                    input=BASE_LOGICAL_COORDS_3D,
+                    output=ALIGN_PROJECTION_IMAGE_COORDS,
+                    name=ALIGN_PROJECTION_IMAGE_XFROM,
+                )
+                alignment_coords = logical_coords(
+                    name=ALIGN_PROJECTION_IMAGE_COORDS, dim=3
                 )
                 cets_obj.coordinate_transformations.append(alignment_xform)
                 cets_obj.coordinate_systems.append(alignment_coords)
