@@ -168,27 +168,29 @@ class PipelineReaderTests(CetsRelionTest):
 
     def test_all_parent_files(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        res = rp.get_all_parent_files("Denoise/job008/tomograms.star")
+        res = sorted(rp.get_all_parent_files("Denoise/job008/tomograms.star"))
         assert res == [
-            "Import/job001/tilt_series.star",
-            "MotionCorr/job002/corrected_tilt_series.star",
+            "AlignTiltSeries/job005/aligned_tilt_series.star",
             "CtfFind/job003/tilt_series_ctf.star",
             "ExcludeTiltImages/job004/selected_tilt_series.star",
-            "AlignTiltSeries/job005/aligned_tilt_series.star",
+            "Import/job001/tilt_series.star",
+            "MotionCorr/job002/corrected_tilt_series.star",
             "Tomograms/job006/tomograms.star",
         ]
 
     def test_all_child_files(self):
         rp = RelionPipeline(self.test_data / "pipelines/short_pipeline.star")
-        res = rp.get_all_child_files("MotionCorr/job002/corrected_tilt_series.star")
+        res = sorted(
+            rp.get_all_child_files("MotionCorr/job002/corrected_tilt_series.star")
+        )
         assert res == [
-            "CtfFind/job003/tilt_series_ctf.star",
-            "CtfFind/job003/logfile.pdf",
-            "ExcludeTiltImages/job004/selected_tilt_series.star",
             "AlignTiltSeries/job005/aligned_tilt_series.star",
-            "Tomograms/job006/tomograms.star",
+            "CtfFind/job003/logfile.pdf",
+            "CtfFind/job003/tilt_series_ctf.star",
             "Denoise/job007/tomograms.star",
             "Denoise/job008/tomograms.star",
+            "ExcludeTiltImages/job004/selected_tilt_series.star",
+            "Tomograms/job006/tomograms.star",
         ]
 
     def test_levels(self):

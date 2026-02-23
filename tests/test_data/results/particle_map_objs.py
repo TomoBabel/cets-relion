@@ -114,20 +114,17 @@ FROM_REFINE = ParticleMap(
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
-            type="scale",
             scale=[8.1],
         ),
         Sequence(
             name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
             output="aligned_subtomogram",
-            type="sequence",
             sequence=[
                 Affine(
                     name="Alignment relative to parent tomogram",
                     input="image_pixel_size",
                     output="Alignment relative to parent tomogram",
-                    type="affine",
                     affine=[
                         [
                             0.9910488295477008,
@@ -146,7 +143,6 @@ FROM_REFINE = ParticleMap(
                     name="Averaging translation",
                     input="Alignment relative to parent tomogram",
                     output="Averaging translation",
-                    type="translation",
                     translation=[
                         -4.658004938271605,
                         -4.658004938271605,
@@ -157,7 +153,6 @@ FROM_REFINE = ParticleMap(
                     name="Averaging alignment",
                     input="Averaging translation",
                     output=None,
-                    type="affine",
                     affine=[
                         [
                             -0.10251085961280204,
@@ -283,20 +278,17 @@ FROM_REC = ParticleMap(
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
-            type="scale",
             scale=[1.35],
         ),
         Sequence(
             name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
             output="aligned_subtomogram",
-            type="sequence",
             sequence=[
                 Affine(
                     name="Alignment relative to parent tomogram",
                     input="image_pixel_size",
                     output="Alignment relative to parent tomogram",
-                    type="affine",
                     affine=[
                         [
                             0.13092364625824407,
@@ -315,14 +307,12 @@ FROM_REC = ParticleMap(
                     name="Averaging translation",
                     input="Alignment relative to parent tomogram",
                     output="Averaging translation",
-                    type="translation",
                     translation=[0.0, 0.0, 0.0],
                 ),
                 Affine(
                     name="Averaging alignment",
                     input="Averaging translation",
                     output=None,
-                    type="affine",
                     affine=[
                         [
                             -0.12565781272105925,
@@ -449,20 +439,17 @@ FROM_PP = ParticleMap(
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
-            type="scale",
             scale=[1.35],
         ),
         Sequence(
             name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
             output="aligned_subtomogram",
-            type="sequence",
             sequence=[
                 Affine(
                     name="Alignment relative to parent tomogram",
                     input="image_pixel_size",
                     output="Alignment relative to parent tomogram",
-                    type="affine",
                     affine=[
                         [
                             0.13092364625824407,
@@ -481,7 +468,6 @@ FROM_PP = ParticleMap(
                     name="Averaging translation",
                     input="Alignment relative to parent tomogram",
                     output="Averaging translation",
-                    type="translation",
                     translation=[
                         0.20488592592592592,
                         -0.06661481481481481,
@@ -492,7 +478,6 @@ FROM_PP = ParticleMap(
                     name="Averaging alignment",
                     input="Averaging translation",
                     output=None,
-                    type="affine",
                     affine=[
                         [
                             -0.12859958749903055,
@@ -619,34 +604,29 @@ TS_01_1 = {
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
-            type="scale",
             scale=[8.1],
         ),
         Sequence(
             name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
             output="aligned_subtomogram",
-            type="sequence",
             sequence=[
                 Affine(
                     name="Alignment relative to parent tomogram",
                     input="image_pixel_size",
                     output="Alignment relative to parent tomogram",
-                    type="affine",
                     affine=[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]],
                 ),
                 Translation(
                     name="Averaging translation",
                     input="Alignment relative to parent tomogram",
                     output="Averaging translation",
-                    type="translation",
                     translation=[0.0, 0.0, 0.0],
                 ),
                 Affine(
                     name="Averaging alignment",
                     input="Averaging translation",
                     output=None,
-                    type="affine",
                     affine=[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]],
                 ),
             ],

@@ -38,11 +38,12 @@ class TomogramsTests(CetsRelionTest):
         self.setup_dirs(jobs_to=8)
         tomos = RelionTomosStarfile(file_name="Denoise/job008/tomograms.star")
         assert tomos.get_cets_tomo("TS_01") == Tomogram(
+            id="TS_01",
             width=4000,
             height=4000,
             depth=2000,
             coordinate_systems=[logical_coords()],
-            coordinate_transformations=None,
+            coordinate_transformations=[],
             path="Denoise/job008/tomograms/rec_TS_01.mrc",
         )
 
