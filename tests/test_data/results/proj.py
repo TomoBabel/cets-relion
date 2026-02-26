@@ -66,7 +66,7 @@ RESULT = [
             defocus_u=38855.828125,
             defocus_v=38750.828125,
             defocus_angle=35.154533,
-            defocus_handedness=-1,
+            # defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_000_0_0.mrc",
         section=0,

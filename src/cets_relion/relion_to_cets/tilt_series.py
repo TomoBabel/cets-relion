@@ -18,14 +18,16 @@ from gemmi import cif
 
 
 from cets_relion.math_utils import rotation_to_matrix_3d
-from tmp_transformations import (
+from tmp_transformations import (  #  will be replaced when CETS models updated
     logical_coords,
     physical_coords,
+)
+from tmp_transformations import BASE_LOGICAL_COORDS_3D
+from cets_relion.relion_to_cets.transformation_names import (
     IMAGE_PIXEL_SIZE_COORDS,
     IMAGE_PIXEL_SIZE_XFROM,
     ALIGN_PROJECTION_IMAGE_COORDS,
     ALIGN_PROJECTION_IMAGE_XFROM,
-    BASE_LOGICAL_COORDS_3D,
 )
 
 logger = getLogger(__name__)
@@ -272,6 +274,7 @@ class RelionTiltSeriesStarfile(object):
                     input=BASE_LOGICAL_COORDS_3D,
                     output=ALIGN_PROJECTION_IMAGE_COORDS,
                     name=ALIGN_PROJECTION_IMAGE_XFROM,
+                    target=self.name,
                 )
                 alignment_coords = logical_coords(
                     name=ALIGN_PROJECTION_IMAGE_COORDS, dim=3

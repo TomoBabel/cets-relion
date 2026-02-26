@@ -22,6 +22,8 @@ from tmp_transformations import (
     BASE_LOGICAL_COORDS_3D,
     logical_coords,
     physical_coords,
+)
+from cets_relion.relion_to_cets.transformation_names import (
     IMAGE_PIXEL_SIZE_COORDS,
     ALIGN_SUBTOMOGRAM_COORDS,
     ALIGN_SUBTOMOGRAM_XFROM,

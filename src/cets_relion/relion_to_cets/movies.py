@@ -144,12 +144,13 @@ class RelionMoviesStarFile(object):
                 )
 
             # make a MovieStack for the movie
-            movie_stacks.append(MovieStack(images=frames, path=movie_name))
+            movie_stacks.append(MovieStack(id=ts_name, images=frames, path=movie_name))
 
         # return a CETS MovieStackSeries for the tilt series
         return MovieStackSeries(
             # name=ts_name,   # ToDo: Add this field to model?
-            stacks=movie_stacks
+            id=ts_name,
+            stacks=movie_stacks,
         )
 
     def get_all_tomo_names(self) -> List[str]:

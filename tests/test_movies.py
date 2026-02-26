@@ -102,7 +102,6 @@ class RelionCetsMoviesTests(CetsRelionTest):
             ],
             coordinate_transformations=[
                 Scale(
-                    type="scale",
                     name="image_pixel_size",
                     input="base_logical_coordinates_2d",
                     output="image_pixel_size",
@@ -154,7 +153,6 @@ class RelionCetsMoviesTests(CetsRelionTest):
             ],
             coordinate_transformations=[
                 Scale(
-                    type="scale",
                     name="image_pixel_size",
                     input="base_logical_coordinates_2d",
                     output="image_pixel_size",
@@ -206,7 +204,6 @@ class RelionCetsMoviesTests(CetsRelionTest):
             ],
             coordinate_transformations=[
                 Scale(
-                    type="scale",
                     name="image_pixel_size",
                     input="base_logical_coordinates_2d",
                     output="image_pixel_size",
@@ -268,7 +265,6 @@ class RelionCetsMoviesTests(CetsRelionTest):
             ],
             coordinate_transformations=[
                 Scale(
-                    type="scale",
                     name="image_pixel_size",
                     input="base_logical_coordinates_2d",
                     output="image_pixel_size",
@@ -318,7 +314,6 @@ class RelionCetsMoviesTests(CetsRelionTest):
             ],
             coordinate_transformations=[
                 Scale(
-                    type="scale",
                     name="image_pixel_size",
                     input="base_logical_coordinates_2d",
                     output="image_pixel_size",
@@ -368,7 +363,6 @@ class RelionCetsMoviesTests(CetsRelionTest):
             ],
             coordinate_transformations=[
                 Scale(
-                    type="scale",
                     name="image_pixel_size",
                     input="base_logical_coordinates_2d",
                     output="image_pixel_size",

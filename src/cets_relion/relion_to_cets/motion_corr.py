@@ -14,12 +14,14 @@ from cets_relion.math_utils import rotation_to_matrix_2d, flip_matrix_2d
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
 from cets_relion.job_utils import joboptions_from_job
 from tmp_transformations import (
-    ALIGN_CALIBRATION_IMAGE_XFROM,
-    ALIGN_CALIBRATION_IMAGE_COORDS,
     Flip2D,
     Rotation2D,
     logical_coords,
     BASE_LOGICAL_COORDS_2D,
+)
+from cets_relion.relion_to_cets.transformation_names import (
+    ALIGN_CALIBRATION_IMAGE_XFROM,
+    ALIGN_CALIBRATION_IMAGE_COORDS,
 )
 
 
