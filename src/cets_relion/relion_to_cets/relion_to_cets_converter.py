@@ -165,6 +165,7 @@ class RelionCetsConverter:
             if opt_values:
                 for key, val in opt_values.items():
                     setattr(self, key, [val])
+
         # of one is not in terminal job see if any associated with averages
         elif self.averages:
             opt_sets = [x.opt_set for x in self.averages]

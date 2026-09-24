@@ -4,12 +4,14 @@ from typing import Union, Tuple, List, Optional
 
 from cets_data_model.models.models import (
     PointSet3D,
+    SphereSet,
     ConfiguredBaseModel,
     ParticleMap,
     Affine,
     Translation,
     Scale,
     Sequence,
+    AnnotationType,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
@@ -28,15 +30,6 @@ from cets_relion.relion_to_cets.transformation_names import (
     ALIGN_SUBTOMOGRAM_COORDS,
     ALIGN_SUBTOMOGRAM_XFROM,
 )
-
-
-# ToDo: This class will probably be superseded by CETS objects in cets_data_model
-class Sphere(object):
-    """A sphere this is a temp annotation object until a CETS Sphere model is available"""
-
-    def __init__(self, origin: Tuple[float, float, float], radius: float):
-        self.origin = origin
-        self.radius = radius
 
 
 class RelionAnnotationFile(object):
@@ -74,7 +67,7 @@ class RelionSphereAnnotations(RelionAnnotationFile):
         """
         super().__init__(in_file)
 
-    def get_cets(self) -> list:
+    def get_cets(self) -> List[SphereSet]:
         # get the tomo name from the data rather than file name for robustness
         data = (
             cif.read_file(self.name)
@@ -90,19 +83,22 @@ class RelionSphereAnnotations(RelionAnnotationFile):
                 ],
             )
         )
-        if len(set([x[0] for x in list(data)])) != 1:
+        lines = list(data)
+        if len(set([x[0] for x in lines])) != 1:
             raise ValueError(
                 "Invalid sphere annotation file; should have exactly one name"
             )
-        spheres: List[Sphere] = []
-        for line in data:
-            spheres.append(
-                Sphere(
-                    origin=(float(line[1]), float(line[2]), float(line[3])),
-                    radius=line[4],
-                ),
+        origins = [[float(line[1]), float(line[2]), float(line[3])] for line in lines]
+        radii = [float(line[4]) for line in lines]
+        return [
+            SphereSet(
+                annotation_type=AnnotationType.sphere_set,
+                origin3D=origins,
+                radii=radii,
+                coordinate_systems=[physical_coords(name="image_pixel_size", dim=3)],
+                id=self.name,
             )
-        return spheres
+        ]
 
 
 class RelionCoordsStarFile(object):
@@ -149,6 +145,7 @@ class RelionCoordsStarFile(object):
             if part[0] == tomo_name:
                 coords.append([float(x) for x in [part[1], part[2], part[3]]])
         return PointSet3D(
+            annotation_type=AnnotationType.point_set_3D,
             origin3D=coords,
             coordinate_systems=[physical_coords(name="image_pixel_size", dim=3)],
             id=self.name,
@@ -171,7 +168,7 @@ class RelionCoordsStarFile(object):
         Args:
             tomo_name (str): The name of the tomo
         Returns:
-            List[Union[Point, Sphere]]: The annotations
+            Optional[RelionAnnotationFile]: The annotation file object for this tomo
         """
         annotype = self.determine_annotation_type()
         if annotype is None or annotype == "particles":
@@ -287,8 +284,10 @@ class RelionParticlesStarFile(object):
                 name=ALIGN_SUBTOMOGRAM_XFROM,
             )
             final_coords = physical_coords(dim=3, name=ALIGN_SUBTOMOGRAM_COORDS)
-
-            dims = get_mrc_dims(part[11])
+            try:
+                dims = get_mrc_dims(part[11])
+            except FileNotFoundError:
+                dims = (0, 0, 0)
             cets_part = ParticleMap(
                 path=image_name,
                 width=dims[0],

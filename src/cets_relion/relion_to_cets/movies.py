@@ -108,7 +108,10 @@ class RelionMoviesStarFile(object):
         # process each movie
         for row_n, row in enumerate(cifdata):
             movie_name = cif.as_string(row[0])
-            width, height = get_image_dims(movie_name)[:2]
+            try:
+                width, height = get_image_dims(movie_name)[:2]
+            except ValueError:
+                width, height = 0, 0
 
             # find the ctf data for this move - applies for all frames
             cets_ctf: Optional[CTFMetadata] = all_ctfs.get(movie_name)
@@ -132,7 +135,7 @@ class RelionMoviesStarFile(object):
                 frames.append(
                     MovieFrame(
                         path=f"{frame_n}@{movie_name}",
-                        section=str(n),
+                        section=n,
                         nominal_tilt_angle=float(row[2]),
                         accumulated_dose=frame_dose + float(row[4]),
                         ctf_metadata=cets_ctf,
@@ -144,12 +147,13 @@ class RelionMoviesStarFile(object):
                 )
 
             # make a MovieStack for the movie
-            movie_stacks.append(MovieStack(id=ts_name, images=frames, path=movie_name))
+            movie_stacks.append(
+                MovieStack(id=movie_name, images=frames, path=movie_name)
+            )
 
         # return a CETS MovieStackSeries for the tilt series
         return MovieStackSeries(
-            # name=ts_name,   # ToDo: Add this field to model?
-            id=ts_name,
+            id=ts_name + "_movie_stack_set",
             stacks=movie_stacks,
         )
 

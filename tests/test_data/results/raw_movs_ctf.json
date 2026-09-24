@@ -1,10 +1,10 @@
 {
   "movie_stacks": [
     {
-      "id": "TS_01",
+      "id": "TS_01_movie_stack_set",
       "stacks": [
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_000_0.0.mrc",
           "path": "frames/TS_01_000_0.0.mrc",
           "images": [
             {
@@ -482,7 +482,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_001_3.0.mrc",
           "path": "frames/TS_01_001_3.0.mrc",
           "images": [
             {
@@ -960,7 +960,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_002_-3.0.mrc",
           "path": "frames/TS_01_002_-3.0.mrc",
           "images": [
             {
@@ -1438,7 +1438,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_003_-6.0.mrc",
           "path": "frames/TS_01_003_-6.0.mrc",
           "images": [
             {
@@ -1916,7 +1916,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_004_6.0.mrc",
           "path": "frames/TS_01_004_6.0.mrc",
           "images": [
             {
@@ -2394,7 +2394,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_005_9.0.mrc",
           "path": "frames/TS_01_005_9.0.mrc",
           "images": [
             {
@@ -2872,7 +2872,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_006_-9.0.mrc",
           "path": "frames/TS_01_006_-9.0.mrc",
           "images": [
             {
@@ -3350,7 +3350,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_007_-12.0.mrc",
           "path": "frames/TS_01_007_-12.0.mrc",
           "images": [
             {
@@ -3828,7 +3828,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_008_12.0.mrc",
           "path": "frames/TS_01_008_12.0.mrc",
           "images": [
             {
@@ -4306,7 +4306,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_009_15.0.mrc",
           "path": "frames/TS_01_009_15.0.mrc",
           "images": [
             {
@@ -4784,7 +4784,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_010_-15.0.mrc",
           "path": "frames/TS_01_010_-15.0.mrc",
           "images": [
             {
@@ -5262,7 +5262,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_011_-18.0.mrc",
           "path": "frames/TS_01_011_-18.0.mrc",
           "images": [
             {
@@ -5740,7 +5740,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_012_18.0.mrc",
           "path": "frames/TS_01_012_18.0.mrc",
           "images": [
             {
@@ -6218,7 +6218,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_013_21.0.mrc",
           "path": "frames/TS_01_013_21.0.mrc",
           "images": [
             {
@@ -6696,7 +6696,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_014_-21.0.mrc",
           "path": "frames/TS_01_014_-21.0.mrc",
           "images": [
             {
@@ -7174,7 +7174,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_015_-24.0.mrc",
           "path": "frames/TS_01_015_-24.0.mrc",
           "images": [
             {
@@ -7652,7 +7652,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_016_24.0.mrc",
           "path": "frames/TS_01_016_24.0.mrc",
           "images": [
             {
@@ -8130,7 +8130,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_017_27.0.mrc",
           "path": "frames/TS_01_017_27.0.mrc",
           "images": [
             {
@@ -8608,7 +8608,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_018_-27.0.mrc",
           "path": "frames/TS_01_018_-27.0.mrc",
           "images": [
             {
@@ -9086,7 +9086,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_019_-30.0.mrc",
           "path": "frames/TS_01_019_-30.0.mrc",
           "images": [
             {
@@ -9564,7 +9564,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_020_30.0.mrc",
           "path": "frames/TS_01_020_30.0.mrc",
           "images": [
             {
@@ -10042,7 +10042,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_021_33.0.mrc",
           "path": "frames/TS_01_021_33.0.mrc",
           "images": [
             {
@@ -10520,7 +10520,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_022_-33.0.mrc",
           "path": "frames/TS_01_022_-33.0.mrc",
           "images": [
             {
@@ -10998,7 +10998,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_023_-36.0.mrc",
           "path": "frames/TS_01_023_-36.0.mrc",
           "images": [
             {
@@ -11476,7 +11476,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_024_36.0.mrc",
           "path": "frames/TS_01_024_36.0.mrc",
           "images": [
             {
@@ -11954,7 +11954,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_025_39.0.mrc",
           "path": "frames/TS_01_025_39.0.mrc",
           "images": [
             {
@@ -12432,7 +12432,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_026_-39.0.mrc",
           "path": "frames/TS_01_026_-39.0.mrc",
           "images": [
             {
@@ -12910,7 +12910,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_027_-42.0.mrc",
           "path": "frames/TS_01_027_-42.0.mrc",
           "images": [
             {
@@ -13388,7 +13388,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_028_42.0.mrc",
           "path": "frames/TS_01_028_42.0.mrc",
           "images": [
             {
@@ -13866,7 +13866,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_029_45.0.mrc",
           "path": "frames/TS_01_029_45.0.mrc",
           "images": [
             {
@@ -14344,7 +14344,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_030_-45.0.mrc",
           "path": "frames/TS_01_030_-45.0.mrc",
           "images": [
             {
@@ -14822,7 +14822,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_031_-48.0.mrc",
           "path": "frames/TS_01_031_-48.0.mrc",
           "images": [
             {
@@ -15300,7 +15300,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_032_48.0.mrc",
           "path": "frames/TS_01_032_48.0.mrc",
           "images": [
             {
@@ -15778,7 +15778,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_033_51.0.mrc",
           "path": "frames/TS_01_033_51.0.mrc",
           "images": [
             {
@@ -16256,7 +16256,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_034_-51.0.mrc",
           "path": "frames/TS_01_034_-51.0.mrc",
           "images": [
             {
@@ -16734,7 +16734,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_035_-54.0.mrc",
           "path": "frames/TS_01_035_-54.0.mrc",
           "images": [
             {
@@ -17212,7 +17212,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_036_54.0.mrc",
           "path": "frames/TS_01_036_54.0.mrc",
           "images": [
             {
@@ -17690,7 +17690,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_037_57.0.mrc",
           "path": "frames/TS_01_037_57.0.mrc",
           "images": [
             {
@@ -18168,7 +18168,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_038_-57.0.mrc",
           "path": "frames/TS_01_038_-57.0.mrc",
           "images": [
             {
@@ -18646,7 +18646,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_039_-60.0.mrc",
           "path": "frames/TS_01_039_-60.0.mrc",
           "images": [
             {
@@ -19124,7 +19124,7 @@
           ]
         },
         {
-          "id": "TS_01",
+          "id": "frames/TS_01_040_60.0.mrc",
           "path": "frames/TS_01_040_60.0.mrc",
           "images": [
             {

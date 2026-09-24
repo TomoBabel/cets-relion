@@ -2,13 +2,13 @@ from tests.test_data.results.particle_map_objs import TS_01_1
 from tests.testing_tools import CetsRelionTest
 from cets_relion.relion_to_cets.particle_coords import (
     RelionCoordsStarFile,
-    Sphere,
     RelionSphereAnnotations,
     RelionParticlesStarFile,
 )
 from tmp_transformations import physical_coords
 from pathlib import Path
 from pytest import fixture
+from cets_data_model.models.models import AnnotationType
 from cets_relion.relion_to_cets.transformation_names import IMAGE_PIXEL_SIZE_COORDS
 
 
@@ -47,11 +47,17 @@ class TestRelionParticleCoordsStarFile(CetsRelionTest):
         self.setup_dirs(9)
         sa = RelionSphereAnnotations("Picks/job009/annotations/TS_01_spheres.star")
         cets = sa.get_cets()
-        assert len(cets) == 9
-        assert cets[0].__dict__ == {
-            "origin": (444.970917, 185.166, 208.641861),
-            "radius": "43.955040",
-        }
+        assert len(cets) == 1
+        sphere_set = cets[0]
+        assert sphere_set.annotation_type == AnnotationType.sphere_set
+        assert sphere_set.id == sa.name
+        assert len(sphere_set.origin3D) == 9
+        assert len(sphere_set.radii) == 9
+        assert sphere_set.origin3D[0] == [444.970917, 185.166, 208.641861]
+        assert sphere_set.radii[0] == 43.955040
+        assert sphere_set.coordinate_systems == [
+            physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=3)
+        ]
 
     def test_get_secondary_annotations_spheres(self):
         # points have no secondary annotations
@@ -108,10 +114,3 @@ class TestRelionParticlesStarFile(CetsRelionTest):
         self.setup_dirs(10)
         cf = RelionParticlesStarFile("Extract/job010/particles.star")
         assert cf.get_all_tomo_names() == ["TS_01", "TS_03", "TS_43", "TS_45", "TS_54"]
-
-
-# ToDo: This is a placeholder class that will be replaced with a CETS model later
-def test_instantiate_sphere():
-    sp = Sphere((1.0, 2.0, 3.0), 10.0)
-    assert sp.origin == (1.0, 2.0, 3.0)
-    assert sp.radius == 10.0

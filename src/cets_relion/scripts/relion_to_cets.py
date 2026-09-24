@@ -1,6 +1,6 @@
 import argparse
 import warnings
-from typing import List
+from typing import List, Optional
 from pathlib import Path
 from cets_data_model.models.models import (
     Region,
@@ -16,7 +16,7 @@ from cets_relion.relion_to_cets.relion_to_cets_converter import RelionCetsConver
 
 
 def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="RELION-CETS C")
+    parser = argparse.ArgumentParser(description="RELION-CETS Converter")
     parser.add_argument(
         "--job",
         "-j",
@@ -29,13 +29,6 @@ def parse_args(argv=None):
         nargs="+",
         required=False,
         help="Tomograms to operate on. If empty, all tomos will be used",
-    )
-    parser.add_argument(
-        "--region_name",
-        "-r",
-        required=False,
-        help="Name to give the Region in the CETS data",
-        default=None,
     )
     parser.add_argument(
         "--dataset_name",
@@ -57,7 +50,7 @@ def parse_args(argv=None):
 
 def get_raw_movies(
     con: RelionCetsConverter, tomo_name: str
-) -> List[MovieStackCollection]:
+) -> Optional[MovieStackCollection]:
     movies = []
     for movie_set in con.movies:
         movies.append(movie_set.make_movie_cets_for_tilt_series(tomo_name))
@@ -69,9 +62,9 @@ def get_raw_movies(
             defect_file=con.find_defect_file(tomo_name),
             movie_stacks=clean_movies,
         )
-        return [mov_stack_col]
+        return mov_stack_col
     else:
-        return []
+        return None
 
 
 def get_tilt_series(con: RelionCetsConverter, tomo_name: str) -> List[TiltSeries]:
@@ -90,7 +83,7 @@ def get_tilt_series(con: RelionCetsConverter, tomo_name: str) -> List[TiltSeries
     if not all_tilt_series:
         for con_mocorr in con.mocorr:
             all_tilt_series.extend(con_mocorr.get_cets_tilt_images(tomo_name))
-    return [TiltSeries(id=tomo_name, images=all_tilt_series)]
+    return [TiltSeries(id=tomo_name + "_tilt_series", images=all_tilt_series)]
 
 
 def get_tomos(con: RelionCetsConverter, tomo_name: str) -> List[Tomogram]:
@@ -130,11 +123,14 @@ def main(argv=None):
         tomos = con.get_all_tomo_names()
 
     for tomo_name in tomos:
-        # ToDo: Region needs a name field
         region = Region(
-            movie_stack_collections=[], tomograms=[], tilt_series=[], annotations=[]
+            id=tomo_name,
+            movie_stack_collection=None,
+            tomograms=[],
+            tilt_series=[],
+            annotations=[],
         )
-        region.movie_stack_collections = get_raw_movies(con, tomo_name)
+        region.movie_stack_collection = get_raw_movies(con, tomo_name)
         region.tilt_series = get_tilt_series(con, tomo_name)
         region.tomograms = get_tomos(con, tomo_name)
         region.annotations = get_coord_annotations(con, tomo_name)

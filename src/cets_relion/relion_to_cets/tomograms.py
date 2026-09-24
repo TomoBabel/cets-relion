@@ -80,7 +80,7 @@ class RelionTomosStarfile(object):
             raise ValueError("Couldn't get tomogram dimensions")
 
         return Tomogram(
-            id=tomogram_name,
+            id=tomogram_name + "_tomogram",
             path=tomo,
             coordinate_systems=[logical_coords()],
             height=dims[1],
