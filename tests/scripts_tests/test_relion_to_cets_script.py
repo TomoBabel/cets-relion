@@ -100,28 +100,3 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
             json.dump(ts[0].images[-1].model_dump(mode="json"), f, indent=2)
         assert ts[0].images[0].model_dump(mode="json") == CTF_0
         assert ts[0].images[-1].model_dump(mode="json") == CTF_40
-
-    # ToDo: Output of dumping transformation objects to JSON is not correct
-    #  fix before adding these tests
-
-    # @patch("cets_relion.tilt_series.get_mrc_dims")
-    # def test_get_tilt_series_from_aligned(self, mock_dims):
-    #     """First job type with alignments, 1 tilt image has been excluded"""
-    #     mock_dims.return_value = (2000, 2000, 8)
-    #     self.setup_dirs(5)
-    #     con = RelionCetsConverter("AlignTiltSeries/job005/")
-    #     ts = get_tilt_series(con, "TS_01")
-    #     assert len(ts) == 40
-    #     assert ts[0].model_dump(mode="json") == {}
-    #     assert ts[-1].model_dump(mode="json") == {}
-    #
-    # @patch("cets_relion.tilt_series.get_mrc_dims")
-    # def test_get_tilt_series_from_late_job(self, mock_dims):
-    #     """First job type with alignments, 1 tilt image has been excluded"""
-    #     mock_dims.return_value = (2000, 2000, 8)
-    #     self.setup_dirs(40)
-    #     con = RelionCetsConverter("Polish/job040/")
-    #     ts = get_tilt_series(con, "TS_01")
-    #     assert len(ts) == 40
-    #     assert ts[0].model_dump(mode="json") == {}
-    #     assert ts[-1].model_dump(mode="json") == {}
