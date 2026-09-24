@@ -499,9 +499,7 @@ FROM_PP = ParticleMap(
 )
 
 TS_01_1 = {
-    "width": 1,
-    "height": 2,
-    "depth": 3,
+    "coord_index": None,
     "coordinate_systems": [
         CoordinateSystem(
             name="base_logical_coordinates_3d",
@@ -601,29 +599,34 @@ TS_01_1 = {
     ],
     "coordinate_transformations": [
         Scale(
+            transformation_type="scale",
             name="Å/pix",
             input="base_logical_coordinates_3d",
             output="image_pixel_size",
             scale=[8.1],
         ),
         Sequence(
+            transformation_type="sequence",
             name="align_subtomogram_to_tomogram",
             input="image_pixel_size",
             output="aligned_subtomogram",
             sequence=[
                 Affine(
+                    transformation_type="affine",
                     name="Alignment relative to parent tomogram",
                     input="image_pixel_size",
                     output="Alignment relative to parent tomogram",
                     affine=[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]],
                 ),
                 Translation(
+                    transformation_type="translation",
                     name="Averaging translation",
                     input="Alignment relative to parent tomogram",
                     output="Averaging translation",
                     translation=[0.0, 0.0, 0.0],
                 ),
                 Affine(
+                    transformation_type="affine",
                     name="Averaging alignment",
                     input="Averaging translation",
                     output=None,
@@ -632,5 +635,10 @@ TS_01_1 = {
             ],
         ),
     ],
+    "depth": 3,
+    "height": 2,
     "path": "000001@Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
+    "source_annotation_id": None,
+    "source_region_id": None,
+    "width": 1,
 }

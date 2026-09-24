@@ -259,7 +259,7 @@
               "accumulated_dose": 3.0,
               "ctf_metadata": null,
               "path": "00008@frames/TS_01_000_0.0.mrc",
-              "section": "7"
+              "section": 7
             }
           ],
           "path": "frames/TS_01_000_0.0.mrc"

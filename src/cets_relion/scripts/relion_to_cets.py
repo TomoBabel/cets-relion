@@ -63,6 +63,7 @@ def get_raw_movies(
         movies.append(movie_set.make_movie_cets_for_tilt_series(tomo_name))
     clean_movies: List[MovieStackSeries] = [x for x in movies if x is not None]
     if movies:
+        print(con.__dict__)
         mov_stack_col = MovieStackCollection(
             gain_file=con.find_gain_file(tomo_name),
             defect_file=con.find_defect_file(tomo_name),
@@ -78,24 +79,18 @@ def get_tilt_series(con: RelionCetsConverter, tomo_name: str) -> List[TiltSeries
     # see if there is a tilt series entry in the converter
 
     for con_ts in con.tilt_series:
-        all_tilt_series.extend(con_ts.get_cets_projection_images(tomo_name))
+        all_tilt_series.extend(con_ts.get_cets_tilt_images(tomo_name))
 
     # if not try to use the ctf entry
     if not all_tilt_series:
         for con_ctf in con.ctf:
-            all_tilt_series.extend(con_ctf.get_cets_projection_images(tomo_name))
+            all_tilt_series.extend(con_ctf.get_cets_tilt_images(tomo_name))
 
     # if not finally try the motioncorr entry
     if not all_tilt_series:
         for con_mocorr in con.mocorr:
-            all_tilt_series.extend(con_mocorr.get_cets_projection_images(tomo_name))
-
-    return [
-        TiltSeries(
-            # name=tomo_name,  # ToDo: add this field to model
-            images=all_tilt_series
-        )
-    ]
+            all_tilt_series.extend(con_mocorr.get_cets_tilt_images(tomo_name))
+    return [TiltSeries(id=tomo_name, images=all_tilt_series)]
 
 
 def get_tomos(con: RelionCetsConverter, tomo_name: str) -> List[Tomogram]:

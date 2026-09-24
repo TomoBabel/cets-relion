@@ -7,11 +7,11 @@ from typing import List, Union, Optional, Dict
 
 from cets_data_model.models.models import (
     CTFMetadata,
-    ProjectionImage,
     Translation,
     Affine,
     Scale,
     Sequence,
+    TiltImage,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
@@ -151,8 +151,8 @@ class RelionTiltSeriesStarfile(object):
             dose_dict[img] = preexp + dose_rate
         return dose_dict
 
-    def get_cets_projection_images(self, ts_name: str) -> List[ProjectionImage]:
-        """Get cets ProjectionImage objects (merged motion corrected images) for a tilt
+    def get_cets_tilt_images(self, ts_name: str) -> List[TiltImage]:
+        """Get cets TiltImage objects (merged motion corrected images) for a tilt
         series
 
         ts_starfile (str): The starfile for the tilt series
@@ -160,7 +160,7 @@ class RelionTiltSeriesStarfile(object):
             each tilt angle image
 
         Returns:
-            List[ProjectionImage]: List of cets ProjectionImage objects
+            List[TiltImage]: List of cets TiltImage objects
         """
         tiltimgs_file = self.get_specific_tilt_series_star_file(ts_name)
         block = cif.read_file(str(tiltimgs_file)).find_block(ts_name)
@@ -199,9 +199,10 @@ class RelionTiltSeriesStarfile(object):
                 defocus_angle=defocus_angle,
                 # defocus_handedness=-1,
             )
-            cets_obj = ProjectionImage(
+            cets_obj = TiltImage(
+                id=micname,
                 path=micname,
-                section=str(n),
+                section=n,
                 width=x_size,
                 height=y_size,
                 coordinate_systems=[
@@ -274,7 +275,6 @@ class RelionTiltSeriesStarfile(object):
                     input=BASE_LOGICAL_COORDS_3D,
                     output=ALIGN_PROJECTION_IMAGE_COORDS,
                     name=ALIGN_PROJECTION_IMAGE_XFROM,
-                    target=self.name,
                 )
                 alignment_coords = logical_coords(
                     name=ALIGN_PROJECTION_IMAGE_COORDS, dim=3

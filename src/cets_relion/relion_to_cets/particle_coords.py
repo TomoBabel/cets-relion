@@ -151,7 +151,7 @@ class RelionCoordsStarFile(object):
         return PointSet3D(
             origin3D=coords,
             coordinate_systems=[physical_coords(name="image_pixel_size", dim=3)],
-            path=self.name,
+            id=self.name,
         )
 
     def determine_annotation_type(self):
@@ -259,7 +259,7 @@ class RelionParticlesStarFile(object):
 
             subtomo_affine = Affine(
                 name="Alignment relative to parent tomogram",
-                affine=list(relion_eulers_to_matrix(tomotilt, tomorot, tomopsi)),
+                affine=relion_eulers_to_matrix(tomotilt, tomorot, tomopsi),
                 input=IMAGE_PIXEL_SIZE_COORDS,
                 output="Alignment relative to parent tomogram",
             )
@@ -288,7 +288,7 @@ class RelionParticlesStarFile(object):
             )
             final_coords = physical_coords(dim=3, name=ALIGN_SUBTOMOGRAM_COORDS)
 
-            dims = get_mrc_dims(part[4])
+            dims = get_mrc_dims(part[11])
             cets_part = ParticleMap(
                 path=image_name,
                 width=dims[0],

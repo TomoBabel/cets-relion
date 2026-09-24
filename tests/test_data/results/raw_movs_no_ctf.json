@@ -17636,28 +17636,6 @@
       ]
     }
   ],
-  "gain_file": {
-    "width": 1000,
-    "height": 1000,
-    "coordinate_systems": [
-      {
-        "name": "base_logical_coordinates_2d",
-        "axes": [
-          {
-            "name": "logical coordinates x axis",
-            "axis_unit": "pixel/voxel",
-            "axis_type": null
-          },
-          {
-            "name": "logical coordinates y axis",
-            "axis_unit": "pixel/voxel",
-            "axis_type": null
-          }
-        ]
-      }
-    ],
-    "coordinate_transformations": [],
-    "path": "gain_reference.mrc"
-  },
+  "gain_file": null,
   "defect_file": null
 }

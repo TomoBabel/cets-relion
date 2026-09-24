@@ -1,5 +1,5 @@
 from cets_data_model.models.models import (
-    ProjectionImage,
+    TiltImage,
     CoordinateSystem,
     CTFMetadata,
     Axis,
@@ -10,7 +10,7 @@ from cets_data_model.models.models import (
 )
 
 RESULT = [
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -137,23 +137,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[34.845611, 108.499417],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -164,6 +168,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -174,6 +179,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -188,12 +194,15 @@ RESULT = [
             defocus_u=39527.78125,
             defocus_v=39418.410156,
             defocus_angle=44.527622,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_038_-57_0.mrc",
         section=0,
+        id="MotionCorr/job002/frames/TS_01_038_-57_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -320,23 +329,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[20.667906, 93.169012],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -347,6 +360,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -357,6 +371,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -371,12 +386,15 @@ RESULT = [
             defocus_u=38593.777344,
             defocus_v=38453.007812,
             defocus_angle=-77.46074,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_035_-54_0.mrc",
         section=1,
+        id="MotionCorr/job002/frames/TS_01_035_-54_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -503,23 +521,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[28.684076, 116.360156],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -530,6 +552,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -540,6 +563,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -554,12 +578,15 @@ RESULT = [
             defocus_u=39716.988281,
             defocus_v=39676.960938,
             defocus_angle=-89.50993,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_034_-51_0.mrc",
         section=2,
+        id="MotionCorr/job002/frames/TS_01_034_-51_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -686,23 +713,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[18.826563, 97.635815],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -713,6 +744,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -723,6 +755,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -737,12 +770,15 @@ RESULT = [
             defocus_u=40543.109375,
             defocus_v=40288.300781,
             defocus_angle=34.091747,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_031_-48_0.mrc",
         section=3,
+        id="MotionCorr/job002/frames/TS_01_031_-48_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -869,23 +905,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[29.472386, 116.098643],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -896,6 +936,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -906,6 +947,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -920,12 +962,15 @@ RESULT = [
             defocus_u=39621.261719,
             defocus_v=39378.523438,
             defocus_angle=-51.37516,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_030_-45_0.mrc",
         section=4,
+        id="MotionCorr/job002/frames/TS_01_030_-45_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -1052,23 +1097,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[19.003113, 94.890557],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -1079,6 +1128,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -1089,6 +1139,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -1103,12 +1154,15 @@ RESULT = [
             defocus_u=39632.832031,
             defocus_v=39503.171875,
             defocus_angle=-73.60011,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_027_-42_0.mrc",
         section=5,
+        id="MotionCorr/job002/frames/TS_01_027_-42_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -1235,23 +1289,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[21.761036, 116.891845],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -1262,6 +1320,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -1272,6 +1331,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -1286,12 +1346,15 @@ RESULT = [
             defocus_u=39656.90625,
             defocus_v=39248.902344,
             defocus_angle=44.287949,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_026_-39_0.mrc",
         section=6,
+        id="MotionCorr/job002/frames/TS_01_026_-39_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -1418,23 +1481,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[12.780535, 90.255066],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -1445,6 +1512,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -1455,6 +1523,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -1469,12 +1538,15 @@ RESULT = [
             defocus_u=39759.144531,
             defocus_v=39368.929688,
             defocus_angle=18.869625,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_023_-36_0.mrc",
         section=7,
+        id="MotionCorr/job002/frames/TS_01_023_-36_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -1601,23 +1673,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[17.908609, 112.196687],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -1628,6 +1704,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -1638,6 +1715,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -1652,12 +1730,15 @@ RESULT = [
             defocus_u=39546.019531,
             defocus_v=39414.261719,
             defocus_angle=-48.23753,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_022_-33_0.mrc",
         section=8,
+        id="MotionCorr/job002/frames/TS_01_022_-33_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -1784,23 +1865,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[6.62473, 83.144477],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -1811,6 +1896,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -1821,6 +1907,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -1835,12 +1922,15 @@ RESULT = [
             defocus_u=39621.554688,
             defocus_v=39219.816406,
             defocus_angle=25.755552,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_019_-30_0.mrc",
         section=9,
+        id="MotionCorr/job002/frames/TS_01_019_-30_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -1967,23 +2057,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[9.257857, 104.734463],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -1994,6 +2088,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -2004,6 +2099,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -2018,12 +2114,15 @@ RESULT = [
             defocus_u=39395.929688,
             defocus_v=38934.125,
             defocus_angle=70.461578,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_018_-27_0.mrc",
         section=10,
+        id="MotionCorr/job002/frames/TS_01_018_-27_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -2150,23 +2249,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[1.454121, 74.985005],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -2177,6 +2280,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -2187,6 +2291,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -2201,12 +2306,15 @@ RESULT = [
             defocus_u=39957.90625,
             defocus_v=39131.46875,
             defocus_angle=44.914368,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_015_-24_0.mrc",
         section=11,
+        id="MotionCorr/job002/frames/TS_01_015_-24_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -2333,23 +2441,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[8.57864, 100.746389],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -2360,6 +2472,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -2370,6 +2483,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -2384,12 +2498,15 @@ RESULT = [
             defocus_u=39191.355469,
             defocus_v=38752.570312,
             defocus_angle=41.521111,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_014_-21_0.mrc",
         section=12,
+        id="MotionCorr/job002/frames/TS_01_014_-21_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -2516,23 +2633,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[3.762442, 70.426216],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -2543,6 +2664,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -2553,6 +2675,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -2567,12 +2690,15 @@ RESULT = [
             defocus_u=39367.917969,
             defocus_v=38797.90625,
             defocus_angle=69.937973,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_011_-18_0.mrc",
         section=13,
+        id="MotionCorr/job002/frames/TS_01_011_-18_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -2699,23 +2825,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[7.969166, 77.680473],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -2726,6 +2856,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -2736,6 +2867,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -2750,12 +2882,15 @@ RESULT = [
             defocus_u=39371.125,
             defocus_v=39312.433594,
             defocus_angle=43.634537,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_010_-15_0.mrc",
         section=14,
+        id="MotionCorr/job002/frames/TS_01_010_-15_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -2882,23 +3017,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[3.958798, 71.251783],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -2909,6 +3048,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -2919,6 +3059,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -2933,12 +3074,15 @@ RESULT = [
             defocus_u=39587.886719,
             defocus_v=39267.863281,
             defocus_angle=16.908651,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_007_-12_0.mrc",
         section=15,
+        id="MotionCorr/job002/frames/TS_01_007_-12_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -3065,23 +3209,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[7.246304, 46.122795],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -3092,6 +3240,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -3102,6 +3251,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -3116,12 +3266,15 @@ RESULT = [
             defocus_u=39666.992188,
             defocus_v=38692.070312,
             defocus_angle=67.526459,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_006_-9_0.mrc",
         section=16,
+        id="MotionCorr/job002/frames/TS_01_006_-9_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -3248,23 +3401,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[4.056802, 43.530523],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -3275,6 +3432,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -3285,6 +3443,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -3299,12 +3458,15 @@ RESULT = [
             defocus_u=38916.207031,
             defocus_v=38578.90625,
             defocus_angle=-42.83319,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_003_-6_0.mrc",
         section=17,
+        id="MotionCorr/job002/frames/TS_01_003_-6_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -3431,23 +3593,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-0.664505, 14.789812],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -3458,6 +3624,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -3468,6 +3635,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -3482,12 +3650,15 @@ RESULT = [
             defocus_u=39039.273438,
             defocus_v=38788.375,
             defocus_angle=48.905102,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_002_-3_0.mrc",
         section=18,
+        id="MotionCorr/job002/frames/TS_01_002_-3_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -3614,23 +3785,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[0.610515, -9.180914],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -3641,12 +3816,14 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
                         affine=[[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -3661,12 +3838,15 @@ RESULT = [
             defocus_u=38855.828125,
             defocus_v=38750.828125,
             defocus_angle=35.154533,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_000_0_0.mrc",
         section=19,
+        id="MotionCorr/job002/frames/TS_01_000_0_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -3793,23 +3973,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-3.254469, -41.716951],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -3820,6 +4004,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -3830,6 +4015,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -3844,12 +4030,15 @@ RESULT = [
             defocus_u=39181.238281,
             defocus_v=39140.960938,
             defocus_angle=12.550397,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_001_3_0.mrc",
         section=20,
+        id="MotionCorr/job002/frames/TS_01_001_3_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -3976,23 +4165,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-7.638392, -65.149493],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -4003,6 +4196,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -4013,6 +4207,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -4027,12 +4222,15 @@ RESULT = [
             defocus_u=38871.554688,
             defocus_v=38659.703125,
             defocus_angle=-86.54452,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_004_6_0.mrc",
         section=21,
+        id="MotionCorr/job002/frames/TS_01_004_6_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -4159,23 +4357,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-8.105922, -58.018655],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -4186,6 +4388,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -4196,6 +4399,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -4210,12 +4414,15 @@ RESULT = [
             defocus_u=39463.386719,
             defocus_v=38568.289062,
             defocus_angle=40.258121,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_005_9_0.mrc",
         section=22,
+        id="MotionCorr/job002/frames/TS_01_005_9_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -4342,23 +4549,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-9.168774, -87.453127],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -4369,6 +4580,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -4379,6 +4591,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -4393,12 +4606,15 @@ RESULT = [
             defocus_u=38949.433594,
             defocus_v=38699.5625,
             defocus_angle=25.551586,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_008_12_0.mrc",
         section=23,
+        id="MotionCorr/job002/frames/TS_01_008_12_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -4525,23 +4741,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-11.018162, -74.036338],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -4552,6 +4772,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -4562,6 +4783,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -4576,12 +4798,15 @@ RESULT = [
             defocus_u=39014.972656,
             defocus_v=38768.765625,
             defocus_angle=-0.90581,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_009_15_0.mrc",
         section=24,
+        id="MotionCorr/job002/frames/TS_01_009_15_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -4708,23 +4933,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-15.055541, -105.101393],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -4735,6 +4964,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -4745,6 +4975,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -4759,12 +4990,15 @@ RESULT = [
             defocus_u=38690.386719,
             defocus_v=38564.035156,
             defocus_angle=5.383391,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_012_18_0.mrc",
         section=25,
+        id="MotionCorr/job002/frames/TS_01_012_18_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -4891,23 +5125,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-14.136312, -105.00574],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -4918,6 +5156,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -4928,6 +5167,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -4942,12 +5182,15 @@ RESULT = [
             defocus_u=39183.546875,
             defocus_v=38977.851562,
             defocus_angle=-75.17061,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_013_21_0.mrc",
         section=26,
+        id="MotionCorr/job002/frames/TS_01_013_21_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -5074,23 +5317,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-19.906444, -125.451695],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -5101,6 +5348,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -5111,6 +5359,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -5125,12 +5374,15 @@ RESULT = [
             defocus_u=39091.230469,
             defocus_v=38781.570312,
             defocus_angle=76.682976,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_016_24_0.mrc",
         section=27,
+        id="MotionCorr/job002/frames/TS_01_016_24_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -5257,23 +5509,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-15.166403, -130.853929],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -5284,6 +5540,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -5294,6 +5551,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -5308,12 +5566,15 @@ RESULT = [
             defocus_u=38935.335938,
             defocus_v=38806.46875,
             defocus_angle=-83.8278,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_017_27_0.mrc",
         section=28,
+        id="MotionCorr/job002/frames/TS_01_017_27_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -5440,23 +5701,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-24.585325, -142.198395],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -5467,6 +5732,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -5477,6 +5743,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -5491,12 +5758,15 @@ RESULT = [
             defocus_u=38910.875,
             defocus_v=38214.078125,
             defocus_angle=55.941147,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_020_30_0.mrc",
         section=29,
+        id="MotionCorr/job002/frames/TS_01_020_30_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -5623,23 +5893,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-20.100055, -128.847136],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -5650,6 +5924,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -5660,6 +5935,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -5674,12 +5950,15 @@ RESULT = [
             defocus_u=38949.035156,
             defocus_v=38796.992188,
             defocus_angle=45.229416,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_021_33_0.mrc",
         section=30,
+        id="MotionCorr/job002/frames/TS_01_021_33_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -5806,23 +6085,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-22.668676, -156.078011],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -5833,6 +6116,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -5843,6 +6127,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -5857,12 +6142,15 @@ RESULT = [
             defocus_u=38909.515625,
             defocus_v=38473.996094,
             defocus_angle=34.372036,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_024_36_0.mrc",
         section=31,
+        id="MotionCorr/job002/frames/TS_01_024_36_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -5989,23 +6277,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-8.901784, -138.030123],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -6016,6 +6308,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -6026,6 +6319,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -6040,12 +6334,15 @@ RESULT = [
             defocus_u=39229.929688,
             defocus_v=38722.871094,
             defocus_angle=40.212944,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_025_39_0.mrc",
         section=32,
+        id="MotionCorr/job002/frames/TS_01_025_39_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -6172,23 +6469,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-25.537779, -165.243161],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -6199,6 +6500,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -6209,6 +6511,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -6223,12 +6526,15 @@ RESULT = [
             defocus_u=38625.375,
             defocus_v=38329.550781,
             defocus_angle=38.231094,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_028_42_0.mrc",
         section=33,
+        id="MotionCorr/job002/frames/TS_01_028_42_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -6355,23 +6661,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-10.783477, -146.425472],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -6382,6 +6692,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -6392,6 +6703,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -6406,12 +6718,15 @@ RESULT = [
             defocus_u=38758.140625,
             defocus_v=38564.382812,
             defocus_angle=53.667973,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_029_45_0.mrc",
         section=34,
+        id="MotionCorr/job002/frames/TS_01_029_45_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -6538,23 +6853,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-28.227257, -169.437971],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -6565,6 +6884,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -6575,6 +6895,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -6589,12 +6910,15 @@ RESULT = [
             defocus_u=38438.015625,
             defocus_v=38173.0625,
             defocus_angle=63.245338,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_032_48_0.mrc",
         section=35,
+        id="MotionCorr/job002/frames/TS_01_032_48_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -6721,23 +7045,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-8.804052, -143.820056],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -6748,6 +7076,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -6758,6 +7087,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -6772,12 +7102,15 @@ RESULT = [
             defocus_u=38861.210938,
             defocus_v=38739.855469,
             defocus_angle=21.330759,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_033_51_0.mrc",
         section=36,
+        id="MotionCorr/job002/frames/TS_01_033_51_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -6904,23 +7237,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-29.571601, -162.395054],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -6931,6 +7268,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -6941,6 +7279,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -6955,12 +7294,15 @@ RESULT = [
             defocus_u=38656.089844,
             defocus_v=38493.3125,
             defocus_angle=-8.29779,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_036_54_0.mrc",
         section=37,
+        id="MotionCorr/job002/frames/TS_01_036_54_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -7087,23 +7429,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-11.98729, -137.537965],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -7114,6 +7460,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -7124,6 +7471,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -7138,12 +7486,15 @@ RESULT = [
             defocus_u=37450.847656,
             defocus_v=37448.03125,
             defocus_angle=-35.11659,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_037_57_0.mrc",
         section=38,
+        id="MotionCorr/job002/frames/TS_01_037_57_0.mrc",
+        movie_stack_id=None,
     ),
-    ProjectionImage(
+    TiltImage(
         width=2000,
         height=2000,
         coordinate_systems=[
@@ -7270,23 +7621,27 @@ RESULT = [
         ],
         coordinate_transformations=[
             Scale(
+                transformation_type="scale",
                 name="image_pixel_size",
                 input="base_logical_coordinates_3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
             Translation(
+                transformation_type="translation",
                 name="Tilt image alignment translation",
                 input="logical",
                 output="alignment translation",
                 translation=[-27.89235, -156.675694],
             ),
             Sequence(
+                transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
                 input="base_logical_coordinates_3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x rotation",
                         input="alignment translation",
                         output="alignment z rotation",
@@ -7297,6 +7652,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment y tilt",
                         input="alignment x tilt",
                         output="alignment y tilt",
@@ -7307,6 +7663,7 @@ RESULT = [
                         ],
                     ),
                     Affine(
+                        transformation_type="affine",
                         name="Tilt image alignment x tilt",
                         input="alignment z rotation",
                         output="alignment x tilt",
@@ -7321,9 +7678,12 @@ RESULT = [
             defocus_u=38544.476562,
             defocus_v=38449.148438,
             defocus_angle=-10.13496,
+            phase_shift=None,
             defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_040_60_0.mrc",
         section=39,
+        id="MotionCorr/job002/frames/TS_01_040_60_0.mrc",
+        movie_stack_id=None,
     ),
 ]

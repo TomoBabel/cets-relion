@@ -2,7 +2,7 @@ import os
 from typing import Optional, Union, Dict, List, Tuple
 
 from cets_data_model.models.models import (
-    ProjectionImage,
+    TiltImage,
     CTFMetadata,
     Sequence,
     CoordinateSystem,
@@ -42,6 +42,7 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
             str: Path to the file, relative to the project
         """
         joval = joboptions_from_job(self.file.parent).get("fn_gain_ref")
+        print("GGF", joval, "***********")
         if joval in ("", ""):
             return None
         return joval
@@ -104,7 +105,7 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
     def get_tilt_image_ctfs(self, ts_name: str) -> Dict[str, CTFMetadata]:
         raise NotImplementedError("Motion corr starfiles have no ctf information")
 
-    def get_cets_projection_images(self, ts_name: str) -> List[ProjectionImage]:
+    def get_cets_tilt_images(self, ts_name: str) -> List[TiltImage]:
         """Get cets ProjectionImage objects (merged motion corrected images) for a tilt
         series
 
@@ -129,8 +130,9 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
             micname = cif.as_string(row[0])
             x_size, y_size, _z_size = get_mrc_dims(micname)
             nom_tilt = row[1]
-            cets_obj = ProjectionImage(
+            cets_obj = TiltImage(
                 path=micname,
+                id=micname,
                 section=n,
                 width=x_size,
                 height=y_size,

@@ -233,6 +233,7 @@ class RelionCetsConverter:
             The path to the Gain file for the given tomogram.
         """
         for mocorrfile in self.mocorr:
+            print(mocorrfile, "********")
             if mocorrfile.tilt_series_in_file(tomo_name):
                 gf = mocorrfile.get_gain_file()
                 if gf:

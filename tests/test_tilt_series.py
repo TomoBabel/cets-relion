@@ -1,6 +1,7 @@
 from unittest.mock import patch
 
-from pytest import fixture
+
+from cets_relion.relion_to_cets import tilt_series
 from tests.testing_tools import CetsRelionTest
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
 from tests.test_data.results import proj, proj_aligned
@@ -8,15 +9,19 @@ from tests.test_data.results.ts_01_doses import DOSES
 from tests.test_data.results.ctfs import CTFS
 
 
-@fixture(autouse=True)
-def mock_get_mrc_dims():
-    with patch("cets_relion.relion_to_cets.tilt_series.get_mrc_dims") as mock:
-        mock.return_value = (2000, 2000, 8)
-        yield mock
-
-
 class TiltSeriesStarTest(CetsRelionTest):
     """Exclude is the first job without a specific subclass"""
+
+    def setUp(self):
+        super().setUp()
+
+        self.get_mrc_dims_patch = patch.object(
+            tilt_series,
+            "get_mrc_dims",
+            return_value=(2000, 2000, 1),
+        )
+        self.get_mrc_dims_patch.start()
+        self.addCleanup(self.get_mrc_dims_patch.stop)
 
     def test_instantiate_RelionTiltSeriesStarfileBase(self):
         self.setup_dirs(4)
@@ -51,13 +56,12 @@ class TiltSeriesStarTest(CetsRelionTest):
     def test_get_tilt_projections_cets_objs_no_alignments(self):
         self.setup_dirs(jobs_to=3)
         ts = RelionTiltSeriesStarfile("CtfFind/job003/tilt_series_ctf.star")
-        print(ts.get_cets_projection_images("TS_01"))
-        assert ts.get_cets_projection_images("TS_01") == proj.RESULT
+        assert ts.get_cets_tilt_images("TS_01") == proj.RESULT
 
     def test_make_cets_projection_image_object_with_alignments(self):
         self.setup_dirs(jobs_to=5)
         ts = RelionTiltSeriesStarfile("AlignTiltSeries/job005/aligned_tilt_series.star")
-        assert ts.get_cets_projection_images("TS_01") == proj_aligned.RESULT
+        assert ts.get_cets_tilt_images("TS_01") == proj_aligned.RESULT
 
     def test_get_all_tomo_names(self):
         self.setup_dirs(5)

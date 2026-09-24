@@ -6,7 +6,7 @@ IDENTITY2D = [[1, 0], [0, 1]]
 IDENTITY3D = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 
 
-def relion_eulers_to_matrix(rot: float, tilt: float, psi: float) -> List[List[int]]:
+def relion_eulers_to_matrix(rot: float, tilt: float, psi: float) -> List[List[float]]:
     """Convert the Euler angles from a RELION star file into a rotation matrix
 
     Args:

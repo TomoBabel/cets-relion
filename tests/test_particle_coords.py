@@ -27,7 +27,7 @@ class TestRelionParticleCoordsStarFile(CetsRelionTest):
             parts.coordinate_systems,
             [physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=3)],
         )
-        assert parts.path == pcf.name
+        assert parts.id == pcf.name
         assert len(parts.origin3D) == 6981
 
     def test_get_annotation_file_type(self):
@@ -64,6 +64,7 @@ class TestRelionParticleCoordsStarFile(CetsRelionTest):
 class TestRelionParticlesStarFile(CetsRelionTest):
     @fixture(autouse=True)
     def _mock_get_mrc_dims(self, monkeypatch):
+        print("RUNNING _mock_matrix_from_euler")
         monkeypatch.setattr(
             "cets_relion.relion_to_cets.particle_coords.get_mrc_dims",
             lambda *args, **kwargs: (1, 2, 3),
