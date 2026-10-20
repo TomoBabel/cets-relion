@@ -86,6 +86,11 @@ FROM_REFINE = ParticleMap(
                     axis_unit="pixel",
                     axis_type=None,
                 ),
+                Axis(
+                    name="logical coordinates z axis",
+                    axis_unit="pixel",
+                    axis_type=None,
+                ),
             ],
         ),
         CoordinateSystem(
@@ -250,6 +255,11 @@ FROM_REC = ParticleMap(
                     axis_unit="pixel",
                     axis_type=None,
                 ),
+                Axis(
+                    name="logical coordinates z axis",
+                    axis_unit="pixel",
+                    axis_type=None,
+                ),
             ],
         ),
         CoordinateSystem(
@@ -408,6 +418,11 @@ FROM_PP = ParticleMap(
                 ),
                 Axis(
                     name="logical coordinates y axis",
+                    axis_unit="pixel",
+                    axis_type=None,
+                ),
+                Axis(
+                    name="logical coordinates z axis",
                     axis_unit="pixel",
                     axis_type=None,
                 ),
@@ -571,6 +586,11 @@ TS_01_1 = {
                 ),
                 Axis(
                     name="logical coordinates y axis",
+                    axis_unit="pixel",
+                    axis_type=None,
+                ),
+                Axis(
+                    name="logical coordinates z axis",
                     axis_unit="pixel",
                     axis_type=None,
                 ),

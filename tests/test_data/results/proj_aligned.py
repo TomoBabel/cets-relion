@@ -67,6 +67,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -79,6 +84,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -97,6 +107,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -112,10 +127,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -258,6 +278,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -270,6 +295,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -288,6 +318,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -303,10 +338,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -449,6 +489,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -461,6 +506,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -479,6 +529,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -494,10 +549,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -640,6 +700,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -652,6 +717,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -670,6 +740,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -685,10 +760,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -831,6 +911,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -843,6 +928,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -861,6 +951,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -876,10 +971,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1022,6 +1122,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1034,6 +1139,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -1052,6 +1162,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1067,10 +1182,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1213,6 +1333,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1225,6 +1350,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -1243,6 +1373,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1258,10 +1393,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1404,6 +1544,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1416,6 +1561,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -1434,6 +1584,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1449,10 +1604,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1595,6 +1755,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1607,6 +1772,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -1625,6 +1795,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1640,10 +1815,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1786,6 +1966,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1798,6 +1983,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -1816,6 +2006,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1831,10 +2026,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -1977,6 +2177,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -1989,6 +2194,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -2007,6 +2217,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2022,10 +2237,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2168,6 +2388,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2180,6 +2405,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -2198,6 +2428,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2213,10 +2448,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2359,6 +2599,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2371,6 +2616,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -2389,6 +2639,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2404,10 +2659,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2550,6 +2810,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2562,6 +2827,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -2580,6 +2850,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2595,10 +2870,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2741,6 +3021,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2753,6 +3038,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -2771,6 +3061,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2786,10 +3081,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -2932,6 +3232,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2944,6 +3249,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -2962,6 +3272,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -2977,10 +3292,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3123,6 +3443,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3135,6 +3460,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -3153,6 +3483,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3168,10 +3503,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3314,6 +3654,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3326,6 +3671,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -3344,6 +3694,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3359,10 +3714,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3505,6 +3865,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3517,6 +3882,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -3535,6 +3905,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3550,10 +3925,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3696,6 +4076,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3708,6 +4093,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -3726,6 +4116,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3741,10 +4136,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -3883,6 +4283,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3895,6 +4300,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -3913,6 +4323,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -3928,10 +4343,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4074,6 +4494,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4086,6 +4511,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -4104,6 +4534,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4119,10 +4554,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4265,6 +4705,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4277,6 +4722,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -4295,6 +4745,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4310,10 +4765,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4456,6 +4916,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4468,6 +4933,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -4486,6 +4956,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4501,10 +4976,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4647,6 +5127,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4659,6 +5144,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -4677,6 +5167,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4692,10 +5187,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -4838,6 +5338,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4850,6 +5355,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -4868,6 +5378,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -4883,10 +5398,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5029,6 +5549,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5041,6 +5566,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -5059,6 +5589,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5074,10 +5609,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5220,6 +5760,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5232,6 +5777,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -5250,6 +5800,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5265,10 +5820,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5411,6 +5971,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5423,6 +5988,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -5441,6 +6011,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5456,10 +6031,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5602,6 +6182,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5614,6 +6199,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -5632,6 +6222,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5647,10 +6242,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5793,6 +6393,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5805,6 +6410,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -5823,6 +6433,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5838,10 +6453,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -5984,6 +6604,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -5996,6 +6621,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -6014,6 +6644,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6029,10 +6664,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6175,6 +6815,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6187,6 +6832,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -6205,6 +6855,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6220,10 +6875,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6366,6 +7026,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6378,6 +7043,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -6396,6 +7066,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6411,10 +7086,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6557,6 +7237,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6569,6 +7254,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -6587,6 +7277,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6602,10 +7297,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6748,6 +7448,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6760,6 +7465,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -6778,6 +7488,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6793,10 +7508,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -6939,6 +7659,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6951,6 +7676,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -6969,6 +7699,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -6984,10 +7719,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -7130,6 +7870,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -7142,6 +7887,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -7160,6 +7910,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -7175,10 +7930,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -7321,6 +8081,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -7333,6 +8098,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -7351,6 +8121,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -7366,10 +8141,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
@@ -7512,6 +8292,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -7524,6 +8309,11 @@ RESULT = [
                     ),
                     Axis(
                         name="logical coordinates y axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
                         axis_unit="pixel",
                         axis_type=None,
                     ),
@@ -7542,6 +8332,11 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
@@ -7557,10 +8352,15 @@ RESULT = [
                         axis_unit="pixel",
                         axis_type=None,
                     ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
