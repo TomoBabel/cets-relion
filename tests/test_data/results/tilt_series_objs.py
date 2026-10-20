@@ -5,12 +5,12 @@ MOCORR_0 = {
             "axes": [
                 {
                     "axis_type": None,
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "name": "logical coordinates x axis",
                 },
                 {
                     "axis_type": None,
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "name": "logical coordinates y axis",
                 },
             ],
@@ -34,12 +34,12 @@ MOCORR_40 = {
             "axes": [
                 {
                     "axis_type": None,
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "name": "logical coordinates x axis",
                 },
                 {
                     "axis_type": None,
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "name": "logical coordinates y axis",
                 },
             ],
@@ -66,17 +66,17 @@ CTF_0 = {
             "axes": [
                 {
                     "name": "logical coordinates x axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
                 {
                     "name": "logical coordinates y axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
                 {
                     "name": "logical coordinates z axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
             ],
@@ -86,17 +86,17 @@ CTF_0 = {
             "axes": [
                 {
                     "name": "physical coordinates x axis",
-                    "axis_unit": "Ångstrom",
+                    "axis_unit": "angstrom",
                     "axis_type": None,
                 },
                 {
                     "name": "physical coordinates y axis",
-                    "axis_unit": "Ångstrom",
+                    "axis_unit": "angstrom",
                     "axis_type": None,
                 },
                 {
                     "name": "physical coordinates z axis",
-                    "axis_unit": "Ångstrom",
+                    "axis_unit": "angstrom",
                     "axis_type": None,
                 },
             ],
@@ -134,17 +134,17 @@ CTF_40 = {
             "axes": [
                 {
                     "name": "logical coordinates x axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
                 {
                     "name": "logical coordinates y axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
                 {
                     "name": "logical coordinates z axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
             ],
@@ -154,17 +154,17 @@ CTF_40 = {
             "axes": [
                 {
                     "name": "physical coordinates x axis",
-                    "axis_unit": "Ångstrom",
+                    "axis_unit": "angstrom",
                     "axis_type": None,
                 },
                 {
                     "name": "physical coordinates y axis",
-                    "axis_unit": "Ångstrom",
+                    "axis_unit": "angstrom",
                     "axis_type": None,
                 },
                 {
                     "name": "physical coordinates z axis",
-                    "axis_unit": "Ångstrom",
+                    "axis_unit": "angstrom",
                     "axis_type": None,
                 },
             ],
@@ -202,12 +202,12 @@ GAIN_FILE = {
             "axes": [
                 {
                     "name": "logical coordinates x axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
                 {
                     "name": "logical coordinates y axis",
-                    "axis_unit": "pixel/voxel",
+                    "axis_unit": "pixel",
                     "axis_type": None,
                 },
             ],

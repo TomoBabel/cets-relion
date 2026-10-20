@@ -18,17 +18,17 @@ FROM_REFINE = ParticleMap(
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates z axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -38,17 +38,17 @@ FROM_REFINE = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -58,17 +58,17 @@ FROM_REFINE = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -78,12 +78,12 @@ FROM_REFINE = ParticleMap(
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -93,17 +93,17 @@ FROM_REFINE = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -182,17 +182,17 @@ FROM_REC = ParticleMap(
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates z axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -202,17 +202,17 @@ FROM_REC = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -222,17 +222,17 @@ FROM_REC = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -242,12 +242,12 @@ FROM_REC = ParticleMap(
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -257,17 +257,17 @@ FROM_REC = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -343,17 +343,17 @@ FROM_PP = ParticleMap(
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates z axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -363,17 +363,17 @@ FROM_PP = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -383,17 +383,17 @@ FROM_PP = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -403,12 +403,12 @@ FROM_PP = ParticleMap(
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -418,17 +418,17 @@ FROM_PP = ParticleMap(
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -506,17 +506,17 @@ TS_01_1 = {
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates z axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -526,17 +526,17 @@ TS_01_1 = {
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -546,17 +546,17 @@ TS_01_1 = {
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
@@ -566,12 +566,12 @@ TS_01_1 = {
             axes=[
                 Axis(
                     name="logical coordinates x axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
                 Axis(
                     name="logical coordinates y axis",
-                    axis_unit="pixel/voxel",
+                    axis_unit="pixel",
                     axis_type=None,
                 ),
             ],
@@ -581,17 +581,17 @@ TS_01_1 = {
             axes=[
                 Axis(
                     name="physical coordinates x axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates y axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
                 Axis(
                     name="physical coordinates z axis",
-                    axis_unit="Ångstrom",
+                    axis_unit="angstrom",
                     axis_type=None,
                 ),
             ],
