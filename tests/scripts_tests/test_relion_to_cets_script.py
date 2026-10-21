@@ -46,6 +46,32 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
             expected = json.load(f)
         assert actual == expected
 
+    def find_differences(self, actual, expected, path="$"):
+        if type(actual) is not type(expected):
+            print(
+                f"{path}: type mismatch: "
+                f"{type(actual).__name__} != {type(expected).__name__}"
+            )
+            return
+
+        if isinstance(actual, dict):
+            for key in actual.keys() | expected.keys():
+                if key not in actual:
+                    print(f"{path}.{key}: missing from actual")
+                elif key not in expected:
+                    print(f"{path}.{key}: missing from expected")
+                else:
+                    self.find_differences(actual[key], expected[key], f"{path}.{key}")
+
+        elif isinstance(actual, list):
+            if len(actual) != len(expected):
+                print(f"{path}: length mismatch: {len(actual)} != {len(expected)}")
+            for i, (a, e) in enumerate(zip(actual, expected)):
+                self.find_differences(a, e, f"{path}[{i}]")
+
+        elif actual != expected:
+            print(f"{path}: {actual!r} != {expected!r}")
+
     def test_get_raw_movies_mocorr(self):
         self.setup_dirs(2)
         con = RelionCetsConverter("MotionCorr/job002/")
@@ -53,6 +79,11 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         actual = movs.model_dump(mode="json")
         with open(self.test_data / "results/raw_movs_no_ctf.json") as f:
             expected = json.load(f)
+        self.find_differences(
+            actual["movie_stacks"],
+            expected["movie_stacks"],
+            self.test_data / "results/raw_movs_no_ctf.json",
+        )
         assert actual["movie_stacks"] == expected["movie_stacks"]
         assert actual["gain_file"] == GAIN_FILE
         assert actual["defect_file"] is None
@@ -71,8 +102,6 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         con = RelionCetsConverter("Polish/job030/")
         movs = get_raw_movies(con, "TS_01")
         actual = movs.model_dump(mode="json")
-        with open(self.test_data / "results/raw_movs_ctf.json", "w") as f:
-            json.dump(actual, f, indent=2)
         with open(self.test_data / "results/raw_movs_ctf.json") as f:
             expected = json.load(f)
         assert actual == expected
