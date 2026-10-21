@@ -22,13 +22,13 @@ from cets_relion.relion_to_cets.transformation_names import (
 # correct string from below is used in the `name` field.
 
 # Axis definitions
-x_axis_logical = Axis(name="logical coordinates x axis", axis_unit="pixel/voxel")
-y_axis_logical = Axis(name="logical coordinates y axis", axis_unit="pixel/voxel")
-z_axis_logical = Axis(name="logical coordinates z axis", axis_unit="pixel/voxel")
+x_axis_logical = Axis(name="logical coordinates x axis", axis_unit="pixel")
+y_axis_logical = Axis(name="logical coordinates y axis", axis_unit="pixel")
+z_axis_logical = Axis(name="logical coordinates z axis", axis_unit="pixel")
 
-x_axis_physical = Axis(name="physical coordinates x axis", axis_unit="Ångstrom")
-y_axis_physical = Axis(name="physical coordinates y axis", axis_unit="Ångstrom")
-z_axis_physical = Axis(name="physical coordinates z axis", axis_unit="Ångstrom")
+x_axis_physical = Axis(name="physical coordinates x axis", axis_unit="angstrom")
+y_axis_physical = Axis(name="physical coordinates y axis", axis_unit="angstrom")
+z_axis_physical = Axis(name="physical coordinates z axis", axis_unit="angstrom")
 
 # NAMES - for the globals coordinate systems always end with COORDS, transformations
 # always end with XFORM
@@ -60,7 +60,8 @@ def logical_coords(name: Optional[str] = None, dim: int = 2) -> CoordinateSystem
     name = BASE_LOGICAL_COORDS_2D if name is None else name
     axes = [x_axis_logical, y_axis_logical]
     if dim == 3:
-        name = BASE_LOGICAL_COORDS_3D
+        if name == BASE_LOGICAL_COORDS_2D:
+            name = BASE_LOGICAL_COORDS_3D
         axes.append(z_axis_logical)
     elif dim not in (2, 3):
         raise ValueError(f"{dim} is not a valid dimension")

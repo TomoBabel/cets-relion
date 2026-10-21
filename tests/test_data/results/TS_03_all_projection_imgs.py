@@ -11,17 +11,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -43,17 +43,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -75,17 +75,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -107,17 +107,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -139,17 +139,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -171,17 +171,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -203,17 +203,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -235,17 +235,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -267,17 +267,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -299,17 +299,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -331,17 +331,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -363,17 +363,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -395,17 +395,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -427,17 +427,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -459,17 +459,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -491,17 +491,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -523,17 +523,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -555,17 +555,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -587,17 +587,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -619,17 +619,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -651,17 +651,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -683,17 +683,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -715,17 +715,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -747,17 +747,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -779,17 +779,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -811,17 +811,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -843,17 +843,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -875,17 +875,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -907,17 +907,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -939,17 +939,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -971,17 +971,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1003,17 +1003,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1035,17 +1035,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1067,17 +1067,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1099,17 +1099,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1131,17 +1131,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1163,17 +1163,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1195,17 +1195,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1227,17 +1227,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1259,17 +1259,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -1291,17 +1291,17 @@ ALL_PROJECTION_IMGS = {
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates z axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],

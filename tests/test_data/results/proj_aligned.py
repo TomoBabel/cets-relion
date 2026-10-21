@@ -19,17 +19,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -39,17 +39,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -59,12 +59,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -74,12 +79,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -89,12 +99,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -104,32 +119,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -195,7 +215,6 @@ RESULT = [
             defocus_v=39418.410156,
             defocus_angle=44.527622,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_038_-57_0.mrc",
         section=0,
@@ -211,17 +230,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -231,17 +250,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -251,12 +270,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -266,12 +290,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -281,12 +310,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -296,32 +330,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -387,7 +426,6 @@ RESULT = [
             defocus_v=38453.007812,
             defocus_angle=-77.46074,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_035_-54_0.mrc",
         section=1,
@@ -403,17 +441,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -423,17 +461,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -443,12 +481,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -458,12 +501,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -473,12 +521,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -488,32 +541,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -579,7 +637,6 @@ RESULT = [
             defocus_v=39676.960938,
             defocus_angle=-89.50993,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_034_-51_0.mrc",
         section=2,
@@ -595,17 +652,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -615,17 +672,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -635,12 +692,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -650,12 +712,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -665,12 +732,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -680,32 +752,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -771,7 +848,6 @@ RESULT = [
             defocus_v=40288.300781,
             defocus_angle=34.091747,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_031_-48_0.mrc",
         section=3,
@@ -787,17 +863,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -807,17 +883,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -827,12 +903,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -842,12 +923,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -857,12 +943,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -872,32 +963,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -963,7 +1059,6 @@ RESULT = [
             defocus_v=39378.523438,
             defocus_angle=-51.37516,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_030_-45_0.mrc",
         section=4,
@@ -979,17 +1074,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -999,17 +1094,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -1019,12 +1114,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1034,12 +1134,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1049,12 +1154,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1064,32 +1174,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1155,7 +1270,6 @@ RESULT = [
             defocus_v=39503.171875,
             defocus_angle=-73.60011,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_027_-42_0.mrc",
         section=5,
@@ -1171,17 +1285,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1191,17 +1305,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -1211,12 +1325,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1226,12 +1345,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1241,12 +1365,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1256,32 +1385,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1347,7 +1481,6 @@ RESULT = [
             defocus_v=39248.902344,
             defocus_angle=44.287949,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_026_-39_0.mrc",
         section=6,
@@ -1363,17 +1496,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1383,17 +1516,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -1403,12 +1536,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1418,12 +1556,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1433,12 +1576,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1448,32 +1596,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1539,7 +1692,6 @@ RESULT = [
             defocus_v=39368.929688,
             defocus_angle=18.869625,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_023_-36_0.mrc",
         section=7,
@@ -1555,17 +1707,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1575,17 +1727,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -1595,12 +1747,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1610,12 +1767,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1625,12 +1787,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1640,32 +1807,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1731,7 +1903,6 @@ RESULT = [
             defocus_v=39414.261719,
             defocus_angle=-48.23753,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_022_-33_0.mrc",
         section=8,
@@ -1747,17 +1918,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1767,17 +1938,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -1787,12 +1958,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1802,12 +1978,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1817,12 +1998,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1832,32 +2018,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1923,7 +2114,6 @@ RESULT = [
             defocus_v=39219.816406,
             defocus_angle=25.755552,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_019_-30_0.mrc",
         section=9,
@@ -1939,17 +2129,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1959,17 +2149,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -1979,12 +2169,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -1994,12 +2189,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2009,12 +2209,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2024,32 +2229,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2115,7 +2325,6 @@ RESULT = [
             defocus_v=38934.125,
             defocus_angle=70.461578,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_018_-27_0.mrc",
         section=10,
@@ -2131,17 +2340,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2151,17 +2360,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -2171,12 +2380,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2186,12 +2400,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2201,12 +2420,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2216,32 +2440,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2307,7 +2536,6 @@ RESULT = [
             defocus_v=39131.46875,
             defocus_angle=44.914368,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_015_-24_0.mrc",
         section=11,
@@ -2323,17 +2551,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2343,17 +2571,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -2363,12 +2591,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2378,12 +2611,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2393,12 +2631,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2408,32 +2651,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2499,7 +2747,6 @@ RESULT = [
             defocus_v=38752.570312,
             defocus_angle=41.521111,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_014_-21_0.mrc",
         section=12,
@@ -2515,17 +2762,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2535,17 +2782,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -2555,12 +2802,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2570,12 +2822,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2585,12 +2842,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2600,32 +2862,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2691,7 +2958,6 @@ RESULT = [
             defocus_v=38797.90625,
             defocus_angle=69.937973,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_011_-18_0.mrc",
         section=13,
@@ -2707,17 +2973,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2727,17 +2993,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -2747,12 +3013,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2762,12 +3033,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2777,12 +3053,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2792,32 +3073,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2883,7 +3169,6 @@ RESULT = [
             defocus_v=39312.433594,
             defocus_angle=43.634537,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_010_-15_0.mrc",
         section=14,
@@ -2899,17 +3184,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2919,17 +3204,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -2939,12 +3224,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2954,12 +3244,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2969,12 +3264,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -2984,32 +3284,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3075,7 +3380,6 @@ RESULT = [
             defocus_v=39267.863281,
             defocus_angle=16.908651,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_007_-12_0.mrc",
         section=15,
@@ -3091,17 +3395,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3111,17 +3415,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -3131,12 +3435,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3146,12 +3455,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3161,12 +3475,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3176,32 +3495,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3267,7 +3591,6 @@ RESULT = [
             defocus_v=38692.070312,
             defocus_angle=67.526459,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_006_-9_0.mrc",
         section=16,
@@ -3283,17 +3606,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3303,17 +3626,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -3323,12 +3646,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3338,12 +3666,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3353,12 +3686,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3368,32 +3706,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3459,7 +3802,6 @@ RESULT = [
             defocus_v=38578.90625,
             defocus_angle=-42.83319,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_003_-6_0.mrc",
         section=17,
@@ -3475,17 +3817,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3495,17 +3837,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -3515,12 +3857,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3530,12 +3877,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3545,12 +3897,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3560,32 +3917,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3651,7 +4013,6 @@ RESULT = [
             defocus_v=38788.375,
             defocus_angle=48.905102,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_002_-3_0.mrc",
         section=18,
@@ -3667,17 +4028,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3687,17 +4048,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -3707,12 +4068,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3722,12 +4088,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3737,12 +4108,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3752,32 +4128,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3839,7 +4220,6 @@ RESULT = [
             defocus_v=38750.828125,
             defocus_angle=35.154533,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_000_0_0.mrc",
         section=19,
@@ -3855,17 +4235,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3875,17 +4255,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -3895,12 +4275,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3910,12 +4295,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3925,12 +4315,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -3940,32 +4335,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4031,7 +4431,6 @@ RESULT = [
             defocus_v=39140.960938,
             defocus_angle=12.550397,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_001_3_0.mrc",
         section=20,
@@ -4047,17 +4446,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4067,17 +4466,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -4087,12 +4486,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4102,12 +4506,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4117,12 +4526,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4132,32 +4546,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4223,7 +4642,6 @@ RESULT = [
             defocus_v=38659.703125,
             defocus_angle=-86.54452,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_004_6_0.mrc",
         section=21,
@@ -4239,17 +4657,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4259,17 +4677,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -4279,12 +4697,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4294,12 +4717,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4309,12 +4737,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4324,32 +4757,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4415,7 +4853,6 @@ RESULT = [
             defocus_v=38568.289062,
             defocus_angle=40.258121,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_005_9_0.mrc",
         section=22,
@@ -4431,17 +4868,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4451,17 +4888,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -4471,12 +4908,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4486,12 +4928,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4501,12 +4948,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4516,32 +4968,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4607,7 +5064,6 @@ RESULT = [
             defocus_v=38699.5625,
             defocus_angle=25.551586,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_008_12_0.mrc",
         section=23,
@@ -4623,17 +5079,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4643,17 +5099,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -4663,12 +5119,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4678,12 +5139,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4693,12 +5159,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4708,32 +5179,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4799,7 +5275,6 @@ RESULT = [
             defocus_v=38768.765625,
             defocus_angle=-0.90581,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_009_15_0.mrc",
         section=24,
@@ -4815,17 +5290,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4835,17 +5310,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -4855,12 +5330,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4870,12 +5350,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4885,12 +5370,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4900,32 +5390,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -4991,7 +5486,6 @@ RESULT = [
             defocus_v=38564.035156,
             defocus_angle=5.383391,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_012_18_0.mrc",
         section=25,
@@ -5007,17 +5501,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5027,17 +5521,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -5047,12 +5541,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5062,12 +5561,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5077,12 +5581,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5092,32 +5601,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5183,7 +5697,6 @@ RESULT = [
             defocus_v=38977.851562,
             defocus_angle=-75.17061,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_013_21_0.mrc",
         section=26,
@@ -5199,17 +5712,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5219,17 +5732,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -5239,12 +5752,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5254,12 +5772,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5269,12 +5792,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5284,32 +5812,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5375,7 +5908,6 @@ RESULT = [
             defocus_v=38781.570312,
             defocus_angle=76.682976,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_016_24_0.mrc",
         section=27,
@@ -5391,17 +5923,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5411,17 +5943,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -5431,12 +5963,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5446,12 +5983,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5461,12 +6003,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5476,32 +6023,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5567,7 +6119,6 @@ RESULT = [
             defocus_v=38806.46875,
             defocus_angle=-83.8278,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_017_27_0.mrc",
         section=28,
@@ -5583,17 +6134,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5603,17 +6154,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -5623,12 +6174,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5638,12 +6194,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5653,12 +6214,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5668,32 +6234,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5759,7 +6330,6 @@ RESULT = [
             defocus_v=38214.078125,
             defocus_angle=55.941147,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_020_30_0.mrc",
         section=29,
@@ -5775,17 +6345,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5795,17 +6365,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -5815,12 +6385,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5830,12 +6405,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5845,12 +6425,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5860,32 +6445,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5951,7 +6541,6 @@ RESULT = [
             defocus_v=38796.992188,
             defocus_angle=45.229416,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_021_33_0.mrc",
         section=30,
@@ -5967,17 +6556,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -5987,17 +6576,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -6007,12 +6596,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6022,12 +6616,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6037,12 +6636,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6052,32 +6656,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6143,7 +6752,6 @@ RESULT = [
             defocus_v=38473.996094,
             defocus_angle=34.372036,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_024_36_0.mrc",
         section=31,
@@ -6159,17 +6767,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6179,17 +6787,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -6199,12 +6807,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6214,12 +6827,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6229,12 +6847,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6244,32 +6867,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6335,7 +6963,6 @@ RESULT = [
             defocus_v=38722.871094,
             defocus_angle=40.212944,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_025_39_0.mrc",
         section=32,
@@ -6351,17 +6978,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6371,17 +6998,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -6391,12 +7018,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6406,12 +7038,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6421,12 +7058,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6436,32 +7078,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6527,7 +7174,6 @@ RESULT = [
             defocus_v=38329.550781,
             defocus_angle=38.231094,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_028_42_0.mrc",
         section=33,
@@ -6543,17 +7189,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6563,17 +7209,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -6583,12 +7229,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6598,12 +7249,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6613,12 +7269,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6628,32 +7289,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6719,7 +7385,6 @@ RESULT = [
             defocus_v=38564.382812,
             defocus_angle=53.667973,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_029_45_0.mrc",
         section=34,
@@ -6735,17 +7400,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6755,17 +7420,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -6775,12 +7440,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6790,12 +7460,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6805,12 +7480,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6820,32 +7500,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6911,7 +7596,6 @@ RESULT = [
             defocus_v=38173.0625,
             defocus_angle=63.245338,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_032_48_0.mrc",
         section=35,
@@ -6927,17 +7611,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6947,17 +7631,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -6967,12 +7651,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6982,12 +7671,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -6997,12 +7691,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7012,32 +7711,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7103,7 +7807,6 @@ RESULT = [
             defocus_v=38739.855469,
             defocus_angle=21.330759,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_033_51_0.mrc",
         section=36,
@@ -7119,17 +7822,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7139,17 +7842,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -7159,12 +7862,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7174,12 +7882,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7189,12 +7902,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7204,32 +7922,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7295,7 +8018,6 @@ RESULT = [
             defocus_v=38493.3125,
             defocus_angle=-8.29779,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_036_54_0.mrc",
         section=37,
@@ -7311,17 +8033,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7331,17 +8053,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -7351,12 +8073,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7366,12 +8093,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7381,12 +8113,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7396,32 +8133,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7487,7 +8229,6 @@ RESULT = [
             defocus_v=37448.03125,
             defocus_angle=-35.11659,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_037_57_0.mrc",
         section=38,
@@ -7503,17 +8244,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7523,17 +8264,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="physical coordinates x axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates y axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                     Axis(
                         name="physical coordinates z axis",
-                        axis_unit="Ångstrom",
+                        axis_unit="angstrom",
                         axis_type=None,
                     ),
                 ],
@@ -7543,12 +8284,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7558,12 +8304,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7573,12 +8324,17 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7588,32 +8344,37 @@ RESULT = [
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
+                        axis_type=None,
+                    ),
+                    Axis(
+                        name="logical coordinates z axis",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
             ),
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="aligned_projection_image",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates y axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                     Axis(
                         name="logical coordinates z axis",
-                        axis_unit="pixel/voxel",
+                        axis_unit="pixel",
                         axis_type=None,
                     ),
                 ],
@@ -7679,7 +8440,6 @@ RESULT = [
             defocus_v=38449.148438,
             defocus_angle=-10.13496,
             phase_shift=None,
-            defocus_handedness=-1,
         ),
         path="MotionCorr/job002/frames/TS_01_040_60_0.mrc",
         section=39,

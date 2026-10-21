@@ -270,7 +270,7 @@ class RelionParticlesStarFile(object):
                 input="Alignment relative to parent tomogram",
                 output="Averaging translation",
             )
-            align_trans_coord_sys = logical_coords(name="Averaging translation")
+            align_trans_coord_sys = logical_coords(name="Averaging translation", dim=3)
 
             align_affine = Affine(
                 name="Averaging alignment",

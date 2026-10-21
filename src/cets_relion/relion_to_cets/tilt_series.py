@@ -241,7 +241,7 @@ class RelionTiltSeriesStarfile(object):
                 )
                 cets_obj.coordinate_transformations.append(translation)
 
-                trans_coord_sys = logical_coords("alignment translation")
+                trans_coord_sys = logical_coords("alignment translation", dim=3)
                 cets_obj.coordinate_systems.append(trans_coord_sys)
 
                 z_affine = Affine(
@@ -250,7 +250,7 @@ class RelionTiltSeriesStarfile(object):
                     input="alignment translation",
                     output="alignment z rotation",
                 )
-                zr_coord_sys = logical_coords("alignment z rotation")
+                zr_coord_sys = logical_coords("alignment z rotation", dim=3)
                 cets_obj.coordinate_systems.append(zr_coord_sys)
 
                 x_affine = Affine(
@@ -259,7 +259,7 @@ class RelionTiltSeriesStarfile(object):
                     input="alignment z rotation",
                     output="alignment x tilt",
                 )
-                ax_coord_sys = logical_coords("alignment x tilt")
+                ax_coord_sys = logical_coords("alignment x tilt", dim=3)
                 cets_obj.coordinate_systems.append(ax_coord_sys)
 
                 y_affine = Affine(
@@ -268,7 +268,7 @@ class RelionTiltSeriesStarfile(object):
                     input="alignment x tilt",
                     output="alignment y tilt",
                 )
-                ay_coord_sys = logical_coords("alignment y tilt")
+                ay_coord_sys = logical_coords("alignment y tilt", dim=3)
                 cets_obj.coordinate_systems.append(ay_coord_sys)
                 alignment_xform = Sequence(
                     sequence=[z_affine, y_affine, x_affine],

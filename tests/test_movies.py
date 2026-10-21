@@ -78,12 +78,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -93,12 +93,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                         Axis(
                             name="physical coordinates y axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                     ],
@@ -129,12 +129,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -144,12 +144,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                         Axis(
                             name="physical coordinates y axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                     ],
@@ -180,12 +180,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -195,12 +195,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                         Axis(
                             name="physical coordinates y axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                     ],
@@ -241,12 +241,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -256,12 +256,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                         Axis(
                             name="physical coordinates y axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                     ],
@@ -290,12 +290,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -305,12 +305,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                         Axis(
                             name="physical coordinates y axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                     ],
@@ -339,12 +339,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                         Axis(
                             name="logical coordinates y axis",
-                            axis_unit="pixel/voxel",
+                            axis_unit="pixel",
                             axis_type=None,
                         ),
                     ],
@@ -354,12 +354,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                     axes=[
                         Axis(
                             name="physical coordinates x axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                         Axis(
                             name="physical coordinates y axis",
-                            axis_unit="Ångstrom",
+                            axis_unit="angstrom",
                             axis_type=None,
                         ),
                     ],
