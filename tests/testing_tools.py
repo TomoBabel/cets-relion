@@ -38,3 +38,31 @@ class CetsRelionTest(unittest.TestCase):
         jobs.sort(key=lambda x: int(str(x)[-3:]))
         for n in range(jobs_to):
             shutil.copytree(jobs[n], jobs[n].relative_to(skele))
+
+
+# for debugging big dicts when IDE fails
+def find_differences(actual, expected, path="$"):
+    if type(actual) is not type(expected):
+        print(
+            f"{path}: type mismatch: "
+            f"{type(actual).__name__} != {type(expected).__name__}"
+        )
+        return
+
+    if isinstance(actual, dict):
+        for key in actual.keys() | expected.keys():
+            if key not in actual:
+                print(f"{path}.{key}: missing from actual")
+            elif key not in expected:
+                print(f"{path}.{key}: missing from expected")
+            else:
+                find_differences(actual[key], expected[key], f"{path}.{key}")
+
+    elif isinstance(actual, list):
+        if len(actual) != len(expected):
+            print(f"{path}: length mismatch: {len(actual)} != {len(expected)}")
+        for i, (a, e) in enumerate(zip(actual, expected)):
+            find_differences(a, e, f"{path}[{i}]")
+
+    elif actual != expected:
+        print(f"{path}: {actual!r} != {expected!r}")
