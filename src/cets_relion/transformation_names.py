@@ -1,6 +1,10 @@
 # Just to keep things standardized keeping all the names for transformations and
 # systems as globals here rather than defining if the specifc RELION file classes
 
+# Base logical coordinate systems from CETS data model
+BASE_LOGICAL_COORDS_2D = "logical coordinates 2d"
+BASE_LOGICAL_COORDS_3D = "logical coordinates 3d"
+
 # Align calibration image to movie frame
 ALIGN_CALIBRATION_IMAGE_XFROM = "align_calibration_image_to_movie_frame"
 ALIGN_CALIBRATION_IMAGE_COORDS = "aligned_calibration_image"

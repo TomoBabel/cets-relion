@@ -20,16 +20,13 @@ from gemmi import cif
 from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from cets_relion.math_utils import relion_eulers_to_matrix
 from cets_relion.job_utils import joboptions_from_job
-from tmp_transformations import (
-    BASE_LOGICAL_COORDS_3D,
-    logical_coords,
-    physical_coords,
-)
-from cets_relion.relion_to_cets.transformation_names import (
+from cets_relion.transformation_names import BASE_LOGICAL_COORDS_3D
+from cets_relion.transformation_names import (
     IMAGE_PIXEL_SIZE_COORDS,
     ALIGN_SUBTOMOGRAM_COORDS,
     ALIGN_SUBTOMOGRAM_XFROM,
 )
+from cets_data_model.utils.coordinate_systems import logical_coords, physical_coords
 
 
 class RelionAnnotationFile(object):
@@ -242,8 +239,7 @@ class RelionParticlesStarFile(object):
             tomorot, tomotilt, tomopsi = float(part[1]), float(part[2]), float(part[3])
             tilt, rot, psi = float(part[4]), float(part[5]), float(part[6])
             x, y, z = (float(part[7]), float(part[8]), float(part[9]))
-            image_number = int(part[10].split("/")[-1])
-            image_name = f"{image_number:06}@{part[11]}"
+            image_name = part[11]
             apix = float(optics_dict[part[12]])
 
             # add scale transformation for logical coords
@@ -289,6 +285,7 @@ class RelionParticlesStarFile(object):
             except FileNotFoundError:
                 dims = (0, 0, 0)
             cets_part = ParticleMap(
+                id=image_name,
                 path=image_name,
                 width=dims[0],
                 height=dims[1],

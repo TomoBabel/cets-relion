@@ -5,11 +5,11 @@ from cets_relion.relion_to_cets.particle_coords import (
     RelionSphereAnnotations,
     RelionParticlesStarFile,
 )
-from tmp_transformations import physical_coords
+from cets_data_model.utils.coordinate_systems import physical_coords
 from pathlib import Path
 from pytest import fixture
 from cets_data_model.models.models import AnnotationType
-from cets_relion.relion_to_cets.transformation_names import IMAGE_PIXEL_SIZE_COORDS
+from cets_relion.transformation_names import IMAGE_PIXEL_SIZE_COORDS
 
 
 class TestRelionParticleCoordsStarFile(CetsRelionTest):

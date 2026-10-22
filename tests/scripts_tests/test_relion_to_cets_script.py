@@ -94,7 +94,5 @@ class RelionCETSConverterScriptTestGetTiltSeries(CetsRelionTest):
         self.setup_dirs(3)
         con = RelionCetsConverter("CtfFind/job003/")
         ts = get_tilt_series(con, "TS_01")
-        with open("/Users/matthew.iadanza/Desktop/0.json", "w") as f:
-            json.dump(ts[0].images[-1].model_dump(mode="json"), f, indent=2)
         assert ts[0].images[0].model_dump(mode="json") == CTF_0
         assert ts[0].images[-1].model_dump(mode="json") == CTF_40

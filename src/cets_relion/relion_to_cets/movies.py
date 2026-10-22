@@ -15,7 +15,8 @@ from gemmi import cif
 from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
 from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
-from tmp_transformations import logical_coords, image_pixel_size
+from tmp_transformations import image_pixel_size
+from cets_data_model.utils.coordinate_systems import logical_coords
 
 
 class RelionMoviesStarFile(object):
@@ -134,6 +135,7 @@ class RelionMoviesStarFile(object):
                 scale_xform, scale_coords = image_pixel_size(apix)
                 frames.append(
                     MovieFrame(
+                        id=f"{frame_n}@{movie_name}",
                         path=f"{frame_n}@{movie_name}",
                         section=n,
                         nominal_tilt_angle=float(row[2]),

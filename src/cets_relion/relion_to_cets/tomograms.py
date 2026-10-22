@@ -7,7 +7,7 @@ from typing import Optional, Union
 from cets_data_model.models.models import Tomogram
 from gemmi import cif
 
-from tmp_transformations import logical_coords
+from cets_data_model.utils.coordinate_systems import logical_coords
 
 
 class RelionTomosStarfile(object):

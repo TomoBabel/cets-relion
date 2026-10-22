@@ -18,17 +18,15 @@ from gemmi import cif
 
 
 from cets_relion.math_utils import rotation_to_matrix_3d
-from tmp_transformations import (  #  will be replaced when CETS models updated
-    logical_coords,
-    physical_coords,
-)
-from tmp_transformations import BASE_LOGICAL_COORDS_3D
-from cets_relion.relion_to_cets.transformation_names import (
+
+from cets_relion.transformation_names import (
     IMAGE_PIXEL_SIZE_COORDS,
     IMAGE_PIXEL_SIZE_XFROM,
     ALIGN_PROJECTION_IMAGE_COORDS,
     ALIGN_PROJECTION_IMAGE_XFROM,
 )
+from cets_relion.transformation_names import BASE_LOGICAL_COORDS_3D
+from cets_data_model.utils.coordinate_systems import logical_coords, physical_coords
 
 logger = getLogger(__name__)
 

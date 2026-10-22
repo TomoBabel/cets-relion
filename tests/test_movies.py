@@ -70,21 +70,22 @@ class RelionCetsMoviesTests(CetsRelionTest):
         assert isinstance(result.stacks[0], MovieStack)
         assert len(result.stacks[0].images) == 8
         assert result.stacks[0].images[0] == MovieFrame(
+            id="00001@frames/TS_01_000_0.0.mrc",
             width=2000,
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="base_logical_coordinates_2d",
+                    name="logical coordinates 2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                         Axis(
                             name="logical coordinates y axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                     ],
                 ),
@@ -94,12 +95,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                         Axis(
                             name="physical coordinates x axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                         Axis(
                             name="physical coordinates y axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                     ],
                 ),
@@ -107,7 +108,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_transformations=[
                 Scale(
                     name="image_pixel_size",
-                    input="base_logical_coordinates_2d",
+                    input="logical coordinates 2d",
                     output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
@@ -121,21 +122,22 @@ class RelionCetsMoviesTests(CetsRelionTest):
             section="0",
         )
         assert result.stacks[0].images[-1] == MovieFrame(
+            id="00008@frames/TS_01_000_0.0.mrc",
             width=2000,
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="base_logical_coordinates_2d",
+                    name="logical coordinates 2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                         Axis(
                             name="logical coordinates y axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                     ],
                 ),
@@ -145,12 +147,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                         Axis(
                             name="physical coordinates x axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                         Axis(
                             name="physical coordinates y axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                     ],
                 ),
@@ -158,7 +160,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_transformations=[
                 Scale(
                     name="image_pixel_size",
-                    input="base_logical_coordinates_2d",
+                    input="logical coordinates 2d",
                     output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
@@ -172,21 +174,22 @@ class RelionCetsMoviesTests(CetsRelionTest):
             section="7",
         )
         assert result.stacks[-1].images[-1] == MovieFrame(
+            id="00008@frames/TS_01_040_60.0.mrc",
             width=2000,
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="base_logical_coordinates_2d",
+                    name="logical coordinates 2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                         Axis(
                             name="logical coordinates y axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                     ],
                 ),
@@ -196,12 +199,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                         Axis(
                             name="physical coordinates x axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                         Axis(
                             name="physical coordinates y axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                     ],
                 ),
@@ -209,7 +212,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_transformations=[
                 Scale(
                     name="image_pixel_size",
-                    input="base_logical_coordinates_2d",
+                    input="logical coordinates 2d",
                     output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
@@ -233,21 +236,22 @@ class RelionCetsMoviesTests(CetsRelionTest):
         assert isinstance(result.stacks[0], MovieStack)
         assert len(result.stacks[0].images) == 8
         assert result.stacks[0].images[0] == MovieFrame(
+            id="00001@frames/TS_01_000_0.0.mrc",
             width=2000,
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="base_logical_coordinates_2d",
+                    name="logical coordinates 2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                         Axis(
                             name="logical coordinates y axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                     ],
                 ),
@@ -257,12 +261,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                         Axis(
                             name="physical coordinates x axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                         Axis(
                             name="physical coordinates y axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                     ],
                 ),
@@ -270,7 +274,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_transformations=[
                 Scale(
                     name="image_pixel_size",
-                    input="base_logical_coordinates_2d",
+                    input="logical coordinates 2d",
                     output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
@@ -282,21 +286,22 @@ class RelionCetsMoviesTests(CetsRelionTest):
             section="0",
         )
         assert result.stacks[0].images[-1] == MovieFrame(
+            id="00008@frames/TS_01_000_0.0.mrc",
             width=2000,
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="base_logical_coordinates_2d",
+                    name="logical coordinates 2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                         Axis(
                             name="logical coordinates y axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                     ],
                 ),
@@ -306,12 +311,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                         Axis(
                             name="physical coordinates x axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                         Axis(
                             name="physical coordinates y axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                     ],
                 ),
@@ -319,7 +324,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_transformations=[
                 Scale(
                     name="image_pixel_size",
-                    input="base_logical_coordinates_2d",
+                    input="logical coordinates 2d",
                     output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )
@@ -331,21 +336,22 @@ class RelionCetsMoviesTests(CetsRelionTest):
             section="7",
         )
         assert result.stacks[-1].images[-1] == MovieFrame(
+            id="00008@frames/TS_01_040_60.0.mrc",
             width=2000,
             height=2000,
             coordinate_systems=[
                 CoordinateSystem(
-                    name="base_logical_coordinates_2d",
+                    name="logical coordinates 2d",
                     axes=[
                         Axis(
                             name="logical coordinates x axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                         Axis(
                             name="logical coordinates y axis",
                             axis_unit="pixel",
-                            axis_type=None,
+                            axis_type="array",
                         ),
                     ],
                 ),
@@ -355,12 +361,12 @@ class RelionCetsMoviesTests(CetsRelionTest):
                         Axis(
                             name="physical coordinates x axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                         Axis(
                             name="physical coordinates y axis",
                             axis_unit="angstrom",
-                            axis_type=None,
+                            axis_type="space",
                         ),
                     ],
                 ),
@@ -368,7 +374,7 @@ class RelionCetsMoviesTests(CetsRelionTest):
             coordinate_transformations=[
                 Scale(
                     name="image_pixel_size",
-                    input="base_logical_coordinates_2d",
+                    input="logical coordinates 2d",
                     output="image_pixel_size",
                     scale=[0.675, 0.675],
                 )

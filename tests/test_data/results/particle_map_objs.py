@@ -9,27 +9,28 @@ from cets_data_model.models.models import (
 )
 
 FROM_REFINE = ParticleMap(
+    id="Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
     width=127,
     height=127,
     depth=127,
     coordinate_systems=[
         CoordinateSystem(
-            name="base_logical_coordinates_3d",
+            name="logical coordinates 3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -39,17 +40,17 @@ FROM_REFINE = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -59,17 +60,17 @@ FROM_REFINE = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -79,17 +80,17 @@ FROM_REFINE = ParticleMap(
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -99,17 +100,17 @@ FROM_REFINE = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -117,7 +118,7 @@ FROM_REFINE = ParticleMap(
     coordinate_transformations=[
         Scale(
             name="Å/pix",
-            input="base_logical_coordinates_3d",
+            input="logical coordinates 3d",
             output="image_pixel_size",
             scale=[8.1],
         ),
@@ -175,30 +176,31 @@ FROM_REFINE = ParticleMap(
             ],
         ),
     ],
-    path="000001@Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
+    path="Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
 )
 FROM_REC = ParticleMap(
+    id="Extract/job020/Subtomograms/TS_01/12_stack2d.mrcs",
     width=127,
     height=127,
     depth=127,
     coordinate_systems=[
         CoordinateSystem(
-            name="base_logical_coordinates_3d",
+            name="logical coordinates 3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -208,17 +210,17 @@ FROM_REC = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -228,17 +230,17 @@ FROM_REC = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -248,17 +250,17 @@ FROM_REC = ParticleMap(
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -268,17 +270,17 @@ FROM_REC = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -286,7 +288,7 @@ FROM_REC = ParticleMap(
     coordinate_transformations=[
         Scale(
             name="Å/pix",
-            input="base_logical_coordinates_3d",
+            input="logical coordinates 3d",
             output="image_pixel_size",
             scale=[1.35],
         ),
@@ -340,31 +342,32 @@ FROM_REC = ParticleMap(
             ],
         ),
     ],
-    path="000012@Extract/job020/Subtomograms/TS_01/12_stack2d.mrcs",
+    path="Extract/job020/Subtomograms/TS_01/12_stack2d.mrcs",
 )
 
 FROM_PP = ParticleMap(
+    id="Extract/job041/Subtomograms/TS_01/12_stack2d.mrcs",
     width=127,
     height=127,
     depth=127,
     coordinate_systems=[
         CoordinateSystem(
-            name="base_logical_coordinates_3d",
+            name="logical coordinates 3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -374,17 +377,17 @@ FROM_PP = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -394,17 +397,17 @@ FROM_PP = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -414,17 +417,17 @@ FROM_PP = ParticleMap(
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -434,17 +437,17 @@ FROM_PP = ParticleMap(
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -452,7 +455,7 @@ FROM_PP = ParticleMap(
     coordinate_transformations=[
         Scale(
             name="Å/pix",
-            input="base_logical_coordinates_3d",
+            input="logical coordinates 3d",
             output="image_pixel_size",
             scale=[1.35],
         ),
@@ -510,29 +513,30 @@ FROM_PP = ParticleMap(
             ],
         ),
     ],
-    path="000012@Extract/job041/Subtomograms/TS_01/12_stack2d.mrcs",
+    path="Extract/job041/Subtomograms/TS_01/12_stack2d.mrcs",
 )
 
 TS_01_1 = {
+    "id": "Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
     "coord_index": None,
     "coordinate_systems": [
         CoordinateSystem(
-            name="base_logical_coordinates_3d",
+            name="logical coordinates 3d",
             axes=[
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -542,17 +546,17 @@ TS_01_1 = {
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -562,17 +566,17 @@ TS_01_1 = {
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -582,17 +586,17 @@ TS_01_1 = {
                 Axis(
                     name="logical coordinates x axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates y axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
                 Axis(
                     name="logical coordinates z axis",
                     axis_unit="pixel",
-                    axis_type=None,
+                    axis_type="array",
                 ),
             ],
         ),
@@ -602,17 +606,17 @@ TS_01_1 = {
                 Axis(
                     name="physical coordinates x axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates y axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
                 Axis(
                     name="physical coordinates z axis",
                     axis_unit="angstrom",
-                    axis_type=None,
+                    axis_type="space",
                 ),
             ],
         ),
@@ -621,7 +625,7 @@ TS_01_1 = {
         Scale(
             transformation_type="scale",
             name="Å/pix",
-            input="base_logical_coordinates_3d",
+            input="logical coordinates 3d",
             output="image_pixel_size",
             scale=[8.1],
         ),
@@ -657,7 +661,7 @@ TS_01_1 = {
     ],
     "depth": 3,
     "height": 2,
-    "path": "000001@Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
+    "path": "Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
     "source_annotation_id": None,
     "source_region_id": None,
     "width": 1,

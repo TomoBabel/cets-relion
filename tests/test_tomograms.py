@@ -3,7 +3,7 @@ from tests.testing_tools import CetsRelionTest
 from pathlib import Path
 from pytest import fixture
 from cets_data_model.models.models import Tomogram
-from tmp_transformations import logical_coords
+from cets_data_model.utils.coordinate_systems import logical_coords
 
 
 class TestRelionParticlesStarFile(CetsRelionTest):

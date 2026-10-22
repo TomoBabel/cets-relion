@@ -2,77 +2,16 @@ from typing import Tuple, Optional
 from cets_data_model.models.models import (
     Scale,
     CoordinateSystem,
-    Axis,
     TransformationType,
     CoordinateTransformation,
 )
 from pydantic import Field, conlist
-from cets_relion.relion_to_cets.transformation_names import (
+from cets_relion.transformation_names import (
     IMAGE_PIXEL_SIZE_XFROM,
     IMAGE_PIXEL_SIZE_COORDS,
-    IMAGE_SUPER_RES_PIXEL_SIZE_XFROM,
-    IMAGE_SUPER_RES_PIXEL_SIZE_COORDS,
 )
-
-# Standard coordinate system and transformation names - The transformation or sequence
-# of transformations that accomplish these tasks must have these specific names and
-# the endpoint coordinate system must have the associated name.
-
-# The actual transformation/sequence and coordinate system can vary as long as the
-# correct string from below is used in the `name` field.
-
-# Axis definitions
-x_axis_logical = Axis(name="logical coordinates x axis", axis_unit="pixel")
-y_axis_logical = Axis(name="logical coordinates y axis", axis_unit="pixel")
-z_axis_logical = Axis(name="logical coordinates z axis", axis_unit="pixel")
-
-x_axis_physical = Axis(name="physical coordinates x axis", axis_unit="angstrom")
-y_axis_physical = Axis(name="physical coordinates y axis", axis_unit="angstrom")
-z_axis_physical = Axis(name="physical coordinates z axis", axis_unit="angstrom")
-
-# NAMES - for the globals coordinate systems always end with COORDS, transformations
-# always end with XFORM
-
-# basic logical coords
-BASE_LOGICAL_COORDS_2D = "base_logical_coordinates_2d"
-BASE_LOGICAL_COORDS_3D = "base_logical_coordinates_3d"
-
-
-# Helper functions
-
-
-def physical_coords(name: str, dim: int) -> CoordinateSystem:
-    """Generate physical coordinates object"""
-    axes = [x_axis_physical, y_axis_physical]
-    name = name
-    if dim == 3:
-        axes.append(z_axis_physical)
-    elif dim not in (2, 3):
-        raise ValueError(f"{dim} is not a valid dimension")
-    return CoordinateSystem(name=name, axes=axes)
-
-
-def logical_coords(name: Optional[str] = None, dim: int = 2) -> CoordinateSystem:
-    """Generate physical coordinates object
-
-    Gives the base logical coordinates if no name specified
-    """
-    name = BASE_LOGICAL_COORDS_2D if name is None else name
-    axes = [x_axis_logical, y_axis_logical]
-    if dim == 3:
-        if name == BASE_LOGICAL_COORDS_2D:
-            name = BASE_LOGICAL_COORDS_3D
-        axes.append(z_axis_logical)
-    elif dim not in (2, 3):
-        raise ValueError(f"{dim} is not a valid dimension")
-    return CoordinateSystem(name=name, axes=axes)
-
-
-# helper functions for generating transformations and their associated coordinate
-# systems with the correct naming conventions. Each one returns the transformation
-# and the final coordinate system.
-
-# helper functions for scaling - just provide pixel size
+from cets_relion.transformation_names import BASE_LOGICAL_COORDS_2D
+from cets_data_model.utils.coordinate_systems import physical_coords
 
 
 def image_pixel_size(apix: float) -> Tuple[Scale, CoordinateSystem]:
@@ -85,20 +24,6 @@ def image_pixel_size(apix: float) -> Tuple[Scale, CoordinateSystem]:
             scale=[apix, apix],
         ),
         physical_coords(name=IMAGE_PIXEL_SIZE_COORDS, dim=2),
-    )
-
-
-def image_super_res_pixel_size(apix: float) -> Tuple[Scale, CoordinateSystem]:
-    """Get the scale transformation obj and final coord system for superres image pixel
-    size"""
-    return (
-        Scale(
-            name=IMAGE_SUPER_RES_PIXEL_SIZE_XFROM,
-            input=BASE_LOGICAL_COORDS_2D,
-            output=IMAGE_SUPER_RES_PIXEL_SIZE_COORDS,
-            scale=[apix, apix],
-        ),
-        physical_coords(name=IMAGE_SUPER_RES_PIXEL_SIZE_COORDS, dim=2),
     )
 
 

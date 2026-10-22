@@ -16,12 +16,12 @@ from cets_relion.job_utils import joboptions_from_job
 from tmp_transformations import (
     Flip2D,
     Rotation2D,
-    logical_coords,
-    BASE_LOGICAL_COORDS_2D,
 )
-from cets_relion.relion_to_cets.transformation_names import (
+from cets_data_model.utils.coordinate_systems import logical_coords
+from cets_relion.transformation_names import (
     ALIGN_CALIBRATION_IMAGE_XFROM,
     ALIGN_CALIBRATION_IMAGE_COORDS,
+    BASE_LOGICAL_COORDS_2D,
 )
 
 
@@ -42,7 +42,6 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
             str: Path to the file, relative to the project
         """
         joval = joboptions_from_job(self.file.parent).get("fn_gain_ref")
-        print("GGF", joval, "***********")
         if joval in ("", ""):
             return None
         return joval

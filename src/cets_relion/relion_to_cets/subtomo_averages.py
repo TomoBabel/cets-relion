@@ -53,4 +53,8 @@ class RelionSubtomoAverage(object):
         return parts.get_cets_particles()
 
     def get_cets_average(self) -> Average:
-        return Average(name=self.file_name, particle_maps=self.get_particle_maps())
+        return Average(
+            id=self.file_name,
+            name=self.file_name,
+            particle_maps=self.get_particle_maps(),
+        )

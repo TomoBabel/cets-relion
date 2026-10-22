@@ -15,22 +15,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -40,17 +40,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -60,17 +60,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -80,17 +80,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -100,17 +100,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -120,17 +120,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -140,17 +140,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -159,7 +159,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -173,7 +173,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -226,22 +226,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -251,17 +251,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -271,17 +271,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -291,17 +291,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -311,17 +311,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -331,17 +331,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -351,17 +351,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -370,7 +370,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -384,7 +384,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -437,22 +437,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -462,17 +462,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -482,17 +482,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -502,17 +502,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -522,17 +522,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -542,17 +542,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -562,17 +562,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -581,7 +581,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -595,7 +595,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -648,22 +648,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -673,17 +673,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -693,17 +693,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -713,17 +713,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -733,17 +733,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -753,17 +753,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -773,17 +773,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -792,7 +792,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -806,7 +806,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -859,22 +859,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -884,17 +884,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -904,17 +904,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -924,17 +924,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -944,17 +944,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -964,17 +964,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -984,17 +984,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1003,7 +1003,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -1017,7 +1017,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -1070,22 +1070,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1095,17 +1095,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -1115,17 +1115,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1135,17 +1135,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1155,17 +1155,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1175,17 +1175,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1195,17 +1195,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1214,7 +1214,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -1228,7 +1228,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -1281,22 +1281,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1306,17 +1306,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -1326,17 +1326,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1346,17 +1346,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1366,17 +1366,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1386,17 +1386,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1406,17 +1406,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1425,7 +1425,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -1439,7 +1439,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -1492,22 +1492,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1517,17 +1517,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -1537,17 +1537,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1557,17 +1557,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1577,17 +1577,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1597,17 +1597,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1617,17 +1617,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1636,7 +1636,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -1650,7 +1650,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -1703,22 +1703,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1728,17 +1728,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -1748,17 +1748,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1768,17 +1768,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1788,17 +1788,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1808,17 +1808,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1828,17 +1828,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1847,7 +1847,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -1861,7 +1861,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -1914,22 +1914,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1939,17 +1939,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -1959,17 +1959,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1979,17 +1979,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -1999,17 +1999,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2019,17 +2019,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2039,17 +2039,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2058,7 +2058,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -2072,7 +2072,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -2125,22 +2125,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2150,17 +2150,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -2170,17 +2170,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2190,17 +2190,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2210,17 +2210,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2230,17 +2230,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2250,17 +2250,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2269,7 +2269,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -2283,7 +2283,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -2336,22 +2336,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2361,17 +2361,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -2381,17 +2381,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2401,17 +2401,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2421,17 +2421,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2441,17 +2441,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2461,17 +2461,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2480,7 +2480,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -2494,7 +2494,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -2547,22 +2547,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2572,17 +2572,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -2592,17 +2592,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2612,17 +2612,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2632,17 +2632,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2652,17 +2652,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2672,17 +2672,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2691,7 +2691,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -2705,7 +2705,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -2758,22 +2758,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2783,17 +2783,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -2803,17 +2803,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2823,17 +2823,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2843,17 +2843,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2863,17 +2863,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2883,17 +2883,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2902,7 +2902,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -2916,7 +2916,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -2969,22 +2969,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -2994,17 +2994,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -3014,17 +3014,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3034,17 +3034,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3054,17 +3054,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3074,17 +3074,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3094,17 +3094,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3113,7 +3113,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -3127,7 +3127,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -3180,22 +3180,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3205,17 +3205,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -3225,17 +3225,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3245,17 +3245,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3265,17 +3265,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3285,17 +3285,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3305,17 +3305,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3324,7 +3324,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -3338,7 +3338,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -3391,22 +3391,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3416,17 +3416,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -3436,17 +3436,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3456,17 +3456,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3476,17 +3476,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3496,17 +3496,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3516,17 +3516,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3535,7 +3535,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -3549,7 +3549,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -3602,22 +3602,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3627,17 +3627,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -3647,17 +3647,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3667,17 +3667,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3687,17 +3687,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3707,17 +3707,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3727,17 +3727,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3746,7 +3746,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -3760,7 +3760,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -3813,22 +3813,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3838,17 +3838,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -3858,17 +3858,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3878,17 +3878,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3898,17 +3898,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3918,17 +3918,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3938,17 +3938,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -3957,7 +3957,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -3971,7 +3971,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -4024,22 +4024,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4049,17 +4049,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -4069,17 +4069,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4089,17 +4089,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4109,17 +4109,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4129,17 +4129,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4149,17 +4149,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4168,7 +4168,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -4182,7 +4182,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -4231,22 +4231,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4256,17 +4256,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -4276,17 +4276,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4296,17 +4296,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4316,17 +4316,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4336,17 +4336,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4356,17 +4356,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4375,7 +4375,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -4389,7 +4389,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -4442,22 +4442,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4467,17 +4467,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -4487,17 +4487,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4507,17 +4507,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4527,17 +4527,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4547,17 +4547,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4567,17 +4567,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4586,7 +4586,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -4600,7 +4600,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -4653,22 +4653,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4678,17 +4678,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -4698,17 +4698,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4718,17 +4718,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4738,17 +4738,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4758,17 +4758,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4778,17 +4778,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4797,7 +4797,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -4811,7 +4811,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -4864,22 +4864,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4889,17 +4889,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -4909,17 +4909,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4929,17 +4929,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4949,17 +4949,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4969,17 +4969,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -4989,17 +4989,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5008,7 +5008,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -5022,7 +5022,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -5075,22 +5075,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5100,17 +5100,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -5120,17 +5120,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5140,17 +5140,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5160,17 +5160,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5180,17 +5180,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5200,17 +5200,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5219,7 +5219,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -5233,7 +5233,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -5286,22 +5286,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5311,17 +5311,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -5331,17 +5331,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5351,17 +5351,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5371,17 +5371,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5391,17 +5391,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5411,17 +5411,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5430,7 +5430,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -5444,7 +5444,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -5497,22 +5497,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5522,17 +5522,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -5542,17 +5542,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5562,17 +5562,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5582,17 +5582,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5602,17 +5602,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5622,17 +5622,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5641,7 +5641,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -5655,7 +5655,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -5708,22 +5708,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5733,17 +5733,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -5753,17 +5753,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5773,17 +5773,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5793,17 +5793,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5813,17 +5813,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5833,17 +5833,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5852,7 +5852,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -5866,7 +5866,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -5919,22 +5919,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5944,17 +5944,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -5964,17 +5964,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -5984,17 +5984,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6004,17 +6004,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6024,17 +6024,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6044,17 +6044,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6063,7 +6063,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -6077,7 +6077,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -6130,22 +6130,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6155,17 +6155,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -6175,17 +6175,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6195,17 +6195,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6215,17 +6215,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6235,17 +6235,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6255,17 +6255,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6274,7 +6274,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -6288,7 +6288,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -6341,22 +6341,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6366,17 +6366,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -6386,17 +6386,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6406,17 +6406,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6426,17 +6426,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6446,17 +6446,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6466,17 +6466,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6485,7 +6485,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -6499,7 +6499,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -6552,22 +6552,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6577,17 +6577,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -6597,17 +6597,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6617,17 +6617,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6637,17 +6637,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6657,17 +6657,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6677,17 +6677,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6696,7 +6696,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -6710,7 +6710,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -6763,22 +6763,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6788,17 +6788,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -6808,17 +6808,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6828,17 +6828,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6848,17 +6848,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6868,17 +6868,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6888,17 +6888,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6907,7 +6907,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -6921,7 +6921,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -6974,22 +6974,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -6999,17 +6999,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -7019,17 +7019,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7039,17 +7039,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7059,17 +7059,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7079,17 +7079,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7099,17 +7099,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7118,7 +7118,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -7132,7 +7132,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -7185,22 +7185,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7210,17 +7210,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -7230,17 +7230,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7250,17 +7250,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7270,17 +7270,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7290,17 +7290,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7310,17 +7310,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7329,7 +7329,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -7343,7 +7343,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -7396,22 +7396,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7421,17 +7421,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -7441,17 +7441,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7461,17 +7461,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7481,17 +7481,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7501,17 +7501,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7521,17 +7521,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7540,7 +7540,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -7554,7 +7554,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -7607,22 +7607,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7632,17 +7632,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -7652,17 +7652,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7672,17 +7672,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7692,17 +7692,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7712,17 +7712,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7732,17 +7732,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7751,7 +7751,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -7765,7 +7765,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -7818,22 +7818,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7843,17 +7843,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -7863,17 +7863,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7883,17 +7883,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7903,17 +7903,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7923,17 +7923,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7943,17 +7943,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -7962,7 +7962,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -7976,7 +7976,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -8029,22 +8029,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8054,17 +8054,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -8074,17 +8074,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8094,17 +8094,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8114,17 +8114,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8134,17 +8134,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8154,17 +8154,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8173,7 +8173,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -8187,7 +8187,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
@@ -8240,22 +8240,22 @@ RESULT = [
         height=2000,
         coordinate_systems=[
             CoordinateSystem(
-                name="base_logical_coordinates_3d",
+                name="logical coordinates 3d",
                 axes=[
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8265,17 +8265,17 @@ RESULT = [
                     Axis(
                         name="physical coordinates x axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates y axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                     Axis(
                         name="physical coordinates z axis",
                         axis_unit="angstrom",
-                        axis_type=None,
+                        axis_type="space",
                     ),
                 ],
             ),
@@ -8285,17 +8285,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8305,17 +8305,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8325,17 +8325,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8345,17 +8345,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8365,17 +8365,17 @@ RESULT = [
                     Axis(
                         name="logical coordinates x axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates y axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                     Axis(
                         name="logical coordinates z axis",
                         axis_unit="pixel",
-                        axis_type=None,
+                        axis_type="array",
                     ),
                 ],
             ),
@@ -8384,7 +8384,7 @@ RESULT = [
             Scale(
                 transformation_type="scale",
                 name="image_pixel_size",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="image_pixel_size",
                 scale=[1.35],
             ),
@@ -8398,7 +8398,7 @@ RESULT = [
             Sequence(
                 transformation_type="sequence",
                 name="align_projection_image_to_tomogram",
-                input="base_logical_coordinates_3d",
+                input="logical coordinates 3d",
                 output="aligned_projection_image",
                 sequence=[
                     Affine(
