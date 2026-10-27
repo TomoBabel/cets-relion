@@ -38,9 +38,9 @@ dependencies = [
     "networkx",
     "matplotlib",
     "gemmi",
-    "tiffile",
+    "tifffile",
     "scipy",
-    "cets-data-model @ git+https://github.com/TomoBabel/cets-data-models.git@main",
+    "cets-data-model @ git+https://github.com/TomoBabel/cets-data-models.git@add-id-fields",
     "pydash",
 ]
 
@@ -69,5 +69,5 @@ python_version = "3.9"
 warn_unused_configs = true
 
 [[tool.mypy.overrides]]
-module = ["gemmi", "mrcfile", "tiffile", "networkx", "matplotlib.pyplot"]
+module = ["gemmi", "mrcfile", "tifffile", "networkx", "matplotlib.pyplot"]
 ignore_missing_imports = true

@@ -56,7 +56,6 @@ def get_raw_movies(
         movies.append(movie_set.make_movie_cets_for_tilt_series(tomo_name))
     clean_movies: List[MovieStackSeries] = [x for x in movies if x is not None]
     if movies:
-        print(con.__dict__)
         mov_stack_col = MovieStackCollection(
             gain_file=con.find_gain_file(tomo_name),
             defect_file=con.find_defect_file(tomo_name),
@@ -83,6 +82,8 @@ def get_tilt_series(con: RelionCetsConverter, tomo_name: str) -> List[TiltSeries
     if not all_tilt_series:
         for con_mocorr in con.mocorr:
             all_tilt_series.extend(con_mocorr.get_cets_tilt_images(tomo_name))
+    if not all_tilt_series:
+        return []
     return [TiltSeries(id=tomo_name + "_tilt_series", images=all_tilt_series)]
 
 
@@ -116,7 +117,13 @@ def get_coord_annotations(con: RelionCetsConverter, tomo_name: str) -> list:
 def main(argv=None):
     args = parse_args(argv)
     con = RelionCetsConverter(args.job)
-    dataset = Dataset(name=args.dataset_name, regions=[])
+    outname = args.output_name
+    outname = outname + ".json" if not Path(outname).suffix == ".json" else outname
+    dataset = Dataset(
+        id=args.dataset_name or Path(outname).stem,
+        name=args.dataset_name,
+        regions=[],
+    )
     # make a region for each tomogram
     tomos = args.tomos
     if not tomos:
@@ -144,8 +151,6 @@ def main(argv=None):
     else:
         dataset.averages = get_averages(con)
 
-    outname = args.output_name
-    outname = outname + ".json" if not Path(outname).suffix == ".json" else outname
     with open(outname, "w") as out:
         out.write(dataset.model_dump_json(indent=2))
 

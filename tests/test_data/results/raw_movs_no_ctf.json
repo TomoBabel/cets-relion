@@ -3,7 +3,7 @@
   "movie_stacks": [
     {
       "id": "TS_01_movie_stack_set",
-      "name": null,
+      "name": "TS_01",
       "stacks": [
         {
           "id": "frames/TS_01_000_0.0.mrc",

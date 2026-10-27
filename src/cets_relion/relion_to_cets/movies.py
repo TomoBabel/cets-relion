@@ -156,6 +156,7 @@ class RelionMoviesStarFile(object):
         # return a CETS MovieStackSeries for the tilt series
         return MovieStackSeries(
             id=ts_name + "_movie_stack_set",
+            name=ts_name,
             stacks=movie_stacks,
         )
 

@@ -19,19 +19,21 @@ class CetsReader(object):
             data = json.load(f)
         self.data = Dataset.model_validate(data)
         regions = self.data.regions
-        movie_collections = list(
-            chain.from_iterable([x.movie_stack_collections for x in regions])
-        )
+        movie_collections = [
+            x.movie_stack_collection
+            for x in regions
+            if x.movie_stack_collection is not None
+        ]
         movie_stacks_dict = {}
         for mov_stack_collection in movie_collections:
             for mov in mov_stack_collection.movie_stacks:
-                movie_stacks_dict[mov.name] = mov.stacks
+                movie_stacks_dict[mov.name or mov.id] = mov.stacks
         self.movie_stacks: Dict[str, List[MovieFrame]] = movie_stacks_dict
 
         all_tilt_series = list(chain.from_iterable([x.tilt_series for x in regions]))
         tilt_image_dict = {}
         for tilt_series in all_tilt_series:
-            tilt_image_dict[tilt_series.name] = tilt_series.images
+            tilt_image_dict[tilt_series.id] = tilt_series.images
         self.tilt_angle_images: Dict[str, List[ProjectionImage]] = tilt_image_dict
 
         all_tomos = list(chain.from_iterable([x.tomograms for x in regions]))
