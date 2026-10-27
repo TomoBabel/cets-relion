@@ -1,4 +1,4 @@
-from cets_relion.relion_to_cets.relion_reader import RelionPipeline
+from cets_relion.relion_to_cets.relion_reader import RelionPipeline, get_sort_key
 from tests.test_data.pipelines.short_pipeline_networks import (
     FULL_EDGES,
     FULL_NODES,
@@ -197,3 +197,18 @@ class PipelineReaderTests(CetsRelionTest):
         rp = RelionPipeline(self.test_data / "pipelines/forked_pipeline.star")
         res = nx.topological_sort(rp.process_layer().graph)
         print(list(res))
+
+
+def test_get_sort_key_files_before_job_that_made_them():
+    nodes = [
+        "Import/job001/",
+        "MotionCorr/job002/",
+        "MotionCorr/job002/corrected_tilt_series.star",
+        "Import/job001/tilt_series.star",
+    ]
+    assert sorted(nodes, key=get_sort_key) == [
+        "Import/job001/tilt_series.star",
+        "Import/job001/",
+        "MotionCorr/job002/corrected_tilt_series.star",
+        "MotionCorr/job002/",
+    ]

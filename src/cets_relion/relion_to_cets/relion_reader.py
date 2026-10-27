@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, Tuple, List, Union, Literal, Hashable, Any
@@ -480,32 +481,25 @@ class RelionPipeline(object):
     def get_all_child_files(self, file: Union[os.PathLike, str]) -> List[str]:
         return self.get_children(file, "file")
 
-    def levels(self):
-        levels = nx.algorithms.dag.topological_generations(self.graph)
-        for i, layer in enumerate(levels):
-            print(f"Level {i}: {list(layer)}")
-
 
 def get_sort_key(node_name: Union[str, os.PathLike]) -> Tuple[int, int]:
     """Get the keys for sorting multiple nodes associated with the same job
 
-    Nodes are sorted on (in descending order of importance) its depth in the project,
-    job number, and finally name.
-
-    Files come before the jobs that created them, as it's intended for working
-    backwards through a project
+    Nodes are sorted on job number first, then files before the job that created
+    them, as it's intended for working backwards through a project. Nodes that are
+    not part of a job sort first.
 
     Args:
         node_name (Union[str, os.PathLike]): The node name; a job or a file
 
     Returns:
-        Tuple[int, int]: (job number, depth)
+        Tuple[int, int]: (job number, 0 for a file or 1 for a job)
 
     """
     node_name = str(node_name)
     try:
         job_num = get_job_number(node_name)
-        depth = 0 if Path(node_name).is_dir() == "" else 1
     except Exception:
         return 0, 0
-    return job_num, depth
+    is_job = re.match(r"^job\d{3}$", Path(node_name).name) is not None
+    return job_num, 1 if is_job else 0

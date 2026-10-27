@@ -55,7 +55,7 @@ def get_raw_movies(
     for movie_set in con.movies:
         movies.append(movie_set.make_movie_cets_for_tilt_series(tomo_name))
     clean_movies: List[MovieStackSeries] = [x for x in movies if x is not None]
-    if movies:
+    if clean_movies:
         mov_stack_col = MovieStackCollection(
             gain_file=con.find_gain_file(tomo_name),
             defect_file=con.find_defect_file(tomo_name),
@@ -145,7 +145,7 @@ def main(argv=None):
         dataset.regions.append(region)
     if args.tomos and con.averages:
         warnings.warn(
-            "Cannot generate CETS objects for Subtomograms when specifying specific"
+            "Cannot generate CETS objects for Subtomograms when specifying specific "
             "tilt series/tomograms with the --tomos argument."
         )
     else:

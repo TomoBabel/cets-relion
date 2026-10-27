@@ -1,5 +1,5 @@
 from tests.testing_tools import CetsRelionTest, load_result
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 from cets_relion.scripts.relion_to_cets import (
     get_raw_movies,
     get_tilt_series,
@@ -45,6 +45,13 @@ class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):
         with open(self.test_data / "results/raw_movs_no_ctf.json") as f:
             expected = json.load(f)
         assert actual == expected
+
+    def test_get_raw_movies_no_movies_for_tomo(self):
+        """Movie sets that return nothing shouldn't make an empty collection"""
+        self.setup_dirs(1)
+        con = RelionCetsConverter("Import/job001/")
+        con.movies = [Mock(make_movie_cets_for_tilt_series=Mock(return_value=None))]
+        assert get_raw_movies(con, "TS_01") is None
 
     def test_get_raw_movies_mocorr(self):
         self.setup_dirs(2)
