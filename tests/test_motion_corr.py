@@ -1,8 +1,7 @@
 from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
-from tests.testing_tools import CetsRelionTest
+from tests.testing_tools import CetsRelionTest, load_result
 from pathlib import Path
 from unittest.mock import patch
-from tests.test_data.results.ts_01_doses import DOSES
 
 
 class TestMotionCorr(CetsRelionTest):
@@ -40,4 +39,4 @@ class TestMotionCorr(CetsRelionTest):
     def test_get_tilt_image_doses(self):
         self.setup_dirs(2)
         mco = RelionMotionCorrStarFile("MotionCorr/job002/corrected_tilt_series.star")
-        assert mco.get_tilt_image_doses("TS_01") == DOSES
+        assert mco.get_tilt_image_doses("TS_01") == load_result("ts_01_doses.json")

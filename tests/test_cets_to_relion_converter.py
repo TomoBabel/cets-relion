@@ -1,9 +1,11 @@
 from cets_relion.cets_to_relion.cets_to_relion_converter import CetsToRelionConverter
 from cets_relion.cets_to_relion.cets_reader import CetsReader
-from tests.testing_tools import CetsRelionTest
-from tests.test_data.results.TS_03_all_movie_stacks import ALL_MOVIE_STACKS
-from tests.test_data.results.TS_03_all_projection_imgs import ALL_PROJECTION_IMGS
-from tests.test_data.results.TS_03_ts_file import TS_DATA_IMPORT, TS_DATA_CTF
+from tests.testing_tools import (
+    CetsRelionTest,
+    all_movie_stacks,
+    all_projection_imgs,
+    load_result,
+)
 from unittest import skip
 
 
@@ -13,7 +15,7 @@ class CetsToRelionConverterTest(CetsRelionTest):
             self.test_data / "results/TS_03_r_to_c_import.json"
         )
         assert isinstance(converter.data, CetsReader)
-        assert converter.data.movie_stacks["TS_03"] == ALL_MOVIE_STACKS
+        assert converter.data.movie_stacks["TS_03"] == all_movie_stacks()
         assert converter.data.tilt_angle_images == {}
 
     def test_instantiate_converter_mocorr_data(self):
@@ -21,8 +23,8 @@ class CetsToRelionConverterTest(CetsRelionTest):
             self.test_data / "results/TS_03_r_to_c_mocorr.json"
         )
         assert isinstance(converter.data, CetsReader)
-        assert converter.data.movie_stacks["TS_03"] == ALL_MOVIE_STACKS
-        assert converter.data.tilt_angle_images == ALL_PROJECTION_IMGS
+        assert converter.data.movie_stacks["TS_03"] == all_movie_stacks()
+        assert converter.data.tilt_angle_images == all_projection_imgs()
 
     def test_get_main_file_data(self):
         converter = CetsToRelionConverter(
@@ -53,14 +55,20 @@ class CetsToRelionConverterTest(CetsRelionTest):
         converter = CetsToRelionConverter(
             self.test_data / "results/TS_03_r_to_c_import.json"
         )
-        assert converter.ts_file_data_from_frames() == TS_DATA_IMPORT
+        assert (
+            converter.ts_file_data_from_frames()
+            == load_result("TS_03_ts_file.json")["TS_DATA_IMPORT"]
+        )
 
     def test_get_tilt_series_file_data_from_frames_import_from_ctf_job(self):
         """Includes ctf info"""
         converter = CetsToRelionConverter(
             self.test_data / "results/TS_03_r_to_c_ctf.json"
         )
-        assert converter.ts_file_data_from_frames() == TS_DATA_CTF
+        assert (
+            converter.ts_file_data_from_frames()
+            == load_result("TS_03_ts_file.json")["TS_DATA_CTF"]
+        )
 
     @skip("This isn't added to the converter code yet")
     def test_get_tilt_series_file_data_from_frames_import_from_align_job(self):
@@ -68,7 +76,10 @@ class CetsToRelionConverterTest(CetsRelionTest):
         converter = CetsToRelionConverter(
             self.test_data / "results/TS_03_r_to_c_align.json"
         )
-        assert converter.ts_file_data_from_frames() == TS_DATA_CTF
+        assert (
+            converter.ts_file_data_from_frames()
+            == load_result("TS_03_ts_file.json")["TS_DATA_CTF"]
+        )
 
     def test_write_main_relion_starfile_import_data(self):
         converter = CetsToRelionConverter(

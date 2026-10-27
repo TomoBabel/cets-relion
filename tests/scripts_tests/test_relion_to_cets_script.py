@@ -1,4 +1,4 @@
-from tests.testing_tools import CetsRelionTest
+from tests.testing_tools import CetsRelionTest, load_result
 from unittest.mock import patch
 from cets_relion.scripts.relion_to_cets import (
     get_raw_movies,
@@ -8,13 +8,13 @@ from cets_relion.relion_to_cets.relion_to_cets_converter import RelionCetsConver
 from cets_relion.relion_to_cets import relion_to_cets_converter
 from cets_relion.relion_to_cets import movies
 import json
-from tests.test_data.results.tilt_series_objs import (
-    MOCORR_0,
-    MOCORR_40,
-    CTF_0,
-    CTF_40,
-    GAIN_FILE,
-)
+
+TILT_SERIES_OBJS = load_result("tilt_series_objs.json")
+MOCORR_0 = TILT_SERIES_OBJS["MOCORR_0"]
+MOCORR_40 = TILT_SERIES_OBJS["MOCORR_40"]
+CTF_0 = TILT_SERIES_OBJS["CTF_0"]
+CTF_40 = TILT_SERIES_OBJS["CTF_40"]
+GAIN_FILE = TILT_SERIES_OBJS["GAIN_FILE"]
 
 
 class RelionCETSConverterScriptTestRawMovies(CetsRelionTest):

@@ -1,0 +1,569 @@
+{
+  "FROM_REFINE": {
+    "width": 127,
+    "height": 127,
+    "depth": 127,
+    "coordinate_systems": [
+      {
+        "name": "logical coordinates 3d",
+        "axes": [
+          {
+            "name": "logical coordinates x axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates y axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates z axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          }
+        ]
+      },
+      {
+        "name": "image_pixel_size",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      },
+      {
+        "name": "Alignment relative to parent tomogram",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      },
+      {
+        "name": "Averaging translation",
+        "axes": [
+          {
+            "name": "logical coordinates x axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates y axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates z axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          }
+        ]
+      },
+      {
+        "name": "aligned_subtomogram",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      }
+    ],
+    "coordinate_transformations": [
+      {
+        "transformation_type": "scale",
+        "name": "Å/pix",
+        "input": "logical coordinates 3d",
+        "output": "image_pixel_size",
+        "scale": [
+          8.1
+        ]
+      },
+      {
+        "transformation_type": "sequence",
+        "name": "align_subtomogram_to_tomogram",
+        "input": "image_pixel_size",
+        "output": "aligned_subtomogram",
+        "target_id": null,
+        "sequence": [
+          {
+            "transformation_type": "affine",
+            "name": "Alignment relative to parent tomogram",
+            "input": "image_pixel_size",
+            "output": "Alignment relative to parent tomogram",
+            "affine": [
+              [
+                0.9910488295477008,
+                -0.13337511157340148,
+                0.005770360899859925
+              ],
+              [
+                -0.133499618837432,
+                -0.9900355054638975,
+                0.04480568815569209
+              ],
+              [
+                -0.00026310148668653435,
+                -0.04517496578446365,
+                -0.9989790554581112
+              ]
+            ]
+          },
+          {
+            "transformation_type": "translation",
+            "name": "Averaging translation",
+            "input": "Alignment relative to parent tomogram",
+            "output": "Averaging translation",
+            "translation": [
+              -4.658004938271605,
+              -4.658004938271605,
+              2.1702444444444446
+            ]
+          },
+          {
+            "transformation_type": "affine",
+            "name": "Averaging alignment",
+            "input": "Averaging translation",
+            "output": null,
+            "affine": [
+              [
+                -0.10251085961280204,
+                0.057973834532939375,
+                0.9930410657022155
+              ],
+              [
+                -0.08628111017328001,
+                0.994019574957615,
+                -0.06693769213491753
+              ],
+              [
+                -0.9909828927326196,
+                -0.09254252595769173,
+                -0.09689575429635322
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "id": "Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
+    "path": "Extract/job010/Subtomograms/TS_01/1_stack2d.mrcs",
+    "source_region_id": null,
+    "source_annotation_id": null,
+    "coord_index": null
+  },
+  "FROM_REC": {
+    "width": 127,
+    "height": 127,
+    "depth": 127,
+    "coordinate_systems": [
+      {
+        "name": "logical coordinates 3d",
+        "axes": [
+          {
+            "name": "logical coordinates x axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates y axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates z axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          }
+        ]
+      },
+      {
+        "name": "image_pixel_size",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      },
+      {
+        "name": "Alignment relative to parent tomogram",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      },
+      {
+        "name": "Averaging translation",
+        "axes": [
+          {
+            "name": "logical coordinates x axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates y axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates z axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          }
+        ]
+      },
+      {
+        "name": "aligned_subtomogram",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      }
+    ],
+    "coordinate_transformations": [
+      {
+        "transformation_type": "scale",
+        "name": "Å/pix",
+        "input": "logical coordinates 3d",
+        "output": "image_pixel_size",
+        "scale": [
+          1.35
+        ]
+      },
+      {
+        "transformation_type": "sequence",
+        "name": "align_subtomogram_to_tomogram",
+        "input": "image_pixel_size",
+        "output": "aligned_subtomogram",
+        "target_id": null,
+        "sequence": [
+          {
+            "transformation_type": "affine",
+            "name": "Alignment relative to parent tomogram",
+            "input": "image_pixel_size",
+            "output": "Alignment relative to parent tomogram",
+            "affine": [
+              [
+                0.13092364625824407,
+                -0.9698575059870079,
+                -0.20551257122401773
+              ],
+              [
+                -0.9909367229741296,
+                -0.12173608334852255,
+                -0.056786768461101464
+              ],
+              [
+                0.030056778133049328,
+                0.21108468464486557,
+                -0.977005550647814
+              ]
+            ]
+          },
+          {
+            "transformation_type": "translation",
+            "name": "Averaging translation",
+            "input": "Alignment relative to parent tomogram",
+            "output": "Averaging translation",
+            "translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "transformation_type": "affine",
+            "name": "Averaging alignment",
+            "input": "Averaging translation",
+            "output": null,
+            "affine": [
+              [
+                -0.12565781272105925,
+                -0.11642509927386767,
+                0.9852184074413294
+              ],
+              [
+                -0.03202850847922693,
+                0.9930484030505851,
+                0.11326536912613247
+              ],
+              [
+                -0.991556498010454,
+                -0.017322397575191877,
+                -0.12851321253276526
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "id": "Extract/job020/Subtomograms/TS_01/12_stack2d.mrcs",
+    "path": "Extract/job020/Subtomograms/TS_01/12_stack2d.mrcs",
+    "source_region_id": null,
+    "source_annotation_id": null,
+    "coord_index": null
+  },
+  "FROM_PP": {
+    "width": 127,
+    "height": 127,
+    "depth": 127,
+    "coordinate_systems": [
+      {
+        "name": "logical coordinates 3d",
+        "axes": [
+          {
+            "name": "logical coordinates x axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates y axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates z axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          }
+        ]
+      },
+      {
+        "name": "image_pixel_size",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      },
+      {
+        "name": "Alignment relative to parent tomogram",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      },
+      {
+        "name": "Averaging translation",
+        "axes": [
+          {
+            "name": "logical coordinates x axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates y axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          },
+          {
+            "name": "logical coordinates z axis",
+            "axis_unit": "pixel",
+            "axis_type": "array"
+          }
+        ]
+      },
+      {
+        "name": "aligned_subtomogram",
+        "axes": [
+          {
+            "name": "physical coordinates x axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates y axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          },
+          {
+            "name": "physical coordinates z axis",
+            "axis_unit": "angstrom",
+            "axis_type": "space"
+          }
+        ]
+      }
+    ],
+    "coordinate_transformations": [
+      {
+        "transformation_type": "scale",
+        "name": "Å/pix",
+        "input": "logical coordinates 3d",
+        "output": "image_pixel_size",
+        "scale": [
+          1.35
+        ]
+      },
+      {
+        "transformation_type": "sequence",
+        "name": "align_subtomogram_to_tomogram",
+        "input": "image_pixel_size",
+        "output": "aligned_subtomogram",
+        "target_id": null,
+        "sequence": [
+          {
+            "transformation_type": "affine",
+            "name": "Alignment relative to parent tomogram",
+            "input": "image_pixel_size",
+            "output": "Alignment relative to parent tomogram",
+            "affine": [
+              [
+                0.13092364625824407,
+                -0.9698575059870079,
+                -0.20551257122401773
+              ],
+              [
+                -0.9909367229741296,
+                -0.12173608334852255,
+                -0.056786768461101464
+              ],
+              [
+                0.030056778133049328,
+                0.21108468464486557,
+                -0.977005550647814
+              ]
+            ]
+          },
+          {
+            "transformation_type": "translation",
+            "name": "Averaging translation",
+            "input": "Alignment relative to parent tomogram",
+            "output": "Averaging translation",
+            "translation": [
+              0.20488592592592592,
+              -0.06661481481481481,
+              -0.06661481481481481
+            ]
+          },
+          {
+            "transformation_type": "affine",
+            "name": "Averaging alignment",
+            "input": "Averaging translation",
+            "output": null,
+            "affine": [
+              [
+                -0.12859958749903055,
+                -0.08704297677291388,
+                0.9878692556657431
+              ],
+              [
+                -0.03642505354906922,
+                0.9958830256812498,
+                0.08300731674922938
+              ],
+              [
+                -0.9910274272536692,
+                -0.025308483843751572,
+                -0.131240691389919
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "id": "Extract/job041/Subtomograms/TS_01/12_stack2d.mrcs",
+    "path": "Extract/job041/Subtomograms/TS_01/12_stack2d.mrcs",
+    "source_region_id": null,
+    "source_annotation_id": null,
+    "coord_index": null
+  }
+}

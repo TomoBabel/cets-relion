@@ -1,8 +1,34 @@
+import json
 import os
 import shutil
 import tempfile
 import unittest
 from pathlib import Path
+
+from cets_data_model.models.models import MovieStack, TiltImage
+
+RESULTS_DIR = Path(__file__).parent / "test_data/results"
+
+
+def load_result(name: str):
+    """Load a JSON expected-result fixture from test_data/results"""
+    with open(RESULTS_DIR / name) as f:
+        return json.load(f)
+
+
+def all_movie_stacks():
+    """The expected CETS MovieStacks for TS_03"""
+    return [
+        MovieStack.model_validate(x) for x in load_result("TS_03_all_movie_stacks.json")
+    ]
+
+
+def all_projection_imgs():
+    """The expected CETS TiltImages for TS_03, by tilt series name"""
+    return {
+        k: [TiltImage.model_validate(x) for x in v]
+        for k, v in load_result("TS_03_all_projection_imgs.json").items()
+    }
 
 
 class CetsRelionTest(unittest.TestCase):

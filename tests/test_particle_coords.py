@@ -1,5 +1,4 @@
-from tests.test_data.results.particle_map_objs import TS_01_1
-from tests.testing_tools import CetsRelionTest
+from tests.testing_tools import CetsRelionTest, load_result
 from cets_relion.relion_to_cets.particle_coords import (
     RelionCoordsStarFile,
     RelionSphereAnnotations,
@@ -8,7 +7,7 @@ from cets_relion.relion_to_cets.particle_coords import (
 from cets_data_model.utils.coordinate_systems import physical_coords
 from pathlib import Path
 from pytest import fixture
-from cets_data_model.models.models import AnnotationType
+from cets_data_model.models.models import AnnotationType, ParticleMap
 from cets_relion.transformation_names import IMAGE_PIXEL_SIZE_COORDS
 
 
@@ -96,7 +95,9 @@ class TestRelionParticlesStarFile(CetsRelionTest):
         pf = RelionParticlesStarFile("Extract/job010/particles.star")
         cets_parts = pf.get_cets_particles("TS_01")
         assert len(cets_parts) == 6623
-        assert cets_parts[0].__dict__ == TS_01_1
+        assert cets_parts[0] == ParticleMap.model_validate(
+            load_result("particle_ts_01_1.json")
+        )
 
     def test_get_coords_object(self):
         self.setup_dirs(10)

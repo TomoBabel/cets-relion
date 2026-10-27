@@ -1,9 +1,7 @@
 from cets_data_model.models.models import Dataset
 
-from tests.testing_tools import CetsRelionTest
+from tests.testing_tools import CetsRelionTest, all_movie_stacks, all_projection_imgs
 from cets_relion.cets_to_relion.cets_reader import CetsReader
-from tests.test_data.results.TS_03_all_movie_stacks import ALL_MOVIE_STACKS
-from tests.test_data.results.TS_03_all_projection_imgs import ALL_PROJECTION_IMGS
 
 
 class TestCetsReader(CetsRelionTest):
@@ -11,7 +9,7 @@ class TestCetsReader(CetsRelionTest):
         con = CetsReader(self.test_data / "results/TS_03_r_to_c_import.json")
         assert isinstance(con.data, Dataset)
         assert list(con.movie_stacks.keys()) == ["TS_03"]
-        assert con.movie_stacks["TS_03"] == ALL_MOVIE_STACKS
+        assert con.movie_stacks["TS_03"] == all_movie_stacks()
         assert con.tilt_angle_images == {}
 
     def test_instantiate_cets_reader_mocorr(self):
@@ -19,5 +17,5 @@ class TestCetsReader(CetsRelionTest):
         con = CetsReader(self.test_data / "results/TS_03_r_to_c_mocorr.json")
         assert isinstance(con.data, Dataset)
         assert list(con.movie_stacks.keys()) == ["TS_03"]
-        assert con.movie_stacks["TS_03"] == ALL_MOVIE_STACKS
-        assert con.tilt_angle_images == ALL_PROJECTION_IMGS
+        assert con.movie_stacks["TS_03"] == all_movie_stacks()
+        assert con.tilt_angle_images == all_projection_imgs()

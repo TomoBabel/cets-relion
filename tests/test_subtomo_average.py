@@ -1,9 +1,6 @@
 from tests.test_testing_tools import CetsRelionTest
-from tests.test_data.results.particle_map_objs import (
-    FROM_REFINE,
-    FROM_PP,
-    FROM_REC,
-)
+from cets_data_model.models.models import ParticleMap
+from tests.testing_tools import load_result
 from cets_relion.relion_to_cets.subtomo_averages import RelionSubtomoAverage
 from pathlib import Path
 from unittest.mock import patch
@@ -15,6 +12,10 @@ def mock_get_mrc_dims():
     with patch("cets_relion.relion_to_cets.particle_coords.get_mrc_dims") as mock:
         mock.return_value = (127, 127, 127)
         yield mock
+
+
+def particle_map(key: str) -> ParticleMap:
+    return ParticleMap.model_validate(load_result("particle_maps.json")[key])
 
 
 class TestRelionSubtomoAverage(CetsRelionTest):
@@ -62,7 +63,7 @@ class TestRelionSubtomoAverage(CetsRelionTest):
         avg = sta.get_cets_average()
         assert avg.name == "Refine3D/job012/run_class001.mrc"
         assert len(avg.particle_maps) == 30596
-        assert avg.particle_maps[0] == FROM_REFINE
+        assert avg.particle_maps[0] == particle_map("FROM_REFINE")
 
     def test_get_cets_average_from_class3D(self):
         self.setup_dirs(17)
@@ -74,11 +75,11 @@ class TestRelionSubtomoAverage(CetsRelionTest):
         sta = RelionSubtomoAverage("Reconstruct/job021/merged.mrc")
         avg = sta.get_cets_average()
         assert len(avg.particle_maps) == 9442
-        assert avg.particle_maps[0] == FROM_REC
+        assert avg.particle_maps[0] == particle_map("FROM_REC")
 
     def test_get_cets_average_from_postprocess(self):
         self.setup_dirs(49)
         sta = RelionSubtomoAverage("PostProcess/job049/postprocessed.mrc")
         avg = sta.get_cets_average()
         assert len(avg.particle_maps) == 9053
-        assert avg.particle_maps[0] == FROM_PP
+        assert avg.particle_maps[0] == particle_map("FROM_PP")

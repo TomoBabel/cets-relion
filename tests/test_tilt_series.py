@@ -2,11 +2,9 @@ from unittest.mock import patch
 
 
 from cets_relion.relion_to_cets import tilt_series
-from tests.testing_tools import CetsRelionTest
+from cets_data_model.models.models import CTFMetadata, TiltImage
+from tests.testing_tools import CetsRelionTest, load_result
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
-from tests.test_data.results import proj, proj_aligned
-from tests.test_data.results.ts_01_doses import DOSES
-from tests.test_data.results.ctfs import CTFS
 
 
 class TiltSeriesStarTest(CetsRelionTest):
@@ -46,22 +44,29 @@ class TiltSeriesStarTest(CetsRelionTest):
     def test_get_tilt_image_ctfs(self):
         self.setup_dirs(jobs_to=3)
         ctf = RelionTiltSeriesStarfile("CtfFind/job003/tilt_series_ctf.star")
-        assert ctf.get_tilt_image_ctfs(ts_name="TS_01") == CTFS
+        assert ctf.get_tilt_image_ctfs(ts_name="TS_01") == {
+            k: CTFMetadata.model_validate(v)
+            for k, v in load_result("ctfs.json").items()
+        }
 
     def test_get_tilt_image_dose_dict(self):
         self.setup_dirs(jobs_to=3)
         ts = RelionTiltSeriesStarfile("CtfFind/job003/tilt_series_ctf.star")
-        assert ts.get_tilt_image_doses("TS_01") == DOSES
+        assert ts.get_tilt_image_doses("TS_01") == load_result("ts_01_doses.json")
 
     def test_get_tilt_projections_cets_objs_no_alignments(self):
         self.setup_dirs(jobs_to=3)
         ts = RelionTiltSeriesStarfile("CtfFind/job003/tilt_series_ctf.star")
-        assert ts.get_cets_tilt_images("TS_01") == proj.RESULT
+        assert ts.get_cets_tilt_images("TS_01") == [
+            TiltImage.model_validate(x) for x in load_result("proj.json")
+        ]
 
     def test_make_cets_projection_image_object_with_alignments(self):
         self.setup_dirs(jobs_to=5)
         ts = RelionTiltSeriesStarfile("AlignTiltSeries/job005/aligned_tilt_series.star")
-        assert ts.get_cets_tilt_images("TS_01") == proj_aligned.RESULT
+        assert ts.get_cets_tilt_images("TS_01") == [
+            TiltImage.model_validate(x) for x in load_result("proj_aligned.json")
+        ]
 
     def test_get_all_tomo_names(self):
         self.setup_dirs(5)
