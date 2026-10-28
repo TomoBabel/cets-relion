@@ -454,25 +454,25 @@ class RelionPipeline(object):
     def get_parents(
         self, node: Union[os.PathLike, str], n_type: Literal["", "file", "process"]
     ) -> List[str]:
-        tc_dag = nx.transitive_closure_dag(self.graph)
-        linked = [x[0] for x in list(tc_dag.edges()) if x[1] == str(node)]
+        linked = nx.ancestors(self.graph, str(node)) if str(node) in self.graph else []
         if n_type:
             parents = [x for x in linked if self.graph.nodes[x]["type"] == n_type]
         else:
             parents = [x for x in linked if self.graph.nodes[x]]
-        parents.sort(key=lambda x: get_sort_key(x))
+        parents.sort(key=lambda x: (get_sort_key(x), x))
         return parents
 
     def get_children(
         self, node: Union[os.PathLike, str], n_type: Literal["", "file", "process"]
     ) -> List[str]:
-        tc_dag = nx.transitive_closure_dag(self.graph)
-        linked = [x[1] for x in list(tc_dag.edges()) if x[0] == str(node)]
+        linked = (
+            nx.descendants(self.graph, str(node)) if str(node) in self.graph else []
+        )
         if n_type:
             children = [x for x in linked if self.graph.nodes[x]["type"] == n_type]
         else:
             children = [x for x in linked if self.graph.nodes[x]]
-        children.sort(key=lambda x: get_sort_key(x))
+        children.sort(key=lambda x: (get_sort_key(x), x))
         return children
 
     def get_all_parent_files(self, file: Union[os.PathLike, str]) -> List[str]:
