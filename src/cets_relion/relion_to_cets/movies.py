@@ -15,7 +15,7 @@ from gemmi import cif
 from cets_relion.relion_to_cets.motion_corr import RelionMotionCorrStarFile
 from cets_relion.relion_to_cets.relion_reader import RelionPipeline
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
-from tmp_transformations import image_pixel_size
+from cets_relion.common_transformations import image_pixel_size
 from cets_data_model.utils.coordinate_systems import logical_coords
 
 

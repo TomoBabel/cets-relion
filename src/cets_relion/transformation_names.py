@@ -1,13 +1,9 @@
-# Just to keep things standardized keeping all the names for transformations and
-# systems as globals here rather than defining if the specifc RELION file classes
+# To keep things standardized keeping all the names for transformations and
+# systems as globals here rather than defining if the specific RELION file classes
 
 # Base logical coordinate systems from CETS data model
 BASE_LOGICAL_COORDS_2D = "logical coordinates 2d"
 BASE_LOGICAL_COORDS_3D = "logical coordinates 3d"
-
-# Align calibration image to movie frame
-ALIGN_CALIBRATION_IMAGE_XFROM = "align_calibration_image_to_movie_frame"
-ALIGN_CALIBRATION_IMAGE_COORDS = "aligned_calibration_image"
 
 # Align movie frame to projection
 ALIGN_MOVIE_FRAME_XFROM = "align_movie_frame_to_projection"
@@ -36,3 +32,10 @@ IMAGE_PIXEL_SIZE_COORDS = "image_pixel_size"
 # set super res pixel size of image
 IMAGE_SUPER_RES_PIXEL_SIZE_XFROM = "image_pixel_size"
 IMAGE_SUPER_RES_PIXEL_SIZE_COORDS = "image_pixel_size"
+
+# gain reference
+FLIP_GAIN_REF_XFORM = "flip_gain_reference"
+FLIPPED_GAIN_REF_COORDS = "flipped_gain_reference"
+GAIN_REF_ROTATION_XFORM = "gain_reference_rotation"
+GAIN_REF_ALIGNMENT_SEQUENCE = "gain_reference_align_and_flip"
+ALIGNED_GAIN_REF_COORDS = "gain_reference_aligned_and_flipped"

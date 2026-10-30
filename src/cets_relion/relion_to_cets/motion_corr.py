@@ -6,6 +6,7 @@ from cets_data_model.models.models import (
     CTFMetadata,
     Sequence,
     CoordinateSystem,
+    Affine,
 )
 from cets_data_model.utils.image_utils import get_mrc_dims
 from gemmi import cif
@@ -13,15 +14,13 @@ from gemmi import cif
 from cets_relion.math_utils import rotation_to_matrix_2d, flip_matrix_2d
 from cets_relion.relion_to_cets.tilt_series import RelionTiltSeriesStarfile
 from cets_relion.job_utils import joboptions_from_job
-from tmp_transformations import (
-    Flip2D,
-    Rotation2D,
-)
 from cets_data_model.utils.coordinate_systems import logical_coords
 from cets_relion.transformation_names import (
-    ALIGN_CALIBRATION_IMAGE_XFROM,
-    ALIGN_CALIBRATION_IMAGE_COORDS,
     BASE_LOGICAL_COORDS_2D,
+    FLIPPED_GAIN_REF_COORDS,
+    ALIGNED_GAIN_REF_COORDS,
+    GAIN_REF_ROTATION_XFORM,
+    GAIN_REF_ALIGNMENT_SEQUENCE,
 )
 
 
@@ -63,30 +62,30 @@ class RelionMotionCorrStarFile(RelionTiltSeriesStarfile):
             "Flip left to right (2)": ["y"],
         }
 
-        gain_flip_xform = Flip2D(
+        gain_flip_xform = Affine(
             name="Flip gain reference",
-            matrix=flip_matrix_2d(gain_flip_vals[gain_flip]),
+            affine=flip_matrix_2d(gain_flip_vals[gain_flip]),
             input=BASE_LOGICAL_COORDS_2D,
-            output="flipped_gain_reference",
+            output=FLIPPED_GAIN_REF_COORDS,
         )
 
-        gain_rot_xform = Rotation2D(
-            name="Rotate gain reference",
-            matrix=rotation_to_matrix_2d(gain_rot_vals[gain_rot]),
-            input="flpped_gain_reference",
-            output=ALIGN_CALIBRATION_IMAGE_COORDS,
+        gain_rot_xform = Affine(
+            name=GAIN_REF_ROTATION_XFORM,
+            affine=rotation_to_matrix_2d(gain_rot_vals[gain_rot]),
+            input=FLIPPED_GAIN_REF_COORDS,
+            output=ALIGNED_GAIN_REF_COORDS,
         )
         final_xform = Sequence(
-            name=ALIGN_CALIBRATION_IMAGE_XFROM,
+            name=GAIN_REF_ALIGNMENT_SEQUENCE,
             input=BASE_LOGICAL_COORDS_2D,
-            output=ALIGN_CALIBRATION_IMAGE_COORDS,
+            output=ALIGNED_GAIN_REF_COORDS,
             sequence=[gain_rot_xform, gain_flip_xform],
         )
         return (
             final_xform,
             [
-                logical_coords("flipped_gain_reference"),
-                logical_coords(ALIGN_CALIBRATION_IMAGE_COORDS),
+                logical_coords(FLIPPED_GAIN_REF_COORDS),
+                logical_coords(ALIGNED_GAIN_REF_COORDS),
             ],
         )
 
