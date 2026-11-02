@@ -144,12 +144,11 @@ class RelionCetsConverter:
             setattr(self, attr, [obj(Path(terminal_job) / file)])
 
         # Find and subtomogram averages associated with the terminal job
-        pipe = RelionPipeline("default_pipeline.star")
         stas = [
             x
-            for x in list(pipe.graph.successors(terminal_job))
-            if pipe.graph.nodes()[x]["relion_type"] == "DensityMap"
-            and "halfmap" not in pipe.graph.nodes()[x]["kwds"]
+            for x in list(self.pipeline.graph.successors(terminal_job))
+            if self.pipeline.graph.nodes()[x]["relion_type"] == "DensityMap"
+            and "halfmap" not in self.pipeline.graph.nodes()[x]["kwds"]
         ]
         if stas:
             try:
